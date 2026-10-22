@@ -1,0 +1,14 @@
+/* 提示控件沿用原版奶油底色、圆角和棕色字，不改动原有界面样式。 */
+#hintDock { flex-shrink: 0; margin-top: 7px; color: #5a3d1e; font-size: 11px; }
+.hint-top { display: flex; align-items: center; gap: 8px; min-height: 24px; }
+#hintToggle { border: 0; border-radius: 7px; background: #fff9; padding: 4px 7px; color: #5a3d1e; font: inherit; white-space: nowrap; cursor: pointer; }
+#hintStatus { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.hint-actions { display: flex; gap: 6px; margin-top: 4px; }
+.hint-actions button, .hint-actions select { border: 0; border-radius: 8px; font: inherit; padding: 6px 9px; cursor: pointer; color: #5a3d1e; background: #fff9; }
+#hintPlace { flex: 1; color: #fff; background: #e8553a; font-weight: 700; box-shadow: 0 2px 0 #a8321d; }
+#hintPlace:disabled { opacity: .5; cursor: default; box-shadow: none; }
+#hintDetail { margin-top: 5px; opacity: .75; font-size: 10px; line-height: 1.4; min-height: 14px; }
+#hintDock button:focus-visible, #hintDock select:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+#hintControls[hidden] { display: none; }
+@media (min-width: 1040px) { #hintDock { position: fixed; top: 130px; padding: 10px; border-radius: 12px; background: #fff7; } }
+@media (max-height: 650px) { html, body { overflow-y: auto; } body { min-height: 100%; height: auto; } }
