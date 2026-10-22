@@ -34,15 +34,16 @@ window.Hints = (() => {
     if (!enabled || state.over || !compatible(source, state)) { hint = null; source = null; return; }
     hint = result;
     const risks = { low: '堆叠较低', medium: '注意高度', high: '接近溢出', fatal: '所有已测落点都有失败风险' };
-    const pos = Math.round(result.x / GamePhysics.W * 100);
-    status(`推荐横向 ${pos}% · ${risks[result.risk]}`,
-      `预计 +${result.gain} 分 · ${result.examined} 个落点 · ${(result.elapsed / 1000).toFixed(1)} 秒${result.usedNext ? ' · 已考虑下一盒' : ' · 本步模拟'}${fallback ? ' · 兼容模式' : ''}`);
+    const pos = Math.round(result.x / GamePhysics.W * 100), nextPos = Math.round(result.nextX / GamePhysics.W * 100);
+    status(result.usedNext ? `①本步 ${pos}% → ②下步 ${nextPos}%` : `本步 ${pos}% · 暂无可行后续`,
+      `预计${result.usedNext ? '两步' : '本步'} +${result.totalGain} 分 · ${result.totalMerges} 次合成\n${result.pairsExamined} 组组合 · ${(result.elapsed / 1000).toFixed(1)} 秒 · ${risks[result.risk]}${fallback ? ' · 兼容模式' : ''}`);
+    $h('hintStatus').title = '②是本步落定后的预估落点；每次实际投放后会按新局面重算。';
   }
   function request(t) {
     const id = ++generation, state = Game.state();
     source = { ...Game.snapshot(), level: state.level, nextLevel: state.nextLevel };
     pending = true; hint = null; lastRequest = t;
-    status('正在模拟放置位置…', '计算在副本中进行，不影响当前局面；仍可手动放置。');
+    status('正在联算当前盒与下一盒…', '逐一模拟两次投放、运动和连锁合成。');
     const data = { id, snapshot: source, level: state.level, nextLevel: state.nextLevel, mode };
     const localSolve = () => PlacementSolver.solve(data.snapshot, data.level, data.nextLevel,
       { mode, yieldMain: true, cancelled: () => id !== generation })
@@ -52,7 +53,11 @@ window.Hints = (() => {
       if (!worker) {
         worker = new Worker('hint-worker.js');
       }
-      worker.onmessage = ({ data: reply }) => accept(reply.id, reply.result, reply.error);
+      worker.onmessage = ({ data: reply }) => {
+        if (reply.progress) {
+          if (reply.id === generation && pending) status(`两步搜索 ${reply.progress.completed}/${reply.progress.total}`, `已模拟 ${reply.progress.pairs} 组组合，仍可手动投放。`);
+        } else accept(reply.id, reply.result, reply.error);
+      };
       worker.onerror = e => {
         e.preventDefault(); worker?.terminate(); worker = null; fallback = true;
         if (id === generation) localSolve();
@@ -87,6 +92,12 @@ window.Hints = (() => {
     const x = hint.x, { H, DEAD_Y, LEVELS, spawnY } = GamePhysics;
     const lv = Game.state().level;
     ctx.save();
+    if (hint.usedNext && Math.abs(hint.nextX - x) > 12) {
+      ctx.strokeStyle = '#537ab08c'; ctx.lineWidth = 1.2; ctx.setLineDash([3, 9]);
+      ctx.beginPath(); ctx.moveTo(hint.nextX, DEAD_Y + 54); ctx.lineTo(hint.nextX, H - 8); ctx.stroke();
+      ctx.fillStyle = '#537ab0'; ctx.font = '700 11px "Microsoft YaHei",sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText('②预计', Math.max(23, Math.min(377, hint.nextX)), DEAD_Y + 52);
+    }
     const color = hint.risk === 'high' || hint.risk === 'fatal' ? '#d04b2f' : '#168b70';
     ctx.fillStyle = hint.risk === 'high' || hint.risk === 'fatal' ? '#e8553a14' : '#168b7012';
     ctx.fillRect(x - LEVELS[lv].w / 2, DEAD_Y, LEVELS[lv].w, H - DEAD_Y);
@@ -95,7 +106,7 @@ window.Hints = (() => {
     ctx.setLineDash([]);
     ctx.fillStyle = color; ctx.beginPath(); ctx.moveTo(x - 7, DEAD_Y + 12); ctx.lineTo(x + 7, DEAD_Y + 12); ctx.lineTo(x, DEAD_Y + 23); ctx.closePath(); ctx.fill();
     ctx.font = '700 12px "Microsoft YaHei",sans-serif'; ctx.textAlign = 'center';
-    ctx.fillText('推荐', Math.max(20, Math.min(380, x)), DEAD_Y + 39);
+    ctx.fillText(hint.usedNext && Math.abs(hint.nextX - x) <= 12 ? '①②同列' : '①本步', Math.max(25, Math.min(375, x)), DEAD_Y + 39);
     ctx.restore();
   }
   function init() {

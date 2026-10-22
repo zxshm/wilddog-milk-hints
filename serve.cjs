@@ -9,6 +9,18 @@ const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; ch
 http.createServer((req, res) => {
   let name;
   try { name = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); } catch { res.writeHead(400); res.end(); return; }
+  // 验收页只由本地服务提供，发布目录中不包含自动点击或加速脚本。
+  if (name === '/__qa/acceptance') {
+    const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+      .replace('<head>', '<head><base href="/"><script src="/__qa/clock.js"></script>')
+      .replace('</body>', '<script src="/__qa/acceptance.js"></script></body>');
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); res.end(html); return;
+  }
+  const qaScripts = { '/__qa/clock.js': 'browser-clock.js', '/__qa/acceptance.js': 'browser-acceptance.js' };
+  if (qaScripts[name]) {
+    res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'no-store' });
+    res.end(fs.readFileSync(path.join(__dirname, 'tests', qaScripts[name]))); return;
+  }
   const mobilePreview = name === '/__qa/mobile';
   const file = mobilePreview ? path.join(__dirname, 'tests', 'mobile.html') : path.resolve(root, '.' + (name === '/' ? '/index.html' : name));
   if (!mobilePreview && !file.startsWith(root + path.sep)) { res.writeHead(403); res.end(); return; }
