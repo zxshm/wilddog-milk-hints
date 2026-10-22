@@ -10,7 +10,7 @@ http.createServer((req, res) => {
   let name;
   try { name = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); } catch { res.writeHead(400); res.end(); return; }
   // 验收页只由本地服务提供，发布目录中不包含自动点击或加速脚本。
-  if (['/__qa/acceptance', '/__qa/parallel', '/__qa/persistent'].includes(name)) {
+  if (['/__qa/acceptance', '/__qa/parallel', '/__qa/persistent', '/__qa/goal'].includes(name)) {
     let html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
       .replace('<head>', '<head><base href="/"><script src="/__qa/clock.js"></script>')
       .replace('</body>', '<script src="/__qa/acceptance.js"></script></body>');
@@ -18,6 +18,8 @@ http.createServer((req, res) => {
       .replace('src="hints.js"', 'src="hints-optimized.js"');
     if (name === '/__qa/persistent') html = html.replace('src="solver.js"', 'src="solver-optimized.js"')
       .replace('src="hints.js"', 'src="hints-persistent.js"');
+    if (name === '/__qa/goal') html = html.replace('src="solver.js"', 'src="solver-goal.js"')
+      .replace('src="hints.js"', 'src="hints-goal.js"');
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); res.end(html); return;
   }
   const qaScripts = { '/__qa/clock.js': 'browser-clock.js', '/__qa/acceptance.js': 'browser-acceptance.js' };

@@ -2,7 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { World, LEVELS, clampX } = require('../dist/physics.js');
-const Solver = require('../dist/solver.js');
+const Solver = require(process.env.SOLVER_FILE || '../dist/solver.js');
 
 test('第一步造出下一盒可接续的目标，报告两步总合成', async () => {
   const w = new World(); w.spawn(0, 85, 680);
