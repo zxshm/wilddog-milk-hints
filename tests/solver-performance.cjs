@@ -16,7 +16,7 @@ for (let i = 0; i < 250; i++) {
 }
 w.destroy();
 (async () => {
-  const pool = workers ? require('./node-pool.cjs')(workers) : null;
+  const pool = workers ? require('./node-pool.cjs')(workers, path.resolve(__dirname, '..', moduleName)) : null;
   const results = [];
   for (let round = 0; round < rounds; round++) for (const c of cases) {
     const started = performance.now();
