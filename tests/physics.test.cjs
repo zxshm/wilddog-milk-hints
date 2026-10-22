@@ -93,3 +93,25 @@ test('最高堆叠风险的评分低于低处安全放置', () => {
   assert.ok(Solver.evaluate(safe, 0).value > Solver.evaluate(danger, 0).value);
   safe.destroy(); danger.destroy();
 });
+
+test('复查失败局的全部 289 步：快照副本保留接触缓存后，得分和运动与实局一致', () => {
+  const fixture = require('./fixtures/failed-route-42.json'), w = new P.World();
+  let maxError = 0;
+  for (const [index, move] of fixture.route.entries()) {
+    const clone = P.World.restore(w.snapshot());
+    w.drop(move.level, move.x); clone.drop(move.level, move.x);
+    for (let i = 0; i < 240; i++) { w.step(); clone.step(); }
+    assert.equal(clone.score, w.score, `第 ${index + 1} 步合成得分不一致`);
+    assert.equal(clone.over, w.over);
+    const expected = w.cartons(), actual = clone.cartons();
+    assert.equal(actual.length, expected.length);
+    expected.forEach((b, i) => {
+      assert.equal(actual[i].lv, b.lv);
+      maxError = Math.max(maxError, Math.hypot(actual[i].position.x - b.position.x, actual[i].position.y - b.position.y));
+    });
+    clone.destroy();
+  }
+  assert.equal(w.score, fixture.score);
+  assert.ok(maxError < 1e-7, `最大位置误差 ${maxError}`);
+  w.destroy();
+});
