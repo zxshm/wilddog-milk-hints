@@ -81,7 +81,8 @@
   async function solve(snapshot, lv, nextLv, options = {}) {
     const started = now(), mode = options.mode || 'balanced';
     const config = MODES[mode] || MODES.balanced;
-    const budget = options.budgetMs ?? config.budget;
+    // 搜索数量只取决于精度档，避免手机或后台负载改变同一局面的推荐。
+    const refinement = options.budgetMs === 0 ? 0 : config.refine;
     const xs = candidates(snapshot, lv, config.first, config.extra);
     const results = []; let simulated = 0, pairsExamined = 0;
     const hasNext = Number.isInteger(nextLv) && nextLv >= 0 && nextLv < LEVELS.length;
@@ -124,17 +125,15 @@
     }
     const rank = () => results.sort((a, b) => better(a.route, b.route) ? -1 : better(b.route, a.route) ? 1 : 0);
     rank();
-    if (hasNext && config.refine && now() - started < budget) {
-      const finalists = results.filter(r => r.route.second && !r.route.fatal).slice(0, config.refine);
+    if (hasNext && refinement) {
+      const finalists = results.filter(r => r.route.second && !r.route.fatal).slice(0, refinement);
       for (const first of finalists) {
-        if (now() - started >= budget) break;
         const x = first.route.second.x;
         await extend(first, [-12, -6, 6, 12].map(d => clampX(nextLv, x + d)));
       }
       rank();
-      const centers = results.slice(0, config.refine).map(r => r.x);
+      const centers = results.slice(0, refinement).map(r => r.x);
       for (const x of centers.flatMap(x => [-6, 6].map(d => clampX(lv, x + d)))) {
-        if (now() - started >= budget) break;
         if (!results.some(r => Math.abs(r.x - x) < 2)) await searchFirst(x);
       }
       rank();
@@ -144,7 +143,7 @@
       top: second?.top ?? best.top, value: best.route.jointValue, nextX: second?.x ?? null, nextLevel: nextLv,
       totalGain: best.gain + (second?.gain || 0), totalMerges: best.merges + (second?.merges || 0),
       nextGain: second?.gain || 0, examined: results.length, pairsExamined, simulations: simulated,
-      elapsed: Math.round(now() - started), usedNext: !!second, level: lv, version: 'joint-2' };
+      elapsed: Math.round(now() - started), usedNext: !!second, level: lv, version: 'joint-2-exact' };
     if (options.diagnostics) answer.branches = results.map(r => ({ x: r.x, firstGain: r.gain, nextX: r.route.second?.x,
       totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
     return answer;

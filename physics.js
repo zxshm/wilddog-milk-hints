@@ -97,32 +97,75 @@
       if (this.dangerT > 2) this.over = true;
     }
     snapshot() {
+      const all = Composite.allBodies(this.world), ids = new Set(all.map(b => b.id));
+      const vertexRef = v => v ? { id: v.body.id, index: v.index } : null;
       return {
         time: this.time, score: this.score, maxLv: this.maxLv, dangerT: this.dangerT,
         over: this.over, serial: this.serial, merges: this.merges,
+        timing: { ...this.engine.timing },
+        walls: all.filter(b => b.lv === undefined).map(b => b.id),
+        // 接触点的冲量和顺序影响后续翻倒、摩擦与连锁合成，预测副本必须一起保留。
+        pairs: this.engine.pairs.list.filter(p => ids.has(p.bodyA.id) && ids.has(p.bodyB.id)).map(p => ({
+          a: p.bodyA.id, b: p.bodyB.id, separation: p.separation, isActive: p.isActive,
+          timeCreated: p.timeCreated, timeUpdated: p.timeUpdated, contactCount: p.contactCount,
+          collision: { collided: p.collision.collided, depth: p.collision.depth,
+            normal: { ...p.collision.normal }, tangent: { ...p.collision.tangent }, penetration: { ...p.collision.penetration },
+            supports: p.collision.supports.map(vertexRef), supportCount: p.collision.supportCount },
+          contacts: p.contacts.map(c => ({ vertex: vertexRef(c.vertex), normalImpulse: c.normalImpulse, tangentImpulse: c.tangentImpulse })),
+        })),
         bodies: this.cartons().map(b => ({
+          id: b.id,
           lv: b.lv, k: b.k, born: b.born, gameId: b.gameId,
           x: b.position.x, y: b.position.y, angle: b.angle,
           vx: b.velocity.x, vy: b.velocity.y, av: b.angularVelocity,
           px: b.positionPrev.x, py: b.positionPrev.y, pa: b.anglePrev,
           ix: b.positionImpulse.x, iy: b.positionImpulse.y, deltaTime: b.deltaTime,
           vertices: b.vertices.map(v => ({ x: v.x, y: v.y })),
+          // 直接保留已经旋转和缩放的轴、质量与惯量，避免重新计算引入浮点偏差。
+          dynamics: { axes: b.axes.map(a => ({ ...a })), bounds: { min: { ...b.bounds.min }, max: { ...b.bounds.max } },
+            area: b.area, mass: b.mass, inverseMass: b.inverseMass, inertia: b.inertia, inverseInertia: b.inverseInertia,
+            speed: b.speed, angularSpeed: b.angularSpeed, motion: b.motion, sleepCounter: b.sleepCounter,
+            totalContacts: b.totalContacts, force: { ...b.force }, torque: b.torque, constraintImpulse: { ...b.constraintImpulse } },
         })),
       };
     }
     static restore(s) {
       const w = new World();
       Object.assign(w, { time: s.time, score: s.score, maxLv: s.maxLv, dangerT: s.dangerT, over: s.over, merges: s.merges });
+      if (s.timing) Object.assign(w.engine.timing, s.timing);
+      if (s.walls) Composite.allBodies(w.world).forEach((b, i) => { b.id = s.walls[i]; });
       for (const v of s.bodies) {
         const b = w.spawn(v.lv, v.x, v.y, v.angle, v.k);
         // 保留合成后缩放形成的真实圆角顶点，避免重建圆角时改变碰撞形状。
-        if (v.vertices) Body.setVertices(b, v.vertices);
+        if (v.vertices && v.dynamics) {
+          b.vertices = v.vertices.map((point, index) => ({ ...point, index, body: b, isInternal: false }));
+          Object.assign(b, { ...v.dynamics, axes: v.dynamics.axes.map(a => ({ ...a })),
+            bounds: { min: { ...v.dynamics.bounds.min }, max: { ...v.dynamics.bounds.max } },
+            force: { ...v.dynamics.force }, constraintImpulse: { ...v.dynamics.constraintImpulse } });
+        } else if (v.vertices) Body.setVertices(b, v.vertices);
+        if (v.id !== undefined) b.id = v.id;
         b.born = v.born; b.gameId = v.gameId;
-        Body.setVelocity(b, { x: v.vx, y: v.vy }); Body.setAngularVelocity(b, v.av);
+        b.velocity.x = v.vx; b.velocity.y = v.vy; b.angularVelocity = v.av;
+        if (!v.dynamics) { b.speed = Math.hypot(v.vx, v.vy); b.angularSpeed = Math.abs(v.av); }
         b.positionPrev.x = v.px; b.positionPrev.y = v.py; b.anglePrev = v.pa;
         b.positionImpulse.x = v.ix; b.positionImpulse.y = v.iy; b.deltaTime = v.deltaTime;
       }
       w.serial = s.serial;
+      const byId = new Map(Composite.allBodies(w.world).map(b => [b.id, b]));
+      M.Common._nextId = Math.max(M.Common._nextId, ...[...byId.keys()].map(id => id + 1));
+      const getVertex = ref => ref ? byId.get(ref.id).vertices[ref.index] : null;
+      for (const p of s.pairs || []) {
+        const a = byId.get(p.a), b = byId.get(p.b);
+        if (!a || !b) continue;
+        const c = M.Collision.create(a, b);
+        Object.assign(c, p.collision, { normal: { ...p.collision.normal }, tangent: { ...p.collision.tangent },
+          penetration: { ...p.collision.penetration }, supports: p.collision.supports.map(getVertex) });
+        const pair = M.Pair.create(c, p.timeCreated);
+        Object.assign(pair, { separation: p.separation, isActive: p.isActive, timeCreated: p.timeCreated,
+          timeUpdated: p.timeUpdated, contactCount: p.contactCount });
+        pair.contacts = p.contacts.map(contact => ({ ...contact, vertex: getVertex(contact.vertex) }));
+        w.engine.pairs.list.push(pair); w.engine.pairs.table[pair.id] = pair;
+      }
       return w;
     }
     destroy() { Events.off(this.engine); Composite.clear(this.world, false); Engine.clear(this.engine); }
