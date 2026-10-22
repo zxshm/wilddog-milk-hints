@@ -1,6 +1,6 @@
 'use strict';
-const { parentPort } = require('node:worker_threads');
-const Solver = require('../dist/solver-optimized.js');
+const { parentPort, workerData } = require('node:worker_threads');
+const Solver = require(workerData?.modulePath || '../dist/solver-optimized.js');
 let context;
 parentPort.on('message', async data => {
   if (data.type === 'init') { context = data.context; return; }
