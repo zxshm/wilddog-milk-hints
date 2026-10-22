@@ -1,160 +1,23 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#fff3e0">
-<title>合成野生狗奶</title>
-<link rel="icon" href="img/11.png" type="image/png">
-<link rel="apple-touch-icon" href="img/11.png">
-<meta name="description" content="合成野生狗奶：把合成大西瓜搬进超市冷柜，十一级奶盒连锁合成，从野生马尿养到终极狗奶。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="合成野生狗奶">
-<meta property="og:description" content="十一级奶盒连锁合成，从野生马尿养到野生奶·终极进化版。">
-<meta property="og:image" content="img/11.png">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-  html, body { height: 100%; overflow: hidden; }
-  body {
-    background: linear-gradient(#fff8ec, #ffdca8);
-    color: #5a3d1e;
-    font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
-    display: flex; flex-direction: column; align-items: center;
-    padding: 8px 0 calc(6px + env(safe-area-inset-bottom));
-    touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
-  }
-  header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 2px 8px; }
-  .title { font-size: 20px; font-weight: 900; letter-spacing: 1px; color: #c2410c; text-shadow: 0 2px 0 #fff; }
-  .score { font-size: 30px; font-weight: 900; line-height: 1.1; }
-  .best { font-size: 12px; opacity: .75; }
-  .right { display: flex; align-items: center; gap: 8px; }
-  .next { display: flex; flex-direction: column; align-items: center; font-size: 11px; background: #fff7; border-radius: 12px; padding: 4px 8px; }
-  .next canvas { width: 44px; height: 60px; }
-  .btns { display: flex; flex-direction: column; gap: 6px; }
-  .icon-btn {
-    width: 36px; height: 36px; border: 0; border-radius: 10px; cursor: pointer;
-    background: #fff; color: #5a3d1e; font-size: 18px; box-shadow: 0 2px 0 #e5b679;
-  }
-  .icon-btn:focus-visible, .btn:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
-  #board {
-    position: relative; border-radius: 16px; overflow: hidden;
-    box-shadow: 0 6px 0 #d69a55, 0 10px 24px #0002; background: #fffdf6;
-  }
-  #game { display: block; width: 100%; height: 100%; touch-action: none; cursor: pointer; }
-  #chain { display: block; margin-top: 10px; }
-  .overlay {
-    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    background: #0006; backdrop-filter: blur(2px);
-  }
-  .overlay[hidden] { display: none; }
-  .dialog { background: #fff8ec; border-radius: 18px; padding: 22px 26px; text-align: center; min-width: 230px; box-shadow: 0 8px 30px #0004; }
-  .dialog .emoji { font-size: 46px; }
-  .dialog h2 { margin: 6px 0 10px; font-size: 22px; }
-  .dialog p { margin: 4px 0; }
-  .dialog strong { font-size: 26px; color: #c2410c; }
-  .btn {
-    margin-top: 14px; border: 0; border-radius: 12px; padding: 10px 26px; cursor: pointer;
-    font: inherit; font-size: 17px; font-weight: 700; color: #fff; background: #e8553a; box-shadow: 0 3px 0 #a8321d;
-  }
-</style>
-</head>
-<body>
-
-<header id="top">
-  <div>
-    <div class="title">合成野生狗奶</div>
-    <div class="score" id="score" aria-live="polite">0</div>
-    <div class="best">最高 <span id="best">0</span></div>
-  </div>
-  <div class="right">
-    <div class="next"><span>下一个</span><canvas id="next" aria-label="下一个奶盒"></canvas></div>
-    <div class="btns">
-      <button class="icon-btn" id="soundBtn" type="button" aria-label="音效开关" aria-pressed="true">🔊</button>
-      <button class="icon-btn" id="resetBtn" type="button" aria-label="重新开始">↻</button>
-    </div>
-  </div>
-</header>
-
-<div id="board">
-  <canvas id="game" aria-label="游戏区域：移动瞄准，点击或松手投放"></canvas>
-  <div class="overlay" id="over" hidden>
-    <div class="dialog" role="dialog" aria-labelledby="overTitle">
-      <div class="emoji">🐕</div>
-      <h2 id="overTitle">奶溢出来了</h2>
-      <p>本局得分 <strong id="finalScore">0</strong></p>
-      <p>最高分 <span id="finalBest">0</span></p>
-      <p>本局最高合成：<span id="finalLevel">-</span></p>
-      <button class="btn" id="restartBtn" type="button">再来一局</button>
-    </div>
-  </div>
-</div>
-
-<canvas id="chain" aria-label="合成顺序：从野生马尿到野生狗奶"></canvas>
-
-<!-- Matter.js 0.20.0（MIT），本地引入，负责奶盒的刚体碰撞和翻倒 -->
-<script src="lib/matter.min.js"></script>
-<script>
 'use strict';
 
-// ===== 十一级奶盒 =====
-// s：面积开方（决定体积），相邻两级线性尺寸约差 12%~24%，保证每一级都能一眼看出大小
-// aspect：贴图宽高比（img/N.png 的实际裁切比例），宽 = s·√aspect，高 = s/√aspect
-const LEVELS = [
-  { name: '野生马尿',         color: '#f2c230', s: 42,  aspect: .468 },
-  { name: '野生狗尿',         color: '#5fa83c', s: 51,  aspect: .436 },
-  { name: '野生鼠奶',         color: '#4a4f58', s: 62,  aspect: .433 },
-  { name: '野生驴奶',         color: '#2e7fc9', s: 75,  aspect: .436 },
-  { name: '老母鸡奶',         color: '#8a5a2b', s: 90,  aspect: .451 },
-  { name: '野生见手青奶',     color: '#2f6a3d', s: 104, aspect: .440 },
-  { name: '野老猫猴奶',       color: '#2b2b33', s: 120, aspect: .427 },
-  { name: '野生爱因斯坦奶',   color: '#5b3a91', s: 136, aspect: .423 },
-  { name: '幻纹虎奶',         color: '#d9531e', s: 154, aspect: .431 },
-  { name: '野生龙奶',         color: '#e07a1f', s: 171, aspect: .435 },
-  { name: '野生奶·终极进化版', color: '#1f4fa8', s: 211, aspect: .736 },
-];
-LEVELS.forEach((L) => {
-  L.w = L.s * Math.sqrt(L.aspect);
-  L.h = L.s / Math.sqrt(L.aspect);
-  L.round = Math.max(3, L.w * .1);
-});
-const LAST = LEVELS.length - 1;
-const SPAWN_WEIGHTS = [30, 28, 22, 13, 7];             // 只投放前 5 级，越小越常见
-const MERGE_SCORE = LEVELS.map((_, i) => i * (i + 1)); // 合成出第 i 级得分
-const FINAL_BONUS = 1000;                              // 两盒终极狗奶相撞：一起炸掉
-
-// ===== 世界参数（逻辑坐标） =====
-// 警戒线要高过最大的可投放奶盒（第 5 级），手上那盒才能完整显示
-const W = 400, H = 720;
-const DEAD_Y = 150;
-const STEP = 1000 / 60;
+// 原版游戏与预测器使用同一组尺寸和物理参数。
+const { LEVELS, LAST, SPAWN_WEIGHTS, MERGE_SCORE, FINAL_BONUS, W, H, DEAD_Y, STEP, spawnY } = GamePhysics;
 const PI2 = Math.PI * 2;
 const TEXT_FONT = '"PingFang SC","Microsoft YaHei",sans-serif';
-
-const { Engine, Bodies, Body, Composite, Events } = Matter;
+const { Body } = Matter;
 const $ = (id) => document.getElementById(id);
 const cvs = $('game'), ctx = cvs.getContext('2d');
 const nextCvs = $('next'), nctx = nextCvs.getContext('2d');
 const chainCvs = $('chain'), cctx = chainCvs.getContext('2d');
 const board = $('board'), top_ = $('top');
 
-const engine = Engine.create({ positionIterations: 10, velocityIterations: 8 });
-engine.gravity.y = 1.6;
-const world = engine.world;
-
+let sim;
 let viewScale = 1, dpr = 1;
 let particles = [], popups = [], mergeQueue = [];
-let score = 0, best = +localStorage.getItem('wildDogMilkBest') || 0;
+let score = 0, best = +localStorage.getItem('wildDogMilkHintBest') || 0;
 let curLv = 0, nextLv = 0, aimX = W / 2, dropCd = 0;
 let dangerT = 0, maxLv = 0, shake = 0, over = false, acc = 0, lastT = 0, time = 0;
-let soundOn = localStorage.getItem('wildDogMilkSound') !== '0';
-
-// 墙体放在可视区外，足够厚防止穿透
-const WALL = 200;
-const walls = [
-  Bodies.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, { isStatic: true, friction: .6 }),
-  Bodies.rectangle(-WALL / 2, H / 2 - 400, WALL, H + 800, { isStatic: true, friction: .1 }),
-  Bodies.rectangle(W + WALL / 2, H / 2 - 400, WALL, H + 800, { isStatic: true, friction: .1 }),
-];
+let soundOn = localStorage.getItem('wildDogMilkHintSound') !== '0';
 
 // ===== 贴图 =====
 LEVELS.forEach((L) => {
@@ -234,26 +97,14 @@ function randLv() {
   return 0;
 }
 
-function cartons() { return Composite.allBodies(world).filter((b) => b.lv !== undefined); }
-
-function spawnY(lv) { return DEAD_Y - 6 - LEVELS[lv].h / 2; }
-
-function makeCarton(lv, x, y, angle = 0, k = 1) {
-  const L = LEVELS[lv];
-  const b = Bodies.rectangle(x, y, L.w * k, L.h * k, {
-    angle, chamfer: { radius: L.round * k },
-    friction: .25, frictionStatic: .5, frictionAir: .004, restitution: .12, density: .0012,
-  });
-  b.lv = lv; b.k = k; b.born = time; b.gone = false;
-  Composite.add(world, b);
-  return b;
-}
+function cartons() { return sim.cartons(); }
 
 function reset() {
-  Composite.clear(world, false);
-  Composite.add(world, walls);
+  if (sim) sim.destroy();
+  sim = new GamePhysics.World(mergeEffects);
+  if (window.Hints) Hints.invalidate();
   particles = []; popups = []; mergeQueue = [];
-  score = 0; maxLv = 0; dangerT = 0; dropCd = 0; shake = 0; over = false;
+  time = 0; score = 0; maxLv = 0; dangerT = 0; dropCd = 0; shake = 0; over = false;
   curLv = randLv(); nextLv = randLv();
   aimX = W / 2;
   $('over').hidden = true;
@@ -267,8 +118,8 @@ function clampAim(lv) {
 
 function drop() {
   if (over || dropCd > 0) return;
-  const b = makeCarton(curLv, clampAim(curLv), spawnY(curLv));
-  Body.setVelocity(b, { x: 0, y: 2 });
+  sim.drop(curLv, clampAim(curLv));
+  if (window.Hints) Hints.invalidate();
   tone(320, .08, 'triangle', .12);
   curLv = nextLv; nextLv = randLv();
   dropCd = .5;
@@ -278,7 +129,7 @@ function drop() {
 function addScore(n, x, y) {
   score += n;
   popups.push({ x, y, text: '+' + n, life: 1 });
-  if (score > best) { best = score; localStorage.setItem('wildDogMilkBest', best); }
+  if (score > best) { best = score; localStorage.setItem('wildDogMilkHintBest', best); }
   updateHud();
 }
 
@@ -293,35 +144,19 @@ function burst(x, y, color, n, speed) {
   }
 }
 
-// 同级相碰：先记进队列，物理步结束后统一处理（避免在碰撞回调里改世界）
-function onCollide(e) {
-  if (over) return;
-  for (const { bodyA: a, bodyB: b } of e.pairs) {
-    if (a.lv === undefined || a.lv !== b.lv || a.gone || b.gone) continue;
-    a.gone = b.gone = true;
-    mergeQueue.push([a, b]);
-  }
-}
-Events.on(engine, 'collisionStart', onCollide);
-Events.on(engine, 'collisionActive', onCollide);
-
-function merge(a, b) {
-  Composite.remove(world, [a, b]);
-  const x = (a.position.x + b.position.x) / 2, y = (a.position.y + b.position.y) / 2;
-  if (a.lv === LAST) {
+// 合成动画与音效沿用原版；分数、消除和生长由共享内核执行。
+function mergeEffects({ x, y, lv, gain, special }) {
+  if (special) {
     burst(x, y, '#ffd34d', 70, 520);
     shake = 14;
-    addScore(FINAL_BONUS, x, y);
+    addScore(gain, x, y);
     popups.push({ x: W / 2, y: H * .38, text: '🐕 狗奶大爆炸', life: 1.6, big: true });
     tone(200, .5, 'sawtooth', .18); tone(500, .4, 'sine', .2, .1);
     return;
   }
-  const lv = a.lv + 1, L = LEVELS[lv];
-  // 新盒子从 0.5 倍长到原尺寸，避免一出生就把周围的盒子炸飞
-  const nb = makeCarton(lv, x, y, (a.angle + b.angle) / 2, .5);
-  Body.setVelocity(nb, { x: (a.velocity.x + b.velocity.x) / 2, y: Math.min(0, (a.velocity.y + b.velocity.y) / 2) - 1 });
+  const L = LEVELS[lv];
   burst(x, y, L.color, 8 + lv * 2, 160 + lv * 25);
-  addScore(MERGE_SCORE[lv], x, y - L.h / 2);
+  addScore(gain, x, y - L.h / 2);
   if (lv > maxLv) {
     maxLv = lv; drawChain();
     if (lv >= 5) popups.push({ x: W / 2, y: H * .38, text: L.name, life: 1.6, big: true });
@@ -335,16 +170,10 @@ function update(dt) {
   if (dropCd > 0) dropCd -= dt;
 
   if (!over) {
-    Engine.update(engine, STEP);
-    const q = mergeQueue; mergeQueue = [];
-    q.forEach(([a, b]) => merge(a, b));
-    for (const b of cartons()) {
-      if (b.k < 1) {
-        const k = Math.min(1, b.k + dt / .18);
-        Body.scale(b, k / b.k, k / b.k);
-        b.k = k;
-      }
-    }
+    sim.step();
+    time = sim.time;
+    dangerT = sim.dangerT;
+    if (sim.over) gameOver();
   }
 
   for (const p of particles) {
@@ -355,20 +184,18 @@ function update(dt) {
   popups = popups.filter((p) => p.life > 0);
   shake = Math.max(0, shake - 40 * dt);
 
-  if (over) return;
-  // 越线判定：已落定的奶盒顶在警戒线上方持续 2 秒
-  const danger = cartons().some((b) => time - b.born > 1.2 && b.bounds.min.y < DEAD_Y && b.speed < 1.5);
-  dangerT = danger ? dangerT + dt : Math.max(0, dangerT - dt * 2);
-  if (dangerT > 2) gameOver();
+
 }
 
 function gameOver() {
   over = true;
+  if (window.Hints) Hints.invalidate();
   tone(300, .6, 'sawtooth', .15); tone(180, .7, 'sawtooth', .12, .2);
   $('finalScore').textContent = score;
   $('finalBest').textContent = best;
   $('finalLevel').textContent = `Lv.${maxLv + 1} ${LEVELS[maxLv].name}`;
-  setTimeout(() => { $('over').hidden = false; $('restartBtn').focus(); }, 500);
+  const endedWorld = sim;
+  setTimeout(() => { if (over && sim === endedWorld) { $('over').hidden = false; $('restartBtn').focus(); } }, 500);
 }
 
 // ===== 绘制 =====
@@ -392,6 +219,8 @@ function render() {
   ctx.strokeStyle = dangerT > 0 ? `rgba(230,40,30,${.5 + .5 * Math.sin(time * 18)})` : 'rgba(200,120,60,.35)';
   ctx.beginPath(); ctx.moveTo(0, DEAD_Y); ctx.lineTo(W, DEAD_Y); ctx.stroke();
   ctx.restore();
+
+  if (window.Hints) Hints.draw(ctx);
 
   // 瞄准线 + 手上的奶盒
   if (!over) {
@@ -470,11 +299,17 @@ function layout() {
   const headH = top_.offsetHeight + 8;
   // 棋盘高 = 宽·H/W，合成表高 ≈ 宽·chainRatio，一起塞进剩余高度
   const chainRatio = LEVELS[LAST].h * chainScale(1000) / 1000;
-  const availH = innerHeight - headH - 40;
+  const dockH = innerWidth >= 1040 ? 0 : (window.Hints && Hints.enabled ? 84 : 30);
+  const availH = innerHeight - headH - 40 - dockH;
   const cssW = Math.floor(Math.max(240, Math.min(innerWidth - 16, availH / (H / W + chainRatio), 480)));
   const cssH = Math.round(cssW * H / W);
   board.style.width = cssW + 'px'; board.style.height = cssH + 'px';
   top_.style.width = cssW + 'px';
+  const dock = $('hintDock');
+  if (dock) {
+    dock.style.width = (innerWidth >= 1040 ? 240 : cssW) + 'px';
+    dock.style.left = innerWidth >= 1040 ? `calc(50% + ${cssW / 2 + 18}px)` : '';
+  }
   cvs.width = cssW * dpr; cvs.height = cssH * dpr;
   viewScale = cssW / W;
   drawNext(); drawChain();
@@ -493,11 +328,13 @@ cvs.addEventListener('pointermove', (e) => { aimX = toLogicalX(e); });
 cvs.addEventListener('pointerup', (e) => { aimX = toLogicalX(e); drop(); });
 
 window.addEventListener('keydown', (e) => {
+  if (['SELECT', 'INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
   if (e.target.tagName === 'BUTTON' && (e.key === ' ' || e.key === 'Enter')) return;
   if (e.key === 'ArrowLeft') aimX = Math.max(0, clampAim(curLv) - 12);
   else if (e.key === 'ArrowRight') aimX = Math.min(W, clampAim(curLv) + 12);
   else if (e.key === ' ') { e.preventDefault(); drop(); }
   else if (e.key === 'r' || e.key === 'R') reset();
+  else if (e.key === 'h' || e.key === 'H') Hints.place();
 });
 
 $('resetBtn').addEventListener('click', reset);
@@ -509,7 +346,7 @@ function syncSound() {
 }
 soundBtn.addEventListener('click', () => {
   soundOn = !soundOn;
-  localStorage.setItem('wildDogMilkSound', soundOn ? '1' : '0');
+  localStorage.setItem('wildDogMilkHintSound', soundOn ? '1' : '0');
   syncSound();
 });
 window.addEventListener('resize', layout);
@@ -522,14 +359,20 @@ function loop(t) {
   let n = 0;
   while (acc >= STEP && n++ < 6) { update(STEP / 1000); acc -= STEP; }
   if (n >= 6) acc = 0;
+  if (window.Hints) Hints.tick(t);
   render();
   requestAnimationFrame(loop);
 }
 
+// 向提示层提供只读快照和经过原版冷却校验的投放入口。
+window.Game = {
+  snapshot: () => sim.snapshot(),
+  state: () => ({ level: curLv, nextLevel: nextLv, over, cooldown: dropCd, bodies: cartons() }),
+  place: x => { if (over || dropCd > 0) return false; aimX = x; drop(); return true; },
+  layout,
+};
 syncSound();
 layout();
 reset();
+Hints.init();
 requestAnimationFrame(loop);
-</script>
-</body>
-</html>
