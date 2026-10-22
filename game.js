@@ -299,7 +299,7 @@ function layout() {
   const headH = top_.offsetHeight + 8;
   // 棋盘高 = 宽·H/W，合成表高 ≈ 宽·chainRatio，一起塞进剩余高度
   const chainRatio = LEVELS[LAST].h * chainScale(1000) / 1000;
-  const dockH = innerWidth >= 1040 ? 0 : (window.Hints && Hints.enabled ? 84 : 30);
+  const dockH = innerWidth >= 1040 ? 0 : (window.Hints && Hints.enabled ? 98 : 30);
   const availH = innerHeight - headH - 40 - dockH;
   const cssW = Math.floor(Math.max(240, Math.min(innerWidth - 16, availH / (H / W + chainRatio), 480)));
   const cssH = Math.round(cssW * H / W);

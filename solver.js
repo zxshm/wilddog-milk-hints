@@ -4,22 +4,36 @@
   const { World, LEVELS, W, H, DEAD_Y, clampX } = P;
   const now = () => performance.now();
   const pause = () => new Promise(resolve => setTimeout(resolve, 0));
+  const GAIN_WEIGHT = 32, MERGE_WEIGHT = 8;
+  const MODES = {
+    fast: { first: 9, second: 7, extra: 5, refine: 0, budget: 1100 },
+    balanced: { first: 17, second: 11, extra: 9, refine: 2, budget: 3500 },
+    deep: { first: 25, second: 17, extra: 15, refine: 4, budget: 8500 },
+  };
 
-  function candidates(snapshot, lv, count = 17) {
+  function candidates(snapshot, lv, count = 17, extra = 9) {
     const xs = [], add = x => {
-      x = Math.round(clampX(lv, x) * 10) / 10;
+      x = clampX(lv, Math.round(clampX(lv, x) * 10) / 10);
       if (!xs.some(v => Math.abs(v - x) < 3)) xs.push(x);
     };
-    // 先覆盖整个容器，再补同级奶盒上方和左右邻接位置。
+    // 横向全覆盖，再补同级接触点和倾斜支撑边缘，让偏心碰撞也进入搜索。
     const half = LEVELS[lv].w / 2 + 1;
     for (let i = 0; i < count; i++) add(half + (W - 2 * half) * i / (count - 1));
-    for (const b of snapshot.bodies.filter(b => b.lv === lv).sort((a, b) => a.y - b.y).slice(0, 7)) {
-      add(b.x); add(b.x - LEVELS[lv].w * .75); add(b.x + LEVELS[lv].w * .75);
+    const surface = [...snapshot.bodies].sort((a, b) => a.y - b.y);
+    const matching = surface.filter(b => b.lv === lv).slice(0, 7);
+    const extraXs = matching.map(b => b.x);
+    for (const b of matching) extraXs.push(b.x - LEVELS[lv].w * .7, b.x + LEVELS[lv].w * .7);
+    for (const b of surface.filter(b => Math.abs(Math.sin(b.angle * 2)) > .2).slice(0, 4)) {
+      if (b.vertices) extraXs.push(Math.min(...b.vertices.map(v => v.x)) - half * .35, Math.max(...b.vertices.map(v => v.x)) + half * .35);
+    }
+    for (const x of extraXs) {
+      if (xs.length >= count + extra) break;
+      add(x);
     }
     return xs;
   }
 
-  function evaluate(w, startScore) {
+  function evaluate(w, startScore, startMerges = 0) {
     const bodies = w.cartons();
     let top = H, centerCost = 0, motion = 0, blocked = 0;
     const skyline = Array(20).fill(H);
@@ -38,9 +52,10 @@
     const avg = heights.reduce((a, b) => a + b, 0) / heights.length;
     const spread = heights.reduce((s, h) => s + Math.abs(h - avg), 0) / heights.length;
     const gain = w.score - startScore;
-    // 高堆叠和越线优先受罚；收益、空余高度和较平整的表面用于候选排序。
-    const value = gain * 20 - (H - top) * .78 - avg * .28 - spread * .28
-      - centerCost * .045 - bodies.length * 3 - motion * 3 - blocked * 12
+    // 两步总合成优先，平整度只作为很弱的次要项；不奖励横放角度本身。
+    const value = gain * GAIN_WEIGHT + (w.merges - startMerges) * MERGE_WEIGHT
+      - (H - top) * .45 - avg * .16 - spread * .06
+      - centerCost * .025 - bodies.length * 8 - motion * 3 - blocked * 16
       - w.dangerT * 1600 - (w.over ? 1e7 : 0);
     return { value, gain, top, risk: w.over ? 'fatal' : (w.dangerT > .1 || top < DEAD_Y + 60 ? 'high' : top < DEAD_Y + 160 ? 'medium' : 'low') };
   }
@@ -57,7 +72,7 @@
       quiet = calm ? quiet + 1 : 0;
       if (i >= 150 && quiet >= 20 && !w.dangerT) break;
     }
-    const metrics = evaluate(w, snapshot.score);
+    const metrics = evaluate(w, snapshot.score, snapshot.merges);
     const result = { x, ...metrics, merges: w.merges - snapshot.merges, snapshot: w.snapshot() };
     w.destroy();
     return result;
@@ -65,52 +80,76 @@
 
   async function solve(snapshot, lv, nextLv, options = {}) {
     const started = now(), mode = options.mode || 'balanced';
-    const budget = mode === 'deep' ? 4200 : mode === 'fast' ? 700 : 1800;
-    const xs = candidates(snapshot, lv, mode === 'fast' ? 11 : 17);
-    const results = []; let simulated = 0;
+    const config = MODES[mode] || MODES.balanced;
+    const budget = options.budgetMs ?? config.budget;
+    const xs = candidates(snapshot, lv, config.first, config.extra);
+    const results = []; let simulated = 0, pairsExamined = 0;
+    const hasNext = Number.isInteger(nextLv) && nextLv >= 0 && nextLv < LEVELS.length;
     const checkpoint = async () => {
       if (options.cancelled?.()) throw new Error('已取消');
       if (options.yieldMain) await pause();
     };
-    for (const x of xs) {
-      await checkpoint();
-      results.push(simulate(snapshot, lv, x)); simulated++;
-    }
-    results.sort((a, b) => b.value - a.value || Math.abs(a.x - 200) - Math.abs(b.x - 200));
-    if (mode !== 'fast' && now() - started < budget) {
-      const bestXs = results.slice(0, 2).map(r => r.x);
-      for (const x of bestXs.flatMap(x => [clampX(lv, x - 6), clampX(lv, x + 6)])) {
-        if (now() - started >= budget) break;
+    const better = (a, b) => {
+      if (!b) return true;
+      if (a.fatal !== b.fatal) return !a.fatal;
+      if (Math.abs(a.jointValue - b.jointValue) > 1e-7) return a.jointValue > b.jointValue;
+      return Math.abs(a.x - 200) < Math.abs(b.x - 200);
+    };
+    const extend = async (first, positions) => {
+      for (const x of positions) {
+        const key = x.toFixed(2);
+        if (first.tested.has(key)) continue;
+        first.tested.add(key);
         await checkpoint();
-        if (results.some(r => Math.abs(r.x - x) < 2)) continue;
-        results.push(simulate(snapshot, lv, x)); simulated++;
+        const second = simulate(first.snapshot, nextLv, x); simulated++; pairsExamined++;
+        // 第二步的末态直接相对于最初局面计分，不重复奖励第一步，不掺入单步贪心排名。
+        const route = { x: first.x, second, fatal: second.snapshot.over,
+          jointValue: second.value + first.gain * GAIN_WEIGHT + first.merges * MERGE_WEIGHT };
+        if (better(route, first.route)) first.route = route;
       }
-      results.sort((a, b) => b.value - a.value || Math.abs(a.x - 200) - Math.abs(b.x - 200));
+    };
+    const searchFirst = async x => {
+      await checkpoint();
+      const first = simulate(snapshot, lv, x); simulated++;
+      first.tested = new Set();
+      if (hasNext && !first.snapshot.over) await extend(first, candidates(first.snapshot, nextLv, config.second, config.extra));
+      if (!first.route) first.route = { x, second: null, fatal: first.snapshot.over, jointValue: first.value };
+      results.push(first);
+      return first;
+    };
+    // 每个初选落点都必须完成下一盒的候选比较，时间预算只限制后续精细搜索。
+    for (const x of xs) {
+      await searchFirst(x);
+      options.onProgress?.({ completed: results.length, total: xs.length, pairs: pairsExamined });
     }
-    let best = results[0], usedNext = false;
-    // 仅使用游戏已公开的下一盒。一次完整比较所有入围分支，避免超时偏袒先计算的候选。
-    if (mode !== 'fast' && Number.isInteger(nextLv) && now() - started < budget * .7 && !best.snapshot.over) {
-      const beam = results.filter(r => !r.snapshot.over).slice(0, 3);
-      const nextResults = beam.map(r => ({ first: r, best: -Infinity }));
-      const grids = beam.map(r => candidates(r.snapshot, nextLv, 9));
-      const rounds = Math.max(...grids.map(g => g.length));
-      for (let i = 0; i < rounds; i++) {
-        if (i >= 9 && now() - started >= budget) break;
-        for (let j = 0; j < beam.length; j++) {
-          if (i >= grids[j].length) continue;
-          await checkpoint();
-          const r = simulate(beam[j].snapshot, nextLv, grids[j][i]); simulated++;
-          const finalValue = r.value + (beam[j].snapshot.score - snapshot.score) * 20;
-          nextResults[j].best = Math.max(nextResults[j].best, finalValue);
-        }
+    const rank = () => results.sort((a, b) => better(a.route, b.route) ? -1 : better(b.route, a.route) ? 1 : 0);
+    rank();
+    if (hasNext && config.refine && now() - started < budget) {
+      const finalists = results.filter(r => r.route.second && !r.route.fatal).slice(0, config.refine);
+      for (const first of finalists) {
+        if (now() - started >= budget) break;
+        const x = first.route.second.x;
+        await extend(first, [-12, -6, 6, 12].map(d => clampX(nextLv, x + d)));
       }
-      nextResults.sort((a, b) => (b.first.value * .45 + b.best * .55) - (a.first.value * .45 + a.best * .55));
-      best = nextResults[0].first; usedNext = true;
+      rank();
+      const centers = results.slice(0, config.refine).map(r => r.x);
+      for (const x of centers.flatMap(x => [-6, 6].map(d => clampX(lv, x + d)))) {
+        if (now() - started >= budget) break;
+        if (!results.some(r => Math.abs(r.x - x) < 2)) await searchFirst(x);
+      }
+      rank();
     }
-    const { snapshot: ignored, ...answer } = best;
-    return { ...answer, examined: results.length, simulations: simulated, elapsed: Math.round(now() - started), usedNext, level: lv };
+    const best = results[0], second = best.route.second;
+    const answer = { x: best.x, gain: best.gain, merges: best.merges, risk: second?.risk ?? best.risk,
+      top: second?.top ?? best.top, value: best.route.jointValue, nextX: second?.x ?? null, nextLevel: nextLv,
+      totalGain: best.gain + (second?.gain || 0), totalMerges: best.merges + (second?.merges || 0),
+      nextGain: second?.gain || 0, examined: results.length, pairsExamined, simulations: simulated,
+      elapsed: Math.round(now() - started), usedNext: !!second, level: lv, version: 'joint-2' };
+    if (options.diagnostics) answer.branches = results.map(r => ({ x: r.x, firstGain: r.gain, nextX: r.route.second?.x,
+      totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
+    return answer;
   }
-  const api = { solve, simulate, candidates, evaluate };
+  const api = { solve, simulate, candidates, evaluate, MODES };
   if (typeof module === 'object') module.exports = api;
   else root.PlacementSolver = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
