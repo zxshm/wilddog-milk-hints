@@ -4,7 +4,7 @@
 
 ## 使用方式
 
-1. 在线版：https://wilddog-milk-hints-20261022.zhangqiongxingzhe.chatgpt.site 。当前按个人私有站点交付，访问时可能需要登录所属账户。
+1. GitHub Pages 公开版：https://zxshm.github.io/wilddog-milk-hints/ ，无需登录账号。源码仓库：https://github.com/zxshm/wilddog-milk-hints 。原个人私有站点仍保留：https://wilddog-milk-hints-20261022.zhangqiongxingzhe.chatgpt.site ，该入口需要登录所属账户。
 2. Windows 本地运行：安装有 Node.js 时，双击 `启动游戏.cmd`，随后访问 `http://127.0.0.1:4173`。命令行也可运行 `node serve.cjs`。
 3. 无需联网的简便方式：直接打开 `dist/index.html`。在文件协议下提示器自动使用分段计算兼容模式，性能可能不如本地服务器方式。
 
@@ -52,7 +52,20 @@
 - 原版基线：`b170dd7`。
 - 原版备份标签：`original-before-hints-b170dd7`。
 - 开发分支：`codex/live-placement-hints`。
+- GitHub 发布前备份标签：`before-github-pages-20261022`。
+- GitHub 的 `main` 分支保留源码，`gh-pages` 分支只发布 `dist` 中的静态游戏文件。`origin` 仍指向原作者仓库，`github` 指向本提示版仓库。
 - 原版历史保留在本项目的 `.git` 中，修改版单独提交。运行测试需要此 Git 历史；压缩包主要用于运行游戏。
+
+## 更新 GitHub Pages
+
+将修改提交到本地 Git 后，在项目目录中运行：
+
+```powershell
+git push github HEAD:main
+git subtree push --prefix dist github gh-pages
+```
+
+站点发布源为 `gh-pages` 分支的根目录。推送后需要等待 GitHub Pages 构建成功，再确认线上页面已更新。
 
 ## 文件
 
