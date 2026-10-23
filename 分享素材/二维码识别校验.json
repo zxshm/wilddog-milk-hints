@@ -1,0 +1,46 @@
+{
+  "url": "https://zxshm.github.io/wilddog-milk-hints/",
+  "checks": [
+    {
+      "width": 2400,
+      "format": "PNG",
+      "decoded": [
+        "https://zxshm.github.io/wilddog-milk-hints/"
+      ],
+      "passed": true
+    },
+    {
+      "width": 1200,
+      "format": "PNG",
+      "decoded": [
+        "https://zxshm.github.io/wilddog-milk-hints/"
+      ],
+      "passed": true
+    },
+    {
+      "width": 600,
+      "format": "PNG",
+      "decoded": [
+        "https://zxshm.github.io/wilddog-milk-hints/"
+      ],
+      "passed": true
+    },
+    {
+      "width": 600,
+      "format": "JPEG",
+      "quality": 70,
+      "decoded": [
+        "https://zxshm.github.io/wilddog-milk-hints/"
+      ],
+      "passed": true
+    },
+    {
+      "width": 360,
+      "format": "PNG",
+      "decoded": [
+        "https://zxshm.github.io/wilddog-milk-hints/"
+      ],
+      "passed": true
+    }
+  ]
+}
