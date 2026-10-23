@@ -3,10 +3,13 @@
   // 只用于评价模拟后的布局，不参与碰撞、合成、出盒或失败判定。
   const position = b => b.position || { x: b.x, y: b.y };
   function bounds(b) {
-    if (b.bounds) return b.bounds;
-    if (b.dynamics?.bounds) return b.dynamics.bounds;
-    return { min: { x: Math.min(...b.vertices.map(v => v.x)), y: Math.min(...b.vertices.map(v => v.y)) },
-      max: { x: Math.max(...b.vertices.map(v => v.x)), y: Math.max(...b.vertices.map(v => v.y)) } };
+    // 引擎包围框含速度外扩，接近通道应取真实轮廓，不能把预测扫过的空白当成盒子表面。
+    const box = { min: { x: Infinity, y: Infinity }, max: { x: -Infinity, y: -Infinity } };
+    for (const v of b.vertices) {
+      box.min.x = Math.min(box.min.x, v.x); box.min.y = Math.min(box.min.y, v.y);
+      box.max.x = Math.max(box.max.x, v.x); box.max.y = Math.max(box.max.y, v.y);
+    }
+    return box;
   }
   function nearest(a, b) {
     let squared = Infinity, start, end;
@@ -73,6 +76,7 @@
       for (let k = 0; k < 9; k++) {
         const x = box.min.x + (box.max.x - box.min.x) * (k + .5) / 9;
         const surface = verticalSpan(body, x).top;
+        if (!Number.isFinite(surface)) continue;
         let cover = -1, coverBottom = -Infinity;
         for (let j = 0; j < bodies.length; j++) {
           if (i === j || positions[j].y >= positions[i].y || x < boxes[j].min.x || x > boxes[j].max.x) continue;

@@ -37,3 +37,9 @@ test('旋转真实几何的评分有限且不修改原物理对象', () => {
     assert.equal(JSON.stringify(w.snapshot()), before);
   } finally { w.destroy(); }
 });
+test('速度外扩的碰撞包围框不改变真实接近通道的评价', () => {
+  const bodies = [rectangle(9, 200, 650, 200, 100), rectangle(0, 200, 570, 100, 60)];
+  const expected = analyze(bodies);
+  bodies[0].bounds = { min: { x: 0, y: 540 }, max: { x: 400, y: 720 } };
+  assert.deepEqual(analyze(bodies), expected);
+});
