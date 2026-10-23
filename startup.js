@@ -9,7 +9,8 @@
   const assetStatus = document.getElementById('textureStatus');
   const assetRetry = document.getElementById('textureRetry');
   const scripts = [...document.querySelectorAll('script[type="application/x-game-script"]')];
-  const loaded = new Set(), images = [];
+  const loaded = new Set(), downloads = new Map(), images = [];
+  let executionError = null;
   let running = false, complete = false, imageCount = 0, imageRun = null, imageFailed = false;
   let imageQueue = [];
   window.GameAssets = { images, prioritize(levels) {
@@ -17,12 +18,6 @@
     imageQueue = first.concat(imageQueue.filter(index => !first.includes(index)));
   } };
   document.getElementById('board').append(assetNotice);
-  // 提前并行下载，随后仍按依赖顺序执行，避免串行网络请求拖慢首屏。
-  for (const template of scripts) {
-    const preload = document.createElement('link');
-    preload.rel = 'preload'; preload.as = 'script'; preload.href = template.getAttribute('src');
-    document.head.append(preload);
-  }
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   async function settleAll(tasks) {
     const results = await Promise.allSettled(tasks);
@@ -46,17 +41,42 @@
     }
     throw error;
   }
-  function loadScript(template) {
-    if (loaded.has(template)) return Promise.resolve();
-    return retry(attempt => new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = resourceUrl(template.getAttribute('src'), attempt);
-      if (template.dataset.worker) script.dataset.worker = template.dataset.worker;
-      script.onload = () => { loaded.add(template); resolve(); };
-      script.onerror = () => { script.remove(); reject(new Error('脚本加载失败')); };
-      // 不在超时后重新执行脚本，避免慢请求晚到时重复初始化游戏。
-      document.body.append(script);
+  function download(template) {
+    if (downloads.has(template)) return downloads.get(template);
+    // 只下载文本，超时中止旧请求；成功后再执行一次，避免慢脚本晚到导致重复开局。
+    const task = retry(attempt => new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', resourceUrl(template.getAttribute('src'), attempt), true);
+      xhr.timeout = 10000;
+      xhr.onload = () => {
+        if ((xhr.status === 200 || (location.protocol === 'file:' && xhr.status === 0)) && xhr.responseText.trim()) resolve(xhr.responseText);
+        else reject(new Error('脚本下载失败：' + template.getAttribute('src')));
+      };
+      xhr.onerror = xhr.ontimeout = xhr.onabort = () => reject(new Error('脚本连接中断或超时：' + template.getAttribute('src')));
+      xhr.send();
     }));
+    downloads.set(template, task);
+    // 为并行下载立即挂上失败处理，避免后面的依赖先失败而触发未处理拒绝。
+    task.catch(() => { downloads.delete(template); });
+    return task;
+  }
+  async function loadScript(template) {
+    if (loaded.has(template)) return;
+    const code = await download(template);
+    const script = document.createElement('script');
+    if (template.dataset.worker) script.dataset.worker = template.dataset.worker;
+    let failure;
+    const onError = event => { failure = event.error || new Error(event.message || '脚本执行失败'); };
+    window.addEventListener('error', onError);
+    try {
+      script.textContent = code + '\n//# sourceURL=' + resourceUrl(template.getAttribute('src'), 0);
+      document.body.append(script);
+      if (failure) throw failure;
+      loaded.add(template);
+    } catch (error) {
+      // 已执行了一部分的脚本不能安全重放；保留明确错误，允许用户重新打开。
+      executionError = error; throw error;
+    } finally { window.removeEventListener('error', onError); script.remove(); }
   }
   function loadImage(index) {
     if (images[index]) return Promise.resolve();
@@ -106,56 +126,40 @@
       .finally(() => { imageRun = null; showAssets(); });
     return imageRun;
   }
-  function loadStyle(link) {
-    // 部分内核即使下载失败也留下空样式表，不能只判断 sheet 是否存在。
-    const valid = node => {
-      try { return !!node.sheet?.cssRules.length; }
-      // 直接打开本地文件时，浏览器可能禁止读取已加载样式表的规则。
-      catch (_) { return location.protocol === 'file:' && !!node.sheet; }
-    };
-    if (valid(link)) return Promise.resolve();
-    return retry(attempt => new Promise((resolve, reject) => {
-      if (valid(link)) { resolve(); return; }
-      const replacement = document.createElement('link');
-      replacement.rel = 'stylesheet'; replacement.href = resourceUrl(link.href, attempt + 1);
-      let finished = false;
-      const finish = error => {
-        if (finished) return;
-        finished = true; clearTimeout(timer);
-        replacement.onload = replacement.onerror = null;
-        if (error) { replacement.remove(); reject(error); }
-        else { link.remove(); resolve(); }
-      };
-      const timer = setTimeout(() => finish(new Error('样式加载超时')), 12000);
-      replacement.onload = () => finish(valid(replacement) ? null : new Error('样式内容为空'));
-      replacement.onerror = () => finish(new Error('样式加载失败'));
-      link.after(replacement);
-    }));
-  }
   async function start() {
     if (running || complete) return;
+    if (executionError) { location.reload(); return; }
     running = true; retryButton.hidden = true;
     status.textContent = '正在打开游戏与放置提示…';
-    startImages();
     try {
-      const preparations = await Promise.allSettled([
-        settleAll([...document.querySelectorAll('link[rel="stylesheet"]')].map(loadStyle)),
-        (async () => { for (const script of scripts.filter(s => !/\bgame\.js(?:\?|$)/.test(s.getAttribute('src')))) await loadScript(script); })(),
-      ]);
-      const failure = preparations.find(item => item.status === 'rejected');
-      if (failure) throw failure.reason;
-      status.textContent = '准备好了，正在打开游戏…';
-      await loadScript(scripts.find(s => /\bgame\.js(?:\?|$)/.test(s.getAttribute('src'))));
+      // 排行榜的恢复不阻塞物理引擎、操作或辅助计算。
+      const core = scripts.filter(s => !/\bleaderboard\.js(?:\?|$)/.test(s.getAttribute('src')));
+      for (const script of core) download(script);
+      for (const script of core) await loadScript(script);
+      if (!window.Game?.initialized) throw new Error('游戏初始化没有完成');
       complete = true; panel.remove(); showAssets();
       window.dispatchEvent(new Event('wilddog:ready'));
-    } catch (_) {
-      status.textContent = '还有部分内容没加载好，连接恢复后会继续。';
+      startImages();
+      const ranking = scripts.find(s => /\bleaderboard\.js(?:\?|$)/.test(s.getAttribute('src')));
+      if (ranking) {
+        const openRanking = () => loadScript(ranking).catch(() => {
+          for (const id of ['rankButton', 'rankEndButton']) {
+            const button = document.getElementById(id);
+            button.textContent = '重试排行榜'; button.onclick = openRanking;
+          }
+        });
+        openRanking();
+      }
+    } catch (error) {
+      window.GameStartup.error = String(error.message || error);
+      status.textContent = executionError ? '游戏初始化失败，请重新打开。' : '游戏脚本连接中断，可继续加载，无需刷新。';
+      retryButton.textContent = executionError ? '重新打开' : '继续加载';
       retryButton.hidden = false;
     } finally { running = false; }
   }
   retryButton.onclick = start;
   assetRetry.onclick = startImages;
-  window.addEventListener('online', () => { startImages(); start(); });
+  window.addEventListener('online', () => { if (complete) startImages(); else start(); });
   window.GameStartup = { start };
   start();
 })();
