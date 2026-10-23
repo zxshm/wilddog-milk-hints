@@ -1,0 +1,29 @@
+{
+  "evidence": "tests/evidence/layout-v7-geometry-2026.json",
+  "duplicatePrevented": true,
+  "publicReadback": {
+    "mode": "auto",
+    "entries": [
+      {
+        "nickname": "历史验收·通关停测",
+        "score": 5166,
+        "moves": 300,
+        "maxLevel": 11,
+        "duration": 204,
+        "createdAt": 1792726331301
+      }
+    ],
+    "updatedAt": 1792726332549,
+    "verification": "客户端上报，未逐局回放验证"
+  },
+  "checkedAt": "2026-10-23T03:32:07.5419580Z",
+  "submitted": {
+    "score": 5166,
+    "mode": "auto",
+    "maxLevel": 11,
+    "duration": 204.0,
+    "nickname": "历史验收·通关停测",
+    "runId": "c697bdd0-21dd-45c9-911d-5ecbdba18532",
+    "moves": 300
+  }
+}
