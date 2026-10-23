@@ -1,6 +1,7 @@
 (function (root) {
   'use strict';
   const P = typeof module === 'object' ? require('./physics.js') : root.GamePhysics;
+  function createSolver(policy = {}) {
   const { World, LEVELS, W, H, DEAD_Y, clampX } = P;
   const now = () => performance.now();
   const pause = () => new Promise(resolve => setTimeout(resolve, 0));
@@ -87,7 +88,7 @@
     const value = gain * GAIN_WEIGHT + (w.merges - startMerges) * MERGE_WEIGHT
       - (H - top) * .45 - avg * .16 - spread * .06
       - centerCost * .025 - bodies.length * 8 - motion * 3 - blocked * 16
-      - w.dangerT * 1600 - (w.over ? 1e7 : 0) - futureMergeCost(bodies)
+      - w.dangerT * 1600 - (w.over ? 1e7 : 0) - futureMergeCost(bodies) - (policy.layoutCost?.(bodies) || 0)
       // 验收目标是造出终极奶；最高级的推进有独立价值，通关路线优先于普通得分。
       + w.maxLv * w.maxLv * 100 + (w.maxLv === P.LAST ? 1e8 : 0);
     return { value, gain, top, risk: w.over ? 'fatal' : (w.dangerT > .1 || top < DEAD_Y + 60 ? 'high' : top < DEAD_Y + 160 ? 'medium' : 'low') };
@@ -130,6 +131,11 @@
       const route = { x: first.x, second, fatal: second.over,
         jointValue: second.value + first.gain * GAIN_WEIGHT + first.merges * MERGE_WEIGHT };
       if (better(route, first.route)) first.route = route;
+      if (first.routeWidth > 1) {
+        first.routes.push(route);
+        first.routes.sort((a, b) => better(a, b) ? -1 : better(b, a) ? 1 : 0);
+        first.routes.length = Math.min(first.routes.length, first.routeWidth);
+      }
     }
     return count;
   }
@@ -139,6 +145,8 @@
     await checkpoint();
     const first = simulate(snapshot, lv, x);
     first.tested = new Set();
+    first.routeWidth = policy.secondWidth || 1;
+    if (first.routeWidth > 1) first.routes = [];
     const hasNext = Number.isInteger(nextLv) && nextLv >= 0 && nextLv < LEVELS.length;
     if (hasNext && !first.over) await extendBranch(first, nextLv,
       candidates(first.snapshot, nextLv, config.second, config.extra), checkpoint);
@@ -185,11 +193,13 @@
       levels = [];
       for (const task of tasks) levels.push(await solveFutureLevel(levelContext, task, checkpoint));
     }
-    const forecasts = prepared.map(first => ({ x: first.x, value: first.value ?? 0, simulations: first.simulations }));
+    const forecasts = prepared.map(first => ({ x: first.x, value: first.value ?? 0, simulations: first.simulations, levels: [] }));
     // 按原来的候选和等级顺序相加，保持浮点运算与平分排序一致。
     for (const level of levels) {
       forecasts[level.index].value += level.value * weights[level.lv] / total;
       forecasts[level.index].simulations += level.simulations;
+      forecasts[level.index].levels.push({ lv: level.lv, probability: weights[level.lv] / total,
+        value: prepared[level.index].jointValue * .35 + level.value * .65 });
     }
     prepared.forEach((first, index) => {
       if (first.after) forecasts[index].value = first.jointValue * .35 + forecasts[index].value * .65;
@@ -210,6 +220,9 @@
 
   async function solve(snapshot, lv, nextLv, options = {}) {
     const started = now(), mode = options.mode || 'balanced';
+    const stages = {};
+    let stageStarted = started;
+    const mark = name => { const t = now(); stages[name] = +(t - stageStarted).toFixed(2); stageStarted = t; };
     const config = MODES[mode] || MODES.balanced;
     // 搜索数量只取决于精度档，避免手机或后台负载改变同一局面的推荐。
     const refinement = options.budgetMs === 0 ? 0 : config.refine;
@@ -241,6 +254,7 @@
     };
     // 完整搜索所有初选落点的下一盒，然后才排名和细化。
     await searchMany(xs);
+    mark('initial');
     const rank = () => results.sort((a, b) => better(a.route, b.route) ? -1 : better(b.route, a.route) ? 1 : 0);
     rank();
     if (hasNext && refinement) {
@@ -256,6 +270,7 @@
         await extend(first, [-12, -6, 6, 12].map(d => clampX(nextLv, x + d)));
       }
       rank();
+      mark('secondRefine');
       const centers = results.slice(0, refinement).map(r => r.x);
       const refinements = [];
       for (const x of centers.flatMap(x => [-6, 6].map(d => clampX(lv, x + d)))) {
@@ -263,30 +278,48 @@
       }
       await searchMany(refinements);
       rank();
+      mark('firstRefine');
     }
     let best = results[0], futureSimulations = 0;
     if (hasNext && !best.won && !best.route.second?.won) {
       const finalists = results.filter(r => !r.route.fatal && r.route.second).slice(0, mode === 'fast' ? 2 : mode === 'deep' ? 6 : 4);
       const context = { snapshot, level: lv, nextLevel: nextLv, mode, stage: 'future' };
-      const forecasts = await forecastBranches(context, finalists, options, checkpoint);
+      const choices = finalists.flatMap(first => (first.routes?.length ? first.routes : [first.route])
+        .map(route => ({ ...first, route })));
+      const forecasts = await forecastBranches(context, choices, options, checkpoint);
       for (const r of forecasts) futureSimulations += r.simulations;
-      for (const first of finalists) first.futureValue = forecasts.find(r => r.x === first.x).value;
+      for (const first of finalists) {
+        const alternatives = choices.map((choice, i) => ({ choice, forecast: forecasts[i] })).filter(r => r.choice.x === first.x);
+        const bestSecond = alternatives.reduce((a, b) => b.forecast.value > a.forecast.value ? b : a);
+        first.futureValue = bestSecond.forecast.value;
+        if (alternatives.length > 1 && alternatives.every(r => r.forecast.levels.length)) {
+          // 本步投放后第三盒会显示出来，第二步可以针对已揭晓的等级重新选择。
+          first.futureValue = bestSecond.forecast.levels.reduce((sum, level) => sum + level.probability
+            * Math.max(...alternatives.map(r => r.forecast.levels.find(v => v.lv === level.lv).value)), 0);
+        }
+        first.route = bestSecond.choice.route;
+      }
       finalists.sort((a, b) => b.futureValue - a.futureValue || (better(a.route, b.route) ? -1 : 1));
       if (finalists.length) best = finalists[0];
       simulated += futureSimulations;
     }
+    mark('future');
     const second = best.route.second;
     const answer = { x: best.x, gain: best.gain, merges: best.merges, risk: second?.risk ?? best.risk,
       top: second?.top ?? best.top, value: best.route.jointValue, nextX: second?.x ?? null, nextLevel: nextLv,
       totalGain: best.gain + (second?.gain || 0), totalMerges: best.merges + (second?.merges || 0),
       nextGain: second?.gain || 0, examined: results.length, pairsExamined, simulations: simulated,
-      elapsed: Math.round(now() - started), usedNext: !!second, level: lv, version: 'joint-5-future', futureSimulations };
+      elapsed: Math.round(now() - started), usedNext: !!second, level: lv,
+      version: policy.version || 'joint-5-future', futureSimulations, stages };
     if (options.diagnostics) answer.branches = results.map(r => ({ x: r.x, firstGain: r.gain, nextX: r.route.second?.x,
       totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
     return answer;
   }
-  const api = { solve, solveBranch, solveFutureBranch, prepareFutureBranch, solveFutureLevel, forecastBranches,
+  return { solve, solveBranch, solveFutureBranch, prepareFutureBranch, solveFutureLevel, forecastBranches,
     refineBranch, simulate, candidates, evaluate, MODES };
+  }
+  const api = createSolver();
+  api.createSolver = createSolver;
   if (typeof module === 'object') module.exports = api;
   else root.PlacementSolver = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
