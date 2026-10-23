@@ -12,6 +12,13 @@ const hash = value => createHash('sha256').update(value).digest('hex');
   const source = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const html = execFileSync('git', ['show', 'HEAD:dist/index.html'], { cwd: root, encoding: 'utf8' });
   const release = html.match(/game\.js\?v=([^"&]+)/)[1];
+  // 原分享链接也必须直接返回新版，不能只验证带版本参数的检查地址。
+  const entryResponse = await fetch(base, { signal: AbortSignal.timeout(30000) });
+  assert.equal(entryResponse.status, 200, '原分享链接');
+  const entryHash = hash(Buffer.from(await entryResponse.arrayBuffer()));
+  const indexHash = hash(execFileSync('git', ['show', 'HEAD:dist/index.html'], { cwd: root }));
+  assert.equal(entryHash, indexHash, '原分享链接尚未更新到验收版本');
+  const entry = { url: base, status: entryResponse.status, sha256: entryHash, matched: true };
   const files = [...new Set(['index.html', ...[...html.matchAll(/<script src="([^"?]+)/g)].map(m => m[1]),
     ...[...html.matchAll(/<link rel="stylesheet" href="([^"?]+)/g)].map(m => m[1]),
     'hint-worker-persistent.js', 'hint-branch-worker.js', 'branch-pool.js'])];
@@ -25,8 +32,8 @@ const hash = value => createHash('sha256').update(value).digest('hex');
     assert.equal(remoteHash, gitHash, `${file} 尚未更新到验收版本`);
     results.push({ file, sha256: gitHash, matched: true });
   }
-  const report = { checkedAt: new Date().toISOString(), base, release, source, allMatched: true, files: results };
+  const report = { checkedAt: new Date().toISOString(), base, release, source, entry, allMatched: true, files: results };
   fs.mkdirSync(path.join(root, 'output/deployment'), { recursive: true });
   fs.writeFileSync(path.join(root, `output/deployment/${release}-online.json`), JSON.stringify(report, null, 2));
-  console.log(JSON.stringify({ source, release, matchedFiles: results.length, allMatched: true }));
+  console.log(JSON.stringify({ source, release, matchedFiles: results.length, originalLinkMatched: entry.matched, allMatched: true }));
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-23T05:43:36.236Z",
+  "base": "https://zxshm.github.io/wilddog-milk-hints/",
+  "release": "startup-v11-20261023",
+  "source": "34ceb1b8780552c3580a976c395a8c37d35a7102",
+  "entry": {
+    "url": "https://zxshm.github.io/wilddog-milk-hints/",
+    "status": 200,
+    "sha256": "9da28eb994503fa2bdb3165232552702f3b9817938ac2ca0f2e35468188b7ba0",
+    "matched": true
+  },
+  "allMatched": true,
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "9da28eb994503fa2bdb3165232552702f3b9817938ac2ca0f2e35468188b7ba0",
+      "matched": true
+    },
+    {
+      "file": "lib/matter.min.js",
+      "sha256": "72d30be0f579eb02ce1e0b6f9d359a4f392e6837e5a26ba8be5dbee7f88e24ae",
+      "matched": true
+    },
+    {
+      "file": "physics.js",
+      "sha256": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6",
+      "matched": true
+    },
+    {
+      "file": "solver-future.js",
+      "sha256": "1360c9b8359103a24a7c910896db89bf632eb707b4c03d763e5a2fcf4fdb1e0a",
+      "matched": true
+    },
+    {
+      "file": "layout.js",
+      "sha256": "00e830755f180c9a65dbcc31b9b4a0b3817fe853aaa0b61ebcba5587770e1bac",
+      "matched": true
+    },
+    {
+      "file": "solver-plan.js",
+      "sha256": "8ba598f570c15a5bd17757f7947e95df464e278dbf620a3c8246c8e0eb70e14a",
+      "matched": true
+    },
+    {
+      "file": "hints-persistent.js",
+      "sha256": "2750017f96d88a19d35fca668b3222750ecf23c2c5533a771656eaa7f4755887",
+      "matched": true
+    },
+    {
+      "file": "leaderboard.js",
+      "sha256": "628c3d26f457fb98a8eac9be5caeef934a212a79a861cf95260eefd8a9cc03e7",
+      "matched": true
+    },
+    {
+      "file": "game.js",
+      "sha256": "ff63ed6cc96fe23a800e4b4f4fc76eff19897a4e31f33c54ffa96e48f185e690",
+      "matched": true
+    },
+    {
+      "file": "startup.js",
+      "sha256": "2552d803b3325cef75a5b9fb36932f063555d1273d6218bd83b2caad93585920",
+      "matched": true
+    },
+    {
+      "file": "hints.css",
+      "sha256": "4d7f3717684c62ecfb768cb0bf17402775a2170217f1ac438489afaaf6a19cfa",
+      "matched": true
+    },
+    {
+      "file": "leaderboard.css",
+      "sha256": "375e253d1ac9c4a5fd41814a727fdbd801a96c20ee68bc6bee9d21743ff146e3",
+      "matched": true
+    },
+    {
+      "file": "mobile.css",
+      "sha256": "c7a067272eee5ba837930ad4aa751e280e9a0b52af520dcb6b7a1fa87065c9b0",
+      "matched": true
+    },
+    {
+      "file": "hint-worker-persistent.js",
+      "sha256": "7ff03fc115ca707f7e0ff0858b9e2a6a45567a8e3a1d3f343d0de4e4d9fbea1a",
+      "matched": true
+    },
+    {
+      "file": "hint-branch-worker.js",
+      "sha256": "59d0ff85ec7d25e7d4019581428847b59f0dcd7e42b7ef8892bcfc6e14cc2b7c",
+      "matched": true
+    },
+    {
+      "file": "branch-pool.js",
+      "sha256": "8fa5b1d9b6dbd9c7a15ab373934ee6d478c6c11037e807c202d96a0776b4485e",
+      "matched": true
+    }
+  ]
+}
