@@ -3,7 +3,7 @@
 #rankDialog::backdrop { background: #0007; }
 .rank-heading, .rank-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 #rankDialog h2 { font-size: 22px; color: #c2410c; }
-#rankDialog button, #rankDialog select, #rankDialog input { border: 1px solid #d69a55; border-radius: 8px; padding: 7px 10px; background: #fff; color: inherit; font: inherit; touch-action: manipulation; }
+#rankDialog button, #rankDialog input { border: 1px solid #d69a55; border-radius: 8px; padding: 7px 10px; background: #fff; color: inherit; font: inherit; touch-action: manipulation; }
 #rankDialog button { cursor: pointer; }
 #rankDialog button:disabled { opacity: .6; cursor: default; }
 #rankDialog input { width: 100%; user-select: text; }
