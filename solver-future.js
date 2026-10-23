@@ -146,26 +146,59 @@
     return first;
   }
 
-  async function solveFutureBranch(context, first, checkpoint = () => {}) {
+  function prepareFutureBranch(context, first) {
     const second = first.route.second;
     if (!second || first.route.fatal || first.won || second.won) return { x: first.x, value: first.route.jointValue, simulations: 0 };
     const after = simulate(first.snapshot, context.nextLevel, second.x).snapshot;
+    return { x: first.x, after, jointValue: first.route.jointValue,
+      gain: first.gain + second.gain, merges: first.merges + second.merges, simulations: 1 };
+  }
+
+  async function solveFutureLevel(context, task, checkpoint = () => {}) {
+    const first = context.prepared[task.index];
+    let best, simulations = 0;
+    for (const x of candidates(first.after, task.lv, context.mode === 'deep' ? 9 : 5, 4)) {
+      await checkpoint();
+      const trial = simulate(first.after, task.lv, x, false); simulations++;
+      const route = { x, fatal: trial.over, jointValue: trial.value
+        + first.gain * GAIN_WEIGHT + first.merges * MERGE_WEIGHT };
+      if (better(route, best)) best = route;
+    }
+    return { index: task.index, lv: task.lv, value: best.jointValue, simulations };
+  }
+
+  async function forecastBranches(context, finalists, options = {}, checkpoint = () => {}) {
     const cap = Math.min(P.SPAWN_WEIGHTS.length, Math.max(3, context.snapshot.maxLv));
     const weights = P.SPAWN_WEIGHTS.slice(0, cap), total = weights.reduce((a, b) => a + b, 0);
-    let value = 0, simulations = 1;
-    // 第三盒尚未生成，只使用原版概率分布；不读取或固定未来随机结果。
-    for (let lv = 0; lv < cap; lv++) {
-      let best;
-      for (const x of candidates(after, lv, context.mode === 'deep' ? 9 : 5, 4)) {
-        await checkpoint();
-        const trial = simulate(after, lv, x, false); simulations++;
-        const route = { x, fatal: trial.over, jointValue: trial.value
-          + (first.gain + second.gain) * GAIN_WEIGHT + (first.merges + second.merges) * MERGE_WEIGHT };
-        if (better(route, best)) best = route;
-      }
-      value += best.jointValue * weights[lv] / total;
+    const prepared = options.mapBranches
+      ? await options.mapBranches(finalists, { ...context, stage: 'future-prepare' }, () => {})
+      : finalists.map(first => prepareFutureBranch(context, first));
+    const tasks = [];
+    prepared.forEach((first, index) => {
+      if (first.after) for (let lv = 0; lv < cap; lv++) tasks.push({ index, lv });
+    });
+    // 每个可能的第三盒独立调度，避免最慢的一个候选让其他线程空等。
+    const levelContext = { mode: context.mode, prepared, stage: 'future-level' };
+    let levels;
+    if (options.mapBranches) levels = await options.mapBranches(tasks, levelContext, () => {});
+    else {
+      levels = [];
+      for (const task of tasks) levels.push(await solveFutureLevel(levelContext, task, checkpoint));
     }
-    return { x: first.x, value: first.route.jointValue * .35 + value * .65, simulations };
+    const forecasts = prepared.map(first => ({ x: first.x, value: first.value ?? 0, simulations: first.simulations }));
+    // 按原来的候选和等级顺序相加，保持浮点运算与平分排序一致。
+    for (const level of levels) {
+      forecasts[level.index].value += level.value * weights[level.lv] / total;
+      forecasts[level.index].simulations += level.simulations;
+    }
+    prepared.forEach((first, index) => {
+      if (first.after) forecasts[index].value = first.jointValue * .35 + forecasts[index].value * .65;
+    });
+    return forecasts;
+  }
+
+  async function solveFutureBranch(context, first, checkpoint = () => {}) {
+    return (await forecastBranches(context, [first], {}, checkpoint))[0];
   }
 
   async function refineBranch(context, first, checkpoint = () => {}) {
@@ -235,13 +268,8 @@
     if (hasNext && !best.won && !best.route.second?.won) {
       const finalists = results.filter(r => !r.route.fatal && r.route.second).slice(0, mode === 'fast' ? 2 : mode === 'deep' ? 6 : 4);
       const context = { snapshot, level: lv, nextLevel: nextLv, mode, stage: 'future' };
-      const account = r => { futureSimulations += r.simulations; };
-      let forecasts;
-      if (options.mapBranches) forecasts = await options.mapBranches(finalists, context, account);
-      else {
-        forecasts = [];
-        for (const first of finalists) { const r = await solveFutureBranch(context, first, checkpoint); account(r); forecasts.push(r); }
-      }
+      const forecasts = await forecastBranches(context, finalists, options, checkpoint);
+      for (const r of forecasts) futureSimulations += r.simulations;
       for (const first of finalists) first.futureValue = forecasts.find(r => r.x === first.x).value;
       finalists.sort((a, b) => b.futureValue - a.futureValue || (better(a.route, b.route) ? -1 : 1));
       if (finalists.length) best = finalists[0];
@@ -257,7 +285,8 @@
       totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
     return answer;
   }
-  const api = { solve, solveBranch, solveFutureBranch, refineBranch, simulate, candidates, evaluate, MODES };
+  const api = { solve, solveBranch, solveFutureBranch, prepareFutureBranch, solveFutureLevel, forecastBranches,
+    refineBranch, simulate, candidates, evaluate, MODES };
   if (typeof module === 'object') module.exports = api;
   else root.PlacementSolver = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
