@@ -6,6 +6,16 @@ const { World } = require('../dist/physics.js');
 const Solver = require('../dist/solver-plan.js');
 const createPool = require('./node-pool.cjs');
 
+test('历史已通关状态继续展开第三盒概率搜索', async () => {
+  const w = new World(), pool = createPool(4, path.resolve(__dirname, '../dist/solver-plan.js'));
+  try {
+    w.maxLv = 10;
+    const result = await Solver.solve(w.snapshot(), 0, 1, { mode: 'fast', mapBranches: pool.mapBranches });
+    assert.ok(result.futureSimulations > 0);
+    assert.equal(result.usedNext, true);
+  } finally { pool.destroy(); w.destroy(); }
+});
+
 test('布局搜索的串行与四线程结果一致，第三盒揭晓后能选择第二步备选', async () => {
   const w = new World(), pool = createPool(4, path.resolve(__dirname, '../dist/solver-plan.js'));
   try {

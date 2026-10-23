@@ -156,7 +156,8 @@
 
   function prepareFutureBranch(context, first) {
     const second = first.route.second;
-    if (!second || first.route.fatal || first.won || second.won) return { x: first.x, value: first.route.jointValue, simulations: 0 };
+    const reachedGoal = context.snapshot.maxLv < P.LAST || !policy.continueAfterWin;
+    if (!second || first.route.fatal || (reachedGoal && (first.won || second.won))) return { x: first.x, value: first.route.jointValue, simulations: 0 };
     const after = simulate(first.snapshot, context.nextLevel, second.x).snapshot;
     return { x: first.x, after, jointValue: first.route.jointValue,
       gain: first.gain + second.gain, merges: first.merges + second.merges, simulations: 1 };
@@ -281,7 +282,9 @@
       mark('firstRefine');
     }
     let best = results[0], futureSimulations = 0, futureBranches;
-    if (hasNext && !best.won && !best.route.second?.won) {
+    // 通关前保持已验收策略；通关后历史最高级不再使概率前瞻提前退出。
+    const continuing = policy.continueAfterWin && snapshot.maxLv === P.LAST;
+    if (hasNext && (continuing || (!best.won && !best.route.second?.won))) {
       const finalists = results.filter(r => !r.route.fatal && r.route.second).slice(0, mode === 'fast' ? 2 : mode === 'deep' ? 6 : 4);
       const context = { snapshot, level: lv, nextLevel: nextLv, mode, stage: 'future' };
       const choices = finalists.flatMap(first => (first.routes?.length ? first.routes : [first.route])

@@ -18,6 +18,7 @@ function level(w, random) {
 (async () => {
   const seed = Number(process.argv[2] || 20261022), limit = Number(process.argv[3] || 1000);
   const mode = process.argv[4] || 'balanced', label = process.argv[5] || 'acceptance';
+  const endless = process.argv.includes('--endless');
   // 在开局时固定源码身份，避免测试运行期间提交文档影响归属。
   const source = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
   const files = [...new Set([solverFile, 'physics.js', 'lib/matter.min.js', 'branch-pool.js',
@@ -25,11 +26,12 @@ function level(w, random) {
   const hashes = Object.fromEntries(files.map(name => [name,
     createHash('sha256').update(fs.readFileSync(path.join(__dirname, '../dist', name))).digest('hex')]));
   const startedAt = new Date().toISOString();
-  const w = new World(), random = rng(seed), start = performance.now();
+  let finalMerges = 0, firstWin = null;
+  const w = new World(event => { if (event.special) finalMerges++; }), random = rng(seed), start = performance.now();
   const workers = Number(process.argv[7] || 0), pool = workers ? require('./node-pool.cjs')(workers, solverPath) : null;
   let current = level(w, random), next = level(w, random), moves = 0, maxMs = 0;
   const route = [];
-  for (; moves < limit && !w.over && w.maxLv < 10; moves++) {
+  for (; moves < limit && !w.over && (endless || w.maxLv < 10); moves++) {
     const r = await solve(w.snapshot(), current, next, { mode, mapBranches: pool?.mapBranches });
     maxMs = Math.max(maxMs, r.elapsed);
     if (!Number.isFinite(r.x) || r.x < 0 || r.x > 400) throw new Error('非法推荐位置');
@@ -38,9 +40,10 @@ function level(w, random) {
     w.drop(current, r.x); current = next; next = level(w, random);
     for (let i = 0; i < 240 && !w.over; i++) w.step();
     Object.assign(item, { score: w.score, maxLevel: w.maxLv + 1, boxes: w.cartons().length }); route.push(item);
+    if (!firstWin && w.maxLv === 10) firstWin = { move: moves + 1, score: w.score };
     if ((moves + 1) % 25 === 0) console.log(JSON.stringify({ seed, moves: moves + 1, score: w.score, level: w.maxLv + 1, boxes: w.cartons().length, seconds: Math.round((performance.now() - start) / 1000) }));
   }
-  const result = { seed, mode, moves, won: w.maxLv === 10, score: w.score, maxLevel: w.maxLv + 1, over: w.over, maxSolveMs: maxMs, totalSeconds: +((performance.now() - start) / 1000).toFixed(1), source, hashes, startedAt, simulatedStepsPerMove: 240, solverFile, workers };
+  const result = { seed, mode, endless, moves, won: w.maxLv === 10, score: w.score, maxLevel: w.maxLv + 1, over: w.over, stopReason: w.over ? 'overflow' : moves >= limit ? 'move-limit' : 'first-win', firstWin, finalMerges, maxSolveMs: maxMs, totalSeconds: +((performance.now() - start) / 1000).toFixed(1), source, hashes, startedAt, simulatedStepsPerMove: 240, solverFile, workers };
   fs.mkdirSync(path.join(__dirname, '../output/acceptance'), { recursive: true });
   fs.writeFileSync(path.join(__dirname, `../output/acceptance/${label}-${seed}.json`), JSON.stringify({ result, route, final: w.snapshot() }, null, 2));
   console.log(JSON.stringify(result));
