@@ -1,0 +1,45 @@
+{
+  "evidence": "tests/evidence/endless-v8-2026.json",
+  "duplicatePrevented": true,
+  "submitted": {
+    "mode": "auto",
+    "nickname": "自动实测·固定序列2026",
+    "maxLevel": 11,
+    "score": 8454,
+    "runId": "32a02d28-1690-4fd5-9764-371c0ac88543",
+    "duration": 426.0,
+    "moves": 511
+  },
+  "checkedAt": "2026-10-23T04:02:34.6865225Z",
+  "publicReadback": {
+    "mode": "auto",
+    "entries": [
+      {
+        "nickname": "自动实测·固定序列2026",
+        "score": 8454,
+        "moves": 511,
+        "maxLevel": 11,
+        "duration": 426,
+        "createdAt": 1792728158393
+      },
+      {
+        "nickname": "自动实测·网页第1局",
+        "score": 6904,
+        "moves": 411,
+        "maxLevel": 11,
+        "duration": 790,
+        "createdAt": 1792727684382
+      },
+      {
+        "nickname": "历史验收·通关停测",
+        "score": 5166,
+        "moves": 300,
+        "maxLevel": 11,
+        "duration": 204,
+        "createdAt": 1792726331301
+      }
+    ],
+    "updatedAt": 1792728159732,
+    "verification": "客户端上报，未逐局回放验证"
+  }
+}

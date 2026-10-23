@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-23T03:57:50.623Z",
+  "base": "https://zxshm.github.io/wilddog-milk-hints/",
+  "release": "endless-v8-20261023",
+  "source": "c5ad6d4c287ebdaf946878d552c027d01cf9e792",
+  "allMatched": true,
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "83015d65cabb5a53af90745caea97ff2ae4245464a28932d5fe6a3b6b9150fed",
+      "matched": true
+    },
+    {
+      "file": "lib/matter.min.js",
+      "sha256": "72d30be0f579eb02ce1e0b6f9d359a4f392e6837e5a26ba8be5dbee7f88e24ae",
+      "matched": true
+    },
+    {
+      "file": "physics.js",
+      "sha256": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6",
+      "matched": true
+    },
+    {
+      "file": "solver-future.js",
+      "sha256": "1360c9b8359103a24a7c910896db89bf632eb707b4c03d763e5a2fcf4fdb1e0a",
+      "matched": true
+    },
+    {
+      "file": "layout.js",
+      "sha256": "00e830755f180c9a65dbcc31b9b4a0b3817fe853aaa0b61ebcba5587770e1bac",
+      "matched": true
+    },
+    {
+      "file": "solver-plan.js",
+      "sha256": "8ba598f570c15a5bd17757f7947e95df464e278dbf620a3c8246c8e0eb70e14a",
+      "matched": true
+    },
+    {
+      "file": "hints-persistent.js",
+      "sha256": "2d11e44778f6b00b0d199de159854ffe720553e2320f048f74c14809684bfb92",
+      "matched": true
+    },
+    {
+      "file": "leaderboard.js",
+      "sha256": "65b6d9be111dc6fe309863c67491ed43b957df13327356cfb286b8467e4d5318",
+      "matched": true
+    },
+    {
+      "file": "game.js",
+      "sha256": "6956428afa4791d9c8ecd27a24872aeb295cbe289120ce4d2324537cdad2d753",
+      "matched": true
+    },
+    {
+      "file": "hints.css",
+      "sha256": "4d7f3717684c62ecfb768cb0bf17402775a2170217f1ac438489afaaf6a19cfa",
+      "matched": true
+    },
+    {
+      "file": "leaderboard.css",
+      "sha256": "b6dc9780bd665895b0e39d6f84db1f44edb24ea6f86e67152c22fabdfadd0368",
+      "matched": true
+    },
+    {
+      "file": "hint-worker-persistent.js",
+      "sha256": "3e2f439aeea85ac56a91c306e52aa0b7f1718773955ff03965c94ca755c69bb0",
+      "matched": true
+    },
+    {
+      "file": "hint-branch-worker.js",
+      "sha256": "59d0ff85ec7d25e7d4019581428847b59f0dcd7e42b7ef8892bcfc6e14cc2b7c",
+      "matched": true
+    },
+    {
+      "file": "branch-pool.js",
+      "sha256": "130cd7c0ff5b25fe180b413a1ed6c7dd2f27c31297e340b36fc9a3ce3f433e61",
+      "matched": true
+    }
+  ]
+}
