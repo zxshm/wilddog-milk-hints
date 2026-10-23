@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-23T06:00:19.7993591Z",
+  "note": "正式玩家榜只读检查",
+  "data": {
+    "mode": "player",
+    "entries": [
+      {
+        "nickname": "123",
+        "score": 1112,
+        "moves": 106,
+        "maxLevel": 8,
+        "duration": 251,
+        "createdAt": 1792728854694
+      }
+    ],
+    "updatedAt": 1792735224935,
+    "verification": "客户端上报，未逐局回放验证"
+  }
+}
