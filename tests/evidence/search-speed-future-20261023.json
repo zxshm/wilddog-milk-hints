@@ -1,0 +1,7035 @@
+{
+  "date": "2026-10-23T00:06:58.320Z",
+  "node": "v24.19.0",
+  "solverFile": "solver-future.js",
+  "workers": 4,
+  "hashes": {
+    "solver-future.js": "ff550927bd641f8927cf27799a4a689a9e1bc5b747047ae04a30e4166b4f549a",
+    "physics.js": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6",
+    "branch-pool.js": "768aed763e5cbf3385927e7bce57180492b473caa2ed23ca562efd218983d878"
+  },
+  "warmupRounds": 1,
+  "measuredSamplesPerCase": 4,
+  "allResultsIdentical": true,
+  "summary": [
+    {
+      "move": 35,
+      "beforeMs": 347,
+      "afterMs": 291,
+      "savedPercent": 16.1,
+      "speedup": 1.19
+    },
+    {
+      "move": 120,
+      "beforeMs": 702,
+      "afterMs": 640,
+      "savedPercent": 8.9,
+      "speedup": 1.1
+    },
+    {
+      "move": 250,
+      "beforeMs": 1159,
+      "afterMs": 1022,
+      "savedPercent": 11.8,
+      "speedup": 1.13
+    }
+  ],
+  "rows": [
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 35,
+      "boxes": 5,
+      "ms": 535.1781000000001,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 120,
+      "boxes": 9,
+      "ms": 713.7194999999999,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1192.4188,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 35,
+      "boxes": 5,
+      "ms": 362.67480000000023,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 120,
+      "boxes": 9,
+      "ms": 686.9303,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1114.0931,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 35,
+      "boxes": 5,
+      "ms": 330.6855000000005,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 120,
+      "boxes": 9,
+      "ms": 712.4376000000002,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1205.259900000001,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 35,
+      "boxes": 5,
+      "ms": 462.56819999999993,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 120,
+      "boxes": 9,
+      "ms": 663.058,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1028.6419999999998,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 35,
+      "boxes": 5,
+      "ms": 294.4580000000001,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 120,
+      "boxes": 9,
+      "ms": 694.5542,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1083.7164999999995,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 35,
+      "boxes": 5,
+      "ms": 283.3242,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 120,
+      "boxes": 9,
+      "ms": 612.8996999999999,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1029.4892,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 35,
+      "boxes": 5,
+      "ms": 457.18219999999997,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 120,
+      "boxes": 9,
+      "ms": 640.1400000000001,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 0,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1020.2330999999999,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 35,
+      "boxes": 5,
+      "ms": 288.29479999999967,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 120,
+      "boxes": 9,
+      "ms": 600.4578999999999,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 1,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1012.3482999999997,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 35,
+      "boxes": 5,
+      "ms": 299.02620000000024,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 120,
+      "boxes": 9,
+      "ms": 666.4667,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "after",
+      "round": 2,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1014.0248000000001,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 35,
+      "boxes": 5,
+      "ms": 543.3969,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 120,
+      "boxes": 9,
+      "ms": 816.5436000000002,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 0,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1099.0849000000003,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 35,
+      "boxes": 5,
+      "ms": 343.6572000000001,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 120,
+      "boxes": 9,
+      "ms": 708.9412000000002,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 1,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1162.5397000000003,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 35,
+      "boxes": 5,
+      "ms": 351.33590000000004,
+      "result": {
+        "x": 200,
+        "nextX": 274.7,
+        "value": 5395.372257679014,
+        "totalGain": 18,
+        "totalMerges": 2,
+        "risk": "low",
+        "examined": 21,
+        "pairsExamined": 334,
+        "simulations": 520,
+        "futureSimulations": 165,
+        "branches": [
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 274.7,
+            "totalGain": 18,
+            "jointValue": 5395.372257679014,
+            "nextPositions": 19
+          },
+          {
+            "x": 317.6,
+            "firstGain": 0,
+            "nextX": 382.16227450039645,
+            "totalGain": 18,
+            "jointValue": 5389.729316690589,
+            "nextPositions": 14
+          },
+          {
+            "x": 311.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5385.153209448227,
+            "nextPositions": 19
+          },
+          {
+            "x": 305.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.899174819406,
+            "nextPositions": 16
+          },
+          {
+            "x": 206,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.7943367669695,
+            "nextPositions": 16
+          },
+          {
+            "x": 356.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.793050515576,
+            "nextPositions": 18
+          },
+          {
+            "x": 289.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.780425806634,
+            "nextPositions": 18
+          },
+          {
+            "x": 244.7,
+            "firstGain": 0,
+            "nextX": 309.3,
+            "totalGain": 18,
+            "jointValue": 5384.730852247924,
+            "nextPositions": 18
+          },
+          {
+            "x": 267,
+            "firstGain": 0,
+            "nextX": 282.3,
+            "totalGain": 18,
+            "jointValue": 5384.71105142418,
+            "nextPositions": 15
+          },
+          {
+            "x": 222.3,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5384.580908676037,
+            "nextPositions": 15
+          },
+          {
+            "x": 334,
+            "firstGain": 0,
+            "nextX": 317.3,
+            "totalGain": 18,
+            "jointValue": 5383.836454893631,
+            "nextPositions": 16
+          },
+          {
+            "x": 378.6,
+            "firstGain": 0,
+            "nextX": 345.7,
+            "totalGain": 18,
+            "jointValue": 5383.746950609545,
+            "nextPositions": 15
+          },
+          {
+            "x": 43.7,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.820487937362,
+            "nextPositions": 15
+          },
+          {
+            "x": 88.4,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.818549904024,
+            "nextPositions": 15
+          },
+          {
+            "x": 66,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.814898817464,
+            "nextPositions": 15
+          },
+          {
+            "x": 21.4,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.811684880902,
+            "nextPositions": 15
+          },
+          {
+            "x": 155.3,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806775393945,
+            "nextPositions": 15
+          },
+          {
+            "x": 110.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806323980041,
+            "nextPositions": 15
+          },
+          {
+            "x": 177.7,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.806242879865,
+            "nextPositions": 15
+          },
+          {
+            "x": 133,
+            "firstGain": 0,
+            "nextX": 280.7,
+            "totalGain": 6,
+            "jointValue": 4950.805233551269,
+            "nextPositions": 15
+          },
+          {
+            "x": 194,
+            "firstGain": 0,
+            "nextX": 272.9,
+            "totalGain": 6,
+            "jointValue": 4950.79375030108,
+            "nextPositions": 15
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 120,
+      "boxes": 9,
+      "ms": 695.0572999999995,
+      "result": {
+        "x": 291.1,
+        "nextX": 284.9,
+        "value": 6892.653582925263,
+        "totalGain": 32,
+        "totalMerges": 3,
+        "risk": "low",
+        "examined": 23,
+        "pairsExamined": 433,
+        "simulations": 622,
+        "futureSimulations": 166,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 20,
+            "nextX": 272.9,
+            "totalGain": 32,
+            "jointValue": 6893.532823850301,
+            "nextPositions": 24
+          },
+          {
+            "x": 291.1,
+            "firstGain": 26,
+            "nextX": 284.9,
+            "totalGain": 32,
+            "jointValue": 6892.653582925263,
+            "nextPositions": 22
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 26,
+            "nextX": 176.5,
+            "totalGain": 32,
+            "jointValue": 6887.143324958769,
+            "nextPositions": 18
+          },
+          {
+            "x": 200,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 32,
+            "jointValue": 6880.271732361958,
+            "nextPositions": 20
+          },
+          {
+            "x": 63.4,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6873.79865166174,
+            "nextPositions": 18
+          },
+          {
+            "x": 372.9,
+            "firstGain": 26,
+            "nextX": 30.4,
+            "totalGain": 32,
+            "jointValue": 6863.140832467394,
+            "nextPositions": 16
+          },
+          {
+            "x": 154.5,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6863.09224377767,
+            "nextPositions": 18
+          },
+          {
+            "x": 313.9,
+            "firstGain": 26,
+            "nextX": 77.7,
+            "totalGain": 32,
+            "jointValue": 6852.114084784731,
+            "nextPositions": 18
+          },
+          {
+            "x": 359.4,
+            "firstGain": 26,
+            "nextX": 58.9,
+            "totalGain": 32,
+            "jointValue": 6848.097907219273,
+            "nextPositions": 17
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6844.6995923900095,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 26,
+            "nextX": 345.7,
+            "totalGain": 32,
+            "jointValue": 6837.980112680247,
+            "nextPositions": 16
+          },
+          {
+            "x": 45.9,
+            "firstGain": 26,
+            "nextX": 382.16227450039645,
+            "totalGain": 32,
+            "jointValue": 6837.5030296506975,
+            "nextPositions": 16
+          },
+          {
+            "x": 336.6,
+            "firstGain": 26,
+            "nextX": 54.3,
+            "totalGain": 32,
+            "jointValue": 6778.517845302146,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 20,
+            "nextX": 17.83772549960356,
+            "totalGain": 26,
+            "jointValue": 6670.446898077111,
+            "nextPositions": 19
+          },
+          {
+            "x": 108.9,
+            "firstGain": 20,
+            "nextX": 265.7,
+            "totalGain": 26,
+            "jointValue": 6660.978596177224,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.8,
+            "firstGain": 20,
+            "nextX": 29.5,
+            "totalGain": 26,
+            "jointValue": 6560.059384539586,
+            "nextPositions": 20
+          },
+          {
+            "x": 228.8,
+            "firstGain": 20,
+            "nextX": 28.9,
+            "totalGain": 26,
+            "jointValue": 6544.0592175181655,
+            "nextPositions": 20
+          },
+          {
+            "x": 177.2,
+            "firstGain": 20,
+            "nextX": 175.8,
+            "totalGain": 26,
+            "jointValue": 6542.698479741241,
+            "nextPositions": 20
+          },
+          {
+            "x": 297.1,
+            "firstGain": 20,
+            "nextX": 176,
+            "totalGain": 26,
+            "jointValue": 6536.978532160496,
+            "nextPositions": 18
+          },
+          {
+            "x": 131.7,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6532.917652905837,
+            "nextPositions": 20
+          },
+          {
+            "x": 268.3,
+            "firstGain": 20,
+            "nextX": 152,
+            "totalGain": 26,
+            "jointValue": 6527.516636349182,
+            "nextPositions": 20
+          },
+          {
+            "x": 285.1,
+            "firstGain": 20,
+            "nextX": 163.6,
+            "totalGain": 26,
+            "jointValue": 6526.245061932415,
+            "nextPositions": 20
+          },
+          {
+            "x": 245.5,
+            "firstGain": 20,
+            "nextX": 187.9,
+            "totalGain": 26,
+            "jointValue": 6525.8771774115485,
+            "nextPositions": 20
+          }
+        ]
+      }
+    },
+    {
+      "variant": "before",
+      "round": 2,
+      "move": 250,
+      "boxes": 12,
+      "ms": 1154.5621,
+      "result": {
+        "x": 216.4,
+        "nextX": 89.5,
+        "value": 7937.792891116749,
+        "totalGain": 20,
+        "totalMerges": 1,
+        "risk": "medium",
+        "examined": 21,
+        "pairsExamined": 356,
+        "simulations": 561,
+        "futureSimulations": 184,
+        "branches": [
+          {
+            "x": 222.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7938.012366952366,
+            "nextPositions": 20
+          },
+          {
+            "x": 216.4,
+            "firstGain": 0,
+            "nextX": 89.5,
+            "totalGain": 20,
+            "jointValue": 7937.792891116749,
+            "nextPositions": 20
+          },
+          {
+            "x": 210.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.428647271696,
+            "nextPositions": 16
+          },
+          {
+            "x": 291.1,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7937.007776750024,
+            "nextPositions": 17
+          },
+          {
+            "x": 86.1,
+            "firstGain": 0,
+            "nextX": 104,
+            "totalGain": 20,
+            "jointValue": 7936.887878857444,
+            "nextPositions": 18
+          },
+          {
+            "x": 228.8,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.506811146589,
+            "nextPositions": 16
+          },
+          {
+            "x": 108.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7936.492720923787,
+            "nextPositions": 18
+          },
+          {
+            "x": 154.5,
+            "firstGain": 0,
+            "nextX": 200,
+            "totalGain": 20,
+            "jointValue": 7936.313776138049,
+            "nextPositions": 19
+          },
+          {
+            "x": 177.2,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.8775263264615,
+            "nextPositions": 16
+          },
+          {
+            "x": 268.3,
+            "firstGain": 0,
+            "nextX": 269.7,
+            "totalGain": 20,
+            "jointValue": 7935.441171680245,
+            "nextPositions": 15
+          },
+          {
+            "x": 200,
+            "firstGain": 0,
+            "nextX": 180.3,
+            "totalGain": 20,
+            "jointValue": 7935.328041655157,
+            "nextPositions": 16
+          },
+          {
+            "x": 245.5,
+            "firstGain": 0,
+            "nextX": 130.3,
+            "totalGain": 20,
+            "jointValue": 7935.0343114115585,
+            "nextPositions": 16
+          },
+          {
+            "x": 382.16227450039645,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7934.3219635465975,
+            "nextPositions": 16
+          },
+          {
+            "x": 313.9,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7932.494227749603,
+            "nextPositions": 15
+          },
+          {
+            "x": 359.4,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7931.920718945167,
+            "nextPositions": 17
+          },
+          {
+            "x": 336.6,
+            "firstGain": 0,
+            "nextX": 339.4,
+            "totalGain": 20,
+            "jointValue": 7930.354926844747,
+            "nextPositions": 17
+          },
+          {
+            "x": 131.7,
+            "firstGain": 0,
+            "nextX": 260.8,
+            "totalGain": 20,
+            "jointValue": 7920.597046241384,
+            "nextPositions": 17
+          },
+          {
+            "x": 158.9,
+            "firstGain": 0,
+            "nextX": 185.2,
+            "totalGain": 20,
+            "jointValue": 7911.968851176486,
+            "nextPositions": 18
+          },
+          {
+            "x": 17.83772549960356,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7905.43374661953,
+            "nextPositions": 16
+          },
+          {
+            "x": 40.6,
+            "firstGain": 0,
+            "nextX": 95.5,
+            "totalGain": 20,
+            "jointValue": 7903.192440341944,
+            "nextPositions": 16
+          },
+          {
+            "x": 63.4,
+            "firstGain": 0,
+            "nextX": 81,
+            "totalGain": 20,
+            "jointValue": 7902.5447703064165,
+            "nextPositions": 17
+          }
+        ]
+      }
+    }
+  ]
+}

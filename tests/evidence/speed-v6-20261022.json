@@ -1,0 +1,5067 @@
+{
+  "result": {
+    "seed": 20261022,
+    "mode": "balanced",
+    "moves": 271,
+    "won": true,
+    "score": 4698,
+    "maxLevel": 11,
+    "over": false,
+    "maxSolveMs": 2902,
+    "totalSeconds": 295,
+    "source": "e1b5aad2f73418e6b3c3a2b23ec986ad4dbc497d",
+    "hashes": {
+      "solver-future.js": "ff550927bd641f8927cf27799a4a689a9e1bc5b747047ae04a30e4166b4f549a",
+      "physics.js": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6"
+    },
+    "startedAt": "2026-10-23T00:07:20.825Z",
+    "simulatedStepsPerMove": 240,
+    "solverFile": "solver-future.js",
+    "workers": 4
+  },
+  "route": [
+    {
+      "move": 1,
+      "level": 1,
+      "next": 0,
+      "x": 177.2,
+      "nextX": 194,
+      "predictedGain": 0,
+      "solveMs": 253,
+      "score": 0,
+      "maxLevel": 1,
+      "boxes": 1
+    },
+    {
+      "move": 2,
+      "level": 0,
+      "next": 0,
+      "x": 206,
+      "nextX": 200,
+      "predictedGain": 8,
+      "solveMs": 110,
+      "score": 0,
+      "maxLevel": 1,
+      "boxes": 2
+    },
+    {
+      "move": 3,
+      "level": 0,
+      "next": 0,
+      "x": 200,
+      "nextX": 15.4,
+      "predictedGain": 8,
+      "solveMs": 103,
+      "score": 8,
+      "maxLevel": 3,
+      "boxes": 1
+    },
+    {
+      "move": 4,
+      "level": 0,
+      "next": 2,
+      "x": 194,
+      "nextX": 200,
+      "predictedGain": 12,
+      "solveMs": 86,
+      "score": 8,
+      "maxLevel": 3,
+      "boxes": 2
+    },
+    {
+      "move": 5,
+      "level": 2,
+      "next": 2,
+      "x": 200,
+      "nextX": 283.4,
+      "predictedGain": 12,
+      "solveMs": 104,
+      "score": 20,
+      "maxLevel": 4,
+      "boxes": 2
+    },
+    {
+      "move": 6,
+      "level": 2,
+      "next": 0,
+      "x": 104.7,
+      "nextX": 52.3,
+      "predictedGain": 2,
+      "solveMs": 114,
+      "score": 20,
+      "maxLevel": 4,
+      "boxes": 3
+    },
+    {
+      "move": 7,
+      "level": 0,
+      "next": 2,
+      "x": 84.6,
+      "nextX": 206,
+      "predictedGain": 34,
+      "solveMs": 134,
+      "score": 22,
+      "maxLevel": 4,
+      "boxes": 3
+    },
+    {
+      "move": 8,
+      "level": 2,
+      "next": 0,
+      "x": 188.8,
+      "nextX": 304.8,
+      "predictedGain": 32,
+      "solveMs": 121,
+      "score": 54,
+      "maxLevel": 5,
+      "boxes": 2
+    },
+    {
+      "move": 9,
+      "level": 0,
+      "next": 2,
+      "x": 309.4,
+      "nextX": 57.1,
+      "predictedGain": 0,
+      "solveMs": 117,
+      "score": 54,
+      "maxLevel": 5,
+      "boxes": 3
+    },
+    {
+      "move": 10,
+      "level": 2,
+      "next": 0,
+      "x": 177.7,
+      "nextX": 304.8,
+      "predictedGain": 2,
+      "solveMs": 163,
+      "score": 54,
+      "maxLevel": 5,
+      "boxes": 4
+    },
+    {
+      "move": 11,
+      "level": 0,
+      "next": 0,
+      "x": 61.5,
+      "nextX": 40.3,
+      "predictedGain": 20,
+      "solveMs": 162,
+      "score": 54,
+      "maxLevel": 5,
+      "boxes": 5
+    },
+    {
+      "move": 12,
+      "level": 0,
+      "next": 2,
+      "x": 61.5,
+      "nextX": 27.4,
+      "predictedGain": 20,
+      "solveMs": 214,
+      "score": 74,
+      "maxLevel": 5,
+      "boxes": 3
+    },
+    {
+      "move": 13,
+      "level": 2,
+      "next": 2,
+      "x": 127,
+      "nextX": 164.3,
+      "predictedGain": 62,
+      "solveMs": 140,
+      "score": 74,
+      "maxLevel": 5,
+      "boxes": 4
+    },
+    {
+      "move": 14,
+      "level": 2,
+      "next": 3,
+      "x": 125.8,
+      "nextX": 165.2,
+      "predictedGain": 62,
+      "solveMs": 148,
+      "score": 136,
+      "maxLevel": 6,
+      "boxes": 2
+    },
+    {
+      "move": 15,
+      "level": 3,
+      "next": 0,
+      "x": 172.2,
+      "nextX": 347.7,
+      "predictedGain": 2,
+      "solveMs": 128,
+      "score": 136,
+      "maxLevel": 6,
+      "boxes": 3
+    },
+    {
+      "move": 16,
+      "level": 0,
+      "next": 1,
+      "x": 361.6,
+      "nextX": 309.3,
+      "predictedGain": 8,
+      "solveMs": 151,
+      "score": 138,
+      "maxLevel": 6,
+      "boxes": 3
+    },
+    {
+      "move": 17,
+      "level": 1,
+      "next": 0,
+      "x": 313.9,
+      "nextX": 15.4,
+      "predictedGain": 6,
+      "solveMs": 152,
+      "score": 144,
+      "maxLevel": 6,
+      "boxes": 3
+    },
+    {
+      "move": 18,
+      "level": 0,
+      "next": 2,
+      "x": 153.8,
+      "nextX": 295.2,
+      "predictedGain": 12,
+      "solveMs": 185,
+      "score": 144,
+      "maxLevel": 6,
+      "boxes": 4
+    },
+    {
+      "move": 19,
+      "level": 2,
+      "next": 1,
+      "x": 295.3,
+      "nextX": 272.9,
+      "predictedGain": 12,
+      "solveMs": 199,
+      "score": 156,
+      "maxLevel": 6,
+      "boxes": 4
+    },
+    {
+      "move": 20,
+      "level": 1,
+      "next": 0,
+      "x": 154.5,
+      "nextX": 126.1,
+      "predictedGain": 8,
+      "solveMs": 208,
+      "score": 156,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 21,
+      "level": 0,
+      "next": 4,
+      "x": 92.9,
+      "nextX": 166.2,
+      "predictedGain": 8,
+      "solveMs": 258,
+      "score": 158,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 22,
+      "level": 4,
+      "next": 2,
+      "x": 178.9,
+      "nextX": 128.6,
+      "predictedGain": 38,
+      "solveMs": 322,
+      "score": 158,
+      "maxLevel": 6,
+      "boxes": 6
+    },
+    {
+      "move": 23,
+      "level": 2,
+      "next": 1,
+      "x": 27.4,
+      "nextX": 127.1,
+      "predictedGain": 38,
+      "solveMs": 318,
+      "score": 196,
+      "maxLevel": 6,
+      "boxes": 4
+    },
+    {
+      "move": 24,
+      "level": 1,
+      "next": 3,
+      "x": 40.6,
+      "nextX": 310.7,
+      "predictedGain": 92,
+      "solveMs": 253,
+      "score": 196,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 25,
+      "level": 3,
+      "next": 1,
+      "x": 314.9,
+      "nextX": 189.8,
+      "predictedGain": 98,
+      "solveMs": 334,
+      "score": 288,
+      "maxLevel": 7,
+      "boxes": 3
+    },
+    {
+      "move": 26,
+      "level": 1,
+      "next": 1,
+      "x": 34.6,
+      "nextX": 189.8,
+      "predictedGain": 6,
+      "solveMs": 199,
+      "score": 288,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 27,
+      "level": 1,
+      "next": 2,
+      "x": 183.8,
+      "nextX": 128.6,
+      "predictedGain": 18,
+      "solveMs": 219,
+      "score": 294,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 28,
+      "level": 2,
+      "next": 1,
+      "x": 228.3,
+      "nextX": 17.83772549960356,
+      "predictedGain": 18,
+      "solveMs": 273,
+      "score": 306,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 29,
+      "level": 1,
+      "next": 0,
+      "x": 23.83772549960356,
+      "nextX": 200,
+      "predictedGain": 6,
+      "solveMs": 194,
+      "score": 312,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 30,
+      "level": 0,
+      "next": 0,
+      "x": 206,
+      "nextX": 220.7,
+      "predictedGain": 2,
+      "solveMs": 218,
+      "score": 312,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 31,
+      "level": 0,
+      "next": 1,
+      "x": 217.1,
+      "nextX": 223.4,
+      "predictedGain": 8,
+      "solveMs": 248,
+      "score": 314,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 32,
+      "level": 1,
+      "next": 1,
+      "x": 46.6,
+      "nextX": 58.5,
+      "predictedGain": 68,
+      "solveMs": 269,
+      "score": 314,
+      "maxLevel": 7,
+      "boxes": 6
+    },
+    {
+      "move": 33,
+      "level": 1,
+      "next": 0,
+      "x": 46.6,
+      "nextX": 163.1,
+      "predictedGain": 68,
+      "solveMs": 244,
+      "score": 382,
+      "maxLevel": 7,
+      "boxes": 3
+    },
+    {
+      "move": 34,
+      "level": 0,
+      "next": 3,
+      "x": 176.9,
+      "nextX": 177.2,
+      "predictedGain": 0,
+      "solveMs": 207,
+      "score": 382,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 35,
+      "level": 3,
+      "next": 1,
+      "x": 178.2,
+      "nextX": 177.1,
+      "predictedGain": 6,
+      "solveMs": 270,
+      "score": 382,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 36,
+      "level": 1,
+      "next": 0,
+      "x": 222.8,
+      "nextX": 167.2,
+      "predictedGain": 8,
+      "solveMs": 296,
+      "score": 388,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 37,
+      "level": 0,
+      "next": 3,
+      "x": 161.2,
+      "nextX": 165.2,
+      "predictedGain": 22,
+      "solveMs": 305,
+      "score": 390,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 38,
+      "level": 3,
+      "next": 0,
+      "x": 47.5,
+      "nextX": 126.1,
+      "predictedGain": 20,
+      "solveMs": 311,
+      "score": 410,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 39,
+      "level": 0,
+      "next": 0,
+      "x": 159.8,
+      "nextX": 204.4,
+      "predictedGain": 20,
+      "solveMs": 378,
+      "score": 410,
+      "maxLevel": 7,
+      "boxes": 6
+    },
+    {
+      "move": 40,
+      "level": 0,
+      "next": 0,
+      "x": 182.9,
+      "nextX": 200,
+      "predictedGain": 20,
+      "solveMs": 535,
+      "score": 430,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 41,
+      "level": 0,
+      "next": 3,
+      "x": 38.4,
+      "nextX": 60.6,
+      "predictedGain": 148,
+      "solveMs": 339,
+      "score": 430,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 42,
+      "level": 3,
+      "next": 1,
+      "x": 47.5,
+      "nextX": 54.3,
+      "predictedGain": 148,
+      "solveMs": 445,
+      "score": 578,
+      "maxLevel": 8,
+      "boxes": 2
+    },
+    {
+      "move": 43,
+      "level": 1,
+      "next": 1,
+      "x": 245.5,
+      "nextX": 272.9,
+      "predictedGain": 6,
+      "solveMs": 199,
+      "score": 578,
+      "maxLevel": 8,
+      "boxes": 3
+    },
+    {
+      "move": 44,
+      "level": 1,
+      "next": 2,
+      "x": 239.5,
+      "nextX": 271.4,
+      "predictedGain": 18,
+      "solveMs": 216,
+      "score": 584,
+      "maxLevel": 8,
+      "boxes": 3
+    },
+    {
+      "move": 45,
+      "level": 2,
+      "next": 1,
+      "x": 244.7,
+      "nextX": 90.7,
+      "predictedGain": 12,
+      "solveMs": 223,
+      "score": 596,
+      "maxLevel": 8,
+      "boxes": 3
+    },
+    {
+      "move": 46,
+      "level": 1,
+      "next": 2,
+      "x": 86.1,
+      "nextX": 164.3,
+      "predictedGain": 0,
+      "solveMs": 267,
+      "score": 596,
+      "maxLevel": 8,
+      "boxes": 4
+    },
+    {
+      "move": 47,
+      "level": 2,
+      "next": 1,
+      "x": 94.4,
+      "nextX": 127.1,
+      "predictedGain": 18,
+      "solveMs": 344,
+      "score": 596,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 48,
+      "level": 1,
+      "next": 1,
+      "x": 222.8,
+      "nextX": 200,
+      "predictedGain": 18,
+      "solveMs": 481,
+      "score": 596,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 49,
+      "level": 1,
+      "next": 1,
+      "x": 49,
+      "nextX": 200,
+      "predictedGain": 24,
+      "solveMs": 504,
+      "score": 614,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 50,
+      "level": 1,
+      "next": 3,
+      "x": 206,
+      "nextX": 269.7,
+      "predictedGain": 26,
+      "solveMs": 534,
+      "score": 620,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 51,
+      "level": 3,
+      "next": 3,
+      "x": 47.5,
+      "nextX": 308.7,
+      "predictedGain": 40,
+      "solveMs": 625,
+      "score": 640,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 52,
+      "level": 3,
+      "next": 1,
+      "x": 281.1,
+      "nextX": 17.83772549960356,
+      "predictedGain": 20,
+      "solveMs": 479,
+      "score": 660,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 53,
+      "level": 1,
+      "next": 1,
+      "x": 183.2,
+      "nextX": 99.7,
+      "predictedGain": 18,
+      "solveMs": 497,
+      "score": 660,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 54,
+      "level": 1,
+      "next": 2,
+      "x": 131.7,
+      "nextX": 27.4,
+      "predictedGain": 18,
+      "solveMs": 511,
+      "score": 678,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 55,
+      "level": 2,
+      "next": 2,
+      "x": 200,
+      "nextX": 164.3,
+      "predictedGain": 62,
+      "solveMs": 421,
+      "score": 678,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 56,
+      "level": 2,
+      "next": 0,
+      "x": 88.4,
+      "nextX": 22.4,
+      "predictedGain": 64,
+      "solveMs": 460,
+      "score": 678,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 57,
+      "level": 0,
+      "next": 3,
+      "x": 34.4,
+      "nextX": 269.7,
+      "predictedGain": 64,
+      "solveMs": 677,
+      "score": 742,
+      "maxLevel": 8,
+      "boxes": 4
+    },
+    {
+      "move": 58,
+      "level": 3,
+      "next": 0,
+      "x": 265.3,
+      "nextX": 157.1,
+      "predictedGain": 0,
+      "solveMs": 378,
+      "score": 742,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 59,
+      "level": 0,
+      "next": 0,
+      "x": 55.5,
+      "nextX": 33,
+      "predictedGain": 8,
+      "solveMs": 353,
+      "score": 742,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 60,
+      "level": 0,
+      "next": 1,
+      "x": 38.4,
+      "nextX": 17.83772549960356,
+      "predictedGain": 8,
+      "solveMs": 452,
+      "score": 750,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 61,
+      "level": 1,
+      "next": 2,
+      "x": 63.4,
+      "nextX": 21.4,
+      "predictedGain": 12,
+      "solveMs": 403,
+      "score": 750,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 62,
+      "level": 2,
+      "next": 1,
+      "x": 43.7,
+      "nextX": 78.7,
+      "predictedGain": 18,
+      "solveMs": 462,
+      "score": 762,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 63,
+      "level": 1,
+      "next": 0,
+      "x": 80.1,
+      "nextX": 310.8,
+      "predictedGain": 6,
+      "solveMs": 419,
+      "score": 768,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 64,
+      "level": 0,
+      "next": 4,
+      "x": 15.4,
+      "nextX": 267.5,
+      "predictedGain": 0,
+      "solveMs": 480,
+      "score": 768,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 65,
+      "level": 4,
+      "next": 0,
+      "x": 248.2,
+      "nextX": 35.6,
+      "predictedGain": 2,
+      "solveMs": 511,
+      "score": 768,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 66,
+      "level": 0,
+      "next": 0,
+      "x": 240.2,
+      "nextX": 273.9,
+      "predictedGain": 2,
+      "solveMs": 601,
+      "score": 768,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 67,
+      "level": 0,
+      "next": 0,
+      "x": 44.4,
+      "nextX": 273.9,
+      "predictedGain": 4,
+      "solveMs": 656,
+      "score": 770,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 68,
+      "level": 0,
+      "next": 0,
+      "x": 170.9,
+      "nextX": 89.2,
+      "predictedGain": 40,
+      "solveMs": 722,
+      "score": 770,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 69,
+      "level": 0,
+      "next": 2,
+      "x": 133.3,
+      "nextX": 21.4,
+      "predictedGain": 40,
+      "solveMs": 862,
+      "score": 778,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 70,
+      "level": 2,
+      "next": 0,
+      "x": 183.7,
+      "nextX": 318.6,
+      "predictedGain": 34,
+      "solveMs": 889,
+      "score": 810,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 71,
+      "level": 0,
+      "next": 2,
+      "x": 269.2,
+      "nextX": 68.6,
+      "predictedGain": 2,
+      "solveMs": 991,
+      "score": 812,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 72,
+      "level": 2,
+      "next": 0,
+      "x": 267,
+      "nextX": 384.6,
+      "predictedGain": 0,
+      "solveMs": 985,
+      "score": 812,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 73,
+      "level": 0,
+      "next": 1,
+      "x": 61.5,
+      "nextX": 382.16227450039645,
+      "predictedGain": 18,
+      "solveMs": 977,
+      "score": 812,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 74,
+      "level": 1,
+      "next": 2,
+      "x": 331.5,
+      "nextX": 305.7,
+      "predictedGain": 18,
+      "solveMs": 1377,
+      "score": 812,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 75,
+      "level": 2,
+      "next": 2,
+      "x": 328.4,
+      "nextX": 271.4,
+      "predictedGain": 80,
+      "solveMs": 1473,
+      "score": 812,
+      "maxLevel": 8,
+      "boxes": 12
+    },
+    {
+      "move": 76,
+      "level": 2,
+      "next": 0,
+      "x": 273,
+      "nextX": 89.2,
+      "predictedGain": 82,
+      "solveMs": 1493,
+      "score": 892,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 77,
+      "level": 0,
+      "next": 0,
+      "x": 38.4,
+      "nextX": 347.7,
+      "predictedGain": 2,
+      "solveMs": 1061,
+      "score": 894,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 78,
+      "level": 0,
+      "next": 0,
+      "x": 32.4,
+      "nextX": 52.3,
+      "predictedGain": 8,
+      "solveMs": 1068,
+      "score": 894,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 79,
+      "level": 0,
+      "next": 0,
+      "x": 361.6,
+      "nextX": 55,
+      "predictedGain": 8,
+      "solveMs": 1351,
+      "score": 894,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 80,
+      "level": 0,
+      "next": 2,
+      "x": 38.4,
+      "nextX": 61.1,
+      "predictedGain": 20,
+      "solveMs": 1671,
+      "score": 902,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 81,
+      "level": 2,
+      "next": 2,
+      "x": 289.3,
+      "nextX": 89.8,
+      "predictedGain": 12,
+      "solveMs": 1456,
+      "score": 914,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 82,
+      "level": 2,
+      "next": 0,
+      "x": 94.4,
+      "nextX": 347.7,
+      "predictedGain": 2,
+      "solveMs": 1487,
+      "score": 914,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 83,
+      "level": 0,
+      "next": 3,
+      "x": 338.5,
+      "nextX": 159.2,
+      "predictedGain": 94,
+      "solveMs": 1389,
+      "score": 916,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 84,
+      "level": 3,
+      "next": 1,
+      "x": 73.7,
+      "nextX": 309.3,
+      "predictedGain": 110,
+      "solveMs": 1007,
+      "score": 1008,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 85,
+      "level": 1,
+      "next": 2,
+      "x": 313.9,
+      "nextX": 27.4,
+      "predictedGain": 30,
+      "solveMs": 505,
+      "score": 1026,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 86,
+      "level": 2,
+      "next": 0,
+      "x": 149.3,
+      "nextX": 52.3,
+      "predictedGain": 12,
+      "solveMs": 518,
+      "score": 1038,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 87,
+      "level": 0,
+      "next": 0,
+      "x": 84.6,
+      "nextX": 99.4,
+      "predictedGain": 2,
+      "solveMs": 656,
+      "score": 1038,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 88,
+      "level": 0,
+      "next": 0,
+      "x": 32.4,
+      "nextX": 63.5,
+      "predictedGain": 2,
+      "solveMs": 765,
+      "score": 1038,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 89,
+      "level": 0,
+      "next": 2,
+      "x": 15.4,
+      "nextX": 51.1,
+      "predictedGain": 2,
+      "solveMs": 841,
+      "score": 1040,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 90,
+      "level": 2,
+      "next": 2,
+      "x": 334,
+      "nextX": 313.2,
+      "predictedGain": 32,
+      "solveMs": 756,
+      "score": 1040,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 91,
+      "level": 2,
+      "next": 4,
+      "x": 250.7,
+      "nextX": 233.8,
+      "predictedGain": 104,
+      "solveMs": 838,
+      "score": 1072,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 92,
+      "level": 4,
+      "next": 0,
+      "x": 263.3,
+      "nextX": 83.2,
+      "predictedGain": 80,
+      "solveMs": 758,
+      "score": 1144,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 93,
+      "level": 0,
+      "next": 3,
+      "x": 153.8,
+      "nextX": 374.2,
+      "predictedGain": 8,
+      "solveMs": 1098,
+      "score": 1152,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 94,
+      "level": 3,
+      "next": 3,
+      "x": 227.8,
+      "nextX": 60.6,
+      "predictedGain": 50,
+      "solveMs": 1266,
+      "score": 1152,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 95,
+      "level": 3,
+      "next": 3,
+      "x": 112.9,
+      "nextX": 60.6,
+      "predictedGain": 70,
+      "solveMs": 1442,
+      "score": 1152,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 96,
+      "level": 3,
+      "next": 0,
+      "x": 47.5,
+      "nextX": 236.9,
+      "predictedGain": 40,
+      "solveMs": 1280,
+      "score": 1172,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 97,
+      "level": 0,
+      "next": 1,
+      "x": 292.3,
+      "nextX": 17.83772549960356,
+      "predictedGain": 0,
+      "solveMs": 1434,
+      "score": 1172,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 98,
+      "level": 1,
+      "next": 4,
+      "x": 40.6,
+      "nextX": 132.5,
+      "predictedGain": 30,
+      "solveMs": 1561,
+      "score": 1172,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 99,
+      "level": 4,
+      "next": 3,
+      "x": 290.4,
+      "nextX": 285.2,
+      "predictedGain": 50,
+      "solveMs": 1688,
+      "score": 1202,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 100,
+      "level": 3,
+      "next": 3,
+      "x": 204.1,
+      "nextX": 304.5,
+      "predictedGain": 20,
+      "solveMs": 1688,
+      "score": 1202,
+      "maxLevel": 8,
+      "boxes": 12
+    },
+    {
+      "move": 101,
+      "level": 3,
+      "next": 0,
+      "x": 290.1,
+      "nextX": 384.6,
+      "predictedGain": 22,
+      "solveMs": 1844,
+      "score": 1222,
+      "maxLevel": 8,
+      "boxes": 12
+    },
+    {
+      "move": 102,
+      "level": 0,
+      "next": 2,
+      "x": 355.6,
+      "nextX": 378.6,
+      "predictedGain": 2,
+      "solveMs": 1902,
+      "score": 1222,
+      "maxLevel": 8,
+      "boxes": 13
+    },
+    {
+      "move": 103,
+      "level": 2,
+      "next": 3,
+      "x": 133,
+      "nextX": 95.5,
+      "predictedGain": 254,
+      "solveMs": 2037,
+      "score": 1222,
+      "maxLevel": 8,
+      "boxes": 14
+    },
+    {
+      "move": 104,
+      "level": 3,
+      "next": 1,
+      "x": 108.5,
+      "nextX": 272.9,
+      "predictedGain": 260,
+      "solveMs": 1752,
+      "score": 1476,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 105,
+      "level": 1,
+      "next": 1,
+      "x": 245.5,
+      "nextX": 64.5,
+      "predictedGain": 12,
+      "solveMs": 826,
+      "score": 1482,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 106,
+      "level": 1,
+      "next": 1,
+      "x": 200,
+      "nextX": 242.4,
+      "predictedGain": 18,
+      "solveMs": 1057,
+      "score": 1482,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 107,
+      "level": 1,
+      "next": 1,
+      "x": 263,
+      "nextX": 17.83772549960356,
+      "predictedGain": 24,
+      "solveMs": 1103,
+      "score": 1500,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 108,
+      "level": 1,
+      "next": 0,
+      "x": 17.83772549960356,
+      "nextX": 200,
+      "predictedGain": 6,
+      "solveMs": 818,
+      "score": 1506,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 109,
+      "level": 0,
+      "next": 0,
+      "x": 200,
+      "nextX": 203.3,
+      "predictedGain": 2,
+      "solveMs": 932,
+      "score": 1506,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 110,
+      "level": 0,
+      "next": 2,
+      "x": 223.1,
+      "nextX": 164.3,
+      "predictedGain": 14,
+      "solveMs": 1065,
+      "score": 1508,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 111,
+      "level": 2,
+      "next": 0,
+      "x": 161.3,
+      "nextX": 273.9,
+      "predictedGain": 12,
+      "solveMs": 1083,
+      "score": 1520,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 112,
+      "level": 0,
+      "next": 0,
+      "x": 229.1,
+      "nextX": 163.1,
+      "predictedGain": 8,
+      "solveMs": 1036,
+      "score": 1520,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 113,
+      "level": 0,
+      "next": 2,
+      "x": 292.3,
+      "nextX": 293.9,
+      "predictedGain": 20,
+      "solveMs": 1118,
+      "score": 1528,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 114,
+      "level": 2,
+      "next": 0,
+      "x": 281.9,
+      "nextX": 144.7,
+      "predictedGain": 32,
+      "solveMs": 1084,
+      "score": 1540,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 115,
+      "level": 0,
+      "next": 0,
+      "x": 144.7,
+      "nextX": 126.1,
+      "predictedGain": 22,
+      "solveMs": 1110,
+      "score": 1560,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 116,
+      "level": 0,
+      "next": 1,
+      "x": 153.8,
+      "nextX": 163.6,
+      "predictedGain": 8,
+      "solveMs": 1105,
+      "score": 1562,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 117,
+      "level": 1,
+      "next": 3,
+      "x": 177.2,
+      "nextX": 44.8,
+      "predictedGain": 56,
+      "solveMs": 977,
+      "score": 1568,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 118,
+      "level": 3,
+      "next": 3,
+      "x": 330.7,
+      "nextX": 222.8,
+      "predictedGain": 50,
+      "solveMs": 1201,
+      "score": 1568,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 119,
+      "level": 3,
+      "next": 0,
+      "x": 352.5,
+      "nextX": 251.7,
+      "predictedGain": 50,
+      "solveMs": 1188,
+      "score": 1618,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 120,
+      "level": 0,
+      "next": 2,
+      "x": 223.1,
+      "nextX": 228.4,
+      "predictedGain": 12,
+      "solveMs": 1149,
+      "score": 1618,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 121,
+      "level": 2,
+      "next": 1,
+      "x": 222.3,
+      "nextX": 60.3,
+      "predictedGain": 12,
+      "solveMs": 1200,
+      "score": 1630,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 122,
+      "level": 1,
+      "next": 2,
+      "x": 95.6,
+      "nextX": 99.2,
+      "predictedGain": 0,
+      "solveMs": 1312,
+      "score": 1630,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 123,
+      "level": 2,
+      "next": 3,
+      "x": 88.4,
+      "nextX": 234.8,
+      "predictedGain": 20,
+      "solveMs": 1658,
+      "score": 1630,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 124,
+      "level": 3,
+      "next": 3,
+      "x": 287.1,
+      "nextX": 215.2,
+      "predictedGain": 20,
+      "solveMs": 1864,
+      "score": 1630,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 125,
+      "level": 3,
+      "next": 4,
+      "x": 336.3,
+      "nextX": 290.6,
+      "predictedGain": 148,
+      "solveMs": 1815,
+      "score": 1650,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 126,
+      "level": 4,
+      "next": 0,
+      "x": 263.3,
+      "nextX": 310.8,
+      "predictedGain": 130,
+      "solveMs": 1498,
+      "score": 1778,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 127,
+      "level": 0,
+      "next": 2,
+      "x": 315.4,
+      "nextX": 200,
+      "predictedGain": 34,
+      "solveMs": 1458,
+      "score": 1780,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 128,
+      "level": 2,
+      "next": 0,
+      "x": 196.5,
+      "nextX": 244.2,
+      "predictedGain": 32,
+      "solveMs": 1403,
+      "score": 1812,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 129,
+      "level": 0,
+      "next": 1,
+      "x": 246.2,
+      "nextX": 78.7,
+      "predictedGain": 6,
+      "solveMs": 1251,
+      "score": 1812,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 130,
+      "level": 1,
+      "next": 3,
+      "x": 228.8,
+      "nextX": 130.3,
+      "predictedGain": 6,
+      "solveMs": 1566,
+      "score": 1818,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 131,
+      "level": 3,
+      "next": 3,
+      "x": 140.7,
+      "nextX": 25.8,
+      "predictedGain": 50,
+      "solveMs": 1795,
+      "score": 1818,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 132,
+      "level": 3,
+      "next": 1,
+      "x": 75.3,
+      "nextX": 90.7,
+      "predictedGain": 56,
+      "solveMs": 2094,
+      "score": 1868,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 133,
+      "level": 1,
+      "next": 2,
+      "x": 63.4,
+      "nextX": 57.1,
+      "predictedGain": 68,
+      "solveMs": 1320,
+      "score": 1874,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 134,
+      "level": 2,
+      "next": 1,
+      "x": 83.7,
+      "nextX": 66.3,
+      "predictedGain": 62,
+      "solveMs": 1419,
+      "score": 1936,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 135,
+      "level": 1,
+      "next": 1,
+      "x": 330.6,
+      "nextX": 280.6,
+      "predictedGain": 18,
+      "solveMs": 1337,
+      "score": 1936,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 136,
+      "level": 1,
+      "next": 2,
+      "x": 274.3,
+      "nextX": 21.4,
+      "predictedGain": 18,
+      "solveMs": 1583,
+      "score": 1954,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 137,
+      "level": 2,
+      "next": 4,
+      "x": 21.4,
+      "nextX": 295.7,
+      "predictedGain": 0,
+      "solveMs": 1505,
+      "score": 1954,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 138,
+      "level": 4,
+      "next": 4,
+      "x": 326.6,
+      "nextX": 296,
+      "predictedGain": 72,
+      "solveMs": 1625,
+      "score": 1954,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 139,
+      "level": 4,
+      "next": 0,
+      "x": 157.8,
+      "nextX": 279.7,
+      "predictedGain": 74,
+      "solveMs": 1621,
+      "score": 2026,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 140,
+      "level": 0,
+      "next": 1,
+      "x": 269.2,
+      "nextX": 272.9,
+      "predictedGain": 8,
+      "solveMs": 1394,
+      "score": 2028,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 141,
+      "level": 1,
+      "next": 0,
+      "x": 239.6,
+      "nextX": 89.2,
+      "predictedGain": 6,
+      "solveMs": 1382,
+      "score": 2028,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 142,
+      "level": 0,
+      "next": 3,
+      "x": 344.5,
+      "nextX": 326.9,
+      "predictedGain": 26,
+      "solveMs": 1767,
+      "score": 2028,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 143,
+      "level": 3,
+      "next": 1,
+      "x": 352.5,
+      "nextX": 382.16227450039645,
+      "predictedGain": 26,
+      "solveMs": 1562,
+      "score": 2054,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 144,
+      "level": 1,
+      "next": 0,
+      "x": 245.5,
+      "nextX": 378.6,
+      "predictedGain": 8,
+      "solveMs": 1702,
+      "score": 2054,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 145,
+      "level": 0,
+      "next": 3,
+      "x": 361.6,
+      "nextX": 95.5,
+      "predictedGain": 8,
+      "solveMs": 1696,
+      "score": 2062,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 146,
+      "level": 3,
+      "next": 1,
+      "x": 374.2,
+      "nextX": 305,
+      "predictedGain": 0,
+      "solveMs": 1725,
+      "score": 2062,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 147,
+      "level": 1,
+      "next": 1,
+      "x": 257.4,
+      "nextX": 206,
+      "predictedGain": 68,
+      "solveMs": 1588,
+      "score": 2062,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 148,
+      "level": 1,
+      "next": 0,
+      "x": 200,
+      "nextX": 384.63378964375084,
+      "predictedGain": 68,
+      "solveMs": 1835,
+      "score": 2130,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 149,
+      "level": 0,
+      "next": 1,
+      "x": 292.3,
+      "nextX": 200,
+      "predictedGain": 0,
+      "solveMs": 1278,
+      "score": 2130,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 150,
+      "level": 1,
+      "next": 0,
+      "x": 177.2,
+      "nextX": 242.9,
+      "predictedGain": 8,
+      "solveMs": 1782,
+      "score": 2130,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 151,
+      "level": 0,
+      "next": 1,
+      "x": 269.2,
+      "nextX": 54.3,
+      "predictedGain": 8,
+      "solveMs": 1691,
+      "score": 2138,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 152,
+      "level": 1,
+      "next": 2,
+      "x": 376.16227450039645,
+      "nextX": 21.4,
+      "predictedGain": 12,
+      "solveMs": 1610,
+      "score": 2138,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 153,
+      "level": 2,
+      "next": 3,
+      "x": 183.7,
+      "nextX": 165.2,
+      "predictedGain": 12,
+      "solveMs": 1990,
+      "score": 2150,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 154,
+      "level": 3,
+      "next": 4,
+      "x": 265.3,
+      "nextX": 290.7,
+      "predictedGain": 148,
+      "solveMs": 1661,
+      "score": 2170,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 155,
+      "level": 4,
+      "next": 0,
+      "x": 195.3,
+      "nextX": 15.36621035624914,
+      "predictedGain": 128,
+      "solveMs": 1462,
+      "score": 2298,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 156,
+      "level": 0,
+      "next": 3,
+      "x": 15.4,
+      "nextX": 222.8,
+      "predictedGain": 0,
+      "solveMs": 1386,
+      "score": 2298,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 157,
+      "level": 3,
+      "next": 2,
+      "x": 243.6,
+      "nextX": 170.3,
+      "predictedGain": 0,
+      "solveMs": 2044,
+      "score": 2298,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 158,
+      "level": 2,
+      "next": 1,
+      "x": 289.3,
+      "nextX": 339.7,
+      "predictedGain": 6,
+      "solveMs": 1855,
+      "score": 2298,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 159,
+      "level": 1,
+      "next": 0,
+      "x": 382.16227450039645,
+      "nextX": 83.2,
+      "predictedGain": 8,
+      "solveMs": 1920,
+      "score": 2304,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 160,
+      "level": 0,
+      "next": 1,
+      "x": 84.6,
+      "nextX": 188,
+      "predictedGain": 244,
+      "solveMs": 1720,
+      "score": 2306,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 161,
+      "level": 1,
+      "next": 3,
+      "x": 291.1,
+      "nextX": 25.8,
+      "predictedGain": 262,
+      "solveMs": 1664,
+      "score": 2306,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 162,
+      "level": 3,
+      "next": 3,
+      "x": 295.1,
+      "nextX": 25.8,
+      "predictedGain": 312,
+      "solveMs": 2155,
+      "score": 2326,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 163,
+      "level": 3,
+      "next": 2,
+      "x": 25.8,
+      "nextX": 334.6,
+      "predictedGain": 346,
+      "solveMs": 2210,
+      "score": 2588,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 164,
+      "level": 2,
+      "next": 2,
+      "x": 317.6,
+      "nextX": 200,
+      "predictedGain": 84,
+      "solveMs": 874,
+      "score": 2672,
+      "maxLevel": 10,
+      "boxes": 4
+    },
+    {
+      "move": 165,
+      "level": 2,
+      "next": 0,
+      "x": 244.7,
+      "nextX": 89.2,
+      "predictedGain": 0,
+      "solveMs": 653,
+      "score": 2672,
+      "maxLevel": 10,
+      "boxes": 5
+    },
+    {
+      "move": 166,
+      "level": 0,
+      "next": 1,
+      "x": 41.8,
+      "nextX": 29.83772549960356,
+      "predictedGain": 0,
+      "solveMs": 914,
+      "score": 2672,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 167,
+      "level": 1,
+      "next": 0,
+      "x": 86.1,
+      "nextX": 15.36621035624914,
+      "predictedGain": 8,
+      "solveMs": 943,
+      "score": 2672,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 168,
+      "level": 0,
+      "next": 2,
+      "x": 15.4,
+      "nextX": 265.4,
+      "predictedGain": 40,
+      "solveMs": 1198,
+      "score": 2680,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 169,
+      "level": 2,
+      "next": 0,
+      "x": 244.7,
+      "nextX": 236.9,
+      "predictedGain": 32,
+      "solveMs": 812,
+      "score": 2712,
+      "maxLevel": 10,
+      "boxes": 5
+    },
+    {
+      "move": 170,
+      "level": 0,
+      "next": 2,
+      "x": 269.2,
+      "nextX": 43.4,
+      "predictedGain": 12,
+      "solveMs": 751,
+      "score": 2712,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 171,
+      "level": 2,
+      "next": 2,
+      "x": 289.3,
+      "nextX": 57.1,
+      "predictedGain": 12,
+      "solveMs": 987,
+      "score": 2712,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 172,
+      "level": 2,
+      "next": 0,
+      "x": 54.5,
+      "nextX": 370.8,
+      "predictedGain": 14,
+      "solveMs": 1110,
+      "score": 2724,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 173,
+      "level": 0,
+      "next": 0,
+      "x": 61.5,
+      "nextX": 101.2,
+      "predictedGain": 2,
+      "solveMs": 1211,
+      "score": 2724,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 174,
+      "level": 0,
+      "next": 0,
+      "x": 84.6,
+      "nextX": 370.8,
+      "predictedGain": 4,
+      "solveMs": 1326,
+      "score": 2726,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 175,
+      "level": 0,
+      "next": 0,
+      "x": 107.7,
+      "nextX": 103.5,
+      "predictedGain": 8,
+      "solveMs": 1282,
+      "score": 2726,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 176,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 335,
+      "predictedGain": 20,
+      "solveMs": 1528,
+      "score": 2726,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 177,
+      "level": 1,
+      "next": 2,
+      "x": 28.4,
+      "nextX": 32.2,
+      "predictedGain": 38,
+      "solveMs": 1496,
+      "score": 2732,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 178,
+      "level": 2,
+      "next": 1,
+      "x": 37.7,
+      "nextX": 345.7,
+      "predictedGain": 52,
+      "solveMs": 1554,
+      "score": 2764,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 179,
+      "level": 1,
+      "next": 4,
+      "x": 336.6,
+      "nextX": 98.7,
+      "predictedGain": 50,
+      "solveMs": 1417,
+      "score": 2784,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 180,
+      "level": 4,
+      "next": 1,
+      "x": 100.5,
+      "nextX": 127.1,
+      "predictedGain": 30,
+      "solveMs": 1136,
+      "score": 2814,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 181,
+      "level": 1,
+      "next": 2,
+      "x": 154.5,
+      "nextX": 128.6,
+      "predictedGain": 0,
+      "solveMs": 1130,
+      "score": 2814,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 182,
+      "level": 2,
+      "next": 2,
+      "x": 244.7,
+      "nextX": 245.9,
+      "predictedGain": 62,
+      "solveMs": 1349,
+      "score": 2814,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 183,
+      "level": 2,
+      "next": 0,
+      "x": 231.8,
+      "nextX": 163.1,
+      "predictedGain": 70,
+      "solveMs": 1365,
+      "score": 2876,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 184,
+      "level": 0,
+      "next": 1,
+      "x": 78,
+      "nextX": 90.7,
+      "predictedGain": 8,
+      "solveMs": 1090,
+      "score": 2884,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 185,
+      "level": 1,
+      "next": 1,
+      "x": 69.4,
+      "nextX": 155.1,
+      "predictedGain": 18,
+      "solveMs": 1007,
+      "score": 2884,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 186,
+      "level": 1,
+      "next": 0,
+      "x": 177.2,
+      "nextX": 89.2,
+      "predictedGain": 18,
+      "solveMs": 1009,
+      "score": 2902,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 187,
+      "level": 0,
+      "next": 4,
+      "x": 90.6,
+      "nextX": 301.3,
+      "predictedGain": 0,
+      "solveMs": 989,
+      "score": 2902,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 188,
+      "level": 4,
+      "next": 0,
+      "x": 284.4,
+      "nextX": 82.9,
+      "predictedGain": 2,
+      "solveMs": 1277,
+      "score": 2902,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 189,
+      "level": 0,
+      "next": 0,
+      "x": 84.6,
+      "nextX": 152.9,
+      "predictedGain": 2,
+      "solveMs": 1514,
+      "score": 2904,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 190,
+      "level": 0,
+      "next": 2,
+      "x": 136.8,
+      "nextX": 108.3,
+      "predictedGain": 0,
+      "solveMs": 1387,
+      "score": 2904,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 191,
+      "level": 2,
+      "next": 2,
+      "x": 334,
+      "nextX": 307.2,
+      "predictedGain": 202,
+      "solveMs": 1344,
+      "score": 2904,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 192,
+      "level": 2,
+      "next": 2,
+      "x": 372.6,
+      "nextX": 267.6,
+      "predictedGain": 202,
+      "solveMs": 1622,
+      "score": 2904,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 193,
+      "level": 2,
+      "next": 1,
+      "x": 267,
+      "nextX": 192,
+      "predictedGain": 208,
+      "solveMs": 1564,
+      "score": 3106,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 194,
+      "level": 1,
+      "next": 1,
+      "x": 365.4,
+      "nextX": 295.7,
+      "predictedGain": 18,
+      "solveMs": 926,
+      "score": 3106,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 195,
+      "level": 1,
+      "next": 0,
+      "x": 319.3,
+      "nextX": 169.1,
+      "predictedGain": 26,
+      "solveMs": 974,
+      "score": 3124,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 196,
+      "level": 0,
+      "next": 1,
+      "x": 181.3,
+      "nextX": 180.3,
+      "predictedGain": 8,
+      "solveMs": 940,
+      "score": 3124,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 197,
+      "level": 1,
+      "next": 4,
+      "x": 131.7,
+      "nextX": 59,
+      "predictedGain": 8,
+      "solveMs": 977,
+      "score": 3132,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 198,
+      "level": 4,
+      "next": 4,
+      "x": 190.1,
+      "nextX": 166.2,
+      "predictedGain": 30,
+      "solveMs": 1113,
+      "score": 3132,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 199,
+      "level": 4,
+      "next": 1,
+      "x": 37.220440102685465,
+      "nextX": 115.7,
+      "predictedGain": 48,
+      "solveMs": 1040,
+      "score": 3162,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 200,
+      "level": 1,
+      "next": 2,
+      "x": 63.4,
+      "nextX": 212.7,
+      "predictedGain": 38,
+      "solveMs": 1131,
+      "score": 3168,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 201,
+      "level": 2,
+      "next": 0,
+      "x": 218.7,
+      "nextX": 291.1,
+      "predictedGain": 32,
+      "solveMs": 1068,
+      "score": 3200,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 202,
+      "level": 0,
+      "next": 1,
+      "x": 309.4,
+      "nextX": 272.9,
+      "predictedGain": 0,
+      "solveMs": 1066,
+      "score": 3200,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 203,
+      "level": 1,
+      "next": 1,
+      "x": 108.9,
+      "nextX": 266.9,
+      "predictedGain": 6,
+      "solveMs": 1207,
+      "score": 3200,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 204,
+      "level": 1,
+      "next": 1,
+      "x": 268.3,
+      "nextX": 339.7,
+      "predictedGain": 6,
+      "solveMs": 1313,
+      "score": 3206,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 205,
+      "level": 1,
+      "next": 0,
+      "x": 154.5,
+      "nextX": 273.9,
+      "predictedGain": 8,
+      "solveMs": 1419,
+      "score": 3206,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 206,
+      "level": 0,
+      "next": 1,
+      "x": 15.4,
+      "nextX": 212,
+      "predictedGain": 18,
+      "solveMs": 1535,
+      "score": 3206,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 207,
+      "level": 1,
+      "next": 0,
+      "x": 222.8,
+      "nextX": 313.8,
+      "predictedGain": 20,
+      "solveMs": 1792,
+      "score": 3224,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 208,
+      "level": 0,
+      "next": 0,
+      "x": 307.5,
+      "nextX": 15.4,
+      "predictedGain": 4,
+      "solveMs": 1871,
+      "score": 3226,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 209,
+      "level": 0,
+      "next": 3,
+      "x": 361.6,
+      "nextX": 345.3,
+      "predictedGain": 50,
+      "solveMs": 1658,
+      "score": 3226,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 210,
+      "level": 3,
+      "next": 2,
+      "x": 345.3,
+      "nextX": 57.1,
+      "predictedGain": 50,
+      "solveMs": 1837,
+      "score": 3276,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 211,
+      "level": 2,
+      "next": 1,
+      "x": 88.4,
+      "nextX": 54.3,
+      "predictedGain": 0,
+      "solveMs": 1517,
+      "score": 3276,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 212,
+      "level": 1,
+      "next": 0,
+      "x": 239.6,
+      "nextX": 384.6,
+      "predictedGain": 8,
+      "solveMs": 1770,
+      "score": 3276,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 213,
+      "level": 0,
+      "next": 0,
+      "x": 315.4,
+      "nextX": 310.8,
+      "predictedGain": 20,
+      "solveMs": 1861,
+      "score": 3276,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 214,
+      "level": 0,
+      "next": 2,
+      "x": 315.4,
+      "nextX": 74.1,
+      "predictedGain": 20,
+      "solveMs": 2089,
+      "score": 3296,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 215,
+      "level": 2,
+      "next": 1,
+      "x": 76.1,
+      "nextX": 17.83772549960356,
+      "predictedGain": 0,
+      "solveMs": 1701,
+      "score": 3296,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 216,
+      "level": 1,
+      "next": 2,
+      "x": 17.83772549960356,
+      "nextX": 122.6,
+      "predictedGain": 32,
+      "solveMs": 1969,
+      "score": 3296,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 217,
+      "level": 2,
+      "next": 3,
+      "x": 61.9,
+      "nextX": 234.8,
+      "predictedGain": 32,
+      "solveMs": 1992,
+      "score": 3328,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 218,
+      "level": 3,
+      "next": 3,
+      "x": 281.1,
+      "nextX": 304.5,
+      "predictedGain": 92,
+      "solveMs": 1619,
+      "score": 3328,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 219,
+      "level": 3,
+      "next": 0,
+      "x": 314.9,
+      "nextX": 384.6,
+      "predictedGain": 100,
+      "solveMs": 1682,
+      "score": 3420,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 220,
+      "level": 0,
+      "next": 0,
+      "x": 27.9,
+      "nextX": 15.36621035624914,
+      "predictedGain": 20,
+      "solveMs": 1931,
+      "score": 3420,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 221,
+      "level": 0,
+      "next": 1,
+      "x": 130.8,
+      "nextX": 54.3,
+      "predictedGain": 20,
+      "solveMs": 1836,
+      "score": 3428,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 222,
+      "level": 1,
+      "next": 0,
+      "x": 154.5,
+      "nextX": 322.8,
+      "predictedGain": 142,
+      "solveMs": 1647,
+      "score": 3440,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 223,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 163.6,
+      "predictedGain": 142,
+      "solveMs": 1554,
+      "score": 3448,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 224,
+      "level": 1,
+      "next": 2,
+      "x": 23.83772549960356,
+      "nextX": 47,
+      "predictedGain": 166,
+      "solveMs": 1271,
+      "score": 3454,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 225,
+      "level": 2,
+      "next": 3,
+      "x": 133,
+      "nextX": 280.8,
+      "predictedGain": 160,
+      "solveMs": 978,
+      "score": 3614,
+      "maxLevel": 10,
+      "boxes": 6
+    },
+    {
+      "move": 226,
+      "level": 3,
+      "next": 1,
+      "x": 274.8,
+      "nextX": 309.3,
+      "predictedGain": 0,
+      "solveMs": 612,
+      "score": 3614,
+      "maxLevel": 10,
+      "boxes": 7
+    },
+    {
+      "move": 227,
+      "level": 1,
+      "next": 4,
+      "x": 131.7,
+      "nextX": 98.7,
+      "predictedGain": 30,
+      "solveMs": 854,
+      "score": 3614,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 228,
+      "level": 4,
+      "next": 4,
+      "x": 163.8,
+      "nextX": 132.5,
+      "predictedGain": 72,
+      "solveMs": 913,
+      "score": 3614,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 229,
+      "level": 4,
+      "next": 0,
+      "x": 242.2,
+      "nextX": 15.4,
+      "predictedGain": 72,
+      "solveMs": 942,
+      "score": 3686,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 230,
+      "level": 0,
+      "next": 3,
+      "x": 84.6,
+      "nextX": 52.8,
+      "predictedGain": 20,
+      "solveMs": 1042,
+      "score": 3686,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 231,
+      "level": 3,
+      "next": 4,
+      "x": 221.8,
+      "nextX": 215.5,
+      "predictedGain": 50,
+      "solveMs": 1236,
+      "score": 3706,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 232,
+      "level": 4,
+      "next": 1,
+      "x": 37.220440102685465,
+      "nextX": 82,
+      "predictedGain": 30,
+      "solveMs": 1035,
+      "score": 3736,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 233,
+      "level": 1,
+      "next": 1,
+      "x": 63.4,
+      "nextX": 132.5,
+      "predictedGain": 6,
+      "solveMs": 1241,
+      "score": 3736,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 234,
+      "level": 1,
+      "next": 0,
+      "x": 148.5,
+      "nextX": 41.8,
+      "predictedGain": 6,
+      "solveMs": 1464,
+      "score": 3742,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 235,
+      "level": 0,
+      "next": 0,
+      "x": 56.7,
+      "nextX": 22.5,
+      "predictedGain": 2,
+      "solveMs": 1615,
+      "score": 3742,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 236,
+      "level": 0,
+      "next": 1,
+      "x": 113.7,
+      "nextX": 144.1,
+      "predictedGain": 20,
+      "solveMs": 1438,
+      "score": 3744,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 237,
+      "level": 1,
+      "next": 2,
+      "x": 131.7,
+      "nextX": 178.5,
+      "predictedGain": 18,
+      "solveMs": 1548,
+      "score": 3762,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 238,
+      "level": 2,
+      "next": 2,
+      "x": 88.4,
+      "nextX": 82.9,
+      "predictedGain": 32,
+      "solveMs": 1324,
+      "score": 3762,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 239,
+      "level": 2,
+      "next": 0,
+      "x": 84.4,
+      "nextX": 89.2,
+      "predictedGain": 32,
+      "solveMs": 1404,
+      "score": 3794,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 240,
+      "level": 0,
+      "next": 0,
+      "x": 90.6,
+      "nextX": 85.9,
+      "predictedGain": 2,
+      "solveMs": 1616,
+      "score": 3794,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 241,
+      "level": 0,
+      "next": 3,
+      "x": 84.6,
+      "nextX": 165.2,
+      "predictedGain": 2,
+      "solveMs": 1636,
+      "score": 3796,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 242,
+      "level": 3,
+      "next": 1,
+      "x": 200,
+      "nextX": 64.8,
+      "predictedGain": 6,
+      "solveMs": 2118,
+      "score": 3796,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 243,
+      "level": 1,
+      "next": 4,
+      "x": 17.83772549960356,
+      "nextX": 227.9,
+      "predictedGain": 78,
+      "solveMs": 2181,
+      "score": 3802,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 244,
+      "level": 4,
+      "next": 2,
+      "x": 130.7,
+      "nextX": 92.8,
+      "predictedGain": 84,
+      "solveMs": 2102,
+      "score": 3874,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 245,
+      "level": 2,
+      "next": 2,
+      "x": 127,
+      "nextX": 200,
+      "predictedGain": 32,
+      "solveMs": 973,
+      "score": 3874,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 246,
+      "level": 2,
+      "next": 3,
+      "x": 27.4,
+      "nextX": 95.5,
+      "predictedGain": 32,
+      "solveMs": 983,
+      "score": 3886,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 247,
+      "level": 3,
+      "next": 2,
+      "x": 91.1,
+      "nextX": 203.3,
+      "predictedGain": 108,
+      "solveMs": 1177,
+      "score": 3906,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 248,
+      "level": 2,
+      "next": 3,
+      "x": 218.4,
+      "nextX": 143.5,
+      "predictedGain": 118,
+      "solveMs": 899,
+      "score": 3974,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 249,
+      "level": 3,
+      "next": 3,
+      "x": 112.9,
+      "nextX": 136.3,
+      "predictedGain": 50,
+      "solveMs": 735,
+      "score": 4024,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 250,
+      "level": 3,
+      "next": 3,
+      "x": 25.8,
+      "nextX": 25.8,
+      "predictedGain": 20,
+      "solveMs": 811,
+      "score": 4024,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 251,
+      "level": 3,
+      "next": 3,
+      "x": 25.8,
+      "nextX": 342.9,
+      "predictedGain": 40,
+      "solveMs": 901,
+      "score": 4044,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 252,
+      "level": 3,
+      "next": 0,
+      "x": 243.6,
+      "nextX": 347.7,
+      "predictedGain": 20,
+      "solveMs": 1071,
+      "score": 4064,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 253,
+      "level": 0,
+      "next": 4,
+      "x": 84.6,
+      "nextX": 86.5,
+      "predictedGain": 80,
+      "solveMs": 941,
+      "score": 4066,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 254,
+      "level": 4,
+      "next": 2,
+      "x": 88.5,
+      "nextX": 378.6,
+      "predictedGain": 78,
+      "solveMs": 784,
+      "score": 4144,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 255,
+      "level": 2,
+      "next": 2,
+      "x": 378.6,
+      "nextX": 372.6,
+      "predictedGain": 12,
+      "solveMs": 750,
+      "score": 4144,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 256,
+      "level": 2,
+      "next": 0,
+      "x": 362.3,
+      "nextX": 126.1,
+      "predictedGain": 12,
+      "solveMs": 635,
+      "score": 4156,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 257,
+      "level": 0,
+      "next": 3,
+      "x": 130.8,
+      "nextX": 269.7,
+      "predictedGain": 50,
+      "solveMs": 712,
+      "score": 4156,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 258,
+      "level": 3,
+      "next": 2,
+      "x": 271.3,
+      "nextX": 200,
+      "predictedGain": 50,
+      "solveMs": 904,
+      "score": 4206,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 259,
+      "level": 2,
+      "next": 2,
+      "x": 133,
+      "nextX": 21.4,
+      "predictedGain": 12,
+      "solveMs": 762,
+      "score": 4206,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 260,
+      "level": 2,
+      "next": 1,
+      "x": 27.4,
+      "nextX": 236.4,
+      "predictedGain": 12,
+      "solveMs": 737,
+      "score": 4218,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 261,
+      "level": 1,
+      "next": 3,
+      "x": 108.9,
+      "nextX": 98.7,
+      "predictedGain": 0,
+      "solveMs": 815,
+      "score": 4218,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 262,
+      "level": 3,
+      "next": 0,
+      "x": 243.6,
+      "nextX": 117.4,
+      "predictedGain": 0,
+      "solveMs": 1260,
+      "score": 4218,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 263,
+      "level": 0,
+      "next": 2,
+      "x": 107.7,
+      "nextX": 261.4,
+      "predictedGain": 0,
+      "solveMs": 1307,
+      "score": 4218,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 264,
+      "level": 2,
+      "next": 0,
+      "x": 261,
+      "nextX": 89.2,
+      "predictedGain": 2,
+      "solveMs": 2902,
+      "score": 4218,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 265,
+      "level": 0,
+      "next": 3,
+      "x": 209.2,
+      "nextX": 200,
+      "predictedGain": 2,
+      "solveMs": 2431,
+      "score": 4220,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 266,
+      "level": 3,
+      "next": 1,
+      "x": 227.8,
+      "nextX": 236.4,
+      "predictedGain": 38,
+      "solveMs": 2131,
+      "score": 4220,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 267,
+      "level": 1,
+      "next": 3,
+      "x": 189.3,
+      "nextX": 159.2,
+      "predictedGain": 130,
+      "solveMs": 1282,
+      "score": 4258,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 268,
+      "level": 3,
+      "next": 0,
+      "x": 149.2,
+      "nextX": 384.63378964375084,
+      "predictedGain": 92,
+      "solveMs": 1275,
+      "score": 4350,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 269,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 337.1,
+      "predictedGain": 328,
+      "solveMs": 809,
+      "score": 4350,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 270,
+      "level": 1,
+      "next": 0,
+      "x": 131.7,
+      "nextX": 384.6,
+      "predictedGain": 348,
+      "solveMs": 801,
+      "score": 4350,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 271,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 139.1,
+      "predictedGain": 354,
+      "solveMs": 1095,
+      "score": 4698,
+      "maxLevel": 11,
+      "boxes": 8
+    }
+  ],
+  "final": {
+    "time": 1083.999999999343,
+    "score": 4698,
+    "maxLv": 10,
+    "dangerT": 0,
+    "over": false,
+    "serial": 534,
+    "merges": 263,
+    "timing": {
+      "timestamp": 1083999.9999991884,
+      "timeScale": 1,
+      "lastDelta": 16.666666666666668,
+      "lastElapsed": 0,
+      "lastUpdatesPerFrame": 0
+    },
+    "walls": [
+      1,
+      2,
+      3
+    ],
+    "pairs": [
+      {
+        "a": 1,
+        "b": 405,
+        "separation": 0.2842607161452969,
+        "isActive": true,
+        "timeCreated": 1001116.6666658006,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.7179907246802486,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.7179907246802486
+          },
+          "supports": [
+            {
+              "id": 405,
+              "index": 5
+            },
+            {
+              "id": 405,
+              "index": 6
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 405,
+              "index": 5
+            },
+            "normalImpulse": -2.3372263723752518,
+            "tangentImpulse": 0.17363406335404694
+          },
+          {
+            "vertex": {
+              "id": 405,
+              "index": 6
+            },
+            "normalImpulse": -7.598952977538705,
+            "tangentImpulse": 0.30421687459950764
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 445,
+        "separation": 0.10620375256504469,
+        "isActive": true,
+        "timeCreated": 1036616.666665718,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.10583611349060362,
+          "normal": {
+            "x": -1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": -1
+          },
+          "penetration": {
+            "x": -0.10583611349060362,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 445,
+              "index": 0
+            },
+            {
+              "id": 445,
+              "index": 11
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 445,
+              "index": 0
+            },
+            "normalImpulse": -2.0998894489332325,
+            "tangentImpulse": 0.23111638028597384
+          },
+          {
+            "vertex": {
+              "id": 445,
+              "index": 11
+            },
+            "normalImpulse": -0.365775940282746,
+            "tangentImpulse": 0.22865763045071774
+          }
+        ]
+      },
+      {
+        "a": 445,
+        "b": 502,
+        "separation": 0.31045011630311303,
+        "isActive": true,
+        "timeCreated": 1037083.3333323835,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.30460232761669204,
+          "normal": {
+            "x": -0.4009079933479496,
+            "y": 0.9161183225270141
+          },
+          "tangent": {
+            "x": -0.9161183225270141,
+            "y": -0.4009079933479496
+          },
+          "penetration": {
+            "x": -0.12211750793392273,
+            "y": 0.27905177341402787
+          },
+          "supports": [
+            {
+              "id": 445,
+              "index": 4
+            },
+            {
+              "id": 445,
+              "index": 3
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 445,
+              "index": 4
+            },
+            "normalImpulse": -5.554983038615042,
+            "tangentImpulse": 0.2602691889539492
+          },
+          {
+            "vertex": {
+              "id": 445,
+              "index": 3
+            },
+            "normalImpulse": -0.5964695886443481,
+            "tangentImpulse": 0.3487283224759706
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 536,
+        "separation": 0.2834143882373815,
+        "isActive": true,
+        "timeCreated": 1081516.6666658435,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.7151838894374123,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.7151838894374123
+          },
+          "supports": [
+            {
+              "id": 536,
+              "index": 15
+            },
+            {
+              "id": 536,
+              "index": 0
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 536,
+              "index": 15
+            },
+            "normalImpulse": -12.856546030706575,
+            "tangentImpulse": -5.884573572808528
+          },
+          {
+            "vertex": {
+              "id": 536,
+              "index": 0
+            },
+            "normalImpulse": -11.12104369393182,
+            "tangentImpulse": 7.8732989780217
+          }
+        ]
+      },
+      {
+        "a": 405,
+        "b": 445,
+        "separation": 0.46547049061637624,
+        "isActive": true,
+        "timeCreated": 1081566.6666658437,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.447996129094804,
+          "normal": {
+            "x": 0.0037239843681183514,
+            "y": 0.999993065946173
+          },
+          "tangent": {
+            "x": -0.999993065946173,
+            "y": 0.0037239843681183514
+          },
+          "penetration": {
+            "x": 0.0016683305817265812,
+            "y": 0.4479930226655306
+          },
+          "supports": [
+            {
+              "id": 445,
+              "index": 8
+            },
+            {
+              "id": 405,
+              "index": 11
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 445,
+              "index": 8
+            },
+            "normalImpulse": -5.335988814183214,
+            "tangentImpulse": 0.0694530462992429
+          },
+          {
+            "vertex": {
+              "id": 405,
+              "index": 11
+            },
+            "normalImpulse": -3.6720477402712004,
+            "tangentImpulse": 0.37473344164168343
+          }
+        ]
+      },
+      {
+        "a": 529,
+        "b": 536,
+        "separation": 0.0706890976049486,
+        "isActive": true,
+        "timeCreated": 1082033.3333325125,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.06918860772827884,
+          "normal": {
+            "x": 0.002080144462710969,
+            "y": -0.999997836497165
+          },
+          "tangent": {
+            "x": 0.999997836497165,
+            "y": 0.002080144462710969
+          },
+          "penetration": {
+            "x": 0.00014392229924866057,
+            "y": -0.06918845803852987
+          },
+          "supports": [
+            {
+              "id": 529,
+              "index": 5
+            },
+            {
+              "id": 529,
+              "index": 6
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 529,
+              "index": 5
+            },
+            "normalImpulse": -0.8920198942099268,
+            "tangentImpulse": 0.10319964598545799
+          },
+          {
+            "vertex": {
+              "id": 529,
+              "index": 6
+            },
+            "normalImpulse": -0.34400304069699783,
+            "tangentImpulse": -0.01840721672690601
+          }
+        ]
+      },
+      {
+        "a": 506,
+        "b": 512,
+        "separation": 0.15980905387527056,
+        "isActive": true,
+        "timeCreated": 1082666.6666658488,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.15471967398298148,
+          "normal": {
+            "x": -0.06419281068694346,
+            "y": 0.9979375146050495
+          },
+          "tangent": {
+            "x": -0.9979375146050495,
+            "y": -0.06419281068694346
+          },
+          "penetration": {
+            "x": -0.009931890741535141,
+            "y": 0.15440056691508008
+          },
+          "supports": [
+            {
+              "id": 512,
+              "index": 11
+            },
+            {
+              "id": 506,
+              "index": 11
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 512,
+              "index": 11
+            },
+            "normalImpulse": -0.9157890126160964,
+            "tangentImpulse": 0.04940482720668884
+          },
+          {
+            "vertex": {
+              "id": 506,
+              "index": 11
+            },
+            "normalImpulse": -0.4654805674227654,
+            "tangentImpulse": 0.010384039677397778
+          }
+        ]
+      },
+      {
+        "a": 502,
+        "b": 506,
+        "separation": 0.06880968986059265,
+        "isActive": true,
+        "timeCreated": 1082683.3333325156,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.07231550059304936,
+          "normal": {
+            "x": -0.4009079933479496,
+            "y": 0.9161183225270141
+          },
+          "tangent": {
+            "x": -0.9161183225270141,
+            "y": -0.4009079933479496
+          },
+          "penetration": {
+            "x": -0.028991862230711877,
+            "y": 0.06624955509600568
+          },
+          "supports": [
+            {
+              "id": 506,
+              "index": 7
+            },
+            {
+              "id": 506,
+              "index": 6
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 506,
+              "index": 7
+            },
+            "normalImpulse": -1.3780589561908099,
+            "tangentImpulse": 0.06533271682997423
+          },
+          {
+            "vertex": {
+              "id": 506,
+              "index": 6
+            },
+            "normalImpulse": -0.3108953047423787,
+            "tangentImpulse": -0.14401307896638826
+          }
+        ]
+      },
+      {
+        "a": 506,
+        "b": 536,
+        "separation": 0.3489360486577276,
+        "isActive": true,
+        "timeCreated": 1082733.3333325158,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.3325631596437688,
+          "normal": {
+            "x": 0.002080144462710969,
+            "y": -0.999997836497165
+          },
+          "tangent": {
+            "x": 0.999997836497165,
+            "y": 0.002080144462710969
+          },
+          "penetration": {
+            "x": 0.0006917794150346497,
+            "y": -0.3325624401424301
+          },
+          "supports": [
+            {
+              "id": 506,
+              "index": 5
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 506,
+              "index": 5
+            },
+            "normalImpulse": -0.7949558527142286,
+            "tangentImpulse": 0.7221098034277399
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      },
+      {
+        "a": 502,
+        "b": 536,
+        "separation": 0.13972567012814952,
+        "isActive": true,
+        "timeCreated": 1082766.6666658493,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.13667192801915462,
+          "normal": {
+            "x": -0.916422727310358,
+            "y": -0.4002116750783804
+          },
+          "tangent": {
+            "x": 0.4002116750783804,
+            "y": -0.916422727310358
+          },
+          "penetration": {
+            "x": -0.12524926102207862,
+            "y": -0.054697701248737705
+          },
+          "supports": [
+            {
+              "id": 536,
+              "index": 5
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 536,
+              "index": 5
+            },
+            "normalImpulse": -1.1451363540767108,
+            "tangentImpulse": 0.5527182289664783
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 537,
+        "separation": 0.052105133492658995,
+        "isActive": true,
+        "timeCreated": 1082866.6666658497,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.4956217806317227,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.4956217806317227
+          },
+          "supports": [
+            {
+              "id": 537,
+              "index": 9
+            },
+            {
+              "id": 537,
+              "index": 8
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 537,
+              "index": 9
+            },
+            "normalImpulse": -2.5759259069713196,
+            "tangentImpulse": 0.04440538334179914
+          },
+          {
+            "vertex": {
+              "id": 537,
+              "index": 8
+            },
+            "normalImpulse": -1.452098767678323,
+            "tangentImpulse": 0.01965391539730733
+          }
+        ]
+      },
+      {
+        "a": 536,
+        "b": 537,
+        "separation": 0.15070551112818542,
+        "isActive": true,
+        "timeCreated": 1082933.3333325167,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.1491504769084031,
+          "normal": {
+            "x": -0.9999994763248033,
+            "y": -0.0010234012495855865
+          },
+          "tangent": {
+            "x": 0.0010234012495855865,
+            "y": -0.9999994763248033
+          },
+          "penetration": {
+            "x": -0.1491503988019978,
+            "y": -0.0001526407844443459
+          },
+          "supports": [
+            {
+              "id": 537,
+              "index": 0
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 537,
+              "index": 0
+            },
+            "normalImpulse": -0.1081321332318536,
+            "tangentImpulse": -1.14263822747796
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      },
+      {
+        "a": 502,
+        "b": 512,
+        "separation": 0.08160233724900692,
+        "isActive": true,
+        "timeCreated": 1083466.6666658525,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.08070336980586035,
+          "normal": {
+            "x": -0.06680498594823255,
+            "y": 0.9977660516636426
+          },
+          "tangent": {
+            "x": -0.9977660516636426,
+            "y": -0.06680498594823255
+          },
+          "penetration": {
+            "x": -0.005391387485855516,
+            "y": 0.08052308264714411
+          },
+          "supports": [
+            {
+              "id": 502,
+              "index": 5
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 502,
+              "index": 5
+            },
+            "normalImpulse": -1.586769378314666,
+            "tangentImpulse": 0.1368870472204369
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 537,
+        "separation": 0.10190907107559691,
+        "isActive": true,
+        "timeCreated": 1083549.9999991863,
+        "timeUpdated": 1083983.3333325216,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.10134601591323644,
+          "normal": {
+            "x": 1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": 1
+          },
+          "penetration": {
+            "x": 0.10134601591323644,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 537,
+              "index": 6
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 537,
+              "index": 6
+            },
+            "normalImpulse": -0.043075211030062774,
+            "tangentImpulse": -0.0911549524960015
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      }
+    ],
+    "bodies": [
+      {
+        "id": 405,
+        "lv": 0,
+        "k": 1,
+        "born": 819.9999999995829,
+        "gameId": 402,
+        "x": 65.7838551083349,
+        "y": 705.9591911640829,
+        "angle": 1.5738691605950614,
+        "vx": -0.00009057651288912894,
+        "vy": 0.0001278922816254635,
+        "av": -0.000003944399857180869,
+        "px": 65.7839456848478,
+        "py": 705.9590632718013,
+        "pa": 1.5738731049949186,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 93.52489992953377,
+            "y": 691.6781568709569
+          },
+          {
+            "x": 95.29428636536879,
+            "y": 692.2622444213928
+          },
+          {
+            "x": 96.37754895187601,
+            "y": 693.7783014106197
+          },
+          {
+            "x": 96.44581443839442,
+            "y": 717.4196745837253
+          },
+          {
+            "x": 95.8617268879568,
+            "y": 719.1890610195638
+          },
+          {
+            "x": 94.34566989873294,
+            "y": 720.2723236060673
+          },
+          {
+            "x": 38.04281028713672,
+            "y": 720.2402254572091
+          },
+          {
+            "x": 36.27342385129774,
+            "y": 719.6561379067737
+          },
+          {
+            "x": 35.190161264790234,
+            "y": 718.1400809175472
+          },
+          {
+            "x": 35.12189577827553,
+            "y": 694.4987077444403
+          },
+          {
+            "x": 35.70598332870893,
+            "y": 692.7293213086017
+          },
+          {
+            "x": 37.222040317938784,
+            "y": 691.6460587220989
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": -0.31346942127009286,
+              "y": 0.949598295032461
+            },
+            {
+              "x": -0.8136408774145154,
+              "y": 0.5813678032021378
+            },
+            {
+              "x": -0.9999958310731689,
+              "y": 0.0028875311694061033
+            },
+            {
+              "x": -0.9495982950324602,
+              "y": -0.31346942127009153
+            },
+            {
+              "x": -0.5813678032021361,
+              "y": -0.8136408774145151
+            },
+            {
+              "x": 0.0005700979287170555,
+              "y": -0.9999998374941574
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 35.12186338403817,
+              "y": 691.6460587220989
+            },
+            "max": {
+              "x": 96.44581443839442,
+              "y": 720.7168422641585
+            }
+          },
+          "area": 1743.696975630594,
+          "mass": 2.0924363707567126,
+          "inverseMass": 0.47791178454729216,
+          "inertia": 3160.9773998189803,
+          "inverseInertia": 0.0003163578455376704,
+          "speed": 0.00015671802827537556,
+          "angularSpeed": 0.000003944399857180869,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 445,
+        "lv": 4,
+        "k": 1,
+        "born": 896.6166666661799,
+        "gameId": 442,
+        "x": 29.991002857388796,
+        "y": 625.2509245977365,
+        "angle": 0.0020394256984069734,
+        "vx": -0.0001670917113578696,
+        "vy": 0.00019678224418839818,
+        "av": -5.812829160282106e-7,
+        "px": 29.991169949100154,
+        "py": 625.2507278154923,
+        "pa": 0.0020400069813230016,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": -0.10504387468085097,
+            "y": 564.2258793781705
+          },
+          {
+            "x": 1.0627476806551157,
+            "y": 560.6670918146692
+          },
+          {
+            "x": 4.103139310875042,
+            "y": 558.4796904400313
+          },
+          {
+            "x": 54.303961644954796,
+            "y": 558.2927420660844
+          },
+          {
+            "x": 57.86274920846162,
+            "y": 559.4605336214211
+          },
+          {
+            "x": 60.05015058309998,
+            "y": 562.5009252516378
+          },
+          {
+            "x": 60.087049589458545,
+            "y": 686.2759698173029
+          },
+          {
+            "x": 58.91925803412217,
+            "y": 689.8347573808041
+          },
+          {
+            "x": 55.87886640390289,
+            "y": 692.0221587554416
+          },
+          {
+            "x": 5.678044069822745,
+            "y": 692.2091071293892
+          },
+          {
+            "x": 2.1192565063160074,
+            "y": 691.041315574053
+          },
+          {
+            "x": -0.06814486832277777,
+            "y": 688.0009239438353
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9501523716464572,
+              "y": 0.3117859372303618
+            },
+            {
+              "x": 0.5840091791846552,
+              "y": 0.8117470533534636
+            },
+            {
+              "x": 0.0037239843681183514,
+              "y": 0.999993065946173
+            },
+            {
+              "x": -0.3117859372303263,
+              "y": 0.9501523716464706
+            },
+            {
+              "x": -0.8117470533534908,
+              "y": 0.58400917918462
+            },
+            {
+              "x": -0.9999999555641887,
+              "y": 0.000298113443208146
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": -0.10514196050026689,
+              "y": 558.2927420660844
+            },
+            "max": {
+              "x": 60.087049589458545,
+              "y": 692.6536554985321
+            }
+          },
+          "area": 8013.039569238315,
+          "mass": 9.615647483085977,
+          "inverseMass": 0.1039971569006674,
+          "inertia": 68415.45723272413,
+          "inverseInertia": 0.000014616579943306804,
+          "speed": 0.0002581528454856231,
+          "angularSpeed": 5.812829160282106e-7,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 502,
+        "lv": 2,
+        "k": 1,
+        "born": 1013.2999999994071,
+        "gameId": 499,
+        "x": 59.98546423065218,
+        "y": 538.4746506677932,
+        "angle": -1.1578160846871832,
+        "vx": -0.00036801433501665315,
+        "vy": 0.00046722412230337795,
+        "av": -0.000004573658683337811,
+        "px": 59.98583224498719,
+        "py": 538.4741834436709,
+        "pa": -1.1578115110284999,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 12.385485918394757,
+            "y": 539.8885540516204
+          },
+          {
+            "x": 10.337451656076723,
+            "y": 537.9017060385853
+          },
+          {
+            "x": 10.092212607164264,
+            "y": 535.0588435418416
+          },
+          {
+            "x": 23.385109253400223,
+            "y": 504.62016981745995
+          },
+          {
+            "x": 25.371957266433263,
+            "y": 502.5721355551466
+          },
+          {
+            "x": 28.214819763180436,
+            "y": 502.3268965062344
+          },
+          {
+            "x": 107.58544254290948,
+            "y": 537.060747283966
+          },
+          {
+            "x": 109.63347680522787,
+            "y": 539.047595297001
+          },
+          {
+            "x": 109.87871585413943,
+            "y": 541.8904577937434
+          },
+          {
+            "x": 96.585819207904,
+            "y": 572.3291315181251
+          },
+          {
+            "x": 94.59897119487132,
+            "y": 574.3771657804388
+          },
+          {
+            "x": 91.75610869812418,
+            "y": 574.6224048293499
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.696303931855287,
+              "y": -0.7177470546668067
+            },
+            {
+              "x": 0.9962998282823716,
+              "y": -0.08594563493582896
+            },
+            {
+              "x": 0.916422727310358,
+              "y": 0.4002116750783804
+            },
+            {
+              "x": 0.7177470546668698,
+              "y": 0.6963039318552231
+            },
+            {
+              "x": 0.085945634935725,
+              "y": 0.9962998282823805
+            },
+            {
+              "x": -0.4009079933479496,
+              "y": 0.9161183225270141
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 10.09198683297768,
+              "y": 502.3268965062344
+            },
+            "max": {
+              "x": 109.87871585413943,
+              "y": 575.0671469042802
+            }
+          },
+          "area": 3820.891909940465,
+          "mass": 4.585070291928558,
+          "inverseMass": 0.21809916453415662,
+          "inertia": 15958.110268527525,
+          "inverseInertia": 0.00006266406129378572,
+          "speed": 0.0005947545134254227,
+          "angularSpeed": 0.000004573658683337811,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 506,
+        "lv": 0,
+        "k": 1,
+        "born": 1023.9999999993973,
+        "gameId": 503,
+        "x": 133.96168846471022,
+        "y": 523.6218125031206,
+        "angle": 1.6375360420083016,
+        "vx": -0.00026289638310572627,
+        "vy": 0.00001667273920702428,
+        "av": 0.000001190954303620373,
+        "px": 133.96195136109333,
+        "py": 523.6217958303814,
+        "pa": 1.637534851053998,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 162.5551432894977,
+            "y": 511.1347051745164
+          },
+          {
+            "x": 164.28378294237413,
+            "y": 511.83018456055385
+          },
+          {
+            "x": 165.26839335808,
+            "y": 513.4120913072285
+          },
+          {
+            "x": 163.8323646892661,
+            "y": 537.0099091586588
+          },
+          {
+            "x": 163.1368853032304,
+            "y": 538.7385488115348
+          },
+          {
+            "x": 161.55497855655506,
+            "y": 539.7231592272423
+          },
+          {
+            "x": 105.36823363992276,
+            "y": 536.1089198317255
+          },
+          {
+            "x": 103.63959398704816,
+            "y": 535.413440445688
+          },
+          {
+            "x": 102.65498357134109,
+            "y": 533.8315336990134
+          },
+          {
+            "x": 104.09101224015629,
+            "y": 510.23371584758337
+          },
+          {
+            "x": 104.78649162619197,
+            "y": 508.5050761947069
+          },
+          {
+            "x": 106.36839837286708,
+            "y": 507.5204657790003
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": -0.37325144232742674,
+              "y": 0.9277302198379069
+            },
+            {
+              "x": -0.8489812734627609,
+              "y": 0.5284229341252638
+            },
+            {
+              "x": -0.9981535040736994,
+              "y": -0.06074193201897665
+            },
+            {
+              "x": -0.9277302198379073,
+              "y": -0.37325144232742535
+            },
+            {
+              "x": -0.5284229341252624,
+              "y": -0.8489812734627616
+            },
+            {
+              "x": 0.06419281068694346,
+              "y": -0.9979375146050495
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 102.6548453413927,
+              "y": 507.5204657790003
+            },
+            "max": {
+              "x": 165.26839335808,
+              "y": 540.1676031951977
+            }
+          },
+          "area": 1743.696975630594,
+          "mass": 2.0924363707567126,
+          "inverseMass": 0.47791178454729216,
+          "inertia": 3160.9773998189803,
+          "inverseInertia": 0.0003163578455376704,
+          "speed": 0.0002634245403957996,
+          "angularSpeed": 0.000001190954303620373,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 512,
+        "lv": 3,
+        "k": 1,
+        "born": 1036.5666666660527,
+        "gameId": 509,
+        "x": 68.75152914177673,
+        "y": 480.3676633903151,
+        "angle": -1.5027216928696991,
+        "vx": -0.0007585548392370356,
+        "vy": 0.00013173168395042012,
+        "av": -0.000010767552675261527,
+        "px": 68.75228769661597,
+        "py": 480.36753165863115,
+        "pa": -1.5027109253170239,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 15.347440479881472,
+            "y": 501.54541943031614
+          },
+          {
+            "x": 12.346444694094538,
+            "y": 500.26299064890446
+          },
+          {
+            "x": 10.794998546918345,
+            "y": 497.3918211767013
+          },
+          {
+            "x": 13.438412815869919,
+            "y": 456.74133910967646
+          },
+          {
+            "x": 14.720841597276577,
+            "y": 453.74034332389147
+          },
+          {
+            "x": 17.592011069477735,
+            "y": 452.18889717671334
+          },
+          {
+            "x": 122.1556178036728,
+            "y": 459.1899073503145
+          },
+          {
+            "x": 125.15661358945957,
+            "y": 460.4723361317254
+          },
+          {
+            "x": 126.70805973663578,
+            "y": 463.3435056039286
+          },
+          {
+            "x": 124.06464546768453,
+            "y": 503.99398767095397
+          },
+          {
+            "x": 122.78221668627819,
+            "y": 506.9949834567426
+          },
+          {
+            "x": 119.91104721407633,
+            "y": 508.54642960391345
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.39295808949321404,
+              "y": -0.9195563821222906
+            },
+            {
+              "x": 0.8797753814990844,
+              "y": -0.4753896066471626
+            },
+            {
+              "x": 0.9978923699830928,
+              "y": 0.06489081544816747
+            },
+            {
+              "x": 0.919556382122278,
+              "y": 0.39295808949324657
+            },
+            {
+              "x": 0.4753896066471639,
+              "y": 0.8797753814990837
+            },
+            {
+              "x": -0.06680498594823255,
+              "y": 0.9977660516636426
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 10.794475195791977,
+              "y": 452.18889717671334
+            },
+            "max": {
+              "x": 126.70805973663578,
+              "y": 508.9907458698117
+            }
+          },
+          "area": 5580.69126822607,
+          "mass": 6.696829521871283,
+          "inverseMass": 0.1493243924955957,
+          "inertia": 33913.088057067274,
+          "inverseInertia": 0.000029487140726236705,
+          "speed": 0.0007699082287431004,
+          "angularSpeed": 0.000010767552675261527,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 529,
+        "lv": 1,
+        "k": 1,
+        "born": 1075.9999999993502,
+        "gameId": 526,
+        "x": 261.19943737263833,
+        "y": 522.8688713161808,
+        "angle": 1.5776163814075415,
+        "vx": -0.0371467441286768,
+        "vy": 0.3017072838583772,
+        "av": -0.0083072945888647,
+        "px": 261.236584116767,
+        "py": 522.5671640323225,
+        "pa": 1.5859236759964062,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 296.56454224056034,
+            "y": 506.2719499073865
+          },
+          {
+            "x": 298.48570155629557,
+            "y": 506.88973776751345
+          },
+          {
+            "x": 299.70869237229533,
+            "y": 508.49498180520237
+          },
+          {
+            "x": 299.7253090521872,
+            "y": 536.6021176148453
+          },
+          {
+            "x": 299.1075211920598,
+            "y": 538.5232769305799
+          },
+          {
+            "x": 297.5022771543709,
+            "y": 539.7462677465795
+          },
+          {
+            "x": 225.83433250471606,
+            "y": 539.4657927249742
+          },
+          {
+            "x": 223.91317318898135,
+            "y": 538.8480048648471
+          },
+          {
+            "x": 222.69018237298187,
+            "y": 537.2427608271591
+          },
+          {
+            "x": 222.67356569308947,
+            "y": 509.13562501751534
+          },
+          {
+            "x": 223.29135355321668,
+            "y": 507.2144657017807
+          },
+          {
+            "x": 224.89659759090588,
+            "y": 505.9914748857811
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": -0.3061315045587281,
+              "y": 0.9519892341390216
+            },
+            {
+              "x": -0.7954442036790945,
+              "y": 0.6060268301266248
+            },
+            {
+              "x": -0.9999998252467704,
+              "y": 0.0005911906890916558
+            },
+            {
+              "x": -0.9519892341390196,
+              "y": -0.30613150455873556
+            },
+            {
+              "x": -0.6060268301266264,
+              "y": -0.7954442036790931
+            },
+            {
+              "x": 0.003913505196192664,
+              "y": -0.9999923422092212
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 222.66929128328837,
+              "y": 505.9914748857811
+            },
+            "max": {
+              "x": 299.7253090521872,
+              "y": 540.3373833879081
+            }
+          },
+          "area": 2569.1282791957665,
+          "mass": 3.0829539350349195,
+          "inverseMass": 0.3243642367263179,
+          "inertia": 7201.002420551546,
+          "inverseInertia": 0.0001388695547644889,
+          "speed": 0.30398546960761264,
+          "angularSpeed": 0.0083072945888647,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 536,
+        "lv": 10,
+        "k": 1,
+        "born": 1081.4333333326786,
+        "gameId": 533,
+        "x": 227.45817551387626,
+        "y": 629.786118684424,
+        "angle": -1.5662892310244318,
+        "vx": -0.00012993977213682228,
+        "vy": -0.00001938076229635044,
+        "av": -8.213617779251337e-7,
+        "px": 227.4583054536484,
+        "py": 629.7861380651863,
+        "pa": -1.566288409662654,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 122.17902147169751,
+            "y": 719.8214482321738
+          },
+          {
+            "x": 114.4186726049898,
+            "y": 718.0348300432155
+          },
+          {
+            "x": 108.17597729553044,
+            "y": 713.0907654846375
+          },
+          {
+            "x": 104.6590874431742,
+            "y": 705.9460818070685
+          },
+          {
+            "x": 104.81169774690386,
+            "y": 556.8254667276033
+          },
+          {
+            "x": 106.59831593586242,
+            "y": 549.0651178608958
+          },
+          {
+            "x": 111.54238049444018,
+            "y": 542.8224225514357
+          },
+          {
+            "x": 118.68706417200939,
+            "y": 539.3055326990795
+          },
+          {
+            "x": 332.73732955605436,
+            "y": 539.7507891366744
+          },
+          {
+            "x": 340.49767842276225,
+            "y": 541.5374073256324
+          },
+          {
+            "x": 346.7403737322213,
+            "y": 546.4814718842105
+          },
+          {
+            "x": 350.2572635845777,
+            "y": 553.6261555617795
+          },
+          {
+            "x": 350.10465328084797,
+            "y": 702.7467706412447
+          },
+          {
+            "x": 348.3180350918889,
+            "y": 710.5071195079523
+          },
+          {
+            "x": 343.3739705333117,
+            "y": 716.7498148174116
+          },
+          {
+            "x": 336.2292868557424,
+            "y": 720.2667046697682
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.22435496622513518,
+              "y": -0.9745074905459254
+            },
+            {
+              "x": 0.6208519782848956,
+              "y": -0.7839278162303789
+            },
+            {
+              "x": 0.8971952010098698,
+              "y": -0.44163420529309055
+            },
+            {
+              "x": 0.9999994763248033,
+              "y": 0.0010234012495855865
+            },
+            {
+              "x": 0.974507490545915,
+              "y": 0.22435496622518217
+            },
+            {
+              "x": 0.7839278162303998,
+              "y": 0.6208519782848689
+            },
+            {
+              "x": 0.4416342052930751,
+              "y": 0.8971952010098774
+            },
+            {
+              "x": -0.002080144462710969,
+              "y": 0.999997836497165
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 104.6590191402052,
+              "y": 539.3055326990795
+            },
+            "max": {
+              "x": 350.2572635845777,
+              "y": 720.7111202121814
+            }
+          },
+          "area": 44025.71021513778,
+          "mass": 52.830852258165336,
+          "inverseMass": 0.018928333677324764,
+          "inertia": 1616210.749890587,
+          "inverseInertia": 6.187311896469549e-7,
+          "speed": 0.0001313771606108038,
+          "angularSpeed": 8.213617779251337e-7,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 537,
+        "lv": 3,
+        "k": 1,
+        "born": 1082.5333333326776,
+        "gameId": 534,
+        "x": 375.07539059734586,
+        "y": 663.1586313507764,
+        "angle": -0.005107678423897674,
+        "vx": -0.00005317246217373395,
+        "vy": -0.00002082272567349719,
+        "av": -7.353114056026649e-7,
+        "px": 375.07544376980803,
+        "py": 663.1586521735021,
+        "pa": -0.005106943112492071,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 350.0495724774622,
+            "y": 611.4459398318877
+          },
+          {
+            "x": 351.1091448419292,
+            "y": 608.3592092491937
+          },
+          {
+            "x": 353.8591921560071,
+            "y": 606.6019844326095
+          },
+          {
+            "x": 394.59414644131385,
+            "y": 606.266081689149
+          },
+          {
+            "x": 397.6808770240086,
+            "y": 607.3256540536153
+          },
+          {
+            "x": 399.43810184059333,
+            "y": 610.0757013676939
+          },
+          {
+            "x": 400.1012087172296,
+            "y": 714.8713228696652
+          },
+          {
+            "x": 399.0416363527625,
+            "y": 717.9580534523592
+          },
+          {
+            "x": 396.2915890386846,
+            "y": 719.7152782689434
+          },
+          {
+            "x": 355.55663475337786,
+            "y": 720.0511810124038
+          },
+          {
+            "x": 352.4699041706832,
+            "y": 718.9916086479376
+          },
+          {
+            "x": 350.7126793540985,
+            "y": 716.241561333859
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9458269887124823,
+              "y": 0.3246710757414015
+            },
+            {
+              "x": 0.5384437067746558,
+              "y": 0.8426614828237791
+            },
+            {
+              "x": 0.008245776377328654,
+              "y": 0.9999660030080698
+            },
+            {
+              "x": -0.3246710757412399,
+              "y": 0.9458269887125381
+            },
+            {
+              "x": -0.8426614828237706,
+              "y": 0.5384437067746687
+            },
+            {
+              "x": -0.9999799812133424,
+              "y": 0.006327493387010002
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 350.0495449605065,
+              "y": 606.266081689149
+            },
+            "max": {
+              "x": 400.1012087172296,
+              "y": 720.4956139906535
+            }
+          },
+          "area": 5580.691268226032,
+          "mass": 6.696829521871238,
+          "inverseMass": 0.1493243924955967,
+          "inertia": 33913.08805706676,
+          "inverseInertia": 0.000029487140726237152,
+          "speed": 0.000057104261120260425,
+          "angularSpeed": 7.353114056026649e-7,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      }
+    ]
+  }
+}
