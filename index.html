@@ -58,6 +58,7 @@
   }
 </style>
 <link rel="stylesheet" href="hints.css">
+<link rel="stylesheet" href="leaderboard.css?v=ranking-v8-20261023">
 </head>
 <body>
 
@@ -72,6 +73,7 @@
     <div class="btns">
       <button class="icon-btn" id="soundBtn" type="button" aria-label="音效开关" aria-pressed="true">🔊</button>
       <button class="icon-btn" id="resetBtn" type="button" aria-label="重新开始">↻</button>
+      <button class="icon-btn" id="rankButton" type="button" aria-label="打开共同排行榜">🏆</button>
     </div>
   </div>
 </header>
@@ -86,6 +88,7 @@
       <p>最高分 <span id="finalBest">0</span></p>
       <p>本局最高合成：<span id="finalLevel">-</span></p>
       <button class="btn" id="restartBtn" type="button">再来一局</button>
+      <button class="btn" id="rankEndButton" type="button">提交成绩 / 看排行榜</button>
     </div>
   </div>
 </div>
@@ -112,12 +115,13 @@
 </section>
 
 <!-- Matter.js 0.20.0（MIT），本地引入，负责奶盒的刚体碰撞和翻倒 -->
-<script src="lib/matter.min.js?v=layout-v7-20261023"></script>
-<script src="physics.js?v=layout-v7-20261023"></script>
-<script src="solver-future.js?v=layout-v7-20261023"></script>
-<script src="layout.js?v=layout-v7-20261023"></script>
-<script src="solver-plan.js?v=layout-v7-20261023"></script>
-<script src="hints-persistent.js?v=layout-v7-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=layout-v7-20261023"></script>
-<script src="game.js?v=layout-v7-20261023"></script>
+<script src="lib/matter.min.js?v=ranking-v8-20261023"></script>
+<script src="physics.js?v=ranking-v8-20261023"></script>
+<script src="solver-future.js?v=ranking-v8-20261023"></script>
+<script src="layout.js?v=ranking-v8-20261023"></script>
+<script src="solver-plan.js?v=ranking-v8-20261023"></script>
+<script src="hints-persistent.js?v=ranking-v8-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=ranking-v8-20261023"></script>
+<script src="leaderboard.js?v=ranking-v8-20261023"></script>
+<script src="game.js?v=ranking-v8-20261023"></script>
 </body>
 </html>
