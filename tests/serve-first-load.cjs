@@ -24,6 +24,7 @@ http.createServer((req, res) => {
   let fail = false, stalled = false;
   if (id.startsWith('retry-')) fail = (relative.startsWith('img/') && count <= 2) || (['startup.js', 'physics.js', 'mobile.css', 'hint-worker-persistent.js', 'hint-branch-worker.js'].includes(relative) && count === 1);
   if (id.startsWith('offline-') && relative === 'img/1.png' && !state.online) fail = true;
+  if (id.startsWith('blocked-') && relative.startsWith('img/') && !state.online) fail = true;
   if (id.startsWith('stall-') && relative === 'hint-worker-persistent.js' && count === 1) stalled = true;
   state.log.push({ file: relative, attempt: count, status: fail ? 503 : 200, ...(stalled ? { stalled: true } : {}) });
   if (fail) { res.writeHead(503); res.end('本地测试：模拟首次网络错误'); return; }

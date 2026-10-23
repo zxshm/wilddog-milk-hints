@@ -12,7 +12,7 @@ pre { white-space: pre-wrap; font-size: 12px; max-height: 360px; overflow: auto;
 <div class="phone"><iframe id="preview" title="首次打开游戏"></iframe></div>
 <aside><h2>首次加载与网络故障恢复</h2>
 <p>每次使用新路径、禁用缓存；只在本机故意制造资源失败，不影响正式网站。</p>
-<select id="scenario" aria-label="故障场景"><option value="retry">首次图片与脚本失败</option><option value="stall">计算线程首次无响应</option><option value="offline">图片一直失败后恢复网络</option></select>
+<select id="scenario" aria-label="故障场景"><option value="blocked">全部图案失败，独立计算验收</option><option value="retry">首次图片与脚本失败</option><option value="stall">计算线程首次无响应</option><option value="offline">图片一直失败后恢复网络</option></select>
 <button id="start">新用户首次打开</button><button id="online">恢复网络</button>
 <p id="state">尚未启动</p><pre id="evidence"></pre></aside>
 </main>
@@ -37,11 +37,13 @@ setInterval(async () => {
   const result = { caseId, elapsedMs: Date.now() - started, firstReadyMs, pageRefreshes: refreshes, ready,
     loading: d.getElementById('loadingStatus')?.textContent || null,
     hint: d.getElementById('hintStatus')?.textContent, detail: d.getElementById('hintDetail')?.textContent,
+    score: d.getElementById('score')?.textContent,
+    textureStatus: d.getElementById('textureNotice')?.hidden ? null : d.getElementById('textureStatus')?.textContent,
     successfulImages: [...new Set(network.filter(x => x.status === 200 && /img\//.test(x.file)).map(x => x.file))].length,
     headerHeight: d.getElementById('top')?.getBoundingClientRect().height,
     successfulStyles: network.filter(x => x.status === 200 && /\.css$/.test(x.file)),
     failures: network.filter(x => x.status !== 200), stalledWorker: network.some(x => x.stalled), requests: network.length };
-  document.getElementById('state').textContent = ready ? '已自行恢复：图案加载完成，提示可以放置' : result.loading || result.hint || '正在启动';
+  document.getElementById('state').textContent = ready ? `提示可以放置；已下载图案 ${result.successfulImages}/11；本局 ${result.score} 分` : result.loading || result.hint || '正在启动';
   document.getElementById('evidence').textContent = JSON.stringify(result, null, 2);
 }, 500);
 </script>
