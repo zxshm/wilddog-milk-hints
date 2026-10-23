@@ -42,7 +42,7 @@
 
 ## 验证记录
 
-验证日期：2026-10-22。
+验证日期：2026-10-22 至 2026-10-23。
 
 - `node --test tests/physics.test.cjs tests/two-step.test.cjs`：共 12 项规则与搜索检查。
 - 对照原版在指定测试局面连续运行 360 帧，得分、奶盒数量、级别、位置、角度和生长比例一致。
@@ -76,6 +76,8 @@ git subtree push --prefix dist github gh-pages
 ```
 
 站点发布源为 `gh-pages` 分支的根目录。推送后需要等待 GitHub Pages 构建成功，再确认线上页面已更新。
+
+当前发布版本为 `layout-v7-20261023`，部署构建已成功，正式页面及十个依赖文件与 Git 中的发布内容逐个哈希一致。可运行 `node tests/check-deployment.cjs` 重新核对线上文件。验收使用“标准两步”和“按提示放置”按钮。
 
 ## 文件
 
