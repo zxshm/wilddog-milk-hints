@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { renderQaPage } = require('../serve.cjs');
 const html = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8');
-const scripts = text => [...text.matchAll(/<script src="([^"]+)"/g)].map(m => m[1]);
+const scripts = text => [...text.matchAll(/<script src="([^"]+)"/g)].map(m => m[1].split('?')[0]);
 
 test('切换正式入口后，旧算法验收页仍独立加载所选版本', () => {
   const plan = renderQaPage(html, 'plan', '{}');

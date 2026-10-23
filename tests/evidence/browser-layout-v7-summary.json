@@ -1,0 +1,75 @@
+{
+  "result": {
+    "won": true,
+    "moves": 258,
+    "score": 4644,
+    "maxLevel": 11,
+    "over": false,
+    "seconds": 353,
+    "mode": "balanced",
+    "runner": "真实浏览器按钮与后台计算，固定物理步长加速显示"
+  },
+  "version": [
+    "joint-7-layout"
+  ],
+  "workers": [
+    4
+  ],
+  "searchMs": {
+    "median": 843,
+    "p95": 1547,
+    "max": 1817
+  },
+  "roundTripMs": {
+    "median": 843,
+    "p95": 1547,
+    "max": 1818
+  },
+  "discardedBecauseStateChanged": 118,
+  "requestsOverFiveSeconds": 0,
+  "browserReplay": {
+    "moves": 258,
+    "score": 4644,
+    "maxLevel": 11,
+    "over": false,
+    "allMovesMatched": true,
+    "maxFinalStateError": 0,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+  },
+  "nodeReplay": {
+    "passed": false,
+    "firstDivergentMove": 25,
+    "expectedScore": 200,
+    "actualScore": 218,
+    "earlierObservedStateDifference": 2.9558577807620168e-12,
+    "node": "v24.19.0"
+  },
+  "manifest": {
+    "revision": "c3cabeb5712af5d923762d0ce4663e67e1177d51",
+    "hashes": {
+      "lib/matter.min.js": "40120ab0e4f6c956b6ee691ba38ade20d38c8fac9b74079b75071276baa8fa93",
+      "branch-pool.js": "130cd7c0ff5b25fe180b413a1ed6c7dd2f27c31297e340b36fc9a3ce3f433e61",
+      "game.js": "8868f4f986d7093853edbb3019ba10c257b36a14115d4f16dc62465d9fff5467",
+      "hint-branch-goal-worker.js": "62cb8a47f34f2c98d77b4e3361791f4fcd7a3545ec7404f6265365281aabaa43",
+      "hint-branch-worker.js": "16d33323db1569147eb05b68afc439731806c75456fe7ef7352f7ae2074e0a3a",
+      "hint-worker-goal.js": "0b656944d3fe92f2180719d0d1295c3c562cf19eaca9ae49ed27b92eb4704d3b",
+      "hint-worker-optimized.js": "2bbb64e5642c4f0c0847f77c0ca6cdf62d9b00861527bd711b438e306a0030b8",
+      "hint-worker-persistent.js": "40e8d50d6046c88f69e344cb54c563946d6b585c77547e8525d41e385b1c5f13",
+      "hint-worker.js": "483ffbb691684ec078f309398ba5da777802ec461529d68a54225b56c1682f0c",
+      "hints-goal.js": "cba60f338864f954f23daac7f578e3d63fc1269aff2c518f18e61bf232830879",
+      "hints-optimized.js": "5366f53385c94a6cf045542ada39a7608bee5af255db9cf230b5431b4a658a0b",
+      "hints-persistent.js": "2d11e44778f6b00b0d199de159854ffe720553e2320f048f74c14809684bfb92",
+      "hints.js": "c04d21e0605df4ac10b284265942060e48a3027b61af606d082832ad0e213950",
+      "layout.js": "00e830755f180c9a65dbcc31b9b4a0b3817fe853aaa0b61ebcba5587770e1bac",
+      "physics.js": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6",
+      "solver-future.js": "b6627794b52abf6e50952180a1521f12ea82d62066b85619349d2b59bcb89600",
+      "solver-goal.js": "5477d5d3ee086f1b09717f3c91574ca8bc76f93cdb024aeb3eafb4fdb79c267f",
+      "solver-optimized.js": "47dca0b9da8d8afa31268494b18abedfdbc9fbaea93bcee268bb726f0faedf8a",
+      "solver-plan.js": "d167a37247ad14333d9df71a8a1b3519d22b35b4effef2cb0542b2f54e7b8fe3",
+      "solver-strategy.js": "823e1210549c6662e0c755a36f2bc4dd27868afe0dcf342890f9a103d870401c",
+      "solver.js": "724c6645f031686714e8e989def95434c3cbf2781da09f4f1fda6a1fe949bfb3"
+    },
+    "page": "/__qa/plan",
+    "loadedAt": "2026-10-23T01:13:42.527Z"
+  }
+}

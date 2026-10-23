@@ -18,8 +18,8 @@ function renderQaPage(source, variant, manifest) {
   const scripts = qaVariants[variant].map(file => `<script src="${file}"${file === 'hints-persistent.js'
     && ['future', 'plan'].includes(variant) ? ` data-worker="hint-worker-persistent.js?strategy=${variant}"` : ''}></script>`).join('\n');
   // 正式入口换版本后，各实验入口仍明确加载自己的算法，避免旧对照页意外加载新版。
-  return source.replace(/<script src="(?:solver(?:-[a-z]+)?|hints(?:-[a-z]+)?|layout)\.js"[^>]*><\/script>\s*/g, '')
-    .replace('<script src="game.js">', `${scripts}\n<script src="game.js">`)
+  return source.replace(/<script src="(?:solver(?:-[a-z]+)?|hints(?:-[a-z]+)?|layout)\.js(?:\?[^\"]*)?"[^>]*><\/script>\s*/g, '')
+    .replace(/<script src="game\.js(?:\?[^\"]*)?">/, match => `${scripts}\n${match}`)
     .replace('<head>', '<head><base href="/"><script src="/__qa/clock.js"></script>')
     .replace('</body>', `<script id="qa-source" type="application/json">${manifest}</script><script src="/__qa/acceptance.js"></script></body>`);
 }
