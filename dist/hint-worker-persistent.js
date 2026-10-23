@@ -36,3 +36,5 @@ onmessage = async ({ data }) => {
     postMessage({ id: data.id, result });
   } catch (error) { pool?.destroy(); pool = null; postMessage({ id: data.id, error: error.message }); }
 };
+// 主页面据此区分依赖尚未下载完成和正常的长时间搜索。
+postMessage({ ready: true });

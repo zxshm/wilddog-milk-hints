@@ -28,6 +28,8 @@
     <button id="measure">读取布局</button>
     <p id="summary"></p>
     <button id="safeArea">模拟底部安全区 34 像素</button>
+    <button id="legacy">旧微信接口兼容测试</button>
+    <p id="compatibility"></p>
     <details><summary>完整布局数据</summary>
     <pre id="metrics">等候游戏加载…</pre>
     </details>
@@ -51,6 +53,9 @@ function measure() {
     bodyScrollSize: [d.body.scrollWidth, d.body.scrollHeight],
     score: d.getElementById('score').textContent,
     hintReady: !d.getElementById('hintPlace').disabled,
+    legacyTimeoutMissing: typeof frame.contentWindow.AbortSignal?.timeout !== 'function',
+    rankingStatus: d.getElementById('rankStatus')?.textContent || '',
+    rankingText: d.getElementById('rankList')?.textContent || '',
   };
   document.getElementById('metrics').textContent = JSON.stringify(record, null, 2);
   document.getElementById('summary').textContent = `棋盘 ${record.layout.board.width} × ${record.layout.board.height}；提示按钮高度 ${record.layout.hintPlace.height}；本局 ${record.score} 分。`;
@@ -63,6 +68,10 @@ document.getElementById('preset').onchange = event => {
   document.getElementById('size').textContent = `${width} × ${height} · 可用窗口模拟`;
 };
 document.getElementById('measure').onclick = measure;
+document.getElementById('legacy').onclick = () => {
+  frame.src = '/__qa/ranking-compat';
+  document.getElementById('compatibility').textContent = '已停用新超时接口。点奖杯读取正式共享榜单；这里只读，不添加测试成绩。';
+};
 document.getElementById('safeArea').onclick = () => {
   frame.contentDocument.body.style.paddingBottom = '34px';
   frame.contentWindow.dispatchEvent(new Event('resize'));

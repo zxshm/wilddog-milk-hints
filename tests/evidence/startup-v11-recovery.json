@@ -1,0 +1,418 @@
+{
+  "checkedAt": "2026-10-23T05:36:04.319Z",
+  "note": "每次测试使用新路径并禁止资源缓存；未清除浏览器历史最高分。非真实微信内核测试。",
+  "retry": {
+    "caseId": "retry-1792733312476",
+    "elapsedMs": 224837,
+    "firstReadyMs": 11332,
+    "pageRefreshes": 0,
+    "ready": true,
+    "loading": null,
+    "hint": "①本步 35% → ②下步 32%",
+    "detail": "预计两步 +0 分 · 0 次合成\n239 组组合 · 0.3 秒 · 堆叠较低",
+    "successfulImages": 11,
+    "headerHeight": 54.000003814697266,
+    "successfulStyles": [
+      {
+        "file": "hints.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "leaderboard.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "mobile.css",
+        "attempt": 2,
+        "status": 200
+      }
+    ],
+    "failures": [
+      {
+        "file": "mobile.css",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "startup.js",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/2.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/3.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "physics.js",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/2.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/3.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/4.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/5.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/6.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/4.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/5.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/6.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/7.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/8.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/9.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/7.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/8.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/9.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/10.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/11.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/10.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/11.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "hint-worker-persistent.js",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "hint-branch-worker.js",
+        "attempt": 1,
+        "status": 503
+      }
+    ],
+    "stalledWorker": false,
+    "requests": 61
+  },
+  "stalledWorker": {
+    "caseId": "stall-1792732965099",
+    "elapsedMs": 222712,
+    "firstReadyMs": 15710,
+    "pageRefreshes": 0,
+    "ready": true,
+    "loading": null,
+    "hint": "①本步 28% → ②下步 32%",
+    "detail": "预计两步 +12 分 · 1 次合成\n289 组组合 · 0.2 秒 · 堆叠较低",
+    "successfulImages": 11,
+    "headerHeight": 54.000003814697266,
+    "successfulStyles": [
+      {
+        "file": "hints.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "leaderboard.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "mobile.css",
+        "attempt": 1,
+        "status": 200
+      }
+    ],
+    "failures": [],
+    "stalledWorker": true,
+    "requests": 56
+  },
+  "offlineBeforeRecovery": {
+    "caseId": "offline-1792733188130",
+    "elapsedMs": 44685,
+    "firstReadyMs": null,
+    "pageRefreshes": 0,
+    "ready": false,
+    "loading": "还有部分内容没加载好，连接恢复后会继续。",
+    "hint": "准备计算…",
+    "detail": "联算当前盒与下一盒的运动和合成。",
+    "successfulImages": 10,
+    "headerHeight": 54.000003814697266,
+    "successfulStyles": [
+      {
+        "file": "hints.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "leaderboard.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "mobile.css",
+        "attempt": 1,
+        "status": 200
+      }
+    ],
+    "failures": [
+      {
+        "file": "img/1.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 3,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 4,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 5,
+        "status": 503
+      }
+    ],
+    "stalledWorker": false,
+    "requests": 27
+  },
+  "offlineRecovered": {
+    "caseId": "offline-1792733188130",
+    "elapsedMs": 124180,
+    "firstReadyMs": 45679,
+    "pageRefreshes": 0,
+    "ready": true,
+    "loading": null,
+    "hint": "①本步 21% → ②下步 26%",
+    "detail": "预计两步 +2 分 · 1 次合成\n287 组组合 · 0.2 秒 · 堆叠较低",
+    "successfulImages": 11,
+    "headerHeight": 54.000003814697266,
+    "successfulStyles": [
+      {
+        "file": "hints.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "leaderboard.css",
+        "attempt": 1,
+        "status": 200
+      },
+      {
+        "file": "mobile.css",
+        "attempt": 1,
+        "status": 200
+      }
+    ],
+    "failures": [
+      {
+        "file": "img/1.png",
+        "attempt": 1,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 2,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 3,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 4,
+        "status": 503
+      },
+      {
+        "file": "img/1.png",
+        "attempt": 5,
+        "status": 503
+      }
+    ],
+    "stalledWorker": false,
+    "requests": 60
+  },
+  "legacyRanking": {
+    "viewport": [
+      430,
+      847
+    ],
+    "layout": {
+      "top": {
+        "x": 6.142857551574707,
+        "y": 4,
+        "width": 418.0000305175781,
+        "height": 54.15178680419922,
+        "bottom": 58.15178680419922
+      },
+      "board": {
+        "x": 38.642860412597656,
+        "y": 58.15178680419922,
+        "width": 353.0000305175781,
+        "height": 635,
+        "bottom": 693.1517868041992
+      },
+      "chain": {
+        "x": 6.142857551574707,
+        "y": 698.1517944335938,
+        "width": 418.0000305175781,
+        "height": 32,
+        "bottom": 730.1517944335938
+      },
+      "hintDock": {
+        "x": 6.142857551574707,
+        "y": 732.1517944335938,
+        "width": 418.0000305175781,
+        "height": 106.00000762939453,
+        "bottom": 838.1518020629883
+      },
+      "hintToggle": {
+        "x": 6.142857551574707,
+        "y": 732.1517944335938,
+        "width": 80.03572082519531,
+        "height": 30.000001907348633,
+        "bottom": 762.1517963409424
+      },
+      "hintPlace": {
+        "x": 6.142857551574707,
+        "y": 765.1517944335938,
+        "width": 270,
+        "height": 44.000003814697266,
+        "bottom": 809.151798248291
+      },
+      "hintMode": {
+        "x": 282.14288330078125,
+        "y": 765.1517944335938,
+        "width": 92.00000762939453,
+        "height": 44.000003814697266,
+        "bottom": 809.151798248291
+      },
+      "hintRefresh": {
+        "x": 380.14288330078125,
+        "y": 765.1517944335938,
+        "width": 44.000003814697266,
+        "height": 44.000003814697266,
+        "bottom": 809.151798248291
+      },
+      "soundBtn": {
+        "x": 296.14288330078125,
+        "y": 9.071429252624512,
+        "width": 40,
+        "height": 40,
+        "bottom": 49.07142925262451
+      },
+      "resetBtn": {
+        "x": 340.14288330078125,
+        "y": 9.071429252624512,
+        "width": 40,
+        "height": 40,
+        "bottom": 49.07142925262451
+      },
+      "rankButton": {
+        "x": 384.14288330078125,
+        "y": 9.071429252624512,
+        "width": 40,
+        "height": 40,
+        "bottom": 49.07142925262451
+      }
+    },
+    "scrollSize": [
+      430,
+      847
+    ],
+    "bodyScrollSize": [
+      430,
+      847
+    ],
+    "score": "0",
+    "hintReady": true,
+    "legacyTimeoutMissing": true,
+    "rankingStatus": "已同步 · 前 1 名",
+    "rankingText": "1231,112 分"
+  }
+}

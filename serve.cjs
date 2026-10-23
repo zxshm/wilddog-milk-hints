@@ -15,17 +15,23 @@ const qaVariants = {
   plan: ['solver-future.js', 'layout.js', 'solver-plan.js', 'hints-persistent.js'],
 };
 function renderQaPage(source, variant, manifest) {
-  const scripts = qaVariants[variant].map(file => `<script src="${file}"${file === 'hints-persistent.js'
+  const scripts = qaVariants[variant].map(file => `<script src="${file}" type="application/x-game-script"${file === 'hints-persistent.js'
     && ['future', 'plan'].includes(variant) ? ` data-worker="hint-worker-persistent.js?strategy=${variant}"` : ''}></script>`).join('\n');
   // 正式入口换版本后，各实验入口仍明确加载自己的算法，避免旧对照页意外加载新版。
   return source.replace(/<script src="(?:solver(?:-[a-z]+)?|hints(?:-[a-z]+)?|layout)\.js(?:\?[^\"]*)?"[^>]*><\/script>\s*/g, '')
-    .replace(/<script src="game\.js(?:\?[^\"]*)?">/, match => `${scripts}\n${match}`)
+    .replace(/<script src="game\.js(?:\?[^\"]*)?"[^>]*>/, match => `${scripts}\n${match}`)
     .replace('<head>', '<head><base href="/"><script src="/__qa/clock.js"></script>')
     .replace('</body>', `<script id="qa-source" type="application/json">${manifest}</script><script src="/__qa/acceptance.js"></script></body>`);
 }
 const server = http.createServer((req, res) => {
   let name;
   try { name = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); } catch { res.writeHead(400); res.end(); return; }
+  // 仅本地模拟旧微信内核，正式页面不会修改浏览器能力。
+  if (name === '/__qa/ranking-compat') {
+    const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+      .replace('<head>', '<head><base href="/"><script>Object.defineProperty(AbortSignal, "timeout", { value: undefined, configurable: true });</script>');
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); res.end(html); return;
+  }
   // 验收页只由本地服务提供，发布目录中不包含自动点击或加速脚本。
   if (['/__qa/acceptance', '/__qa/parallel', '/__qa/persistent', '/__qa/goal', '/__qa/future', '/__qa/plan'].includes(name)) {
     let revision = '未知';

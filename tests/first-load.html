@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>首次加载恢复验收</title>
+<style>
+body { margin: 12px; font: 14px/1.5 "Microsoft YaHei",sans-serif; background: #eee; }
+main { display: flex; gap: 24px; } iframe { width: 390px; height: 760px; border: 1px solid #bbb; transform: scale(.78); transform-origin: top left; }
+.phone { width: 306px; height: 595px; } aside { max-width: 680px; } button, select { padding: 10px; margin: 5px; }
+pre { white-space: pre-wrap; font-size: 12px; max-height: 360px; overflow: auto; }
+</style>
+<main>
+<div class="phone"><iframe id="preview" title="首次打开游戏"></iframe></div>
+<aside><h2>首次加载与网络故障恢复</h2>
+<p>每次使用新路径、禁用缓存；只在本机故意制造资源失败，不影响正式网站。</p>
+<select id="scenario" aria-label="故障场景"><option value="retry">首次图片与脚本失败</option><option value="stall">计算线程首次无响应</option><option value="offline">图片一直失败后恢复网络</option></select>
+<button id="start">新用户首次打开</button><button id="online">恢复网络</button>
+<p id="state">尚未启动</p><pre id="evidence"></pre></aside>
+</main>
+<script>
+const frame = document.getElementById('preview');
+let caseId, started, refreshes = 0, initialDocument, firstReadyMs;
+document.getElementById('start').onclick = () => {
+  caseId = document.getElementById('scenario').value + '-' + Date.now(); started = Date.now(); refreshes = 0; initialDocument = null; firstReadyMs = null;
+  frame.src = '/__cold/' + caseId + '/index.html';
+};
+frame.onload = () => { if (caseId) { if (initialDocument) refreshes++; initialDocument = frame.contentDocument; } };
+document.getElementById('online').onclick = async () => {
+  await fetch('/__evidence/' + caseId, { method: 'POST' });
+  frame.contentWindow.dispatchEvent(new Event('online'));
+};
+setInterval(async () => {
+  if (!caseId || !frame.contentDocument) return;
+  const d = frame.contentDocument;
+  const ready = !d.getElementById('loadingPanel') && !!d.getElementById('hintPlace') && !d.getElementById('hintPlace').disabled;
+  if (ready && firstReadyMs === null) firstReadyMs = Date.now() - started;
+  const network = await (await fetch('/__evidence/' + caseId)).json();
+  const result = { caseId, elapsedMs: Date.now() - started, firstReadyMs, pageRefreshes: refreshes, ready,
+    loading: d.getElementById('loadingStatus')?.textContent || null,
+    hint: d.getElementById('hintStatus')?.textContent, detail: d.getElementById('hintDetail')?.textContent,
+    successfulImages: [...new Set(network.filter(x => x.status === 200 && /img\//.test(x.file)).map(x => x.file))].length,
+    headerHeight: d.getElementById('top')?.getBoundingClientRect().height,
+    successfulStyles: network.filter(x => x.status === 200 && /\.css$/.test(x.file)),
+    failures: network.filter(x => x.status !== 200), stalledWorker: network.some(x => x.stalled), requests: network.length };
+  document.getElementById('state').textContent = ready ? '已自行恢复：图案加载完成，提示可以放置' : result.loading || result.hint || '正在启动';
+  document.getElementById('evidence').textContent = JSON.stringify(result, null, 2);
+}, 500);
+</script>
+</html>

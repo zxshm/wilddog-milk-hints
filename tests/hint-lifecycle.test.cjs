@@ -16,7 +16,7 @@ test('正常投放复用线程，中途取消终止旧线程，过期回复不�
     postMessage(data) { this.request = data; }
     terminate() { this.terminated = true; }
   }
-  const sandbox = { window: {}, document: { getElementById: element }, Worker: FakeWorker,
+  const sandbox = { window: {}, document: { getElementById: element }, Worker: FakeWorker, setTimeout, clearTimeout,
     localStorage: { getItem: () => null, setItem() {} }, location: { protocol: 'http:' }, GamePhysics: { W: 400 } };
   sandbox.Game = { layout() {}, state: () => ({ level: 0, nextLevel: 1, bodies: [], over: false, cooldown: 0 }),
     snapshot: () => ({ bodies: [] }), place() { sandbox.window.Hints.invalidate(); return true; } };

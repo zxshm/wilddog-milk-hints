@@ -17,30 +17,55 @@
   document.body.append(dialog);
   $('rankName').value = read('wildDogRankName') || '';
   async function api(path, options = {}) {
-    const response = await fetch(API + path, { ...options, signal: AbortSignal.timeout(12000), credentials: 'omit' });
-    const data = await response.json();
-    if (!response.ok) { if (response.status === 401) { identity = null; save('wildDogRankIdentity', 'null'); } throw new Error(data.error || '连接失败'); }
-    return data;
+    // 部分微信内核没有 AbortSignal.timeout，直接调用会导致请求尚未发出就失败。
+    const controller = typeof AbortController === 'function' ? new AbortController() : null;
+    let timer;
+    const deadline = new Promise((_, reject) => {
+      timer = setTimeout(() => { controller?.abort(); reject(new Error('连接超时，请稍后重试')); }, 12000);
+    });
+    try {
+      return await Promise.race([deadline, (async () => {
+        const response = await fetch(API + path, { ...options, ...(controller ? { signal: controller.signal } : {}), credentials: 'omit' });
+        let data;
+        try { data = await response.json(); } catch { throw new Error('排行榜服务暂时不可用，请稍后重试'); }
+        if (!response.ok) { if (response.status === 401) { identity = null; save('wildDogRankIdentity', 'null'); } throw new Error(data.error || '连接失败'); }
+        return data;
+      })()]);
+    } finally { clearTimeout(timer); }
   }
   async function refresh() {
     const current = ++loading;
     $('rankStatus').textContent = '正在读取共享榜单…';
-    $('rankList').replaceChildren();
     try {
-      const data = await api('/leaderboard?mode=player');
+      let data;
+      // 只自动重试读取，创建身份和提交成绩仍各发一次，避免网络波动时重复写入。
+      for (let attempt = 0; attempt < 2; attempt++) {
+        if (current !== loading) return;
+        try { data = await api('/leaderboard?mode=player'); break; }
+        catch (error) {
+          if (attempt || current !== loading) throw error;
+          $('rankStatus').textContent = '连接较慢，正在自动重试…';
+          await new Promise(resolve => setTimeout(resolve, 800));
+        }
+      }
       if (current !== loading) return;
+      if (!Array.isArray(data?.entries)) throw new Error('榜单内容暂时不可用');
+      $('rankList').replaceChildren();
       for (const item of data.entries) {
         const li = document.createElement('li'), name = document.createElement('span'), points = document.createElement('strong');
         name.textContent = item.nickname; points.textContent = item.score.toLocaleString() + ' 分';
         li.append(name, points); $('rankList').append(li);
       }
       $('rankStatus').textContent = data.entries.length ? `已同步 · 前 ${data.entries.length} 名` : '暂无成绩，完成一局后提交你的纪录吧。';
-    } catch { if (current === loading) $('rankStatus').textContent = '暂时连接不上共享榜单，请点击刷新重试。'; }
+    } catch { if (current === loading) $('rankStatus').textContent = $('rankList').children.length
+      ? '暂时无法同步，以下保留上次读取的榜单。请稍后重试。'
+      : '暂时连接不上共享榜单，请检查网络后重试。'; }
   }
-  function open() { if (!dialog.open) dialog.showModal(); refresh(); }
+  function open() { if (!dialog.open) dialog.showModal(); return refresh(); }
   $('rankClose').onclick = () => dialog.close();
   $('rankRefresh').onclick = refresh;
   $('rankButton').onclick = open; $('rankEndButton').onclick = open;
+  window.addEventListener('online', () => { if (dialog.open) refresh(); });
   $('rankForm').onsubmit = async event => {
     event.preventDefault(); if (!ended) return;
     const nickname = $('rankName').value.trim();
