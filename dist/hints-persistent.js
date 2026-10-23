@@ -1,5 +1,6 @@
 'use strict';
 window.Hints = (() => {
+  const workerUrl = document.currentScript?.dataset.worker || 'hint-worker-persistent.js';
   let enabled = true, mode = 'balanced', hint = null, source = null, worker = null;
   let generation = 0, pending = false, stableSince = 0, lastRequest = -10000, fallback = false;
   let ready = false, lastStatus = '', lastDetail = '';
@@ -53,7 +54,7 @@ window.Hints = (() => {
     if (fallback || location.protocol === 'file:') { fallback = true; localSolve(); return; }
     try {
       if (!worker) {
-        worker = new Worker('hint-worker-persistent.js');
+        worker = new Worker(workerUrl);
       }
       worker.onmessage = ({ data: reply }) => {
         if (reply.progress) {

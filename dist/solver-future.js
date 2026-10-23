@@ -168,6 +168,13 @@
     return { x: first.x, value: first.route.jointValue * .35 + value * .65, simulations };
   }
 
+  async function refineBranch(context, first, checkpoint = () => {}) {
+    const x = first.route.second.x;
+    const simulations = await extendBranch(first, context.nextLevel,
+      [-12, -6, 6, 12].map(d => clampX(context.nextLevel, x + d)), checkpoint);
+    return { first, simulations };
+  }
+
   async function solve(snapshot, lv, nextLv, options = {}) {
     const started = now(), mode = options.mode || 'balanced';
     const config = MODES[mode] || MODES.balanced;
@@ -205,7 +212,13 @@
     rank();
     if (hasNext && refinement) {
       const finalists = results.filter(r => r.route.second && !r.route.fatal).slice(0, refinement);
-      for (const first of finalists) {
+      if (options.mapBranches) {
+        // 各优胜分支的第二步细化互不依赖，交给已经启动的线程一起计算。
+        const refined = await options.mapBranches(finalists, { nextLevel: nextLv, mode, stage: 'refine' }, r => {
+          simulated += r.simulations; pairsExamined += r.simulations;
+        });
+        refined.forEach((r, i) => Object.assign(finalists[i], r.first));
+      } else for (const first of finalists) {
         const x = first.route.second.x;
         await extend(first, [-12, -6, 6, 12].map(d => clampX(nextLv, x + d)));
       }
@@ -244,7 +257,7 @@
       totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
     return answer;
   }
-  const api = { solve, solveBranch, solveFutureBranch, simulate, candidates, evaluate, MODES };
+  const api = { solve, solveBranch, solveFutureBranch, refineBranch, simulate, candidates, evaluate, MODES };
   if (typeof module === 'object') module.exports = api;
   else root.PlacementSolver = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

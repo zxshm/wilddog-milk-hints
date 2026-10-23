@@ -1,11 +1,12 @@
 'use strict';
-importScripts('lib/matter.min.js', 'physics.js', 'solver-optimized.js', 'branch-pool.js');
+const strategy = new URL(self.location.href).searchParams.get('strategy') === 'future' ? 'future' : 'optimized';
+importScripts('lib/matter.min.js', 'physics.js', `solver-${strategy}.js`, 'branch-pool.js');
 let pool;
 onmessage = async ({ data }) => {
   try {
     let size = Math.max(1, Math.min(4, Math.floor((navigator.hardwareConcurrency || 2) / 2)));
     // 不支持嵌套线程的环境仍执行同样的串行搜索。
-    try { if (size > 1 && !pool) pool = createBranchPool(() => new Worker('hint-branch-worker.js'), size); }
+    try { if (size > 1 && !pool) pool = createBranchPool(() => new Worker(`hint-branch-worker.js?strategy=${strategy}`), size); }
     catch (_) { size = 1; }
     let lastProgress = 0;
     const options = {
