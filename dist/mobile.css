@@ -1,0 +1,43 @@
+/* 手机使用紧凑工具栏，把高度优先留给棋盘；桌面继续使用原版布局。 */
+@media (max-width: 700px) {
+  html { height: 100%; overflow: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    height: var(--game-viewport-height, 100dvh); min-height: 0;
+    padding: max(4px, env(safe-area-inset-top)) max(6px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(6px, env(safe-area-inset-left));
+    overflow-x: hidden; overflow-y: auto; touch-action: pan-y; scrollbar-width: none;
+  }
+  body::-webkit-scrollbar { display: none; }
+  #top, #board, #chain, #hintDock { flex-shrink: 0; }
+  #top { padding: 0 0 4px; gap: 6px; min-height: 54px; }
+  #top > div:first-child { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 7px; min-width: 0; }
+  #top .title { grid-column: 1 / -1; font-size: clamp(15px, 4vw, 18px); letter-spacing: 0; white-space: nowrap; }
+  #top .score { font-size: 26px; line-height: 1.05; }
+  #top .best { font-size: 10px; white-space: nowrap; }
+  #top .right { gap: 6px; }
+  #top .next { flex-direction: row; gap: 2px; padding: 0 4px; border-radius: 9px; font-size: 10px; white-space: nowrap; }
+  #top .next canvas { width: 28px; height: 38px; }
+  #top .btns { flex-direction: row; gap: 4px; }
+  #top .icon-btn { width: 40px; height: 40px; font-size: 18px; }
+  #board { border-radius: 12px; box-shadow: 0 3px 0 #d69a55, 0 5px 14px #0002; }
+  #chain { margin-top: 5px; }
+  #hintDock { margin-top: 2px; font-size: 12px; padding: 0; }
+  .hint-top { min-height: 30px; gap: 6px; }
+  #hintToggle { min-height: 30px; padding: 4px 6px; flex-shrink: 0; }
+  #hintStatus { flex: 1; min-width: 0; }
+  .hint-actions { gap: 6px; margin-top: 3px; }
+  .hint-actions button, .hint-actions select { min-height: 44px; padding: 6px 10px; font-size: 13px; }
+  #hintPlace { font-size: 15px; }
+  #hintRefresh { flex: 0 0 44px; font-size: 20px; }
+  #hintDetail { margin-top: 3px; min-height: 26px; line-height: 13px; font-size: 10px; }
+  #rankDialog { max-height: calc(var(--game-viewport-height, 100dvh) - 20px); padding: 16px; }
+  #rankDialog input { font-size: 16px; }
+  #rankDialog button { min-height: 40px; }
+  #rankList { max-height: calc(var(--game-viewport-height, 100dvh) * .32); }
+}
+@media (max-width: 370px) {
+  #top .right { gap: 3px; }
+  #top .next { flex-direction: column; gap: 0; padding: 0 3px; font-size: 9px; }
+  #top .next canvas { width: 22px; height: 30px; }
+  #top .btns { gap: 3px; }
+  #top .icon-btn { width: 38px; height: 40px; }
+}

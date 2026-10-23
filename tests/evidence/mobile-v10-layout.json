@@ -1,0 +1,1324 @@
+{
+  "checkedAt": "2026-10-23T05:05:14.663Z",
+  "before": [
+    {
+      "viewport": [
+        430,
+        847
+      ],
+      "layout": {
+        "top": {
+          "x": 77.5,
+          "y": 8,
+          "width": 275,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 77.5,
+          "y": 136,
+          "width": 275,
+          "height": 495,
+          "bottom": 631
+        },
+        "chain": {
+          "x": 77.5,
+          "y": 641,
+          "width": 275,
+          "height": 78,
+          "bottom": 719
+        },
+        "hintDock": {
+          "x": 77.5,
+          "y": 726,
+          "width": 275,
+          "height": 88.33333587646484,
+          "bottom": 814.3333358764648
+        },
+        "hintToggle": {
+          "x": 77.5,
+          "y": 726.6666870117188,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 749.3333549499512
+        },
+        "hintPlace": {
+          "x": 77.5,
+          "y": 754,
+          "width": 154.33334350585938,
+          "height": 27.33333396911621,
+          "bottom": 781.3333339691162
+        },
+        "hintMode": {
+          "x": 237.83334350585938,
+          "y": 754,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 781.3333339691162
+        },
+        "hintRefresh": {
+          "x": 325.8333435058594,
+          "y": 754,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 781.3333339691162
+        },
+        "soundBtn": {
+          "x": 314.5,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 314.5,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 314.5,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        430,
+        847
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "top": {
+          "x": 58.5,
+          "y": 8,
+          "width": 273,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 58.5,
+          "y": 136,
+          "width": 273,
+          "height": 491,
+          "bottom": 627
+        },
+        "chain": {
+          "x": 58.5,
+          "y": 637,
+          "width": 273,
+          "height": 78,
+          "bottom": 715
+        },
+        "hintDock": {
+          "x": 58.5,
+          "y": 722,
+          "width": 273,
+          "height": 88.33333587646484,
+          "bottom": 810.3333358764648
+        },
+        "hintToggle": {
+          "x": 58.5,
+          "y": 722.6666870117188,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 745.3333549499512
+        },
+        "hintPlace": {
+          "x": 58.5,
+          "y": 750,
+          "width": 152.33334350585938,
+          "height": 27.33333396911621,
+          "bottom": 777.3333339691162
+        },
+        "hintMode": {
+          "x": 216.83334350585938,
+          "y": 750,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 777.3333339691162
+        },
+        "hintRefresh": {
+          "x": 304.8333435058594,
+          "y": 750,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 777.3333339691162
+        },
+        "soundBtn": {
+          "x": 293.5,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 293.5,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 293.5,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        390,
+        844
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        393,
+        720
+      ],
+      "layout": {
+        "top": {
+          "x": 76.66667175292969,
+          "y": 8,
+          "width": 240,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 76.66667175292969,
+          "y": 136,
+          "width": 240,
+          "height": 404.66668701171875,
+          "bottom": 540.6666870117188
+        },
+        "chain": {
+          "x": 76.66667175292969,
+          "y": 550.6666870117188,
+          "width": 240,
+          "height": 68,
+          "bottom": 618.6666870117188
+        },
+        "hintDock": {
+          "x": 76.66667175292969,
+          "y": 625.6666870117188,
+          "width": 240,
+          "height": 88.33333587646484,
+          "bottom": 714.0000228881836
+        },
+        "hintToggle": {
+          "x": 76.66667175292969,
+          "y": 626.3333740234375,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 649.0000419616699
+        },
+        "hintPlace": {
+          "x": 76.66667175292969,
+          "y": 653.6666870117188,
+          "width": 119.33333587646484,
+          "height": 27.33333396911621,
+          "bottom": 681.000020980835
+        },
+        "hintMode": {
+          "x": 202,
+          "y": 653.6666870117188,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 681.000020980835
+        },
+        "hintRefresh": {
+          "x": 290,
+          "y": 653.6666870117188,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 681.000020980835
+        },
+        "soundBtn": {
+          "x": 278.66668701171875,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 278.66668701171875,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 278.66668701171875,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        393,
+        720
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        360,
+        640
+      ],
+      "layout": {
+        "top": {
+          "x": 52.333335876464844,
+          "y": 8,
+          "width": 240,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 52.333335876464844,
+          "y": 136,
+          "width": 240,
+          "height": 432,
+          "bottom": 568
+        },
+        "chain": {
+          "x": 52.333335876464844,
+          "y": 578,
+          "width": 240,
+          "height": 68,
+          "bottom": 646
+        },
+        "hintDock": {
+          "x": 52.333335876464844,
+          "y": 653,
+          "width": 240,
+          "height": 88.33333587646484,
+          "bottom": 741.3333358764648
+        },
+        "hintToggle": {
+          "x": 52.333335876464844,
+          "y": 653.6666870117188,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 676.3333549499512
+        },
+        "hintPlace": {
+          "x": 52.333335876464844,
+          "y": 681,
+          "width": 119.33333587646484,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintMode": {
+          "x": 177.6666717529297,
+          "y": 681,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintRefresh": {
+          "x": 265.66668701171875,
+          "y": 681,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "soundBtn": {
+          "x": 254.33334350585938,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 254.33334350585938,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 254.33334350585938,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        345,
+        747
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "layout": {
+        "top": {
+          "x": 32.333335876464844,
+          "y": 8,
+          "width": 240,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 32.333335876464844,
+          "y": 136,
+          "width": 240,
+          "height": 432,
+          "bottom": 568
+        },
+        "chain": {
+          "x": 32.333335876464844,
+          "y": 578,
+          "width": 240,
+          "height": 68,
+          "bottom": 646
+        },
+        "hintDock": {
+          "x": 32.333335876464844,
+          "y": 653,
+          "width": 240,
+          "height": 88.33333587646484,
+          "bottom": 741.3333358764648
+        },
+        "hintToggle": {
+          "x": 32.333335876464844,
+          "y": 653.6666870117188,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 676.3333549499512
+        },
+        "hintPlace": {
+          "x": 32.333335876464844,
+          "y": 681,
+          "width": 119.33333587646484,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintMode": {
+          "x": 157.6666717529297,
+          "y": 681,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintRefresh": {
+          "x": 245.6666717529297,
+          "y": 681,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "soundBtn": {
+          "x": 234.33334350585938,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 234.33334350585938,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 234.33334350585938,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        305,
+        747
+      ],
+      "score": "0",
+      "hintReady": true
+    }
+  ],
+  "after": [
+    {
+      "viewport": [
+        430,
+        847
+      ],
+      "layout": {
+        "top": {
+          "x": 6,
+          "y": 4,
+          "width": 418,
+          "height": 54,
+          "bottom": 58
+        },
+        "board": {
+          "x": 38.5,
+          "y": 58,
+          "width": 353,
+          "height": 635,
+          "bottom": 693
+        },
+        "chain": {
+          "x": 6,
+          "y": 698,
+          "width": 418,
+          "height": 32,
+          "bottom": 730
+        },
+        "hintDock": {
+          "x": 6,
+          "y": 732,
+          "width": 418,
+          "height": 106,
+          "bottom": 838
+        },
+        "hintToggle": {
+          "x": 6,
+          "y": 732,
+          "width": 80.03125,
+          "height": 30,
+          "bottom": 762
+        },
+        "hintPlace": {
+          "x": 6,
+          "y": 765,
+          "width": 270,
+          "height": 44,
+          "bottom": 809
+        },
+        "hintMode": {
+          "x": 282,
+          "y": 765,
+          "width": 92,
+          "height": 44,
+          "bottom": 809
+        },
+        "hintRefresh": {
+          "x": 380,
+          "y": 765,
+          "width": 44,
+          "height": 44,
+          "bottom": 809
+        },
+        "soundBtn": {
+          "x": 296,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "resetBtn": {
+          "x": 340,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "rankButton": {
+          "x": 384,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        }
+      },
+      "scrollSize": [
+        430,
+        847
+      ],
+      "bodyScrollSize": [
+        430,
+        847
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "top": {
+          "x": 6,
+          "y": 4,
+          "width": 378,
+          "height": 54,
+          "bottom": 58
+        },
+        "board": {
+          "x": 19.5,
+          "y": 58,
+          "width": 351,
+          "height": 632,
+          "bottom": 690
+        },
+        "chain": {
+          "x": 6,
+          "y": 695,
+          "width": 378,
+          "height": 32,
+          "bottom": 727
+        },
+        "hintDock": {
+          "x": 6,
+          "y": 729,
+          "width": 378,
+          "height": 106,
+          "bottom": 835
+        },
+        "hintToggle": {
+          "x": 6,
+          "y": 729,
+          "width": 80.03125,
+          "height": 30,
+          "bottom": 759
+        },
+        "hintPlace": {
+          "x": 6,
+          "y": 762,
+          "width": 230,
+          "height": 44,
+          "bottom": 806
+        },
+        "hintMode": {
+          "x": 242,
+          "y": 762,
+          "width": 92,
+          "height": 44,
+          "bottom": 806
+        },
+        "hintRefresh": {
+          "x": 340,
+          "y": 762,
+          "width": 44,
+          "height": 44,
+          "bottom": 806
+        },
+        "soundBtn": {
+          "x": 256,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "resetBtn": {
+          "x": 300,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "rankButton": {
+          "x": 344,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        }
+      },
+      "scrollSize": [
+        390,
+        844
+      ],
+      "bodyScrollSize": [
+        390,
+        844
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        393,
+        720
+      ],
+      "layout": {
+        "top": {
+          "x": 6.1666669845581055,
+          "y": 4,
+          "width": 381,
+          "height": 54,
+          "bottom": 58
+        },
+        "board": {
+          "x": 55.66666793823242,
+          "y": 58,
+          "width": 282,
+          "height": 508,
+          "bottom": 566
+        },
+        "chain": {
+          "x": 6.1666669845581055,
+          "y": 571,
+          "width": 381,
+          "height": 32,
+          "bottom": 603
+        },
+        "hintDock": {
+          "x": 6.1666669845581055,
+          "y": 605,
+          "width": 381,
+          "height": 106,
+          "bottom": 711
+        },
+        "hintToggle": {
+          "x": 6.1666669845581055,
+          "y": 605,
+          "width": 80.03125,
+          "height": 30,
+          "bottom": 635
+        },
+        "hintPlace": {
+          "x": 6.1666669845581055,
+          "y": 638,
+          "width": 233,
+          "height": 44,
+          "bottom": 682
+        },
+        "hintMode": {
+          "x": 245.1666717529297,
+          "y": 638,
+          "width": 92,
+          "height": 44,
+          "bottom": 682
+        },
+        "hintRefresh": {
+          "x": 343.16668701171875,
+          "y": 638,
+          "width": 44,
+          "height": 44,
+          "bottom": 682
+        },
+        "soundBtn": {
+          "x": 259.16668701171875,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "resetBtn": {
+          "x": 303.16668701171875,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        },
+        "rankButton": {
+          "x": 347.16668701171875,
+          "y": 9,
+          "width": 40,
+          "height": 40,
+          "bottom": 49
+        }
+      },
+      "scrollSize": [
+        393,
+        720
+      ],
+      "bodyScrollSize": [
+        393,
+        720
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        360,
+        640
+      ],
+      "layout": {
+        "top": {
+          "x": 6,
+          "y": 4,
+          "width": 348,
+          "height": 54,
+          "bottom": 58
+        },
+        "board": {
+          "x": 60,
+          "y": 58,
+          "width": 240,
+          "height": 432,
+          "bottom": 490
+        },
+        "chain": {
+          "x": 6,
+          "y": 495,
+          "width": 348,
+          "height": 32,
+          "bottom": 527
+        },
+        "hintDock": {
+          "x": 6,
+          "y": 529,
+          "width": 348,
+          "height": 106,
+          "bottom": 635
+        },
+        "hintToggle": {
+          "x": 6,
+          "y": 529,
+          "width": 80.03125,
+          "height": 30,
+          "bottom": 559
+        },
+        "hintPlace": {
+          "x": 6,
+          "y": 562,
+          "width": 200,
+          "height": 44,
+          "bottom": 606
+        },
+        "hintMode": {
+          "x": 212,
+          "y": 562,
+          "width": 92,
+          "height": 44,
+          "bottom": 606
+        },
+        "hintRefresh": {
+          "x": 310,
+          "y": 562,
+          "width": 44,
+          "height": 44,
+          "bottom": 606
+        },
+        "soundBtn": {
+          "x": 234,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        },
+        "resetBtn": {
+          "x": 275,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        },
+        "rankButton": {
+          "x": 316,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        }
+      },
+      "scrollSize": [
+        360,
+        640
+      ],
+      "bodyScrollSize": [
+        360,
+        641
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "layout": {
+        "top": {
+          "x": 6,
+          "y": 4,
+          "width": 308,
+          "height": 54,
+          "bottom": 58
+        },
+        "board": {
+          "x": 40,
+          "y": 58,
+          "width": 240,
+          "height": 432,
+          "bottom": 490
+        },
+        "chain": {
+          "x": 6,
+          "y": 495,
+          "width": 308,
+          "height": 32,
+          "bottom": 527
+        },
+        "hintDock": {
+          "x": 6,
+          "y": 529,
+          "width": 308,
+          "height": 106,
+          "bottom": 635
+        },
+        "hintToggle": {
+          "x": 6,
+          "y": 529,
+          "width": 80.03125,
+          "height": 30,
+          "bottom": 559
+        },
+        "hintPlace": {
+          "x": 6,
+          "y": 562,
+          "width": 160,
+          "height": 44,
+          "bottom": 606
+        },
+        "hintMode": {
+          "x": 172,
+          "y": 562,
+          "width": 92,
+          "height": 44,
+          "bottom": 606
+        },
+        "hintRefresh": {
+          "x": 270,
+          "y": 562,
+          "width": 44,
+          "height": 44,
+          "bottom": 606
+        },
+        "soundBtn": {
+          "x": 194,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        },
+        "resetBtn": {
+          "x": 235,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        },
+        "rankButton": {
+          "x": 276,
+          "y": 9,
+          "width": 38,
+          "height": 40,
+          "bottom": 49
+        }
+      },
+      "scrollSize": [
+        320,
+        568
+      ],
+      "bodyScrollSize": [
+        320,
+        641
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "layout": {
+        "top": {
+          "x": 294.3333435058594,
+          "y": 8,
+          "width": 240,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 294.3333435058594,
+          "y": 136,
+          "width": 240,
+          "height": 432,
+          "bottom": 568
+        },
+        "chain": {
+          "x": 294.3333435058594,
+          "y": 578,
+          "width": 240,
+          "height": 68,
+          "bottom": 646
+        },
+        "hintDock": {
+          "x": 294.3333435058594,
+          "y": 653,
+          "width": 240,
+          "height": 88.33333587646484,
+          "bottom": 741.3333358764648
+        },
+        "hintToggle": {
+          "x": 294.3333435058594,
+          "y": 653.6666870117188,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 676.3333549499512
+        },
+        "hintPlace": {
+          "x": 294.3333435058594,
+          "y": 681,
+          "width": 119.33333587646484,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintMode": {
+          "x": 419.66668701171875,
+          "y": 681,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "hintRefresh": {
+          "x": 507.66668701171875,
+          "y": 681,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 708.3333339691162
+        },
+        "soundBtn": {
+          "x": 496.3333435058594,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 496.3333435058594,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 496.3333435058594,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        829,
+        747
+      ],
+      "bodyScrollSize": [
+        829,
+        747
+      ],
+      "score": "0",
+      "hintReady": true
+    },
+    {
+      "viewport": [
+        1200,
+        900
+      ],
+      "layout": {
+        "top": {
+          "x": 426.5,
+          "y": 8,
+          "width": 347,
+          "height": 128,
+          "bottom": 136
+        },
+        "board": {
+          "x": 426.5,
+          "y": 136,
+          "width": 347,
+          "height": 625,
+          "bottom": 761
+        },
+        "chain": {
+          "x": 426.5,
+          "y": 771,
+          "width": 347,
+          "height": 99,
+          "bottom": 870
+        },
+        "hintDock": {
+          "x": 791.5,
+          "y": 137,
+          "width": 240,
+          "height": 108.33333587646484,
+          "bottom": 245.33333587646484
+        },
+        "hintToggle": {
+          "x": 801.5,
+          "y": 147.6666717529297,
+          "width": 76.36458587646484,
+          "height": 22.666667938232422,
+          "bottom": 170.3333396911621
+        },
+        "hintPlace": {
+          "x": 801.5,
+          "y": 175,
+          "width": 99.33333587646484,
+          "height": 27.33333396911621,
+          "bottom": 202.3333339691162
+        },
+        "hintMode": {
+          "x": 906.8333740234375,
+          "y": 175,
+          "width": 82,
+          "height": 27.33333396911621,
+          "bottom": 202.3333339691162
+        },
+        "hintRefresh": {
+          "x": 994.8333740234375,
+          "y": 175,
+          "width": 26.666667938232422,
+          "height": 27.33333396911621,
+          "bottom": 202.3333339691162
+        },
+        "soundBtn": {
+          "x": 735.5,
+          "y": 8,
+          "width": 36,
+          "height": 36,
+          "bottom": 44
+        },
+        "resetBtn": {
+          "x": 735.5,
+          "y": 50,
+          "width": 36,
+          "height": 36,
+          "bottom": 86
+        },
+        "rankButton": {
+          "x": 735.5,
+          "y": 92,
+          "width": 36,
+          "height": 36,
+          "bottom": 128
+        }
+      },
+      "scrollSize": [
+        1200,
+        900
+      ],
+      "bodyScrollSize": [
+        1200,
+        900
+      ],
+      "score": "0",
+      "hintReady": true
+    }
+  ],
+  "safeArea34": {
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "top": {
+        "x": 6,
+        "y": 4,
+        "width": 378,
+        "height": 54,
+        "bottom": 58
+      },
+      "board": {
+        "x": 27,
+        "y": 58,
+        "width": 336,
+        "height": 605,
+        "bottom": 663
+      },
+      "chain": {
+        "x": 6,
+        "y": 668,
+        "width": 378,
+        "height": 32,
+        "bottom": 700
+      },
+      "hintDock": {
+        "x": 6,
+        "y": 702,
+        "width": 378,
+        "height": 106,
+        "bottom": 808
+      },
+      "hintToggle": {
+        "x": 6,
+        "y": 702,
+        "width": 80.03125,
+        "height": 30,
+        "bottom": 732
+      },
+      "hintPlace": {
+        "x": 6,
+        "y": 735,
+        "width": 230,
+        "height": 44,
+        "bottom": 779
+      },
+      "hintMode": {
+        "x": 242,
+        "y": 735,
+        "width": 92,
+        "height": 44,
+        "bottom": 779
+      },
+      "hintRefresh": {
+        "x": 340,
+        "y": 735,
+        "width": 44,
+        "height": 44,
+        "bottom": 779
+      },
+      "soundBtn": {
+        "x": 256,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      },
+      "resetBtn": {
+        "x": 300,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      },
+      "rankButton": {
+        "x": 344,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      }
+    },
+    "scrollSize": [
+      390,
+      844
+    ],
+    "bodyScrollSize": [
+      390,
+      844
+    ],
+    "score": "18",
+    "hintReady": true
+  },
+  "resizedGame": {
+    "viewport": [
+      430,
+      847
+    ],
+    "layout": {
+      "top": {
+        "x": 6,
+        "y": 4,
+        "width": 418,
+        "height": 54,
+        "bottom": 58
+      },
+      "board": {
+        "x": 46.5,
+        "y": 58,
+        "width": 337,
+        "height": 607,
+        "bottom": 665
+      },
+      "chain": {
+        "x": 6,
+        "y": 670,
+        "width": 418,
+        "height": 32,
+        "bottom": 702
+      },
+      "hintDock": {
+        "x": 6,
+        "y": 704,
+        "width": 418,
+        "height": 106,
+        "bottom": 810
+      },
+      "hintToggle": {
+        "x": 6,
+        "y": 704,
+        "width": 80.03125,
+        "height": 30,
+        "bottom": 734
+      },
+      "hintPlace": {
+        "x": 6,
+        "y": 737,
+        "width": 270,
+        "height": 44,
+        "bottom": 781
+      },
+      "hintMode": {
+        "x": 282,
+        "y": 737,
+        "width": 92,
+        "height": 44,
+        "bottom": 781
+      },
+      "hintRefresh": {
+        "x": 380,
+        "y": 737,
+        "width": 44,
+        "height": 44,
+        "bottom": 781
+      },
+      "soundBtn": {
+        "x": 296,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      },
+      "resetBtn": {
+        "x": 340,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      },
+      "rankButton": {
+        "x": 384,
+        "y": 9,
+        "width": 40,
+        "height": 40,
+        "bottom": 49
+      }
+    },
+    "scrollSize": [
+      430,
+      847
+    ],
+    "bodyScrollSize": [
+      430,
+      847
+    ],
+    "score": "18",
+    "hintReady": true
+  },
+  "checks": {
+    "hintPlacement": true,
+    "hintToggle": true,
+    "leaderboardRead": "123:1112",
+    "scoreAfterResize": 18
+  },
+  "boundary": "浏览器视口模拟，未在真实微信内核复测"
+}
