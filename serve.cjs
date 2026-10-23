@@ -15,7 +15,8 @@ http.createServer((req, res) => {
   if (['/__qa/acceptance', '/__qa/parallel', '/__qa/persistent', '/__qa/goal', '/__qa/future', '/__qa/plan'].includes(name)) {
     let revision = '未知';
     try { revision = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: __dirname, encoding: 'utf8' }).trim(); } catch (_) {}
-    const hashes = Object.fromEntries(fs.readdirSync(root).filter(file => file.endsWith('.js')).map(file => [file,
+    const scriptFiles = ['lib/matter.min.js', ...fs.readdirSync(root).filter(file => file.endsWith('.js'))];
+    const hashes = Object.fromEntries(scriptFiles.map(file => [file,
       createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex')]));
     const manifest = JSON.stringify({ revision, hashes, page: name, loadedAt: new Date().toISOString() });
     let html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
