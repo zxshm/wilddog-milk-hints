@@ -1,0 +1,7569 @@
+{
+  "result": {
+    "seed": 42,
+    "mode": "balanced",
+    "moves": 295,
+    "won": true,
+    "score": 5138,
+    "maxLevel": 11,
+    "over": false,
+    "maxSolveMs": 2207,
+    "totalSeconds": 274.3,
+    "source": "7b4d44e7849acfd172642d5d874c5a1eab73c3c8",
+    "hashes": {
+      "solver-plan.js": "d167a37247ad14333d9df71a8a1b3519d22b35b4effef2cb0542b2f54e7b8fe3",
+      "physics.js": "6c58ad3c97ec1463014bd0f26748072be3de3ac219b6968b05bbd851e33271d6",
+      "lib/matter.min.js": "40120ab0e4f6c956b6ee691ba38ade20d38c8fac9b74079b75071276baa8fa93",
+      "branch-pool.js": "130cd7c0ff5b25fe180b413a1ed6c7dd2f27c31297e340b36fc9a3ce3f433e61",
+      "solver-future.js": "b6627794b52abf6e50952180a1521f12ea82d62066b85619349d2b59bcb89600",
+      "layout.js": "00e830755f180c9a65dbcc31b9b4a0b3817fe853aaa0b61ebcba5587770e1bac"
+    },
+    "startedAt": "2026-10-23T01:01:25.632Z",
+    "simulatedStepsPerMove": 240,
+    "solverFile": "solver-plan.js",
+    "workers": 4
+  },
+  "route": [
+    {
+      "move": 1,
+      "level": 0,
+      "next": 0,
+      "x": 84.6,
+      "nextX": 104.5,
+      "predictedGain": 2,
+      "solveMs": 258,
+      "simulations": 458,
+      "stages": {
+        "initial": 161.72,
+        "secondRefine": 17.26,
+        "firstRefine": 19.3,
+        "future": 60.02
+      },
+      "score": 0,
+      "maxLevel": 1,
+      "boxes": 1
+    },
+    {
+      "move": 2,
+      "level": 0,
+      "next": 1,
+      "x": 104.5,
+      "nextX": 71.4,
+      "predictedGain": 8,
+      "solveMs": 105,
+      "simulations": 443,
+      "stages": {
+        "initial": 63.66,
+        "secondRefine": 2.21,
+        "firstRefine": 9.61,
+        "future": 29.65
+      },
+      "score": 2,
+      "maxLevel": 2,
+      "boxes": 1
+    },
+    {
+      "move": 3,
+      "level": 1,
+      "next": 0,
+      "x": 100.9,
+      "nextX": 15.4,
+      "predictedGain": 6,
+      "solveMs": 93,
+      "simulations": 457,
+      "stages": {
+        "initial": 48.49,
+        "secondRefine": 1.83,
+        "firstRefine": 8.23,
+        "future": 34.71
+      },
+      "score": 8,
+      "maxLevel": 3,
+      "boxes": 1
+    },
+    {
+      "move": 4,
+      "level": 0,
+      "next": 1,
+      "x": 246.2,
+      "nextX": 236.4,
+      "predictedGain": 0,
+      "solveMs": 105,
+      "simulations": 459,
+      "stages": {
+        "initial": 46.55,
+        "secondRefine": 2.91,
+        "firstRefine": 9.76,
+        "future": 45.4
+      },
+      "score": 8,
+      "maxLevel": 3,
+      "boxes": 2
+    },
+    {
+      "move": 5,
+      "level": 1,
+      "next": 0,
+      "x": 228.8,
+      "nextX": 249.7,
+      "predictedGain": 2,
+      "solveMs": 129,
+      "simulations": 489,
+      "stages": {
+        "initial": 65.96,
+        "secondRefine": 4,
+        "firstRefine": 17.68,
+        "future": 40.96
+      },
+      "score": 8,
+      "maxLevel": 3,
+      "boxes": 3
+    },
+    {
+      "move": 6,
+      "level": 0,
+      "next": 1,
+      "x": 223.1,
+      "nextX": 236.4,
+      "predictedGain": 20,
+      "solveMs": 137,
+      "simulations": 503,
+      "stages": {
+        "initial": 85.71,
+        "secondRefine": 3.51,
+        "firstRefine": 15.03,
+        "future": 32.55
+      },
+      "score": 16,
+      "maxLevel": 3,
+      "boxes": 2
+    },
+    {
+      "move": 7,
+      "level": 1,
+      "next": 0,
+      "x": 216.8,
+      "nextX": 236.9,
+      "predictedGain": 12,
+      "solveMs": 134,
+      "simulations": 452,
+      "stages": {
+        "initial": 53.35,
+        "secondRefine": 4.18,
+        "firstRefine": 13.63,
+        "future": 62.47
+      },
+      "score": 16,
+      "maxLevel": 3,
+      "boxes": 3
+    },
+    {
+      "move": 8,
+      "level": 0,
+      "next": 2,
+      "x": 309.4,
+      "nextX": 128.6,
+      "predictedGain": 12,
+      "solveMs": 176,
+      "simulations": 559,
+      "stages": {
+        "initial": 88.04,
+        "secondRefine": 4.34,
+        "firstRefine": 21.69,
+        "future": 61.75
+      },
+      "score": 16,
+      "maxLevel": 3,
+      "boxes": 4
+    },
+    {
+      "move": 9,
+      "level": 2,
+      "next": 2,
+      "x": 149.3,
+      "nextX": 92.8,
+      "predictedGain": 44,
+      "solveMs": 192,
+      "simulations": 589,
+      "stages": {
+        "initial": 119.31,
+        "secondRefine": 4.27,
+        "firstRefine": 20.92,
+        "future": 47.83
+      },
+      "score": 28,
+      "maxLevel": 4,
+      "boxes": 4
+    },
+    {
+      "move": 10,
+      "level": 2,
+      "next": 2,
+      "x": 250.7,
+      "nextX": 57.1,
+      "predictedGain": 32,
+      "solveMs": 209,
+      "simulations": 559,
+      "stages": {
+        "initial": 104.8,
+        "secondRefine": 5.76,
+        "firstRefine": 28.58,
+        "future": 70.26
+      },
+      "score": 28,
+      "maxLevel": 4,
+      "boxes": 5
+    },
+    {
+      "move": 11,
+      "level": 2,
+      "next": 1,
+      "x": 43.7,
+      "nextX": 200,
+      "predictedGain": 50,
+      "solveMs": 245,
+      "simulations": 563,
+      "stages": {
+        "initial": 158.27,
+        "secondRefine": 6.61,
+        "firstRefine": 22.6,
+        "future": 57.2
+      },
+      "score": 40,
+      "maxLevel": 4,
+      "boxes": 5
+    },
+    {
+      "move": 12,
+      "level": 1,
+      "next": 1,
+      "x": 162.2,
+      "nextX": 132.8,
+      "predictedGain": 38,
+      "solveMs": 239,
+      "simulations": 553,
+      "stages": {
+        "initial": 138.4,
+        "secondRefine": 6.88,
+        "firstRefine": 29.32,
+        "future": 64.24
+      },
+      "score": 60,
+      "maxLevel": 5,
+      "boxes": 5
+    },
+    {
+      "move": 13,
+      "level": 1,
+      "next": 2,
+      "x": 125.69999999999999,
+      "nextX": 128.6,
+      "predictedGain": 18,
+      "solveMs": 306,
+      "simulations": 666,
+      "stages": {
+        "initial": 160.61,
+        "secondRefine": 6.3,
+        "firstRefine": 24.05,
+        "future": 115.36
+      },
+      "score": 78,
+      "maxLevel": 5,
+      "boxes": 4
+    },
+    {
+      "move": 14,
+      "level": 2,
+      "next": 1,
+      "x": 267,
+      "nextX": 236.4,
+      "predictedGain": 68,
+      "solveMs": 207,
+      "simulations": 505,
+      "stages": {
+        "initial": 111.32,
+        "secondRefine": 8.42,
+        "firstRefine": 33.57,
+        "future": 53.6
+      },
+      "score": 78,
+      "maxLevel": 5,
+      "boxes": 5
+    },
+    {
+      "move": 15,
+      "level": 1,
+      "next": 0,
+      "x": 359.4,
+      "nextX": 369.4,
+      "predictedGain": 20,
+      "solveMs": 336,
+      "simulations": 612,
+      "stages": {
+        "initial": 187.34,
+        "secondRefine": 10.81,
+        "firstRefine": 36.61,
+        "future": 101.65
+      },
+      "score": 78,
+      "maxLevel": 5,
+      "boxes": 6
+    },
+    {
+      "move": 16,
+      "level": 0,
+      "next": 0,
+      "x": 349.3,
+      "nextX": 334.3,
+      "predictedGain": 70,
+      "solveMs": 383,
+      "simulations": 615,
+      "stages": {
+        "initial": 243.07,
+        "secondRefine": 11.63,
+        "firstRefine": 56.42,
+        "future": 71.41
+      },
+      "score": 78,
+      "maxLevel": 5,
+      "boxes": 7
+    },
+    {
+      "move": 17,
+      "level": 0,
+      "next": 3,
+      "x": 292.3,
+      "nextX": 234.8,
+      "predictedGain": 70,
+      "solveMs": 419,
+      "simulations": 672,
+      "stages": {
+        "initial": 282.1,
+        "secondRefine": 7.91,
+        "firstRefine": 44.65,
+        "future": 84.55
+      },
+      "score": 98,
+      "maxLevel": 5,
+      "boxes": 5
+    },
+    {
+      "move": 18,
+      "level": 3,
+      "next": 3,
+      "x": 330.7,
+      "nextX": 225.1,
+      "predictedGain": 70,
+      "solveMs": 256,
+      "simulations": 584,
+      "stages": {
+        "initial": 135.24,
+        "secondRefine": 7.59,
+        "firstRefine": 36.64,
+        "future": 76.85
+      },
+      "score": 118,
+      "maxLevel": 5,
+      "boxes": 5
+    },
+    {
+      "move": 19,
+      "level": 3,
+      "next": 3,
+      "x": 243.6,
+      "nextX": 136.3,
+      "predictedGain": 50,
+      "solveMs": 234,
+      "simulations": 533,
+      "stages": {
+        "initial": 119.5,
+        "secondRefine": 5.51,
+        "firstRefine": 18.68,
+        "future": 90.76
+      },
+      "score": 168,
+      "maxLevel": 6,
+      "boxes": 4
+    },
+    {
+      "move": 20,
+      "level": 3,
+      "next": 1,
+      "x": 25.8,
+      "nextX": 339.7,
+      "predictedGain": 6,
+      "solveMs": 242,
+      "simulations": 548,
+      "stages": {
+        "initial": 104.93,
+        "secondRefine": 5.45,
+        "firstRefine": 21.59,
+        "future": 110.35
+      },
+      "score": 168,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 21,
+      "level": 1,
+      "next": 0,
+      "x": 382.16227450039645,
+      "nextX": 364.6,
+      "predictedGain": 8,
+      "solveMs": 340,
+      "simulations": 619,
+      "stages": {
+        "initial": 127.42,
+        "secondRefine": 6.12,
+        "firstRefine": 30.35,
+        "future": 176.3
+      },
+      "score": 174,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 22,
+      "level": 0,
+      "next": 1,
+      "x": 361.6,
+      "nextX": 287.6,
+      "predictedGain": 20,
+      "solveMs": 285,
+      "simulations": 576,
+      "stages": {
+        "initial": 145.58,
+        "secondRefine": 6.58,
+        "firstRefine": 30.85,
+        "future": 101.8
+      },
+      "score": 176,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 23,
+      "level": 1,
+      "next": 0,
+      "x": 303,
+      "nextX": 310.8,
+      "predictedGain": 18,
+      "solveMs": 297,
+      "simulations": 617,
+      "stages": {
+        "initial": 152.47,
+        "secondRefine": 6.39,
+        "firstRefine": 20.55,
+        "future": 117.57
+      },
+      "score": 194,
+      "maxLevel": 6,
+      "boxes": 4
+    },
+    {
+      "move": 24,
+      "level": 0,
+      "next": 4,
+      "x": 38.4,
+      "nextX": 59,
+      "predictedGain": 72,
+      "solveMs": 320,
+      "simulations": 565,
+      "stages": {
+        "initial": 140.31,
+        "secondRefine": 11.06,
+        "firstRefine": 34.43,
+        "future": 134.42
+      },
+      "score": 194,
+      "maxLevel": 6,
+      "boxes": 5
+    },
+    {
+      "move": 25,
+      "level": 4,
+      "next": 3,
+      "x": 248.2,
+      "nextX": 40,
+      "predictedGain": 92,
+      "solveMs": 379,
+      "simulations": 701,
+      "stages": {
+        "initial": 228.49,
+        "secondRefine": 7.26,
+        "firstRefine": 40.24,
+        "future": 103.24
+      },
+      "score": 194,
+      "maxLevel": 6,
+      "boxes": 6
+    },
+    {
+      "move": 26,
+      "level": 3,
+      "next": 0,
+      "x": 150.4,
+      "nextX": 15.4,
+      "predictedGain": 94,
+      "solveMs": 277,
+      "simulations": 667,
+      "stages": {
+        "initial": 167.62,
+        "secondRefine": 7.47,
+        "firstRefine": 19.2,
+        "future": 82.48
+      },
+      "score": 286,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 27,
+      "level": 0,
+      "next": 3,
+      "x": 15.4,
+      "nextX": 292.5,
+      "predictedGain": 52,
+      "solveMs": 190,
+      "simulations": 530,
+      "stages": {
+        "initial": 99.37,
+        "secondRefine": 5.36,
+        "firstRefine": 14.97,
+        "future": 70.07
+      },
+      "score": 288,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 28,
+      "level": 3,
+      "next": 1,
+      "x": 281.1,
+      "nextX": 41.5,
+      "predictedGain": 56,
+      "solveMs": 166,
+      "simulations": 525,
+      "stages": {
+        "initial": 89.32,
+        "secondRefine": 4.1,
+        "firstRefine": 13.19,
+        "future": 58.91
+      },
+      "score": 338,
+      "maxLevel": 7,
+      "boxes": 3
+    },
+    {
+      "move": 29,
+      "level": 1,
+      "next": 0,
+      "x": 34.6,
+      "nextX": 15.4,
+      "predictedGain": 6,
+      "solveMs": 180,
+      "simulations": 481,
+      "stages": {
+        "initial": 67.77,
+        "secondRefine": 4.74,
+        "firstRefine": 11.31,
+        "future": 96.56
+      },
+      "score": 344,
+      "maxLevel": 7,
+      "boxes": 3
+    },
+    {
+      "move": 30,
+      "level": 0,
+      "next": 0,
+      "x": 21.4,
+      "nextX": 23,
+      "predictedGain": 2,
+      "solveMs": 173,
+      "simulations": 533,
+      "stages": {
+        "initial": 76.2,
+        "secondRefine": 4.35,
+        "firstRefine": 15.19,
+        "future": 77.22
+      },
+      "score": 344,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 31,
+      "level": 0,
+      "next": 1,
+      "x": 38.4,
+      "nextX": 54.3,
+      "predictedGain": 20,
+      "solveMs": 171,
+      "simulations": 491,
+      "stages": {
+        "initial": 94.12,
+        "secondRefine": 3.94,
+        "firstRefine": 16.56,
+        "future": 56.56
+      },
+      "score": 346,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 32,
+      "level": 1,
+      "next": 3,
+      "x": 63.4,
+      "nextX": 60.6,
+      "predictedGain": 38,
+      "solveMs": 183,
+      "simulations": 485,
+      "stages": {
+        "initial": 87.02,
+        "secondRefine": 3.8,
+        "firstRefine": 13.25,
+        "future": 79.05
+      },
+      "score": 364,
+      "maxLevel": 7,
+      "boxes": 3
+    },
+    {
+      "move": 33,
+      "level": 3,
+      "next": 3,
+      "x": 237.6,
+      "nextX": 234.8,
+      "predictedGain": 20,
+      "solveMs": 208,
+      "simulations": 605,
+      "stages": {
+        "initial": 94.36,
+        "secondRefine": 7.24,
+        "firstRefine": 22.44,
+        "future": 83.98
+      },
+      "score": 364,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 34,
+      "level": 3,
+      "next": 2,
+      "x": 237.6,
+      "nextX": 21.4,
+      "predictedGain": 20,
+      "solveMs": 223,
+      "simulations": 565,
+      "stages": {
+        "initial": 102.89,
+        "secondRefine": 2.94,
+        "firstRefine": 19.41,
+        "future": 98.05
+      },
+      "score": 384,
+      "maxLevel": 7,
+      "boxes": 4
+    },
+    {
+      "move": 35,
+      "level": 2,
+      "next": 1,
+      "x": 334,
+      "nextX": 309.3,
+      "predictedGain": 0,
+      "solveMs": 255,
+      "simulations": 531,
+      "stages": {
+        "initial": 91.81,
+        "secondRefine": 5.45,
+        "firstRefine": 17.35,
+        "future": 140.29
+      },
+      "score": 384,
+      "maxLevel": 7,
+      "boxes": 5
+    },
+    {
+      "move": 36,
+      "level": 1,
+      "next": 2,
+      "x": 40.6,
+      "nextX": 301.2,
+      "predictedGain": 12,
+      "solveMs": 305,
+      "simulations": 566,
+      "stages": {
+        "initial": 127.36,
+        "secondRefine": 6.77,
+        "firstRefine": 22.26,
+        "future": 148.17
+      },
+      "score": 384,
+      "maxLevel": 7,
+      "boxes": 6
+    },
+    {
+      "move": 37,
+      "level": 2,
+      "next": 2,
+      "x": 289.3,
+      "nextX": 271.4,
+      "predictedGain": 12,
+      "solveMs": 357,
+      "simulations": 657,
+      "stages": {
+        "initial": 147.21,
+        "secondRefine": 8.11,
+        "firstRefine": 31.83,
+        "future": 169.78
+      },
+      "score": 384,
+      "maxLevel": 7,
+      "boxes": 7
+    },
+    {
+      "move": 38,
+      "level": 2,
+      "next": 2,
+      "x": 289.3,
+      "nextX": 307.2,
+      "predictedGain": 172,
+      "solveMs": 279,
+      "simulations": 660,
+      "stages": {
+        "initial": 182.59,
+        "secondRefine": 6.41,
+        "firstRefine": 23.99,
+        "future": 65.73
+      },
+      "score": 396,
+      "maxLevel": 7,
+      "boxes": 7
+    },
+    {
+      "move": 39,
+      "level": 2,
+      "next": 2,
+      "x": 283.3,
+      "nextX": 334.8,
+      "predictedGain": 160,
+      "solveMs": 318,
+      "simulations": 593,
+      "stages": {
+        "initial": 185.97,
+        "secondRefine": 8.36,
+        "firstRefine": 40.91,
+        "future": 82.42
+      },
+      "score": 396,
+      "maxLevel": 7,
+      "boxes": 8
+    },
+    {
+      "move": 40,
+      "level": 2,
+      "next": 4,
+      "x": 267,
+      "nextX": 335,
+      "predictedGain": 160,
+      "solveMs": 357,
+      "simulations": 612,
+      "stages": {
+        "initial": 217.97,
+        "secondRefine": 4.53,
+        "firstRefine": 40.84,
+        "future": 93.73
+      },
+      "score": 556,
+      "maxLevel": 8,
+      "boxes": 4
+    },
+    {
+      "move": 41,
+      "level": 4,
+      "next": 1,
+      "x": 305.5,
+      "nextX": 42.3,
+      "predictedGain": 6,
+      "solveMs": 248,
+      "simulations": 589,
+      "stages": {
+        "initial": 120.16,
+        "secondRefine": 4.63,
+        "firstRefine": 29.7,
+        "future": 93.47
+      },
+      "score": 556,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 42,
+      "level": 1,
+      "next": 0,
+      "x": 183.2,
+      "nextX": 384.6,
+      "predictedGain": 6,
+      "solveMs": 246,
+      "simulations": 588,
+      "stages": {
+        "initial": 97.09,
+        "secondRefine": 4.83,
+        "firstRefine": 21.07,
+        "future": 122.98
+      },
+      "score": 562,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 43,
+      "level": 0,
+      "next": 0,
+      "x": 32.4,
+      "nextX": 32.2,
+      "predictedGain": 2,
+      "solveMs": 330,
+      "simulations": 606,
+      "stages": {
+        "initial": 124.81,
+        "secondRefine": 14.75,
+        "firstRefine": 33.07,
+        "future": 157.31
+      },
+      "score": 562,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 44,
+      "level": 0,
+      "next": 1,
+      "x": 44.4,
+      "nextX": 54.3,
+      "predictedGain": 20,
+      "solveMs": 282,
+      "simulations": 541,
+      "stages": {
+        "initial": 144.18,
+        "secondRefine": 6.52,
+        "firstRefine": 26.35,
+        "future": 104.96
+      },
+      "score": 564,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 45,
+      "level": 1,
+      "next": 0,
+      "x": 131.7,
+      "nextX": 15.4,
+      "predictedGain": 38,
+      "solveMs": 300,
+      "simulations": 592,
+      "stages": {
+        "initial": 126.99,
+        "secondRefine": 6.36,
+        "firstRefine": 26.99,
+        "future": 139.42
+      },
+      "score": 602,
+      "maxLevel": 8,
+      "boxes": 4
+    },
+    {
+      "move": 46,
+      "level": 0,
+      "next": 2,
+      "x": 15.4,
+      "nextX": 259.4,
+      "predictedGain": 12,
+      "solveMs": 306,
+      "simulations": 569,
+      "stages": {
+        "initial": 117.46,
+        "secondRefine": 7.87,
+        "firstRefine": 26.73,
+        "future": 154.01
+      },
+      "score": 602,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 47,
+      "level": 2,
+      "next": 2,
+      "x": 267,
+      "nextX": 229.7,
+      "predictedGain": 12,
+      "solveMs": 402,
+      "simulations": 634,
+      "stages": {
+        "initial": 127.46,
+        "secondRefine": 10.9,
+        "firstRefine": 31.21,
+        "future": 232.44
+      },
+      "score": 614,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 48,
+      "level": 2,
+      "next": 3,
+      "x": 104.7,
+      "nextX": 374.2,
+      "predictedGain": 50,
+      "solveMs": 438,
+      "simulations": 622,
+      "stages": {
+        "initial": 221.31,
+        "secondRefine": 6.57,
+        "firstRefine": 48.49,
+        "future": 162.06
+      },
+      "score": 614,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 49,
+      "level": 3,
+      "next": 1,
+      "x": 368.2,
+      "nextX": 90.7,
+      "predictedGain": 50,
+      "solveMs": 388,
+      "simulations": 574,
+      "stages": {
+        "initial": 192.19,
+        "secondRefine": 3.61,
+        "firstRefine": 23.71,
+        "future": 168.48
+      },
+      "score": 664,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 50,
+      "level": 1,
+      "next": 0,
+      "x": 40.6,
+      "nextX": 15.4,
+      "predictedGain": 8,
+      "solveMs": 337,
+      "simulations": 571,
+      "stages": {
+        "initial": 130.66,
+        "secondRefine": 5.99,
+        "firstRefine": 31.6,
+        "future": 169.06
+      },
+      "score": 664,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 51,
+      "level": 0,
+      "next": 0,
+      "x": 34.7,
+      "nextX": 37.5,
+      "predictedGain": 20,
+      "solveMs": 391,
+      "simulations": 610,
+      "stages": {
+        "initial": 178.32,
+        "secondRefine": 7.46,
+        "firstRefine": 49.41,
+        "future": 156.2
+      },
+      "score": 664,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 52,
+      "level": 0,
+      "next": 0,
+      "x": 28.700000000000003,
+      "nextX": 31.8,
+      "predictedGain": 22,
+      "solveMs": 411,
+      "simulations": 617,
+      "stages": {
+        "initial": 219.95,
+        "secondRefine": 8.43,
+        "firstRefine": 34.61,
+        "future": 148.34
+      },
+      "score": 666,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 53,
+      "level": 0,
+      "next": 0,
+      "x": 44.4,
+      "nextX": 15.4,
+      "predictedGain": 20,
+      "solveMs": 393,
+      "simulations": 583,
+      "stages": {
+        "initial": 191.83,
+        "secondRefine": 5.17,
+        "firstRefine": 24.08,
+        "future": 171.57
+      },
+      "score": 686,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 54,
+      "level": 0,
+      "next": 1,
+      "x": 367.6,
+      "nextX": 17.83772549960356,
+      "predictedGain": 6,
+      "solveMs": 356,
+      "simulations": 554,
+      "stages": {
+        "initial": 139.29,
+        "secondRefine": 7.64,
+        "firstRefine": 25.59,
+        "future": 183.19
+      },
+      "score": 686,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 55,
+      "level": 1,
+      "next": 3,
+      "x": 40.6,
+      "nextX": 165.2,
+      "predictedGain": 56,
+      "solveMs": 402,
+      "simulations": 598,
+      "stages": {
+        "initial": 188.08,
+        "secondRefine": 8.41,
+        "firstRefine": 30.45,
+        "future": 174.66
+      },
+      "score": 692,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 56,
+      "level": 3,
+      "next": 4,
+      "x": 162.4,
+      "nextX": 335,
+      "predictedGain": 50,
+      "solveMs": 476,
+      "simulations": 610,
+      "stages": {
+        "initial": 201.15,
+        "secondRefine": 4.75,
+        "firstRefine": 36.27,
+        "future": 233.69
+      },
+      "score": 742,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 57,
+      "level": 4,
+      "next": 0,
+      "x": 94.5,
+      "nextX": 366.5,
+      "predictedGain": 2,
+      "solveMs": 399,
+      "simulations": 560,
+      "stages": {
+        "initial": 180.39,
+        "secondRefine": 7.37,
+        "firstRefine": 52.62,
+        "future": 158.59
+      },
+      "score": 742,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 58,
+      "level": 0,
+      "next": 3,
+      "x": 378.5,
+      "nextX": 25.8,
+      "predictedGain": 2,
+      "solveMs": 445,
+      "simulations": 562,
+      "stages": {
+        "initial": 169.57,
+        "secondRefine": 11.81,
+        "firstRefine": 36.44,
+        "future": 226.77
+      },
+      "score": 744,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 59,
+      "level": 3,
+      "next": 2,
+      "x": 47.5,
+      "nextX": 21.4,
+      "predictedGain": 32,
+      "solveMs": 427,
+      "simulations": 563,
+      "stages": {
+        "initial": 181.56,
+        "secondRefine": 5.14,
+        "firstRefine": 44.88,
+        "future": 195.3
+      },
+      "score": 744,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 60,
+      "level": 2,
+      "next": 1,
+      "x": 21.4,
+      "nextX": 376.16227450039645,
+      "predictedGain": 38,
+      "solveMs": 628,
+      "simulations": 643,
+      "stages": {
+        "initial": 266.26,
+        "secondRefine": 6.92,
+        "firstRefine": 60.87,
+        "future": 293.99
+      },
+      "score": 776,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 61,
+      "level": 1,
+      "next": 1,
+      "x": 291.1,
+      "nextX": 309.3,
+      "predictedGain": 78,
+      "solveMs": 525,
+      "simulations": 637,
+      "stages": {
+        "initial": 233.94,
+        "secondRefine": 11.05,
+        "firstRefine": 53.92,
+        "future": 225.64
+      },
+      "score": 776,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 62,
+      "level": 1,
+      "next": 0,
+      "x": 239.5,
+      "nextX": 236.9,
+      "predictedGain": 78,
+      "solveMs": 518,
+      "simulations": 596,
+      "stages": {
+        "initial": 210.61,
+        "secondRefine": 12.54,
+        "firstRefine": 57.31,
+        "future": 237.51
+      },
+      "score": 848,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 63,
+      "level": 0,
+      "next": 4,
+      "x": 309.4,
+      "nextX": 233.8,
+      "predictedGain": 6,
+      "solveMs": 573,
+      "simulations": 658,
+      "stages": {
+        "initial": 212.89,
+        "secondRefine": 14.86,
+        "firstRefine": 45.2,
+        "future": 300.26
+      },
+      "score": 854,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 64,
+      "level": 4,
+      "next": 0,
+      "x": 200,
+      "nextX": 236.9,
+      "predictedGain": 20,
+      "solveMs": 604,
+      "simulations": 648,
+      "stages": {
+        "initial": 251.69,
+        "secondRefine": 15.55,
+        "firstRefine": 63.13,
+        "future": 273.44
+      },
+      "score": 854,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 65,
+      "level": 0,
+      "next": 3,
+      "x": 229.1,
+      "nextX": 269.7,
+      "predictedGain": 40,
+      "solveMs": 510,
+      "simulations": 636,
+      "stages": {
+        "initial": 266.21,
+        "secondRefine": 10.97,
+        "firstRefine": 50.7,
+        "future": 182.09
+      },
+      "score": 874,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 66,
+      "level": 3,
+      "next": 3,
+      "x": 206,
+      "nextX": 241.1,
+      "predictedGain": 50,
+      "solveMs": 448,
+      "simulations": 649,
+      "stages": {
+        "initial": 210.99,
+        "secondRefine": 13.3,
+        "firstRefine": 64.86,
+        "future": 158.67
+      },
+      "score": 874,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 67,
+      "level": 3,
+      "next": 1,
+      "x": 237.6,
+      "nextX": 382.16227450039645,
+      "predictedGain": 50,
+      "solveMs": 450,
+      "simulations": 617,
+      "stages": {
+        "initial": 208.76,
+        "secondRefine": 4.5,
+        "firstRefine": 31.15,
+        "future": 205.55
+      },
+      "score": 924,
+      "maxLevel": 8,
+      "boxes": 5
+    },
+    {
+      "move": 68,
+      "level": 1,
+      "next": 2,
+      "x": 108.9,
+      "nextX": 378.6,
+      "predictedGain": 0,
+      "solveMs": 489,
+      "simulations": 621,
+      "stages": {
+        "initial": 175.14,
+        "secondRefine": 5.54,
+        "firstRefine": 36.74,
+        "future": 271.91
+      },
+      "score": 924,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 69,
+      "level": 2,
+      "next": 1,
+      "x": 66,
+      "nextX": 85.7,
+      "predictedGain": 18,
+      "solveMs": 498,
+      "simulations": 636,
+      "stages": {
+        "initial": 252.6,
+        "secondRefine": 10.79,
+        "firstRefine": 51.68,
+        "future": 182.58
+      },
+      "score": 924,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 70,
+      "level": 1,
+      "next": 0,
+      "x": 86.1,
+      "nextX": 101.2,
+      "predictedGain": 18,
+      "solveMs": 472,
+      "simulations": 592,
+      "stages": {
+        "initial": 203.52,
+        "secondRefine": 9.63,
+        "firstRefine": 34.75,
+        "future": 223.76
+      },
+      "score": 942,
+      "maxLevel": 8,
+      "boxes": 6
+    },
+    {
+      "move": 71,
+      "level": 0,
+      "next": 1,
+      "x": 286.3,
+      "nextX": 382.16227450039645,
+      "predictedGain": 0,
+      "solveMs": 530,
+      "simulations": 604,
+      "stages": {
+        "initial": 187.24,
+        "secondRefine": 6.2,
+        "firstRefine": 44.36,
+        "future": 291.69
+      },
+      "score": 942,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 72,
+      "level": 1,
+      "next": 0,
+      "x": 342.6,
+      "nextX": 384.6,
+      "predictedGain": 8,
+      "solveMs": 589,
+      "simulations": 656,
+      "stages": {
+        "initial": 241.43,
+        "secondRefine": 12.13,
+        "firstRefine": 63.75,
+        "future": 271.22
+      },
+      "score": 942,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 73,
+      "level": 0,
+      "next": 0,
+      "x": 381,
+      "nextX": 89.2,
+      "predictedGain": 8,
+      "solveMs": 779,
+      "simulations": 783,
+      "stages": {
+        "initial": 406.08,
+        "secondRefine": 13.23,
+        "firstRefine": 64.86,
+        "future": 294.92
+      },
+      "score": 950,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 74,
+      "level": 0,
+      "next": 2,
+      "x": 107.7,
+      "nextX": 378.6,
+      "predictedGain": 32,
+      "solveMs": 646,
+      "simulations": 631,
+      "stages": {
+        "initial": 339.46,
+        "secondRefine": 20.96,
+        "firstRefine": 62.88,
+        "future": 223.09
+      },
+      "score": 950,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 75,
+      "level": 2,
+      "next": 2,
+      "x": 133,
+      "nextX": 366.6,
+      "predictedGain": 74,
+      "solveMs": 737,
+      "simulations": 690,
+      "stages": {
+        "initial": 301.25,
+        "secondRefine": 18.6,
+        "firstRefine": 82.72,
+        "future": 334.27
+      },
+      "score": 950,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 76,
+      "level": 2,
+      "next": 1,
+      "x": 372.6,
+      "nextX": 90.7,
+      "predictedGain": 74,
+      "solveMs": 789,
+      "simulations": 683,
+      "stages": {
+        "initial": 387.18,
+        "secondRefine": 14.46,
+        "firstRefine": 53.6,
+        "future": 333.69
+      },
+      "score": 1024,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 77,
+      "level": 1,
+      "next": 0,
+      "x": 177.2,
+      "nextX": 101.1,
+      "predictedGain": 40,
+      "solveMs": 503,
+      "simulations": 641,
+      "stages": {
+        "initial": 272.53,
+        "secondRefine": 13.14,
+        "firstRefine": 54.63,
+        "future": 162.63
+      },
+      "score": 1024,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 78,
+      "level": 0,
+      "next": 0,
+      "x": 38.4,
+      "nextX": 101.1,
+      "predictedGain": 40,
+      "solveMs": 728,
+      "simulations": 785,
+      "stages": {
+        "initial": 414.93,
+        "secondRefine": 14.34,
+        "firstRefine": 76.38,
+        "future": 222.72
+      },
+      "score": 1024,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 79,
+      "level": 0,
+      "next": 2,
+      "x": 18.9,
+      "nextX": 85.9,
+      "predictedGain": 2,
+      "solveMs": 954,
+      "simulations": 829,
+      "stages": {
+        "initial": 436.8,
+        "secondRefine": 16.89,
+        "firstRefine": 73.46,
+        "future": 426.89
+      },
+      "score": 1026,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 80,
+      "level": 2,
+      "next": 3,
+      "x": 60,
+      "nextX": 95.5,
+      "predictedGain": 0,
+      "solveMs": 1075,
+      "simulations": 826,
+      "stages": {
+        "initial": 485.92,
+        "secondRefine": 17.58,
+        "firstRefine": 79.13,
+        "future": 491.86
+      },
+      "score": 1026,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 81,
+      "level": 3,
+      "next": 3,
+      "x": 227.8,
+      "nextX": 247.5,
+      "predictedGain": 20,
+      "solveMs": 1238,
+      "simulations": 880,
+      "stages": {
+        "initial": 599.68,
+        "secondRefine": 18.16,
+        "firstRefine": 132.62,
+        "future": 487.52
+      },
+      "score": 1026,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 82,
+      "level": 3,
+      "next": 2,
+      "x": 128.7,
+      "nextX": 21.4,
+      "predictedGain": 52,
+      "solveMs": 1226,
+      "simulations": 958,
+      "stages": {
+        "initial": 716.97,
+        "secondRefine": 9.89,
+        "firstRefine": 99.47,
+        "future": 400.03
+      },
+      "score": 1046,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 83,
+      "level": 2,
+      "next": 3,
+      "x": 88.4,
+      "nextX": 241.7,
+      "predictedGain": 62,
+      "solveMs": 1145,
+      "simulations": 831,
+      "stages": {
+        "initial": 586.34,
+        "secondRefine": 25.14,
+        "firstRefine": 91.84,
+        "future": 442.12
+      },
+      "score": 1078,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 84,
+      "level": 3,
+      "next": 1,
+      "x": 79.4,
+      "nextX": 127.1,
+      "predictedGain": 68,
+      "solveMs": 911,
+      "simulations": 774,
+      "stages": {
+        "initial": 496.82,
+        "secondRefine": 15.93,
+        "firstRefine": 97.73,
+        "future": 300.73
+      },
+      "score": 1078,
+      "maxLevel": 8,
+      "boxes": 11
+    },
+    {
+      "move": 85,
+      "level": 1,
+      "next": 0,
+      "x": 131.7,
+      "nextX": 42.5,
+      "predictedGain": 76,
+      "solveMs": 922,
+      "simulations": 811,
+      "stages": {
+        "initial": 594.45,
+        "secondRefine": 12.13,
+        "firstRefine": 54.23,
+        "future": 261.23
+      },
+      "score": 1146,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 86,
+      "level": 0,
+      "next": 0,
+      "x": 48.5,
+      "nextX": 27.4,
+      "predictedGain": 8,
+      "solveMs": 784,
+      "simulations": 841,
+      "stages": {
+        "initial": 421.09,
+        "secondRefine": 8.57,
+        "firstRefine": 49.32,
+        "future": 305.35
+      },
+      "score": 1154,
+      "maxLevel": 8,
+      "boxes": 7
+    },
+    {
+      "move": 87,
+      "level": 0,
+      "next": 1,
+      "x": 32.4,
+      "nextX": 90.7,
+      "predictedGain": 0,
+      "solveMs": 702,
+      "simulations": 719,
+      "stages": {
+        "initial": 277.87,
+        "secondRefine": 11.83,
+        "firstRefine": 61.3,
+        "future": 351.19
+      },
+      "score": 1154,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 88,
+      "level": 1,
+      "next": 2,
+      "x": 102.9,
+      "nextX": 62.7,
+      "predictedGain": 12,
+      "solveMs": 877,
+      "simulations": 795,
+      "stages": {
+        "initial": 361.05,
+        "secondRefine": 18.29,
+        "firstRefine": 68.49,
+        "future": 429.64
+      },
+      "score": 1154,
+      "maxLevel": 8,
+      "boxes": 9
+    },
+    {
+      "move": 89,
+      "level": 2,
+      "next": 4,
+      "x": 88.4,
+      "nextX": 132.5,
+      "predictedGain": 212,
+      "solveMs": 877,
+      "simulations": 855,
+      "stages": {
+        "initial": 486.52,
+        "secondRefine": 16.68,
+        "firstRefine": 94.14,
+        "future": 279.48
+      },
+      "score": 1154,
+      "maxLevel": 8,
+      "boxes": 10
+    },
+    {
+      "move": 90,
+      "level": 4,
+      "next": 1,
+      "x": 136.7,
+      "nextX": 75.6,
+      "predictedGain": 218,
+      "solveMs": 768,
+      "simulations": 826,
+      "stages": {
+        "initial": 412.08,
+        "secondRefine": 14.05,
+        "firstRefine": 59.93,
+        "future": 281.59
+      },
+      "score": 1238,
+      "maxLevel": 8,
+      "boxes": 8
+    },
+    {
+      "move": 91,
+      "level": 1,
+      "next": 2,
+      "x": 66.4,
+      "nextX": 21.4,
+      "predictedGain": 166,
+      "solveMs": 577,
+      "simulations": 696,
+      "stages": {
+        "initial": 322,
+        "secondRefine": 11.27,
+        "firstRefine": 49.2,
+        "future": 194.67
+      },
+      "score": 1372,
+      "maxLevel": 9,
+      "boxes": 6
+    },
+    {
+      "move": 92,
+      "level": 2,
+      "next": 1,
+      "x": 21.4,
+      "nextX": 272.9,
+      "predictedGain": 32,
+      "solveMs": 457,
+      "simulations": 608,
+      "stages": {
+        "initial": 202.1,
+        "secondRefine": 4.58,
+        "firstRefine": 30.4,
+        "future": 219.75
+      },
+      "score": 1404,
+      "maxLevel": 9,
+      "boxes": 5
+    },
+    {
+      "move": 93,
+      "level": 1,
+      "next": 0,
+      "x": 173,
+      "nextX": 30.6,
+      "predictedGain": 8,
+      "solveMs": 470,
+      "simulations": 614,
+      "stages": {
+        "initial": 250.86,
+        "secondRefine": 9.88,
+        "firstRefine": 46.8,
+        "future": 162.35
+      },
+      "score": 1404,
+      "maxLevel": 9,
+      "boxes": 6
+    },
+    {
+      "move": 94,
+      "level": 0,
+      "next": 0,
+      "x": 15.4,
+      "nextX": 83.2,
+      "predictedGain": 8,
+      "solveMs": 525,
+      "simulations": 714,
+      "stages": {
+        "initial": 282.04,
+        "secondRefine": 9.14,
+        "firstRefine": 47.29,
+        "future": 186.49
+      },
+      "score": 1412,
+      "maxLevel": 9,
+      "boxes": 5
+    },
+    {
+      "move": 95,
+      "level": 0,
+      "next": 3,
+      "x": 78.6,
+      "nextX": 130.3,
+      "predictedGain": 0,
+      "solveMs": 459,
+      "simulations": 563,
+      "stages": {
+        "initial": 186.33,
+        "secondRefine": 8.36,
+        "firstRefine": 33.35,
+        "future": 230.99
+      },
+      "score": 1412,
+      "maxLevel": 9,
+      "boxes": 6
+    },
+    {
+      "move": 96,
+      "level": 3,
+      "next": 4,
+      "x": 374.2,
+      "nextX": 136.5,
+      "predictedGain": 30,
+      "solveMs": 569,
+      "simulations": 661,
+      "stages": {
+        "initial": 230.5,
+        "secondRefine": 11.61,
+        "firstRefine": 46.28,
+        "future": 280.91
+      },
+      "score": 1412,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 97,
+      "level": 4,
+      "next": 2,
+      "x": 263.3,
+      "nextX": 70.7,
+      "predictedGain": 42,
+      "solveMs": 605,
+      "simulations": 673,
+      "stages": {
+        "initial": 247.27,
+        "secondRefine": 14.15,
+        "firstRefine": 63.66,
+        "future": 279.87
+      },
+      "score": 1412,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 98,
+      "level": 2,
+      "next": 0,
+      "x": 21.4,
+      "nextX": 15.4,
+      "predictedGain": 44,
+      "solveMs": 658,
+      "simulations": 651,
+      "stages": {
+        "initial": 297.8,
+        "secondRefine": 9.78,
+        "firstRefine": 42.72,
+        "future": 308.01
+      },
+      "score": 1454,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 99,
+      "level": 0,
+      "next": 1,
+      "x": 15.4,
+      "nextX": 48.3,
+      "predictedGain": 2,
+      "solveMs": 743,
+      "simulations": 671,
+      "stages": {
+        "initial": 290.08,
+        "secondRefine": 12.34,
+        "firstRefine": 51.34,
+        "future": 389.67
+      },
+      "score": 1456,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 100,
+      "level": 1,
+      "next": 0,
+      "x": 80.1,
+      "nextX": 15.4,
+      "predictedGain": 0,
+      "solveMs": 769,
+      "simulations": 691,
+      "stages": {
+        "initial": 290.46,
+        "secondRefine": 10.89,
+        "firstRefine": 53.65,
+        "future": 414.02
+      },
+      "score": 1456,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 101,
+      "level": 0,
+      "next": 1,
+      "x": 15.4,
+      "nextX": 49,
+      "predictedGain": 6,
+      "solveMs": 821,
+      "simulations": 691,
+      "stages": {
+        "initial": 342.58,
+        "secondRefine": 16.74,
+        "firstRefine": 60.11,
+        "future": 401.45
+      },
+      "score": 1456,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 102,
+      "level": 1,
+      "next": 3,
+      "x": 69.4,
+      "nextX": 374.2,
+      "predictedGain": 56,
+      "solveMs": 874,
+      "simulations": 770,
+      "stages": {
+        "initial": 398.12,
+        "secondRefine": 11.27,
+        "firstRefine": 79.8,
+        "future": 385.03
+      },
+      "score": 1462,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 103,
+      "level": 3,
+      "next": 3,
+      "x": 63.3,
+      "nextX": 374.2,
+      "predictedGain": 70,
+      "solveMs": 829,
+      "simulations": 732,
+      "stages": {
+        "initial": 423.32,
+        "secondRefine": 14.61,
+        "firstRefine": 55.35,
+        "future": 335.58
+      },
+      "score": 1482,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 104,
+      "level": 3,
+      "next": 0,
+      "x": 374.2,
+      "nextX": 15.36621035624914,
+      "predictedGain": 52,
+      "solveMs": 810,
+      "simulations": 671,
+      "stages": {
+        "initial": 340.24,
+        "secondRefine": 11.72,
+        "firstRefine": 63.71,
+        "future": 394.38
+      },
+      "score": 1532,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 105,
+      "level": 0,
+      "next": 1,
+      "x": 21.4,
+      "nextX": 34.8,
+      "predictedGain": 20,
+      "solveMs": 732,
+      "simulations": 691,
+      "stages": {
+        "initial": 314.92,
+        "secondRefine": 11.75,
+        "firstRefine": 60.41,
+        "future": 345.13
+      },
+      "score": 1534,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 106,
+      "level": 1,
+      "next": 1,
+      "x": 40.6,
+      "nextX": 23.83772549960356,
+      "predictedGain": 18,
+      "solveMs": 769,
+      "simulations": 735,
+      "stages": {
+        "initial": 404.44,
+        "secondRefine": 6.57,
+        "firstRefine": 45.06,
+        "future": 313.21
+      },
+      "score": 1552,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 107,
+      "level": 1,
+      "next": 0,
+      "x": 17.83772549960356,
+      "nextX": 15.4,
+      "predictedGain": 0,
+      "solveMs": 682,
+      "simulations": 646,
+      "stages": {
+        "initial": 265.97,
+        "secondRefine": 9.98,
+        "firstRefine": 48.75,
+        "future": 357.35
+      },
+      "score": 1552,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 108,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 34.5,
+      "predictedGain": 6,
+      "solveMs": 756,
+      "simulations": 693,
+      "stages": {
+        "initial": 313.47,
+        "secondRefine": 14.7,
+        "firstRefine": 58.82,
+        "future": 368.88
+      },
+      "score": 1552,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 109,
+      "level": 1,
+      "next": 0,
+      "x": 23.83772549960356,
+      "nextX": 384.6,
+      "predictedGain": 8,
+      "solveMs": 745,
+      "simulations": 676,
+      "stages": {
+        "initial": 330.99,
+        "secondRefine": 10.79,
+        "firstRefine": 51.38,
+        "future": 352.06
+      },
+      "score": 1558,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 110,
+      "level": 0,
+      "next": 2,
+      "x": 384.6,
+      "nextX": 45.3,
+      "predictedGain": 106,
+      "solveMs": 610,
+      "simulations": 656,
+      "stages": {
+        "initial": 325.4,
+        "secondRefine": 12.65,
+        "firstRefine": 57.59,
+        "future": 214.8
+      },
+      "score": 1560,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 111,
+      "level": 2,
+      "next": 1,
+      "x": 43.7,
+      "nextX": 376.16227450039645,
+      "predictedGain": 110,
+      "solveMs": 595,
+      "simulations": 649,
+      "stages": {
+        "initial": 332.92,
+        "secondRefine": 9.29,
+        "firstRefine": 38.87,
+        "future": 214.29
+      },
+      "score": 1664,
+      "maxLevel": 9,
+      "boxes": 6
+    },
+    {
+      "move": 112,
+      "level": 1,
+      "next": 1,
+      "x": 291.1,
+      "nextX": 291.2,
+      "predictedGain": 6,
+      "solveMs": 622,
+      "simulations": 722,
+      "stages": {
+        "initial": 271.38,
+        "secondRefine": 11.28,
+        "firstRefine": 52.39,
+        "future": 286.86
+      },
+      "score": 1670,
+      "maxLevel": 9,
+      "boxes": 6
+    },
+    {
+      "move": 113,
+      "level": 1,
+      "next": 0,
+      "x": 382.16227450039645,
+      "nextX": 273.9,
+      "predictedGain": 0,
+      "solveMs": 728,
+      "simulations": 721,
+      "stages": {
+        "initial": 272.25,
+        "secondRefine": 11.67,
+        "firstRefine": 48.49,
+        "future": 395.23
+      },
+      "score": 1670,
+      "maxLevel": 9,
+      "boxes": 7
+    },
+    {
+      "move": 114,
+      "level": 0,
+      "next": 2,
+      "x": 355.6,
+      "nextX": 351.5,
+      "predictedGain": 0,
+      "solveMs": 822,
+      "simulations": 794,
+      "stages": {
+        "initial": 338.03,
+        "secondRefine": 13.01,
+        "firstRefine": 64.61,
+        "future": 406.54
+      },
+      "score": 1670,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 115,
+      "level": 2,
+      "next": 2,
+      "x": 319.3,
+      "nextX": 363,
+      "predictedGain": 12,
+      "solveMs": 997,
+      "simulations": 905,
+      "stages": {
+        "initial": 501.29,
+        "secondRefine": 10.51,
+        "firstRefine": 76.53,
+        "future": 408.18
+      },
+      "score": 1670,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 116,
+      "level": 2,
+      "next": 1,
+      "x": 368.5,
+      "nextX": 382.16227450039645,
+      "predictedGain": 12,
+      "solveMs": 1155,
+      "simulations": 909,
+      "stages": {
+        "initial": 597.86,
+        "secondRefine": 14.04,
+        "firstRefine": 73.52,
+        "future": 469.27
+      },
+      "score": 1682,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 117,
+      "level": 1,
+      "next": 2,
+      "x": 307.9,
+      "nextX": 378.6,
+      "predictedGain": 0,
+      "solveMs": 1202,
+      "simulations": 906,
+      "stages": {
+        "initial": 596.15,
+        "secondRefine": 19.88,
+        "firstRefine": 91.26,
+        "future": 495.16
+      },
+      "score": 1682,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 118,
+      "level": 2,
+      "next": 0,
+      "x": 372.6,
+      "nextX": 310.8,
+      "predictedGain": 0,
+      "solveMs": 1296,
+      "simulations": 869,
+      "stages": {
+        "initial": 624.37,
+        "secondRefine": 21.9,
+        "firstRefine": 90.49,
+        "future": 558.97
+      },
+      "score": 1682,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 119,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 375.7,
+      "predictedGain": 38,
+      "solveMs": 1415,
+      "simulations": 919,
+      "stages": {
+        "initial": 792.17,
+        "secondRefine": 21.95,
+        "firstRefine": 112.78,
+        "future": 488.37
+      },
+      "score": 1682,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 120,
+      "level": 1,
+      "next": 1,
+      "x": 365.7,
+      "nextX": 358.8,
+      "predictedGain": 38,
+      "solveMs": 1342,
+      "simulations": 864,
+      "stages": {
+        "initial": 737.54,
+        "secondRefine": 18.68,
+        "firstRefine": 88.11,
+        "future": 497.29
+      },
+      "score": 1720,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 121,
+      "level": 1,
+      "next": 4,
+      "x": 370.8,
+      "nextX": 335,
+      "predictedGain": 50,
+      "solveMs": 1054,
+      "simulations": 803,
+      "stages": {
+        "initial": 572.28,
+        "secondRefine": 18.01,
+        "firstRefine": 84.12,
+        "future": 379.9
+      },
+      "score": 1720,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 122,
+      "level": 4,
+      "next": 0,
+      "x": 340.4,
+      "nextX": 384.6,
+      "predictedGain": 50,
+      "solveMs": 1016,
+      "simulations": 766,
+      "stages": {
+        "initial": 522.06,
+        "secondRefine": 13.91,
+        "firstRefine": 59.52,
+        "future": 420.42
+      },
+      "score": 1770,
+      "maxLevel": 9,
+      "boxes": 8
+    },
+    {
+      "move": 123,
+      "level": 0,
+      "next": 3,
+      "x": 384.6,
+      "nextX": 25.8,
+      "predictedGain": 0,
+      "solveMs": 1071,
+      "simulations": 844,
+      "stages": {
+        "initial": 515.17,
+        "secondRefine": 14.35,
+        "firstRefine": 83.68,
+        "future": 457.74
+      },
+      "score": 1770,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 124,
+      "level": 3,
+      "next": 4,
+      "x": 325.8,
+      "nextX": 31.220440102685465,
+      "predictedGain": 42,
+      "solveMs": 1120,
+      "simulations": 798,
+      "stages": {
+        "initial": 525.56,
+        "secondRefine": 21.17,
+        "firstRefine": 73.25,
+        "future": 499.9
+      },
+      "score": 1770,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 125,
+      "level": 4,
+      "next": 1,
+      "x": 31.220440102685465,
+      "nextX": 382.16227450039645,
+      "predictedGain": 42,
+      "solveMs": 1277,
+      "simulations": 828,
+      "stages": {
+        "initial": 582.01,
+        "secondRefine": 22.97,
+        "firstRefine": 97.58,
+        "future": 573.99
+      },
+      "score": 1812,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 126,
+      "level": 1,
+      "next": 3,
+      "x": 272.7,
+      "nextX": 355.1,
+      "predictedGain": 26,
+      "solveMs": 1287,
+      "simulations": 890,
+      "stages": {
+        "initial": 676.59,
+        "secondRefine": 22.9,
+        "firstRefine": 119.91,
+        "future": 467.1
+      },
+      "score": 1812,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 127,
+      "level": 3,
+      "next": 0,
+      "x": 352.5,
+      "nextX": 384.6,
+      "predictedGain": 28,
+      "solveMs": 1160,
+      "simulations": 842,
+      "stages": {
+        "initial": 571.45,
+        "secondRefine": 18.38,
+        "firstRefine": 99.16,
+        "future": 471.42
+      },
+      "score": 1838,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 128,
+      "level": 0,
+      "next": 0,
+      "x": 315.4,
+      "nextX": 377.1,
+      "predictedGain": 2,
+      "solveMs": 1238,
+      "simulations": 932,
+      "stages": {
+        "initial": 620.52,
+        "secondRefine": 18.42,
+        "firstRefine": 101.85,
+        "future": 496.99
+      },
+      "score": 1838,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 129,
+      "level": 0,
+      "next": 1,
+      "x": 361.6,
+      "nextX": 382.16227450039645,
+      "predictedGain": 70,
+      "solveMs": 1161,
+      "simulations": 818,
+      "stages": {
+        "initial": 625.29,
+        "secondRefine": 21.03,
+        "firstRefine": 96.96,
+        "future": 417.5
+      },
+      "score": 1840,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 130,
+      "level": 1,
+      "next": 1,
+      "x": 268.3,
+      "nextX": 362.1,
+      "predictedGain": 124,
+      "solveMs": 1155,
+      "simulations": 861,
+      "stages": {
+        "initial": 612.31,
+        "secondRefine": 22.08,
+        "firstRefine": 122.63,
+        "future": 398.03
+      },
+      "score": 1840,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 131,
+      "level": 1,
+      "next": 4,
+      "x": 359.4,
+      "nextX": 138.5,
+      "predictedGain": 154,
+      "solveMs": 1235,
+      "simulations": 914,
+      "stages": {
+        "initial": 739.87,
+        "secondRefine": 28.12,
+        "firstRefine": 124.02,
+        "future": 343.2
+      },
+      "score": 1908,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 132,
+      "level": 4,
+      "next": 4,
+      "x": 368.7795598973145,
+      "nextX": 301.3,
+      "predictedGain": 86,
+      "solveMs": 904,
+      "simulations": 790,
+      "stages": {
+        "initial": 409.54,
+        "secondRefine": 17.91,
+        "firstRefine": 88.7,
+        "future": 388.34
+      },
+      "score": 1964,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 133,
+      "level": 4,
+      "next": 2,
+      "x": 320.6,
+      "nextX": 378.6,
+      "predictedGain": 30,
+      "solveMs": 899,
+      "simulations": 779,
+      "stages": {
+        "initial": 404.61,
+        "secondRefine": 8.17,
+        "firstRefine": 67.66,
+        "future": 418.62
+      },
+      "score": 1994,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 134,
+      "level": 2,
+      "next": 3,
+      "x": 378.6,
+      "nextX": 25.8,
+      "predictedGain": 0,
+      "solveMs": 926,
+      "simulations": 701,
+      "stages": {
+        "initial": 367.75,
+        "secondRefine": 12.52,
+        "firstRefine": 67.93,
+        "future": 478.06
+      },
+      "score": 1994,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 135,
+      "level": 3,
+      "next": 1,
+      "x": 69.3,
+      "nextX": 382.16227450039645,
+      "predictedGain": 0,
+      "solveMs": 1069,
+      "simulations": 782,
+      "stages": {
+        "initial": 476.35,
+        "secondRefine": 10.24,
+        "firstRefine": 83.32,
+        "future": 498.61
+      },
+      "score": 1994,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 136,
+      "level": 1,
+      "next": 1,
+      "x": 349.8,
+      "nextX": 354.3,
+      "predictedGain": 18,
+      "solveMs": 1207,
+      "simulations": 828,
+      "stages": {
+        "initial": 629.82,
+        "secondRefine": 18.57,
+        "firstRefine": 96.44,
+        "future": 462.49
+      },
+      "score": 1994,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 137,
+      "level": 1,
+      "next": 2,
+      "x": 363,
+      "nextX": 21.4,
+      "predictedGain": 18,
+      "solveMs": 1091,
+      "simulations": 748,
+      "stages": {
+        "initial": 511.79,
+        "secondRefine": 9.45,
+        "firstRefine": 72.47,
+        "future": 497.17
+      },
+      "score": 2012,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 138,
+      "level": 2,
+      "next": 0,
+      "x": 27.4,
+      "nextX": 364.5,
+      "predictedGain": 0,
+      "solveMs": 1115,
+      "simulations": 730,
+      "stages": {
+        "initial": 467.32,
+        "secondRefine": 19.75,
+        "firstRefine": 79.44,
+        "future": 548.95
+      },
+      "score": 2012,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 139,
+      "level": 0,
+      "next": 1,
+      "x": 384.6,
+      "nextX": 90.7,
+      "predictedGain": 0,
+      "solveMs": 1234,
+      "simulations": 752,
+      "stages": {
+        "initial": 530.7,
+        "secondRefine": 11.99,
+        "firstRefine": 87.62,
+        "future": 604.13
+      },
+      "score": 2012,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 140,
+      "level": 1,
+      "next": 1,
+      "x": 23.83772549960356,
+      "nextX": 17.83772549960356,
+      "predictedGain": 68,
+      "solveMs": 1325,
+      "simulations": 844,
+      "stages": {
+        "initial": 689.92,
+        "secondRefine": 21.72,
+        "firstRefine": 109.91,
+        "future": 503.84
+      },
+      "score": 2012,
+      "maxLevel": 9,
+      "boxes": 14
+    },
+    {
+      "move": 141,
+      "level": 1,
+      "next": 2,
+      "x": 40.6,
+      "nextX": 378.6,
+      "predictedGain": 68,
+      "solveMs": 1252,
+      "simulations": 787,
+      "stages": {
+        "initial": 658.15,
+        "secondRefine": 9.45,
+        "firstRefine": 66.38,
+        "future": 518.26
+      },
+      "score": 2080,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 142,
+      "level": 2,
+      "next": 4,
+      "x": 378.6,
+      "nextX": 31.220440102685465,
+      "predictedGain": 0,
+      "solveMs": 1093,
+      "simulations": 727,
+      "stages": {
+        "initial": 427.72,
+        "secondRefine": 19.11,
+        "firstRefine": 85.35,
+        "future": 560.32
+      },
+      "score": 2080,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 143,
+      "level": 4,
+      "next": 0,
+      "x": 31.220440102685465,
+      "nextX": 365.5,
+      "predictedGain": 2,
+      "solveMs": 1271,
+      "simulations": 816,
+      "stages": {
+        "initial": 617.87,
+        "secondRefine": 19.21,
+        "firstRefine": 92.9,
+        "future": 541.37
+      },
+      "score": 2080,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 144,
+      "level": 0,
+      "next": 1,
+      "x": 345,
+      "nextX": 354.7,
+      "predictedGain": 40,
+      "solveMs": 1232,
+      "simulations": 802,
+      "stages": {
+        "initial": 666.71,
+        "secondRefine": 17.76,
+        "firstRefine": 88.89,
+        "future": 458.83
+      },
+      "score": 2082,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 145,
+      "level": 1,
+      "next": 1,
+      "x": 277.3,
+      "nextX": 284.9,
+      "predictedGain": 38,
+      "solveMs": 1271,
+      "simulations": 879,
+      "stages": {
+        "initial": 674.68,
+        "secondRefine": 18.32,
+        "firstRefine": 108.85,
+        "future": 469.24
+      },
+      "score": 2082,
+      "maxLevel": 9,
+      "boxes": 14
+    },
+    {
+      "move": 146,
+      "level": 1,
+      "next": 2,
+      "x": 256.7,
+      "nextX": 378.6,
+      "predictedGain": 38,
+      "solveMs": 1438,
+      "simulations": 905,
+      "stages": {
+        "initial": 752.95,
+        "secondRefine": 21.6,
+        "firstRefine": 122.75,
+        "future": 540.83
+      },
+      "score": 2120,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 147,
+      "level": 2,
+      "next": 2,
+      "x": 378.6,
+      "nextX": 331.5,
+      "predictedGain": 12,
+      "solveMs": 1220,
+      "simulations": 767,
+      "stages": {
+        "initial": 508.93,
+        "secondRefine": 23.25,
+        "firstRefine": 98.9,
+        "future": 588.76
+      },
+      "score": 2120,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 148,
+      "level": 2,
+      "next": 1,
+      "x": 356.3,
+      "nextX": 375.4,
+      "predictedGain": 18,
+      "solveMs": 1299,
+      "simulations": 862,
+      "stages": {
+        "initial": 648.84,
+        "secondRefine": 19.92,
+        "firstRefine": 106.95,
+        "future": 523.25
+      },
+      "score": 2132,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 149,
+      "level": 1,
+      "next": 0,
+      "x": 268.3,
+      "nextX": 377.9,
+      "predictedGain": 6,
+      "solveMs": 1381,
+      "simulations": 798,
+      "stages": {
+        "initial": 602.51,
+        "secondRefine": 26.13,
+        "firstRefine": 100.48,
+        "future": 651.98
+      },
+      "score": 2138,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 150,
+      "level": 0,
+      "next": 2,
+      "x": 78.6,
+      "nextX": 307.2,
+      "predictedGain": 104,
+      "solveMs": 1301,
+      "simulations": 782,
+      "stages": {
+        "initial": 742.66,
+        "secondRefine": 18.97,
+        "firstRefine": 90.37,
+        "future": 449.41
+      },
+      "score": 2138,
+      "maxLevel": 9,
+      "boxes": 14
+    },
+    {
+      "move": 151,
+      "level": 2,
+      "next": 1,
+      "x": 350.7,
+      "nextX": 382.16227450039645,
+      "predictedGain": 110,
+      "solveMs": 1251,
+      "simulations": 798,
+      "stages": {
+        "initial": 682.9,
+        "secondRefine": 9.48,
+        "firstRefine": 78.97,
+        "future": 479.22
+      },
+      "score": 2242,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 152,
+      "level": 1,
+      "next": 0,
+      "x": 382.16227450039645,
+      "nextX": 83.2,
+      "predictedGain": 8,
+      "solveMs": 1196,
+      "simulations": 797,
+      "stages": {
+        "initial": 571.49,
+        "secondRefine": 19.81,
+        "firstRefine": 95.95,
+        "future": 508.64
+      },
+      "score": 2248,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 153,
+      "level": 0,
+      "next": 3,
+      "x": 100.6,
+      "nextX": 113.2,
+      "predictedGain": 2,
+      "solveMs": 1127,
+      "simulations": 788,
+      "stages": {
+        "initial": 507.99,
+        "secondRefine": 14.35,
+        "firstRefine": 82.85,
+        "future": 521.44
+      },
+      "score": 2250,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 154,
+      "level": 3,
+      "next": 2,
+      "x": 31.8,
+      "nextX": 378.6,
+      "predictedGain": 12,
+      "solveMs": 1239,
+      "simulations": 777,
+      "stages": {
+        "initial": 512.25,
+        "secondRefine": 13.84,
+        "firstRefine": 102.3,
+        "future": 610.89
+      },
+      "score": 2250,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 155,
+      "level": 2,
+      "next": 3,
+      "x": 378.6,
+      "nextX": 60.6,
+      "predictedGain": 160,
+      "solveMs": 1168,
+      "simulations": 790,
+      "stages": {
+        "initial": 590.96,
+        "secondRefine": 19.92,
+        "firstRefine": 106.43,
+        "future": 450.79
+      },
+      "score": 2262,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 156,
+      "level": 3,
+      "next": 2,
+      "x": 41.5,
+      "nextX": 378.6,
+      "predictedGain": 148,
+      "solveMs": 1154,
+      "simulations": 811,
+      "stages": {
+        "initial": 625.2,
+        "secondRefine": 8.2,
+        "firstRefine": 68.99,
+        "future": 452.01
+      },
+      "score": 2410,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 157,
+      "level": 2,
+      "next": 1,
+      "x": 66,
+      "nextX": 163.6,
+      "predictedGain": 18,
+      "solveMs": 1043,
+      "simulations": 874,
+      "stages": {
+        "initial": 523.88,
+        "secondRefine": 16.65,
+        "firstRefine": 89.24,
+        "future": 413.72
+      },
+      "score": 2410,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 158,
+      "level": 1,
+      "next": 4,
+      "x": 120.7,
+      "nextX": 146.8,
+      "predictedGain": 18,
+      "solveMs": 1066,
+      "simulations": 807,
+      "stages": {
+        "initial": 546.91,
+        "secondRefine": 9.04,
+        "firstRefine": 63.3,
+        "future": 446.97
+      },
+      "score": 2428,
+      "maxLevel": 9,
+      "boxes": 9
+    },
+    {
+      "move": 159,
+      "level": 4,
+      "next": 4,
+      "x": 363,
+      "nextX": 362.4,
+      "predictedGain": 30,
+      "solveMs": 1062,
+      "simulations": 840,
+      "stages": {
+        "initial": 511.41,
+        "secondRefine": 16.62,
+        "firstRefine": 82.83,
+        "future": 451.56
+      },
+      "score": 2428,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 160,
+      "level": 4,
+      "next": 2,
+      "x": 200,
+      "nextX": 285.2,
+      "predictedGain": 30,
+      "solveMs": 990,
+      "simulations": 754,
+      "stages": {
+        "initial": 419.33,
+        "secondRefine": 17.07,
+        "firstRefine": 74.68,
+        "future": 478.81
+      },
+      "score": 2458,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 161,
+      "level": 2,
+      "next": 2,
+      "x": 328,
+      "nextX": 200,
+      "predictedGain": 32,
+      "solveMs": 1124,
+      "simulations": 880,
+      "stages": {
+        "initial": 517.58,
+        "secondRefine": 17,
+        "firstRefine": 104.23,
+        "future": 485.32
+      },
+      "score": 2458,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 162,
+      "level": 2,
+      "next": 0,
+      "x": 289.3,
+      "nextX": 15.36621035624914,
+      "predictedGain": 32,
+      "solveMs": 1262,
+      "simulations": 865,
+      "stages": {
+        "initial": 671.5,
+        "secondRefine": 12.72,
+        "firstRefine": 72.44,
+        "future": 505.59
+      },
+      "score": 2490,
+      "maxLevel": 9,
+      "boxes": 10
+    },
+    {
+      "move": 163,
+      "level": 0,
+      "next": 1,
+      "x": 217.1,
+      "nextX": 236.4,
+      "predictedGain": 0,
+      "solveMs": 1200,
+      "simulations": 829,
+      "stages": {
+        "initial": 550.32,
+        "secondRefine": 17.3,
+        "firstRefine": 84.76,
+        "future": 547.78
+      },
+      "score": 2490,
+      "maxLevel": 9,
+      "boxes": 11
+    },
+    {
+      "move": 164,
+      "level": 1,
+      "next": 2,
+      "x": 245.5,
+      "nextX": 218.3,
+      "predictedGain": 0,
+      "solveMs": 1266,
+      "simulations": 812,
+      "stages": {
+        "initial": 568.25,
+        "secondRefine": 20.53,
+        "firstRefine": 101.39,
+        "future": 576.21
+      },
+      "score": 2490,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 165,
+      "level": 2,
+      "next": 0,
+      "x": 88.4,
+      "nextX": 242.9,
+      "predictedGain": 20,
+      "solveMs": 1343,
+      "simulations": 897,
+      "stages": {
+        "initial": 698.13,
+        "secondRefine": 23.34,
+        "firstRefine": 133.74,
+        "future": 487.29
+      },
+      "score": 2490,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 166,
+      "level": 0,
+      "next": 2,
+      "x": 203.2,
+      "nextX": 256.7,
+      "predictedGain": 20,
+      "solveMs": 1475,
+      "simulations": 941,
+      "stages": {
+        "initial": 809.64,
+        "secondRefine": 19.33,
+        "firstRefine": 123.95,
+        "future": 521.91
+      },
+      "score": 2498,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 167,
+      "level": 2,
+      "next": 0,
+      "x": 222.3,
+      "nextX": 206,
+      "predictedGain": 12,
+      "solveMs": 1472,
+      "simulations": 947,
+      "stages": {
+        "initial": 769.39,
+        "secondRefine": 20.48,
+        "firstRefine": 103.8,
+        "future": 578.28
+      },
+      "score": 2510,
+      "maxLevel": 9,
+      "boxes": 12
+    },
+    {
+      "move": 168,
+      "level": 0,
+      "next": 4,
+      "x": 81.4,
+      "nextX": 237.4,
+      "predictedGain": 310,
+      "solveMs": 1445,
+      "simulations": 957,
+      "stages": {
+        "initial": 918.6,
+        "secondRefine": 26.77,
+        "firstRefine": 149.69,
+        "future": 349.95
+      },
+      "score": 2510,
+      "maxLevel": 9,
+      "boxes": 13
+    },
+    {
+      "move": 169,
+      "level": 4,
+      "next": 1,
+      "x": 326.6,
+      "nextX": 23.83772549960356,
+      "predictedGain": 310,
+      "solveMs": 1005,
+      "simulations": 776,
+      "stages": {
+        "initial": 572.93,
+        "secondRefine": 6.67,
+        "firstRefine": 75.17,
+        "future": 350.56
+      },
+      "score": 2800,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 170,
+      "level": 1,
+      "next": 1,
+      "x": 92.1,
+      "nextX": 17.83772549960356,
+      "predictedGain": 38,
+      "solveMs": 903,
+      "simulations": 918,
+      "stages": {
+        "initial": 462.4,
+        "secondRefine": 13.56,
+        "firstRefine": 72.15,
+        "future": 354.97
+      },
+      "score": 2820,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 171,
+      "level": 1,
+      "next": 1,
+      "x": 17.83772549960356,
+      "nextX": 48.3,
+      "predictedGain": 18,
+      "solveMs": 1018,
+      "simulations": 832,
+      "stages": {
+        "initial": 499.91,
+        "secondRefine": 13.19,
+        "firstRefine": 70.13,
+        "future": 434.56
+      },
+      "score": 2838,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 172,
+      "level": 1,
+      "next": 1,
+      "x": 40.6,
+      "nextX": 60.1,
+      "predictedGain": 6,
+      "solveMs": 946,
+      "simulations": 809,
+      "stages": {
+        "initial": 415.92,
+        "secondRefine": 13.04,
+        "firstRefine": 91.76,
+        "future": 425.45
+      },
+      "score": 2838,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 173,
+      "level": 1,
+      "next": 0,
+      "x": 54.1,
+      "nextX": 59.2,
+      "predictedGain": 6,
+      "solveMs": 945,
+      "simulations": 837,
+      "stages": {
+        "initial": 441.83,
+        "secondRefine": 11.27,
+        "firstRefine": 80.07,
+        "future": 412.14
+      },
+      "score": 2844,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 174,
+      "level": 0,
+      "next": 1,
+      "x": 21.4,
+      "nextX": 60,
+      "predictedGain": 0,
+      "solveMs": 1002,
+      "simulations": 787,
+      "stages": {
+        "initial": 451.64,
+        "secondRefine": 16.62,
+        "firstRefine": 69.7,
+        "future": 463.68
+      },
+      "score": 2844,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 175,
+      "level": 1,
+      "next": 2,
+      "x": 382.16227450039645,
+      "nextX": 61.3,
+      "predictedGain": 32,
+      "solveMs": 963,
+      "simulations": 775,
+      "stages": {
+        "initial": 439.68,
+        "secondRefine": 19.49,
+        "firstRefine": 71.32,
+        "future": 432.42
+      },
+      "score": 2844,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 176,
+      "level": 2,
+      "next": 0,
+      "x": 61.3,
+      "nextX": 15.4,
+      "predictedGain": 34,
+      "solveMs": 1123,
+      "simulations": 828,
+      "stages": {
+        "initial": 587.53,
+        "secondRefine": 12.02,
+        "firstRefine": 76.19,
+        "future": 447.35
+      },
+      "score": 2876,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 177,
+      "level": 0,
+      "next": 0,
+      "x": 378.6,
+      "nextX": 364.8,
+      "predictedGain": 8,
+      "solveMs": 1103,
+      "simulations": 842,
+      "stages": {
+        "initial": 548.78,
+        "secondRefine": 12.18,
+        "firstRefine": 80.41,
+        "future": 462.13
+      },
+      "score": 2876,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 178,
+      "level": 0,
+      "next": 0,
+      "x": 367.6,
+      "nextX": 27,
+      "predictedGain": 10,
+      "solveMs": 1142,
+      "simulations": 910,
+      "stages": {
+        "initial": 593.92,
+        "secondRefine": 14.5,
+        "firstRefine": 75.62,
+        "future": 457.52
+      },
+      "score": 2884,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 179,
+      "level": 0,
+      "next": 0,
+      "x": 34.3,
+      "nextX": 15.4,
+      "predictedGain": 2,
+      "solveMs": 1121,
+      "simulations": 837,
+      "stages": {
+        "initial": 552.09,
+        "secondRefine": 13.04,
+        "firstRefine": 69.14,
+        "future": 486.53
+      },
+      "score": 2886,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 180,
+      "level": 0,
+      "next": 0,
+      "x": 47,
+      "nextX": 47.7,
+      "predictedGain": 8,
+      "solveMs": 1119,
+      "simulations": 889,
+      "stages": {
+        "initial": 550.92,
+        "secondRefine": 15.76,
+        "firstRefine": 104.69,
+        "future": 448.01
+      },
+      "score": 2886,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 181,
+      "level": 0,
+      "next": 1,
+      "x": 26.9,
+      "nextX": 17.83772549960356,
+      "predictedGain": 8,
+      "solveMs": 1105,
+      "simulations": 806,
+      "stages": {
+        "initial": 520.97,
+        "secondRefine": 17.37,
+        "firstRefine": 70.15,
+        "future": 496.54
+      },
+      "score": 2894,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 182,
+      "level": 1,
+      "next": 1,
+      "x": 365.4,
+      "nextX": 361.3,
+      "predictedGain": 18,
+      "solveMs": 1031,
+      "simulations": 782,
+      "stages": {
+        "initial": 449.58,
+        "secondRefine": 18.35,
+        "firstRefine": 86.99,
+        "future": 476.31
+      },
+      "score": 2894,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 183,
+      "level": 1,
+      "next": 4,
+      "x": 342.6,
+      "nextX": 296.6,
+      "predictedGain": 90,
+      "solveMs": 930,
+      "simulations": 724,
+      "stages": {
+        "initial": 497.18,
+        "secondRefine": 18.82,
+        "firstRefine": 89.67,
+        "future": 324.09
+      },
+      "score": 2912,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 184,
+      "level": 4,
+      "next": 2,
+      "x": 296.6,
+      "nextX": 32.3,
+      "predictedGain": 84,
+      "solveMs": 852,
+      "simulations": 768,
+      "stages": {
+        "initial": 439.37,
+        "secondRefine": 12.78,
+        "firstRefine": 68.81,
+        "future": 330.76
+      },
+      "score": 2984,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 185,
+      "level": 2,
+      "next": 2,
+      "x": 43.7,
+      "nextX": 21.4,
+      "predictedGain": 12,
+      "solveMs": 829,
+      "simulations": 754,
+      "stages": {
+        "initial": 368.19,
+        "secondRefine": 13.44,
+        "firstRefine": 55.78,
+        "future": 391.51
+      },
+      "score": 2996,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 186,
+      "level": 2,
+      "next": 1,
+      "x": 27.4,
+      "nextX": 23,
+      "predictedGain": 0,
+      "solveMs": 899,
+      "simulations": 736,
+      "stages": {
+        "initial": 395.95,
+        "secondRefine": 7.7,
+        "firstRefine": 63.02,
+        "future": 432.19
+      },
+      "score": 2996,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 187,
+      "level": 1,
+      "next": 2,
+      "x": 24.4,
+      "nextX": 65.5,
+      "predictedGain": 62,
+      "solveMs": 822,
+      "simulations": 698,
+      "stages": {
+        "initial": 427.83,
+        "secondRefine": 13.89,
+        "firstRefine": 61.98,
+        "future": 317.91
+      },
+      "score": 2996,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 188,
+      "level": 2,
+      "next": 0,
+      "x": 77.5,
+      "nextX": 15.4,
+      "predictedGain": 62,
+      "solveMs": 946,
+      "simulations": 700,
+      "stages": {
+        "initial": 487.15,
+        "secondRefine": 20.07,
+        "firstRefine": 46.21,
+        "future": 392.94
+      },
+      "score": 3058,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 189,
+      "level": 0,
+      "next": 3,
+      "x": 55.5,
+      "nextX": 339.4,
+      "predictedGain": 20,
+      "solveMs": 761,
+      "simulations": 609,
+      "stages": {
+        "initial": 301.1,
+        "secondRefine": 13.81,
+        "firstRefine": 65.46,
+        "future": 380.53
+      },
+      "score": 3058,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 190,
+      "level": 3,
+      "next": 3,
+      "x": 337,
+      "nextX": 362.2,
+      "predictedGain": 20,
+      "solveMs": 798,
+      "simulations": 620,
+      "stages": {
+        "initial": 311.18,
+        "secondRefine": 14.76,
+        "firstRefine": 51.07,
+        "future": 421.18
+      },
+      "score": 3078,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 191,
+      "level": 3,
+      "next": 1,
+      "x": 374.2,
+      "nextX": 17.83772549960356,
+      "predictedGain": 6,
+      "solveMs": 939,
+      "simulations": 703,
+      "stages": {
+        "initial": 400.16,
+        "secondRefine": 9.09,
+        "firstRefine": 78.35,
+        "future": 451.37
+      },
+      "score": 3078,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 192,
+      "level": 1,
+      "next": 2,
+      "x": 17.83772549960356,
+      "nextX": 48.7,
+      "predictedGain": 18,
+      "solveMs": 935,
+      "simulations": 639,
+      "stages": {
+        "initial": 368.85,
+        "secondRefine": 19.36,
+        "firstRefine": 54.68,
+        "future": 492.11
+      },
+      "score": 3084,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 193,
+      "level": 2,
+      "next": 2,
+      "x": 273,
+      "nextX": 307.2,
+      "predictedGain": 62,
+      "solveMs": 949,
+      "simulations": 742,
+      "stages": {
+        "initial": 456.29,
+        "secondRefine": 17.77,
+        "firstRefine": 80.43,
+        "future": 395
+      },
+      "score": 3084,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 194,
+      "level": 2,
+      "next": 2,
+      "x": 298,
+      "nextX": 21.4,
+      "predictedGain": 74,
+      "solveMs": 1008,
+      "simulations": 751,
+      "stages": {
+        "initial": 510.34,
+        "secondRefine": 9.07,
+        "firstRefine": 98.86,
+        "future": 389.92
+      },
+      "score": 3146,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 195,
+      "level": 2,
+      "next": 0,
+      "x": 43.7,
+      "nextX": 40.3,
+      "predictedGain": 14,
+      "solveMs": 845,
+      "simulations": 697,
+      "stages": {
+        "initial": 479.94,
+        "secondRefine": 14.25,
+        "firstRefine": 60.17,
+        "future": 290.8
+      },
+      "score": 3158,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 196,
+      "level": 0,
+      "next": 0,
+      "x": 361.6,
+      "nextX": 46.3,
+      "predictedGain": 2,
+      "solveMs": 792,
+      "simulations": 786,
+      "stages": {
+        "initial": 406.59,
+        "secondRefine": 14.93,
+        "firstRefine": 72.69,
+        "future": 297.57
+      },
+      "score": 3158,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 197,
+      "level": 0,
+      "next": 0,
+      "x": 338.5,
+      "nextX": 46.3,
+      "predictedGain": 4,
+      "solveMs": 909,
+      "simulations": 818,
+      "stages": {
+        "initial": 440.06,
+        "secondRefine": 15.26,
+        "firstRefine": 95.78,
+        "future": 357.83
+      },
+      "score": 3160,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 198,
+      "level": 0,
+      "next": 0,
+      "x": 384.6,
+      "nextX": 378.6,
+      "predictedGain": 8,
+      "solveMs": 1001,
+      "simulations": 799,
+      "stages": {
+        "initial": 503.1,
+        "secondRefine": 15.68,
+        "firstRefine": 93.82,
+        "future": 388.51
+      },
+      "score": 3160,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 199,
+      "level": 0,
+      "next": 1,
+      "x": 192.1,
+      "nextX": 72.5,
+      "predictedGain": 8,
+      "solveMs": 1269,
+      "simulations": 834,
+      "stages": {
+        "initial": 627.51,
+        "secondRefine": 19.72,
+        "firstRefine": 149.37,
+        "future": 472.22
+      },
+      "score": 3162,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 200,
+      "level": 1,
+      "next": 1,
+      "x": 66.5,
+      "nextX": 345.7,
+      "predictedGain": 12,
+      "solveMs": 1346,
+      "simulations": 856,
+      "stages": {
+        "initial": 856.24,
+        "secondRefine": 9.4,
+        "firstRefine": 81.43,
+        "future": 398.99
+      },
+      "score": 3168,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 201,
+      "level": 1,
+      "next": 2,
+      "x": 342.6,
+      "nextX": 92.8,
+      "predictedGain": 38,
+      "solveMs": 987,
+      "simulations": 734,
+      "stages": {
+        "initial": 498.06,
+        "secondRefine": 16.92,
+        "firstRefine": 60.21,
+        "future": 411.73
+      },
+      "score": 3174,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 202,
+      "level": 2,
+      "next": 2,
+      "x": 88.4,
+      "nextX": 342.9,
+      "predictedGain": 44,
+      "solveMs": 961,
+      "simulations": 724,
+      "stages": {
+        "initial": 469.37,
+        "secondRefine": 15.56,
+        "firstRefine": 61.8,
+        "future": 414.02
+      },
+      "score": 3206,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 203,
+      "level": 2,
+      "next": 3,
+      "x": 374.6,
+      "nextX": 217.1,
+      "predictedGain": 104,
+      "solveMs": 752,
+      "simulations": 606,
+      "stages": {
+        "initial": 372.76,
+        "secondRefine": 19.2,
+        "firstRefine": 66.71,
+        "future": 293.55
+      },
+      "score": 3218,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 204,
+      "level": 3,
+      "next": 0,
+      "x": 217.2,
+      "nextX": 384.63378964375084,
+      "predictedGain": 94,
+      "solveMs": 723,
+      "simulations": 603,
+      "stages": {
+        "initial": 366.82,
+        "secondRefine": 10.88,
+        "firstRefine": 53.47,
+        "future": 291.45
+      },
+      "score": 3310,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 205,
+      "level": 0,
+      "next": 2,
+      "x": 359.6,
+      "nextX": 21.4,
+      "predictedGain": 2,
+      "solveMs": 586,
+      "simulations": 554,
+      "stages": {
+        "initial": 253.68,
+        "secondRefine": 6.76,
+        "firstRefine": 43.21,
+        "future": 282.12
+      },
+      "score": 3312,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 206,
+      "level": 2,
+      "next": 1,
+      "x": 289.3,
+      "nextX": 309.3,
+      "predictedGain": 18,
+      "solveMs": 752,
+      "simulations": 684,
+      "stages": {
+        "initial": 328.64,
+        "secondRefine": 18.41,
+        "firstRefine": 81.83,
+        "future": 322.67
+      },
+      "score": 3312,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 207,
+      "level": 1,
+      "next": 1,
+      "x": 131.7,
+      "nextX": 303.3,
+      "predictedGain": 18,
+      "solveMs": 985,
+      "simulations": 881,
+      "stages": {
+        "initial": 505.18,
+        "secondRefine": 15.71,
+        "firstRefine": 84.51,
+        "future": 380.06
+      },
+      "score": 3312,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 208,
+      "level": 1,
+      "next": 2,
+      "x": 319.9,
+      "nextX": 307.2,
+      "predictedGain": 18,
+      "solveMs": 944,
+      "simulations": 765,
+      "stages": {
+        "initial": 441.4,
+        "secondRefine": 15.28,
+        "firstRefine": 74.77,
+        "future": 412.55
+      },
+      "score": 3318,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 209,
+      "level": 2,
+      "next": 1,
+      "x": 330.6,
+      "nextX": 345.7,
+      "predictedGain": 50,
+      "solveMs": 1005,
+      "simulations": 839,
+      "stages": {
+        "initial": 524.14,
+        "secondRefine": 17.54,
+        "firstRefine": 85.42,
+        "future": 377.64
+      },
+      "score": 3330,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 210,
+      "level": 1,
+      "next": 2,
+      "x": 102.9,
+      "nextX": 235.7,
+      "predictedGain": 38,
+      "solveMs": 926,
+      "simulations": 780,
+      "stages": {
+        "initial": 459.79,
+        "secondRefine": 14.94,
+        "firstRefine": 69.84,
+        "future": 381.51
+      },
+      "score": 3336,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 211,
+      "level": 2,
+      "next": 2,
+      "x": 311.6,
+      "nextX": 128.6,
+      "predictedGain": 44,
+      "solveMs": 947,
+      "simulations": 826,
+      "stages": {
+        "initial": 482.24,
+        "secondRefine": 13.86,
+        "firstRefine": 68.21,
+        "future": 382.73
+      },
+      "score": 3368,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 212,
+      "level": 2,
+      "next": 0,
+      "x": 127,
+      "nextX": 52.3,
+      "predictedGain": 12,
+      "solveMs": 873,
+      "simulations": 744,
+      "stages": {
+        "initial": 401.15,
+        "secondRefine": 15.14,
+        "firstRefine": 65.49,
+        "future": 391.21
+      },
+      "score": 3380,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 213,
+      "level": 0,
+      "next": 3,
+      "x": 251.3,
+      "nextX": 234.8,
+      "predictedGain": 148,
+      "solveMs": 889,
+      "simulations": 736,
+      "stages": {
+        "initial": 474.85,
+        "secondRefine": 26.43,
+        "firstRefine": 79.83,
+        "future": 307.53
+      },
+      "score": 3380,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 214,
+      "level": 3,
+      "next": 4,
+      "x": 81.6,
+      "nextX": 166.2,
+      "predictedGain": 148,
+      "solveMs": 967,
+      "simulations": 774,
+      "stages": {
+        "initial": 499.26,
+        "secondRefine": 28.07,
+        "firstRefine": 108.38,
+        "future": 331.65
+      },
+      "score": 3400,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 215,
+      "level": 4,
+      "next": 2,
+      "x": 347.7,
+      "nextX": 33.4,
+      "predictedGain": 128,
+      "solveMs": 733,
+      "simulations": 651,
+      "stages": {
+        "initial": 359.64,
+        "secondRefine": 6.58,
+        "firstRefine": 39.02,
+        "future": 327.98
+      },
+      "score": 3528,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 216,
+      "level": 2,
+      "next": 3,
+      "x": 82.4,
+      "nextX": 25.8,
+      "predictedGain": 0,
+      "solveMs": 722,
+      "simulations": 591,
+      "stages": {
+        "initial": 265.65,
+        "secondRefine": 10.88,
+        "firstRefine": 52.17,
+        "future": 393.14
+      },
+      "score": 3528,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 217,
+      "level": 3,
+      "next": 0,
+      "x": 31.8,
+      "nextX": 252.2,
+      "predictedGain": 2,
+      "solveMs": 884,
+      "simulations": 691,
+      "stages": {
+        "initial": 365.72,
+        "secondRefine": 21.33,
+        "firstRefine": 84.58,
+        "future": 412.69
+      },
+      "score": 3528,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 218,
+      "level": 0,
+      "next": 2,
+      "x": 232.2,
+      "nextX": 39.3,
+      "predictedGain": 64,
+      "solveMs": 755,
+      "simulations": 698,
+      "stages": {
+        "initial": 413.08,
+        "secondRefine": 7.45,
+        "firstRefine": 65.48,
+        "future": 269.42
+      },
+      "score": 3530,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 219,
+      "level": 2,
+      "next": 1,
+      "x": 28.8,
+      "nextX": 309.3,
+      "predictedGain": 68,
+      "solveMs": 858,
+      "simulations": 766,
+      "stages": {
+        "initial": 484.75,
+        "secondRefine": 12.85,
+        "firstRefine": 65.26,
+        "future": 295.54
+      },
+      "score": 3592,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 220,
+      "level": 1,
+      "next": 2,
+      "x": 250,
+      "nextX": 195.6,
+      "predictedGain": 18,
+      "solveMs": 675,
+      "simulations": 694,
+      "stages": {
+        "initial": 345.79,
+        "secondRefine": 11.53,
+        "firstRefine": 48.59,
+        "future": 268.89
+      },
+      "score": 3598,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 221,
+      "level": 2,
+      "next": 0,
+      "x": 195.6,
+      "nextX": 248.9,
+      "predictedGain": 12,
+      "solveMs": 646,
+      "simulations": 659,
+      "stages": {
+        "initial": 276.97,
+        "secondRefine": 12.29,
+        "firstRefine": 46.73,
+        "future": 309.57
+      },
+      "score": 3610,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 222,
+      "level": 0,
+      "next": 1,
+      "x": 15.4,
+      "nextX": 51.2,
+      "predictedGain": 0,
+      "solveMs": 747,
+      "simulations": 697,
+      "stages": {
+        "initial": 360.72,
+        "secondRefine": 14.02,
+        "firstRefine": 58.99,
+        "future": 313.31
+      },
+      "score": 3610,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 223,
+      "level": 1,
+      "next": 0,
+      "x": 63.4,
+      "nextX": 15.4,
+      "predictedGain": 8,
+      "solveMs": 800,
+      "simulations": 718,
+      "stages": {
+        "initial": 378.48,
+        "secondRefine": 12.38,
+        "firstRefine": 68.86,
+        "future": 340.33
+      },
+      "score": 3610,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 224,
+      "level": 0,
+      "next": 3,
+      "x": 15.4,
+      "nextX": 204,
+      "predictedGain": 28,
+      "solveMs": 974,
+      "simulations": 789,
+      "stages": {
+        "initial": 488.29,
+        "secondRefine": 15.46,
+        "firstRefine": 67.8,
+        "future": 402.3
+      },
+      "score": 3618,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 225,
+      "level": 3,
+      "next": 0,
+      "x": 210,
+      "nextX": 199.2,
+      "predictedGain": 20,
+      "solveMs": 945,
+      "simulations": 784,
+      "stages": {
+        "initial": 405.56,
+        "secondRefine": 14.57,
+        "firstRefine": 65.88,
+        "future": 458.94
+      },
+      "score": 3638,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 226,
+      "level": 0,
+      "next": 1,
+      "x": 101.7,
+      "nextX": 194.3,
+      "predictedGain": 0,
+      "solveMs": 1084,
+      "simulations": 834,
+      "stages": {
+        "initial": 484.58,
+        "secondRefine": 16.51,
+        "firstRefine": 88.31,
+        "future": 494.71
+      },
+      "score": 3638,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 227,
+      "level": 1,
+      "next": 4,
+      "x": 206,
+      "nextX": 144.8,
+      "predictedGain": 30,
+      "solveMs": 1225,
+      "simulations": 821,
+      "stages": {
+        "initial": 584.07,
+        "secondRefine": 16.92,
+        "firstRefine": 96.42,
+        "future": 527.46
+      },
+      "score": 3638,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 228,
+      "level": 4,
+      "next": 2,
+      "x": 326.6,
+      "nextX": 164.3,
+      "predictedGain": 42,
+      "solveMs": 1395,
+      "simulations": 931,
+      "stages": {
+        "initial": 701.22,
+        "secondRefine": 18.18,
+        "firstRefine": 130.37,
+        "future": 544.99
+      },
+      "score": 3668,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 229,
+      "level": 2,
+      "next": 2,
+      "x": 60.5,
+      "nextX": 117.8,
+      "predictedGain": 12,
+      "solveMs": 1478,
+      "simulations": 884,
+      "stages": {
+        "initial": 747.17,
+        "secondRefine": 25.46,
+        "firstRefine": 111.11,
+        "future": 593.84
+      },
+      "score": 3668,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 230,
+      "level": 2,
+      "next": 0,
+      "x": 110.7,
+      "nextX": 83.4,
+      "predictedGain": 52,
+      "solveMs": 1570,
+      "simulations": 922,
+      "stages": {
+        "initial": 874.95,
+        "secondRefine": 22.91,
+        "firstRefine": 105.04,
+        "future": 566.92
+      },
+      "score": 3680,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 231,
+      "level": 0,
+      "next": 1,
+      "x": 119.5,
+      "nextX": 105.8,
+      "predictedGain": 40,
+      "solveMs": 1642,
+      "simulations": 985,
+      "stages": {
+        "initial": 934.89,
+        "secondRefine": 26.89,
+        "firstRefine": 154.64,
+        "future": 525.82
+      },
+      "score": 3680,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 232,
+      "level": 1,
+      "next": 1,
+      "x": 108.9,
+      "nextX": 115.1,
+      "predictedGain": 46,
+      "solveMs": 1739,
+      "simulations": 975,
+      "stages": {
+        "initial": 1000.94,
+        "secondRefine": 28.94,
+        "firstRefine": 134.69,
+        "future": 574.59
+      },
+      "score": 3718,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 233,
+      "level": 1,
+      "next": 3,
+      "x": 63.4,
+      "nextX": 95.5,
+      "predictedGain": 8,
+      "solveMs": 1349,
+      "simulations": 808,
+      "stages": {
+        "initial": 614.23,
+        "secondRefine": 23.46,
+        "firstRefine": 108.69,
+        "future": 603.09
+      },
+      "score": 3718,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 234,
+      "level": 3,
+      "next": 0,
+      "x": 178.2,
+      "nextX": 40.5,
+      "predictedGain": 0,
+      "solveMs": 1687,
+      "simulations": 901,
+      "stages": {
+        "initial": 825.42,
+        "secondRefine": 23.21,
+        "firstRefine": 134.33,
+        "future": 703.74
+      },
+      "score": 3718,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 235,
+      "level": 0,
+      "next": 0,
+      "x": 67.5,
+      "nextX": 61.7,
+      "predictedGain": 8,
+      "solveMs": 1860,
+      "simulations": 963,
+      "stages": {
+        "initial": 1027.12,
+        "secondRefine": 28.77,
+        "firstRefine": 130.13,
+        "future": 674.07
+      },
+      "score": 3718,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 236,
+      "level": 0,
+      "next": 3,
+      "x": 69.8,
+      "nextX": 60.6,
+      "predictedGain": 230,
+      "solveMs": 1622,
+      "simulations": 896,
+      "stages": {
+        "initial": 1049.72,
+        "secondRefine": 30.11,
+        "firstRefine": 130.5,
+        "future": 411.48
+      },
+      "score": 3726,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 237,
+      "level": 3,
+      "next": 4,
+      "x": 186.1,
+      "nextX": 132.5,
+      "predictedGain": 222,
+      "solveMs": 1349,
+      "simulations": 835,
+      "stages": {
+        "initial": 732.41,
+        "secondRefine": 24.32,
+        "firstRefine": 87.36,
+        "future": 505.04
+      },
+      "score": 3948,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 238,
+      "level": 4,
+      "next": 2,
+      "x": 172.9,
+      "nextX": 101.9,
+      "predictedGain": 12,
+      "solveMs": 1045,
+      "simulations": 755,
+      "stages": {
+        "initial": 428.91,
+        "secondRefine": 17.85,
+        "firstRefine": 110.34,
+        "future": 488.15
+      },
+      "score": 3948,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 239,
+      "level": 2,
+      "next": 0,
+      "x": 155.3,
+      "nextX": 163.1,
+      "predictedGain": 12,
+      "solveMs": 1200,
+      "simulations": 831,
+      "stages": {
+        "initial": 545.02,
+        "secondRefine": 17.12,
+        "firstRefine": 84.19,
+        "future": 554.01
+      },
+      "score": 3960,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 240,
+      "level": 0,
+      "next": 0,
+      "x": 159.8,
+      "nextX": 151.8,
+      "predictedGain": 2,
+      "solveMs": 1242,
+      "simulations": 878,
+      "stages": {
+        "initial": 601.26,
+        "secondRefine": 18.1,
+        "firstRefine": 100.78,
+        "future": 522.23
+      },
+      "score": 3960,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 241,
+      "level": 0,
+      "next": 2,
+      "x": 150.1,
+      "nextX": 146.8,
+      "predictedGain": 2,
+      "solveMs": 1444,
+      "simulations": 884,
+      "stages": {
+        "initial": 717.74,
+        "secondRefine": 18.76,
+        "firstRefine": 90.23,
+        "future": 616.99
+      },
+      "score": 3962,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 242,
+      "level": 2,
+      "next": 3,
+      "x": 146.8,
+      "nextX": 121.4,
+      "predictedGain": 110,
+      "solveMs": 1236,
+      "simulations": 821,
+      "stages": {
+        "initial": 647.27,
+        "secondRefine": 23.71,
+        "firstRefine": 143.05,
+        "future": 421.49
+      },
+      "score": 3962,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 243,
+      "level": 3,
+      "next": 3,
+      "x": 308.9,
+      "nextX": 95.5,
+      "predictedGain": 130,
+      "solveMs": 1155,
+      "simulations": 796,
+      "stages": {
+        "initial": 576.39,
+        "secondRefine": 25.68,
+        "firstRefine": 167.73,
+        "future": 385.62
+      },
+      "score": 3962,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 244,
+      "level": 3,
+      "next": 3,
+      "x": 91.1,
+      "nextX": 60.6,
+      "predictedGain": 130,
+      "solveMs": 1244,
+      "simulations": 820,
+      "stages": {
+        "initial": 673.99,
+        "secondRefine": 24.19,
+        "firstRefine": 116.25,
+        "future": 429.32
+      },
+      "score": 4092,
+      "maxLevel": 10,
+      "boxes": 8
+    },
+    {
+      "move": 245,
+      "level": 3,
+      "next": 0,
+      "x": 31.8,
+      "nextX": 89.2,
+      "predictedGain": 0,
+      "solveMs": 864,
+      "simulations": 717,
+      "stages": {
+        "initial": 328.71,
+        "secondRefine": 14.74,
+        "firstRefine": 69.1,
+        "future": 451.71
+      },
+      "score": 4092,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 246,
+      "level": 0,
+      "next": 2,
+      "x": 84.6,
+      "nextX": 134.6,
+      "predictedGain": 0,
+      "solveMs": 1250,
+      "simulations": 902,
+      "stages": {
+        "initial": 588.97,
+        "secondRefine": 22.95,
+        "firstRefine": 96.93,
+        "future": 540.87
+      },
+      "score": 4092,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 247,
+      "level": 2,
+      "next": 4,
+      "x": 133,
+      "nextX": 301.3,
+      "predictedGain": 30,
+      "solveMs": 1410,
+      "simulations": 836,
+      "stages": {
+        "initial": 707.2,
+        "secondRefine": 24.23,
+        "firstRefine": 124.44,
+        "future": 554.61
+      },
+      "score": 4092,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 248,
+      "level": 4,
+      "next": 2,
+      "x": 31.220440102685465,
+      "nextX": 168.5,
+      "predictedGain": 62,
+      "solveMs": 1198,
+      "simulations": 799,
+      "stages": {
+        "initial": 637.34,
+        "secondRefine": 20.6,
+        "firstRefine": 96.13,
+        "future": 443.48
+      },
+      "score": 4092,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 249,
+      "level": 2,
+      "next": 1,
+      "x": 95.3,
+      "nextX": 69.6,
+      "predictedGain": 62,
+      "solveMs": 1131,
+      "simulations": 678,
+      "stages": {
+        "initial": 516.7,
+        "secondRefine": 17.99,
+        "firstRefine": 109.47,
+        "future": 487.25
+      },
+      "score": 4154,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 250,
+      "level": 1,
+      "next": 3,
+      "x": 291.1,
+      "nextX": 200,
+      "predictedGain": 0,
+      "solveMs": 1128,
+      "simulations": 672,
+      "stages": {
+        "initial": 505.49,
+        "secondRefine": 21.21,
+        "firstRefine": 89.74,
+        "future": 511.84
+      },
+      "score": 4154,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 251,
+      "level": 3,
+      "next": 2,
+      "x": 75.3,
+      "nextX": 92.8,
+      "predictedGain": 0,
+      "solveMs": 1072,
+      "simulations": 645,
+      "stages": {
+        "initial": 377.08,
+        "secondRefine": 21.49,
+        "firstRefine": 75.3,
+        "future": 598.4
+      },
+      "score": 4154,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 252,
+      "level": 2,
+      "next": 2,
+      "x": 267,
+      "nextX": 242.4,
+      "predictedGain": 160,
+      "solveMs": 1081,
+      "simulations": 728,
+      "stages": {
+        "initial": 524.24,
+        "secondRefine": 26.52,
+        "firstRefine": 135.36,
+        "future": 395.26
+      },
+      "score": 4154,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 253,
+      "level": 2,
+      "next": 1,
+      "x": 334,
+      "nextX": 345.7,
+      "predictedGain": 166,
+      "solveMs": 1338,
+      "simulations": 898,
+      "stages": {
+        "initial": 790.63,
+        "secondRefine": 22.5,
+        "firstRefine": 159.96,
+        "future": 365.19
+      },
+      "score": 4314,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 254,
+      "level": 1,
+      "next": 2,
+      "x": 382.16227450039645,
+      "nextX": 378.6,
+      "predictedGain": 18,
+      "solveMs": 993,
+      "simulations": 764,
+      "stages": {
+        "initial": 478.58,
+        "secondRefine": 10.22,
+        "firstRefine": 68.35,
+        "future": 436.3
+      },
+      "score": 4320,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 255,
+      "level": 2,
+      "next": 0,
+      "x": 378.6,
+      "nextX": 126.1,
+      "predictedGain": 12,
+      "solveMs": 1092,
+      "simulations": 846,
+      "stages": {
+        "initial": 519,
+        "secondRefine": 15.97,
+        "firstRefine": 90.96,
+        "future": 466.23
+      },
+      "score": 4332,
+      "maxLevel": 10,
+      "boxes": 9
+    },
+    {
+      "move": 256,
+      "level": 0,
+      "next": 1,
+      "x": 200,
+      "nextX": 45.6,
+      "predictedGain": 0,
+      "solveMs": 1235,
+      "simulations": 910,
+      "stages": {
+        "initial": 619.7,
+        "secondRefine": 16.78,
+        "firstRefine": 107.77,
+        "future": 490.93
+      },
+      "score": 4332,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 257,
+      "level": 1,
+      "next": 2,
+      "x": 45.6,
+      "nextX": 69.1,
+      "predictedGain": 0,
+      "solveMs": 1149,
+      "simulations": 751,
+      "stages": {
+        "initial": 498.62,
+        "secondRefine": 19.15,
+        "firstRefine": 74.82,
+        "future": 556.51
+      },
+      "score": 4332,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 258,
+      "level": 2,
+      "next": 0,
+      "x": 21.4,
+      "nextX": 70.1,
+      "predictedGain": 20,
+      "solveMs": 1284,
+      "simulations": 864,
+      "stages": {
+        "initial": 668.27,
+        "secondRefine": 18.17,
+        "firstRefine": 112.21,
+        "future": 485.73
+      },
+      "score": 4332,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 259,
+      "level": 0,
+      "next": 0,
+      "x": 315.4,
+      "nextX": 151.1,
+      "predictedGain": 22,
+      "solveMs": 1285,
+      "simulations": 923,
+      "stages": {
+        "initial": 720.11,
+        "secondRefine": 17.43,
+        "firstRefine": 110.38,
+        "future": 436.87
+      },
+      "score": 4334,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 260,
+      "level": 0,
+      "next": 1,
+      "x": 153.8,
+      "nextX": 265.6,
+      "predictedGain": 26,
+      "solveMs": 1207,
+      "simulations": 903,
+      "stages": {
+        "initial": 663.52,
+        "secondRefine": 15.13,
+        "firstRefine": 104.16,
+        "future": 424.47
+      },
+      "score": 4354,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 261,
+      "level": 1,
+      "next": 0,
+      "x": 291.1,
+      "nextX": 15.36621035624914,
+      "predictedGain": 6,
+      "solveMs": 947,
+      "simulations": 761,
+      "stages": {
+        "initial": 422.95,
+        "secondRefine": 13.31,
+        "firstRefine": 65.6,
+        "future": 444.96
+      },
+      "score": 4360,
+      "maxLevel": 10,
+      "boxes": 10
+    },
+    {
+      "move": 262,
+      "level": 0,
+      "next": 2,
+      "x": 275.2,
+      "nextX": 307.2,
+      "predictedGain": 32,
+      "solveMs": 1080,
+      "simulations": 838,
+      "stages": {
+        "initial": 532.74,
+        "secondRefine": 15.51,
+        "firstRefine": 94.8,
+        "future": 436.48
+      },
+      "score": 4360,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 263,
+      "level": 2,
+      "next": 2,
+      "x": 200,
+      "nextX": 271.4,
+      "predictedGain": 32,
+      "solveMs": 1378,
+      "simulations": 862,
+      "stages": {
+        "initial": 730.67,
+        "secondRefine": 25.21,
+        "firstRefine": 103.95,
+        "future": 518.5
+      },
+      "score": 4360,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 264,
+      "level": 2,
+      "next": 0,
+      "x": 273.2,
+      "nextX": 305.5,
+      "predictedGain": 34,
+      "solveMs": 1312,
+      "simulations": 937,
+      "stages": {
+        "initial": 659.64,
+        "secondRefine": 17.61,
+        "firstRefine": 98.71,
+        "future": 535.96
+      },
+      "score": 4392,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 265,
+      "level": 0,
+      "next": 0,
+      "x": 44.4,
+      "nextX": 34.4,
+      "predictedGain": 2,
+      "solveMs": 1314,
+      "simulations": 950,
+      "stages": {
+        "initial": 657.97,
+        "secondRefine": 22.96,
+        "firstRefine": 122.2,
+        "future": 510.68
+      },
+      "score": 4392,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 266,
+      "level": 0,
+      "next": 0,
+      "x": 54,
+      "nextX": 236.9,
+      "predictedGain": 4,
+      "solveMs": 1395,
+      "simulations": 941,
+      "stages": {
+        "initial": 746.78,
+        "secondRefine": 23.96,
+        "firstRefine": 95.92,
+        "future": 528.65
+      },
+      "score": 4394,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 267,
+      "level": 0,
+      "next": 3,
+      "x": 240.2,
+      "nextX": 106.5,
+      "predictedGain": 2,
+      "solveMs": 1335,
+      "simulations": 861,
+      "stages": {
+        "initial": 673.56,
+        "secondRefine": 19.53,
+        "firstRefine": 86.19,
+        "future": 555.92
+      },
+      "score": 4396,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 268,
+      "level": 3,
+      "next": 4,
+      "x": 41.5,
+      "nextX": 31.220440102685465,
+      "predictedGain": 50,
+      "solveMs": 1315,
+      "simulations": 835,
+      "stages": {
+        "initial": 657.54,
+        "secondRefine": 27.09,
+        "firstRefine": 107.93,
+        "future": 522.17
+      },
+      "score": 4396,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 269,
+      "level": 4,
+      "next": 1,
+      "x": 94.5,
+      "nextX": 121.1,
+      "predictedGain": 68,
+      "solveMs": 1270,
+      "simulations": 918,
+      "stages": {
+        "initial": 669.74,
+        "secondRefine": 18.1,
+        "firstRefine": 118.95,
+        "future": 463.26
+      },
+      "score": 4446,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 270,
+      "level": 1,
+      "next": 1,
+      "x": 17.83772549960356,
+      "nextX": 54.3,
+      "predictedGain": 18,
+      "solveMs": 1486,
+      "simulations": 964,
+      "stages": {
+        "initial": 811.21,
+        "secondRefine": 19.8,
+        "firstRefine": 97.29,
+        "future": 557.27
+      },
+      "score": 4446,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 271,
+      "level": 1,
+      "next": 0,
+      "x": 63.4,
+      "nextX": 28.4,
+      "predictedGain": 18,
+      "solveMs": 1513,
+      "simulations": 908,
+      "stages": {
+        "initial": 794.65,
+        "secondRefine": 20.74,
+        "firstRefine": 91.88,
+        "future": 605.73
+      },
+      "score": 4464,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 272,
+      "level": 0,
+      "next": 0,
+      "x": 21.4,
+      "nextX": 34.4,
+      "predictedGain": 8,
+      "solveMs": 1419,
+      "simulations": 923,
+      "stages": {
+        "initial": 728.37,
+        "secondRefine": 19.04,
+        "firstRefine": 115.24,
+        "future": 556.11
+      },
+      "score": 4464,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 273,
+      "level": 0,
+      "next": 3,
+      "x": 84.6,
+      "nextX": 36.3,
+      "predictedGain": 58,
+      "solveMs": 1647,
+      "simulations": 953,
+      "stages": {
+        "initial": 941.3,
+        "secondRefine": 27.18,
+        "firstRefine": 149.85,
+        "future": 528.94
+      },
+      "score": 4464,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 274,
+      "level": 3,
+      "next": 0,
+      "x": 31.8,
+      "nextX": 15.4,
+      "predictedGain": 58,
+      "solveMs": 1371,
+      "simulations": 830,
+      "stages": {
+        "initial": 690.94,
+        "secondRefine": 21.76,
+        "firstRefine": 114.01,
+        "future": 544.64
+      },
+      "score": 4522,
+      "maxLevel": 10,
+      "boxes": 11
+    },
+    {
+      "move": 275,
+      "level": 0,
+      "next": 1,
+      "x": 113.7,
+      "nextX": 17.83772549960356,
+      "predictedGain": 0,
+      "solveMs": 1401,
+      "simulations": 914,
+      "stages": {
+        "initial": 689.73,
+        "secondRefine": 19.97,
+        "firstRefine": 106.52,
+        "future": 584.4
+      },
+      "score": 4522,
+      "maxLevel": 10,
+      "boxes": 12
+    },
+    {
+      "move": 276,
+      "level": 1,
+      "next": 2,
+      "x": 75,
+      "nextX": 57.1,
+      "predictedGain": 0,
+      "solveMs": 1615,
+      "simulations": 869,
+      "stages": {
+        "initial": 738.84,
+        "secondRefine": 12.6,
+        "firstRefine": 100.17,
+        "future": 763.7
+      },
+      "score": 4522,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 277,
+      "level": 2,
+      "next": 1,
+      "x": 72,
+      "nextX": 71.8,
+      "predictedGain": 18,
+      "solveMs": 1535,
+      "simulations": 880,
+      "stages": {
+        "initial": 802.68,
+        "secondRefine": 22.53,
+        "firstRefine": 121.78,
+        "future": 588.2
+      },
+      "score": 4522,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 278,
+      "level": 1,
+      "next": 2,
+      "x": 47.3,
+      "nextX": 378.6,
+      "predictedGain": 18,
+      "solveMs": 1500,
+      "simulations": 831,
+      "stages": {
+        "initial": 778.96,
+        "secondRefine": 11.38,
+        "firstRefine": 96.26,
+        "future": 613.82
+      },
+      "score": 4540,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 279,
+      "level": 2,
+      "next": 0,
+      "x": 362.3,
+      "nextX": 21.5,
+      "predictedGain": 44,
+      "solveMs": 1537,
+      "simulations": 900,
+      "stages": {
+        "initial": 780.42,
+        "secondRefine": 24.04,
+        "firstRefine": 140.89,
+        "future": 591.89
+      },
+      "score": 4540,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 280,
+      "level": 0,
+      "next": 0,
+      "x": 142.8,
+      "nextX": 15.4,
+      "predictedGain": 44,
+      "solveMs": 1797,
+      "simulations": 908,
+      "stages": {
+        "initial": 924.12,
+        "secondRefine": 29.18,
+        "firstRefine": 131.5,
+        "future": 712.08
+      },
+      "score": 4540,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 281,
+      "level": 0,
+      "next": 4,
+      "x": 38.4,
+      "nextX": 31.220440102685465,
+      "predictedGain": 44,
+      "solveMs": 1665,
+      "simulations": 781,
+      "stages": {
+        "initial": 889.84,
+        "secondRefine": 29.84,
+        "firstRefine": 0.03,
+        "future": 745.18
+      },
+      "score": 4540,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 282,
+      "level": 4,
+      "next": 2,
+      "x": 52.3,
+      "nextX": 378.6,
+      "predictedGain": 56,
+      "solveMs": 1737,
+      "simulations": 785,
+      "stages": {
+        "initial": 788.53,
+        "secondRefine": 14.53,
+        "firstRefine": 134.66,
+        "future": 799.2
+      },
+      "score": 4584,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 283,
+      "level": 2,
+      "next": 0,
+      "x": 155.3,
+      "nextX": 52.3,
+      "predictedGain": 2,
+      "solveMs": 2047,
+      "simulations": 942,
+      "stages": {
+        "initial": 1105.78,
+        "secondRefine": 32.03,
+        "firstRefine": 152.59,
+        "future": 756.41
+      },
+      "score": 4584,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 284,
+      "level": 0,
+      "next": 3,
+      "x": 99.1,
+      "nextX": 47.1,
+      "predictedGain": 70,
+      "solveMs": 2122,
+      "simulations": 914,
+      "stages": {
+        "initial": 1186.63,
+        "secondRefine": 44.18,
+        "firstRefine": 173.29,
+        "future": 718.22
+      },
+      "score": 4586,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 285,
+      "level": 3,
+      "next": 0,
+      "x": 47.5,
+      "nextX": 379.9,
+      "predictedGain": 68,
+      "solveMs": 2078,
+      "simulations": 879,
+      "stages": {
+        "initial": 1055.92,
+        "secondRefine": 22.66,
+        "firstRefine": 182.02,
+        "future": 817.16
+      },
+      "score": 4654,
+      "maxLevel": 10,
+      "boxes": 13
+    },
+    {
+      "move": 286,
+      "level": 0,
+      "next": 1,
+      "x": 373.8,
+      "nextX": 127.1,
+      "predictedGain": 0,
+      "solveMs": 1715,
+      "simulations": 899,
+      "stages": {
+        "initial": 852.68,
+        "secondRefine": 26.6,
+        "firstRefine": 125.45,
+        "future": 710.01
+      },
+      "score": 4654,
+      "maxLevel": 10,
+      "boxes": 14
+    },
+    {
+      "move": 287,
+      "level": 1,
+      "next": 1,
+      "x": 194,
+      "nextX": 200,
+      "predictedGain": 6,
+      "solveMs": 1865,
+      "simulations": 985,
+      "stages": {
+        "initial": 1008.9,
+        "secondRefine": 26.53,
+        "firstRefine": 137.54,
+        "future": 692.02
+      },
+      "score": 4654,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 288,
+      "level": 1,
+      "next": 3,
+      "x": 200,
+      "nextX": 72.6,
+      "predictedGain": 26,
+      "solveMs": 1676,
+      "simulations": 836,
+      "stages": {
+        "initial": 815.61,
+        "secondRefine": 24.14,
+        "firstRefine": 111.56,
+        "future": 724.8
+      },
+      "score": 4660,
+      "maxLevel": 10,
+      "boxes": 15
+    },
+    {
+      "move": 289,
+      "level": 3,
+      "next": 3,
+      "x": 186.9,
+      "nextX": 130.3,
+      "predictedGain": 20,
+      "solveMs": 1651,
+      "simulations": 828,
+      "stages": {
+        "initial": 775.9,
+        "secondRefine": 27.78,
+        "firstRefine": 131.68,
+        "future": 715.86
+      },
+      "score": 4660,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 290,
+      "level": 3,
+      "next": 1,
+      "x": 165.7,
+      "nextX": 382.16227450039645,
+      "predictedGain": 20,
+      "solveMs": 2017,
+      "simulations": 960,
+      "stages": {
+        "initial": 1093.45,
+        "secondRefine": 15.08,
+        "firstRefine": 147.59,
+        "future": 760.47
+      },
+      "score": 4680,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 291,
+      "level": 1,
+      "next": 0,
+      "x": 200,
+      "nextX": 310.8,
+      "predictedGain": 8,
+      "solveMs": 1988,
+      "simulations": 981,
+      "stages": {
+        "initial": 1078.28,
+        "secondRefine": 29.37,
+        "firstRefine": 162.72,
+        "future": 717.96
+      },
+      "score": 4680,
+      "maxLevel": 10,
+      "boxes": 17
+    },
+    {
+      "move": 292,
+      "level": 0,
+      "next": 2,
+      "x": 359.3,
+      "nextX": 307.2,
+      "predictedGain": 20,
+      "solveMs": 1960,
+      "simulations": 938,
+      "stages": {
+        "initial": 1020.03,
+        "secondRefine": 27.81,
+        "firstRefine": 166.22,
+        "future": 746.06
+      },
+      "score": 4682,
+      "maxLevel": 10,
+      "boxes": 17
+    },
+    {
+      "move": 293,
+      "level": 2,
+      "next": 1,
+      "x": 206,
+      "nextX": 309.3,
+      "predictedGain": 18,
+      "solveMs": 2207,
+      "simulations": 1006,
+      "stages": {
+        "initial": 1176.37,
+        "secondRefine": 28.8,
+        "firstRefine": 166.87,
+        "future": 834.49
+      },
+      "score": 4700,
+      "maxLevel": 10,
+      "boxes": 16
+    },
+    {
+      "move": 294,
+      "level": 1,
+      "next": 3,
+      "x": 273.5,
+      "nextX": 25.76136102882877,
+      "predictedGain": 470,
+      "solveMs": 1070,
+      "simulations": 436,
+      "stages": {
+        "initial": 926.88,
+        "secondRefine": 25.73,
+        "firstRefine": 117.85,
+        "future": 0.01
+      },
+      "score": 4700,
+      "maxLevel": 10,
+      "boxes": 17
+    },
+    {
+      "move": 295,
+      "level": 3,
+      "next": 0,
+      "x": 25.8,
+      "nextX": 384.63378964375084,
+      "predictedGain": 470,
+      "solveMs": 1186,
+      "simulations": 445,
+      "stages": {
+        "initial": 1018.97,
+        "secondRefine": 22.69,
+        "firstRefine": 144.53,
+        "future": 0
+      },
+      "score": 5138,
+      "maxLevel": 11,
+      "boxes": 9
+    }
+  ],
+  "final": {
+    "time": 1179.9999999992556,
+    "score": 5138,
+    "maxLv": 10,
+    "dangerT": 0,
+    "over": false,
+    "serial": 581,
+    "merges": 286,
+    "timing": {
+      "timestamp": 1179999.9999996354,
+      "timeScale": 1,
+      "lastDelta": 16.666666666666668,
+      "lastElapsed": 0,
+      "lastUpdatesPerFrame": 0
+    },
+    "walls": [
+      1,
+      2,
+      3
+    ],
+    "pairs": [
+      {
+        "a": 1,
+        "b": 326,
+        "separation": 0.05011652066252148,
+        "isActive": true,
+        "timeCreated": 756799.9999997028,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.4944910527094635,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.4944910527094635
+          },
+          "supports": [
+            {
+              "id": 326,
+              "index": 3
+            },
+            {
+              "id": 326,
+              "index": 2
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 326,
+              "index": 3
+            },
+            "normalImpulse": -0.592016440967367,
+            "tangentImpulse": 0.0057493223241320245
+          },
+          {
+            "vertex": {
+              "id": 326,
+              "index": 2
+            },
+            "normalImpulse": -0.44241250928598835,
+            "tangentImpulse": 0.006743461147420637
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 326,
+        "separation": 0.05,
+        "isActive": true,
+        "timeCreated": 948049.9999992575,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.05,
+          "normal": {
+            "x": -1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": -1
+          },
+          "penetration": {
+            "x": -0.05,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 326,
+              "index": 5
+            },
+            {
+              "id": 326,
+              "index": 6
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 326,
+              "index": 5
+            },
+            "normalImpulse": -0.012492783471552664,
+            "tangentImpulse": -0.10445722991704899
+          },
+          {
+            "vertex": {
+              "id": 326,
+              "index": 6
+            },
+            "normalImpulse": -0.08590393513358313,
+            "tangentImpulse": 0.09009063946447027
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 194,
+        "separation": 0.05000000044444447,
+        "isActive": true,
+        "timeCreated": 1009599.9999991142,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.49444444448897684,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.49444444448897684
+          },
+          "supports": [
+            {
+              "id": 194,
+              "index": 8
+            },
+            {
+              "id": 194,
+              "index": 9
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 194,
+              "index": 8
+            },
+            "normalImpulse": -0.7192737110973402,
+            "tangentImpulse": -0.030011048903847246
+          },
+          {
+            "vertex": {
+              "id": 194,
+              "index": 9
+            },
+            "normalImpulse": -0.6607860880426558,
+            "tangentImpulse": 0.030011048904810315
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 583,
+        "separation": 0.1799044921636308,
+        "isActive": true,
+        "timeCreated": 1177883.3333329589,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.6017582409377837,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.6017582409377837
+          },
+          "supports": [
+            {
+              "id": 583,
+              "index": 12
+            },
+            {
+              "id": 583,
+              "index": 11
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 583,
+              "index": 12
+            },
+            "normalImpulse": -14.341275158240203,
+            "tangentImpulse": 0.43590501633793133
+          },
+          {
+            "vertex": {
+              "id": 583,
+              "index": 11
+            },
+            "normalImpulse": -15.73805715060428,
+            "tangentImpulse": 0.569832049873429
+          }
+        ]
+      },
+      {
+        "a": 424,
+        "b": 584,
+        "separation": 0.10176958786271503,
+        "isActive": true,
+        "timeCreated": 1178249.9999996272,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.10166667019620945,
+          "normal": {
+            "x": 0.8017063697358104,
+            "y": 0.5977180746179843
+          },
+          "tangent": {
+            "x": -0.5977180746179843,
+            "y": 0.8017063697358104
+          },
+          "penetration": {
+            "x": 0.081506817086131,
+            "y": 0.060768006362499925
+          },
+          "supports": [
+            {
+              "id": 424,
+              "index": 1
+            },
+            {
+              "id": 424,
+              "index": 2
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 424,
+              "index": 1
+            },
+            "normalImpulse": -1.6122852299410209,
+            "tangentImpulse": -0.07733677861672508
+          },
+          {
+            "vertex": {
+              "id": 424,
+              "index": 2
+            },
+            "normalImpulse": -1.4110833979928235,
+            "tangentImpulse": -0.6576366149471611
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 424,
+        "separation": 0.06685402261678496,
+        "isActive": true,
+        "timeCreated": 1178266.666666294,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.06607062683036702,
+          "normal": {
+            "x": 1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": 1
+          },
+          "penetration": {
+            "x": 0.06607062683036702,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 424,
+              "index": 6
+            },
+            {
+              "id": 424,
+              "index": 5
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 424,
+              "index": 6
+            },
+            "normalImpulse": -0.757876391700775,
+            "tangentImpulse": 2.648345772926086
+          },
+          {
+            "vertex": {
+              "id": 424,
+              "index": 5
+            },
+            "normalImpulse": 0,
+            "tangentImpulse": -3.235405792373792
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 579,
+        "separation": 0.0685808520337015,
+        "isActive": true,
+        "timeCreated": 1178283.3333329607,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.0636392236391572,
+          "normal": {
+            "x": -1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": -1
+          },
+          "penetration": {
+            "x": -0.0636392236391572,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 579,
+              "index": 1
+            },
+            {
+              "id": 579,
+              "index": 2
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 579,
+              "index": 1
+            },
+            "normalImpulse": -1.9522376981317893,
+            "tangentImpulse": -0.5383551019021093
+          },
+          {
+            "vertex": {
+              "id": 579,
+              "index": 2
+            },
+            "normalImpulse": -7.827634109638464,
+            "tangentImpulse": -0.4877107807908202
+          }
+        ]
+      },
+      {
+        "a": 424,
+        "b": 547,
+        "separation": 0.1359579100240092,
+        "isActive": true,
+        "timeCreated": 1178316.6666662942,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.13062409092339067,
+          "normal": {
+            "x": 0.054011291895988425,
+            "y": 0.9985403248480917
+          },
+          "tangent": {
+            "x": -0.9985403248480917,
+            "y": 0.054011291895988425
+          },
+          "penetration": {
+            "x": 0.007055175903511386,
+            "y": 0.1304334221836292
+          },
+          "supports": [
+            {
+              "id": 547,
+              "index": 9
+            },
+            {
+              "id": 424,
+              "index": 3
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 547,
+              "index": 9
+            },
+            "normalImpulse": -1.099489912683723,
+            "tangentImpulse": -0.17723127135860967
+          },
+          {
+            "vertex": {
+              "id": 424,
+              "index": 3
+            },
+            "normalImpulse": -0.9228381890860696,
+            "tangentImpulse": 0.0352862748759941
+          }
+        ]
+      },
+      {
+        "a": 579,
+        "b": 583,
+        "separation": 0.11826938845650242,
+        "isActive": true,
+        "timeCreated": 1178366.6666662944,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.1078648132721014,
+          "normal": {
+            "x": -0.47025427823891,
+            "y": -0.8825309704469303
+          },
+          "tangent": {
+            "x": 0.8825309704469303,
+            "y": -0.47025427823891
+          },
+          "penetration": {
+            "x": -0.05072388991264684,
+            "y": -0.09519403833410457
+          },
+          "supports": [
+            {
+              "id": 583,
+              "index": 2
+            },
+            {
+              "id": 583,
+              "index": 1
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 583,
+              "index": 2
+            },
+            "normalImpulse": -4.012240919950138,
+            "tangentImpulse": 0.055910812633377105
+          },
+          {
+            "vertex": {
+              "id": 583,
+              "index": 1
+            },
+            "normalImpulse": -2.2493389439516815,
+            "tangentImpulse": -0.389061830321308
+          }
+        ]
+      },
+      {
+        "a": 583,
+        "b": 584,
+        "separation": 0.0936643468330597,
+        "isActive": true,
+        "timeCreated": 1178383.3333329612,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.08703131564553246,
+          "normal": {
+            "x": -0.5971086466790912,
+            "y": 0.8021603730308964
+          },
+          "tangent": {
+            "x": -0.8021603730308964,
+            "y": -0.5971086466790912
+          },
+          "penetration": {
+            "x": -0.051967151103804704,
+            "y": 0.06981307262359
+          },
+          "supports": [
+            {
+              "id": 583,
+              "index": 5
+            },
+            {
+              "id": 583,
+              "index": 6
+            }
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 583,
+              "index": 5
+            },
+            "normalImpulse": -1.5697845179656391,
+            "tangentImpulse": -0.39770411129206706
+          },
+          {
+            "vertex": {
+              "id": 583,
+              "index": 6
+            },
+            "normalImpulse": 0,
+            "tangentImpulse": -0.6404971577382818
+          }
+        ]
+      },
+      {
+        "a": 573,
+        "b": 583,
+        "separation": 0.10277064461737825,
+        "isActive": true,
+        "timeCreated": 1178616.6666662956,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.08844763350674612,
+          "normal": {
+            "x": -0.0031685509658206093,
+            "y": -0.9999949801297906
+          },
+          "tangent": {
+            "x": 0.9999949801297906,
+            "y": -0.0031685509658206093
+          },
+          "penetration": {
+            "x": -0.0002802508345723477,
+            "y": -0.08844718951110558
+          },
+          "supports": [
+            {
+              "id": 583,
+              "index": 4
+            },
+            {
+              "id": 573,
+              "index": 11
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 583,
+              "index": 4
+            },
+            "normalImpulse": -1.816830890268253,
+            "tangentImpulse": 0.2933268228793711
+          },
+          {
+            "vertex": {
+              "id": 573,
+              "index": 11
+            },
+            "normalImpulse": -0.22334918738213064,
+            "tangentImpulse": 0.1594777139135425
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 240,
+        "separation": 0.2264457549865863,
+        "isActive": true,
+        "timeCreated": 1178866.6666662968,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 2,
+        "collision": {
+          "collided": true,
+          "depth": 0.658831985262168,
+          "normal": {
+            "x": 0,
+            "y": 1
+          },
+          "tangent": {
+            "x": -1,
+            "y": 0
+          },
+          "penetration": {
+            "x": 0,
+            "y": 0.658831985262168
+          },
+          "supports": [
+            {
+              "id": 240,
+              "index": 9
+            },
+            {
+              "id": 240,
+              "index": 10
+            }
+          ],
+          "supportCount": 2
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 240,
+              "index": 9
+            },
+            "normalImpulse": -11.34366426222055,
+            "tangentImpulse": -0.01636448967241702
+          },
+          {
+            "vertex": {
+              "id": 240,
+              "index": 10
+            },
+            "normalImpulse": -4.9934133020826,
+            "tangentImpulse": 0.15245293238287996
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 240,
+        "separation": 0.05943317378126498,
+        "isActive": true,
+        "timeCreated": 1178933.3333329638,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.05886852658045427,
+          "normal": {
+            "x": 1,
+            "y": 0
+          },
+          "tangent": {
+            "x": 0,
+            "y": 1
+          },
+          "penetration": {
+            "x": 0.05886852658045427,
+            "y": 0
+          },
+          "supports": [
+            {
+              "id": 240,
+              "index": 6
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 240,
+              "index": 6
+            },
+            "normalImpulse": -0.19779161116374797,
+            "tangentImpulse": -0.055475996551744136
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      },
+      {
+        "a": 240,
+        "b": 424,
+        "separation": 0.3491955941252346,
+        "isActive": true,
+        "timeCreated": 1178983.333332964,
+        "timeUpdated": 1179983.3333329686,
+        "contactCount": 1,
+        "collision": {
+          "collided": true,
+          "depth": 0.3284862118505316,
+          "normal": {
+            "x": 0.054011291895988425,
+            "y": 0.9985403248480917
+          },
+          "tangent": {
+            "x": -0.9985403248480917,
+            "y": 0.054011291895988425
+          },
+          "penetration": {
+            "x": 0.017741964672066554,
+            "y": 0.32800672868934894
+          },
+          "supports": [
+            {
+              "id": 240,
+              "index": 2
+            },
+            null
+          ],
+          "supportCount": 1
+        },
+        "contacts": [
+          {
+            "vertex": {
+              "id": 240,
+              "index": 2
+            },
+            "normalImpulse": -15.454327081481406,
+            "tangentImpulse": -0.5020352464331205
+          },
+          {
+            "vertex": null,
+            "normalImpulse": 0,
+            "tangentImpulse": 0
+          }
+        ]
+      }
+    ],
+    "bodies": [
+      {
+        "id": 194,
+        "lv": 1,
+        "k": 1,
+        "born": 394.06666666663693,
+        "gameId": 191,
+        "x": 46.93271924345407,
+        "y": 681.2045937853434,
+        "angle": 0.017374620727057997,
+        "vx": 1.3500311979441904e-13,
+        "vy": 0,
+        "av": 3.1884217488453714e-15,
+        "px": 46.93271924345394,
+        "py": 681.2045937853434,
+        "pa": 0.01737462072705481,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 30.709978672513948,
+            "y": 645.666288663456
+          },
+          {
+            "x": 31.67618391365613,
+            "y": 643.3633621325525
+          },
+          {
+            "x": 33.962809511333,
+            "y": 642.3591875706439
+          },
+          {
+            "x": 61.07181692541451,
+            "y": 642.8258137199366
+          },
+          {
+            "x": 63.37474345631523,
+            "y": 643.7920189610859
+          },
+          {
+            "x": 64.37891801822627,
+            "y": 646.0786445587532
+          },
+          {
+            "x": 63.15545981438954,
+            "y": 716.7428989072309
+          },
+          {
+            "x": 62.189254573247226,
+            "y": 719.0458254381333
+          },
+          {
+            "x": 59.90262897557347,
+            "y": 720.0500000000444
+          },
+          {
+            "x": 32.79362156149382,
+            "y": 719.5833738507508
+          },
+          {
+            "x": 30.49069503059077,
+            "y": 718.6171686096015
+          },
+          {
+            "x": 29.48652046868134,
+            "y": 716.3305430119344
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9221284137309871,
+              "y": 0.38688394718566954
+            },
+            {
+              "x": 0.40208746716732874,
+              "y": 0.9156012607827252
+            },
+            {
+              "x": -0.01721040649576899,
+              "y": 0.9998518899857557
+            },
+            {
+              "x": -0.3868839471858244,
+              "y": 0.9221284137309209
+            },
+            {
+              "x": -0.9156012607826622,
+              "y": 0.4020874671674833
+            },
+            {
+              "x": -0.9998501519512013,
+              "y": -0.017311084398845277
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 29.48652046868134,
+              "y": 642.3591875706439
+            },
+            "max": {
+              "x": 64.3789180182267,
+              "y": 720.4944444444889
+            }
+          },
+          "area": 2587.6121233875,
+          "mass": 3.1051345480649997,
+          "inverseMass": 0.3220472364468591,
+          "inertia": 7280.016358754762,
+          "inverseInertia": 0.00013736232869826254,
+          "speed": 1.3500311979441904e-13,
+          "angularSpeed": 3.1884217488453714e-15,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 240,
+        "lv": 0,
+        "k": 1,
+        "born": 487.99999999988484,
+        "gameId": 237,
+        "x": 385.0256905350927,
+        "y": 689.2508279499993,
+        "angle": -0.02423390974673633,
+        "vx": -0.000269208488532513,
+        "vy": -0.0016068105006752376,
+        "av": 0.000009756298825863013,
+        "px": 385.0259597435812,
+        "py": 689.2524347605,
+        "pa": -0.024243666045562193,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 369.9925568379777,
+            "y": 661.9100452344635
+          },
+          {
+            "x": 370.5281164597912,
+            "y": 660.125370889558
+          },
+          {
+            "x": 372.01403155629896,
+            "y": 659.0011187150672
+          },
+          {
+            "x": 395.64472720822386,
+            "y": 658.2873899899648
+          },
+          {
+            "x": 397.4294015531376,
+            "y": 658.8229496117779
+          },
+          {
+            "x": 398.55365372763384,
+            "y": 660.3088647082853
+          },
+          {
+            "x": 400.05882423220754,
+            "y": 716.5916106655309
+          },
+          {
+            "x": 399.5232646103934,
+            "y": 718.3762850104391
+          },
+          {
+            "x": 398.03734951388583,
+            "y": 719.50053718493
+          },
+          {
+            "x": 374.4066538619624,
+            "y": 720.2142659100366
+          },
+          {
+            "x": 372.62197951704877,
+            "y": 719.678706288221
+          },
+          {
+            "x": 371.497727342553,
+            "y": 718.1927911917124
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9578030444846029,
+              "y": 0.2874253433085609
+            },
+            {
+              "x": 0.6033661875467573,
+              "y": 0.797464258587923
+            },
+            {
+              "x": 0.03018969094527884,
+              "y": 0.9995441873977744
+            },
+            {
+              "x": -0.28742534330855946,
+              "y": 0.9578030444846026
+            },
+            {
+              "x": -0.7974642585879235,
+              "y": 0.6033661875467564
+            },
+            {
+              "x": -0.9996425971828918,
+              "y": 0.026733460260589818
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 369.9925143130266,
+              "y": 658.2873899899648
+            },
+            "max": {
+              "x": 400.05882423220754,
+              "y": 720.6588706151713
+            }
+          },
+          "area": 1743.696975630594,
+          "mass": 2.0924363707567126,
+          "inverseMass": 0.47791178454729216,
+          "inertia": 3160.9773998189803,
+          "inverseInertia": 0.0003163578455376704,
+          "speed": 0.0016292063084146734,
+          "angularSpeed": 0.000009756298825863013,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 326,
+        "lv": 0,
+        "k": 1,
+        "born": 667.9999999997211,
+        "gameId": 323,
+        "x": 14.335745393119623,
+        "y": 689.4173411648343,
+        "angle": -3.135975886765395,
+        "vx": 0,
+        "vy": 0,
+        "av": 0,
+        "px": 14.335745393119623,
+        "py": 689.4173411648343,
+        "pa": -3.135975886765395,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 28.546162191806786,
+            "y": 717.194626177252
+          },
+          {
+            "x": 27.95757533562584,
+            "y": 718.9625210097056
+          },
+          {
+            "x": 26.438767507555564,
+            "y": 720.0419233477149
+          },
+          {
+            "x": 2.797297170466117,
+            "y": 720.050046608265
+          },
+          {
+            "x": 1.029402338007842,
+            "y": 719.4614597520765
+          },
+          {
+            "x": -0.05,
+            "y": 717.9426519240006
+          },
+          {
+            "x": 0.12532859443343972,
+            "y": 661.6400561524171
+          },
+          {
+            "x": 0.71391545061343,
+            "y": 659.8721613199632
+          },
+          {
+            "x": 2.23272327868077,
+            "y": 658.7927589819502
+          },
+          {
+            "x": 25.874193615774065,
+            "y": 658.7846357214038
+          },
+          {
+            "x": 27.642088448232144,
+            "y": 659.3732225775925
+          },
+          {
+            "x": 28.72149078624053,
+            "y": 660.8920304056677
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": -0.9487977779735215,
+              "y": -0.31588411880393813
+            },
+            {
+              "x": -0.5792960763492635,
+              "y": -0.8151172037973635
+            },
+            {
+              "x": -0.0003436021510682746,
+              "y": -0.9999999409687739
+            },
+            {
+              "x": 0.31588411880393674,
+              "y": -0.9487977779735208
+            },
+            {
+              "x": 0.8151172037973636,
+              "y": -0.5792960763492621
+            },
+            {
+              "x": 0.9999951514094435,
+              "y": 0.003114025950925818
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": -0.05,
+              "y": 658.7846357214038
+            },
+            "max": {
+              "x": 28.72149078624053,
+              "y": 720.4944910527095
+            }
+          },
+          "area": 1743.696975630594,
+          "mass": 2.0924363707567126,
+          "inverseMass": 0.47791178454729216,
+          "inertia": 3160.9773998189803,
+          "inverseInertia": 0.0003163578455376704,
+          "speed": 0,
+          "angularSpeed": 0,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 424,
+        "lv": 7,
+        "k": 1,
+        "born": 856.7666666662161,
+        "gameId": 421,
+        "x": 351.8631707855808,
+        "y": 556.1489902675838,
+        "angle": -0.041971224616277045,
+        "vx": 0.005326118219045384,
+        "vy": -0.0025921176736574125,
+        "av": 0.000056020145011478895,
+        "px": 351.85784466736175,
+        "py": 556.1515823852575,
+        "pa": -0.042027244761288524,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 303.66015737888813,
+            "y": 462.38064988078264
+          },
+          {
+            "x": 304.8031931854066,
+            "y": 457.6466900383397
+          },
+          {
+            "x": 308.2786923590878,
+            "y": 454.23526626834996
+          },
+          {
+            "x": 382.8259773069741,
+            "y": 450.20298528060863
+          },
+          {
+            "x": 387.5599371494125,
+            "y": 451.3460210871175
+          },
+          {
+            "x": 390.97136091941115,
+            "y": 454.82152026081087
+          },
+          {
+            "x": 400.06618419227357,
+            "y": 649.917330654374
+          },
+          {
+            "x": 398.92314838575436,
+            "y": 654.6512904968084
+          },
+          {
+            "x": 395.44764921207343,
+            "y": 658.0627142668098
+          },
+          {
+            "x": 320.90036426418794,
+            "y": 662.0949952545424
+          },
+          {
+            "x": 316.1664044217477,
+            "y": 660.9519594480386
+          },
+          {
+            "x": 312.75498065175077,
+            "y": 657.4764602743456
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9720655398932231,
+              "y": 0.23470957831344905
+            },
+            {
+              "x": 0.7004975959144946,
+              "y": 0.7136547611542144
+            },
+            {
+              "x": 0.054011291895988425,
+              "y": 0.9985403248480917
+            },
+            {
+              "x": -0.2347095783134214,
+              "y": 0.9720655398932294
+            },
+            {
+              "x": -0.7136547611542997,
+              "y": 0.7004975959144066
+            },
+            {
+              "x": -0.9989151854392567,
+              "y": 0.046566643629214
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 303.6598659012891,
+              "y": 450.20298528060863
+            },
+            "max": {
+              "x": 400.06618419227357,
+              "y": 662.5396479805827
+            }
+          },
+          "area": 18181.32080778496,
+          "mass": 21.81758496934195,
+          "inverseMass": 0.04583458716467469,
+          "inertia": 369066.8564774837,
+          "inverseInertia": 0.000002709536178741124,
+          "speed": 0.005923395083677459,
+          "angularSpeed": 0.000056020145011478895,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 547,
+        "lv": 2,
+        "k": 1,
+        "born": 1111.9999999993174,
+        "gameId": 544,
+        "x": 366.2959984482993,
+        "y": 404.2192362781405,
+        "angle": -0.04370987401631969,
+        "vx": 0.005333518354689204,
+        "vy": -0.0017320829999789567,
+        "av": -0.00011247795641950581,
+        "px": 366.2906649299446,
+        "py": 404.2209683611405,
+        "pa": -0.043597396059900186,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 344.03636478279714,
+            "y": 362.12094929180546
+          },
+          {
+            "x": 344.58942759776454,
+            "y": 359.88493132561433
+          },
+          {
+            "x": 346.2654314400638,
+            "y": 358.30484716867403
+          },
+          {
+            "x": 380.540951568074,
+            "y": 356.44065144433165
+          },
+          {
+            "x": 382.7769695342654,
+            "y": 356.993714259297
+          },
+          {
+            "x": 384.3570536912084,
+            "y": 358.6697181015973
+          },
+          {
+            "x": 388.5556321138014,
+            "y": 446.3175232644762
+          },
+          {
+            "x": 388.0025692988341,
+            "y": 448.5535412306677
+          },
+          {
+            "x": 386.32656545653504,
+            "y": 450.1336253876071
+          },
+          {
+            "x": 352.0510453285243,
+            "y": 451.9978211119499
+          },
+          {
+            "x": 349.81502736233324,
+            "y": 451.444758296984
+          },
+          {
+            "x": 348.23494320539,
+            "y": 449.76875445468255
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9707464091044965,
+              "y": 0.24010707863521805
+            },
+            {
+              "x": 0.6859788448155404,
+              "y": 0.7276214843347707
+            },
+            {
+              "x": 0.054308280889983,
+              "y": 0.9985242163446918
+            },
+            {
+              "x": -0.24010707863522168,
+              "y": 0.9707464091044955
+            },
+            {
+              "x": -0.7276214843347681,
+              "y": 0.685978844815543
+            },
+            {
+              "x": -0.998854629977367,
+              "y": 0.047847969369414746
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 344.03453883810874,
+              "y": 356.44065144433165
+            },
+            "max": {
+              "x": 388.5556321138014,
+              "y": 452.44250160963384
+            }
+          },
+          "area": 3783.9487506224764,
+          "mass": 4.540738500746971,
+          "inverseMass": 0.2202284936328079,
+          "inertia": 15717.538700584864,
+          "inverseInertia": 0.00006362319311246799,
+          "speed": 0.005607720531430105,
+          "angularSpeed": 0.00011247795641950581,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 573,
+        "lv": 3,
+        "k": 1,
+        "born": 1169.1166666659321,
+        "gameId": 570,
+        "x": 188.25591545761924,
+        "y": 449.8181780183461,
+        "angle": -1.5727450258762645,
+        "vx": -0.052646289919778155,
+        "vy": 0.14040966441945102,
+        "av": -0.0026070542607514735,
+        "px": 188.30856174753902,
+        "py": 449.67776835392664,
+        "pa": -1.570137971615513,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 136.46442605189577,
+            "y": 474.68051221757395
+          },
+          {
+            "x": 133.38105803230775,
+            "y": 473.6111942379893
+          },
+          {
+            "x": 131.63252931172823,
+            "y": 470.85560961780413
+          },
+          {
+            "x": 131.4253089093647,
+            "y": 430.11979747438573
+          },
+          {
+            "x": 132.49462688894974,
+            "y": 427.0364294547952
+          },
+          {
+            "x": 135.25021150913355,
+            "y": 425.2879007342181
+          },
+          {
+            "x": 240.04740486334273,
+            "y": 424.9558438191181
+          },
+          {
+            "x": 243.13077288293084,
+            "y": 426.0251617987022
+          },
+          {
+            "x": 244.87930160351002,
+            "y": 428.7807464188877
+          },
+          {
+            "x": 245.08652200587406,
+            "y": 469.51655856230644
+          },
+          {
+            "x": 244.01720402628834,
+            "y": 472.59992658189617
+          },
+          {
+            "x": 241.2616194061055,
+            "y": 474.3484553024742
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.3276572987214439,
+              "y": -0.9447966419259578
+            },
+            {
+              "x": 0.8443582080222727,
+              "y": -0.5357790743818014
+            },
+            {
+              "x": 0.9999870618005219,
+              "y": -0.00508686854151237
+            },
+            {
+              "x": 0.9447966419259545,
+              "y": 0.32765729872145205
+            },
+            {
+              "x": 0.5357790743818043,
+              "y": 0.8443582080222719
+            },
+            {
+              "x": 0.0031685509658206093,
+              "y": 0.9999949801297906
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 131.4253089093647,
+              "y": 424.9558438191181
+            },
+            "max": {
+              "x": 245.10245543368913,
+              "y": 475.1253547625529
+            }
+          },
+          "area": 5580.691268226046,
+          "mass": 6.696829521871255,
+          "inverseMass": 0.14932439249559634,
+          "inertia": 33913.08805706703,
+          "inverseInertia": 0.00002948714072623692,
+          "speed": 0.14995501226934757,
+          "angularSpeed": 0.0026070542607514735,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 579,
+        "lv": 3,
+        "k": 1,
+        "born": 1177.1499999992582,
+        "gameId": 576,
+        "x": 46.54686479285665,
+        "y": 434.45677784309265,
+        "angle": -0.4864406883760261,
+        "vx": 0.006371316164347718,
+        "vy": -0.00022012276434679734,
+        "av": -0.00008365873703736204,
+        "px": 46.540493476692305,
+        "py": 434.456997965857,
+        "pa": -0.48635702963898875,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 0.42354918418816684,
+            "y": 400.20573707116296
+          },
+          {
+            "x": -0.0663048726008611,
+            "y": 396.97918437691834
+          },
+          {
+            "x": 1.5577513561477319,
+            "y": 394.148452907572
+          },
+          {
+            "x": 37.50883232128037,
+            "y": 374.9920151197795
+          },
+          {
+            "x": 40.73538501552463,
+            "y": 374.50216106299035
+          },
+          {
+            "x": 43.56611648487134,
+            "y": 376.1262172917392
+          },
+          {
+            "x": 92.67018040152502,
+            "y": 468.70781861502235
+          },
+          {
+            "x": 93.16003445831394,
+            "y": 471.93437130926685
+          },
+          {
+            "x": 91.53597822956544,
+            "y": 474.7651027786133
+          },
+          {
+            "x": 55.58489726443272,
+            "y": 493.92154056640567
+          },
+          {
+            "x": 52.35834457018851,
+            "y": 494.41139462319506
+          },
+          {
+            "x": 49.5276131008418,
+            "y": 492.7873383944461
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9886708726146262,
+              "y": -0.15009965237613215
+            },
+            {
+              "x": 0.8673844865230799,
+              "y": 0.49763857621681
+            },
+            {
+              "x": 0.47025427823891,
+              "y": 0.8825309704469303
+            },
+            {
+              "x": 0.15009965237614348,
+              "y": 0.988670872614624
+            },
+            {
+              "x": -0.4976385762168695,
+              "y": 0.8673844865230457
+            },
+            {
+              "x": -0.883431450904816,
+              "y": 0.4685604246542955
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": -0.0663048726008611,
+              "y": 374.50216106299035
+            },
+            "max": {
+              "x": 93.16399848362289,
+              "y": 494.85560562448546
+            }
+          },
+          "area": 5580.691268226051,
+          "mass": 6.69682952187126,
+          "inverseMass": 0.14932439249559623,
+          "inertia": 33913.08805706712,
+          "inverseInertia": 0.000029487140726236837,
+          "speed": 0.006375117543815344,
+          "angularSpeed": 0.00008365873703736204,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 583,
+        "lv": 10,
+        "k": 1,
+        "born": 1177.6999999992577,
+        "gameId": 580,
+        "x": 168.5148572217132,
+        "y": 597.2083908962237,
+        "angle": 0.0002667976939588237,
+        "vx": 0.00570197813925688,
+        "vy": -0.0005084401954036366,
+        "av": 0.000040986213176542245,
+        "px": 168.50915524357396,
+        "py": 597.2088993364191,
+        "pa": 0.00022581148078228147,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 78.03392343949966,
+            "y": 492.31195880958137
+          },
+          {
+            "x": 79.78761947290752,
+            "y": 484.5441039378333
+          },
+          {
+            "x": 84.70516877450733,
+            "y": 478.280500505905
+          },
+          {
+            "x": 91.8348756044227,
+            "y": 474.7333467728971
+          },
+          {
+            "x": 240.95479719327787,
+            "y": 474.253641742215
+          },
+          {
+            "x": 248.7226520650252,
+            "y": 476.0073377756231
+          },
+          {
+            "x": 254.98625549695404,
+            "y": 480.92488707722265
+          },
+          {
+            "x": 258.53340922996085,
+            "y": 488.05459390713844
+          },
+          {
+            "x": 258.9957910039261,
+            "y": 702.1048229828644
+          },
+          {
+            "x": 257.24209497051834,
+            "y": 709.8726778546134
+          },
+          {
+            "x": 252.3245456689189,
+            "y": 716.1362812865403
+          },
+          {
+            "x": 245.1948388390036,
+            "y": 719.6834350195492
+          },
+          {
+            "x": 96.0749172501491,
+            "y": 720.1631400502304
+          },
+          {
+            "x": 88.307062378401,
+            "y": 718.409444016823
+          },
+          {
+            "x": 82.04345894647257,
+            "y": 713.4918947152229
+          },
+          {
+            "x": 78.49630521346506,
+            "y": 706.3621878853079
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.9754500587553459,
+              "y": 0.22022075940789979
+            },
+            {
+              "x": 0.7865533582400287,
+              "y": 0.6175223191442828
+            },
+            {
+              "x": 0.44543459866396146,
+              "y": 0.8953144801202965
+            },
+            {
+              "x": 0.0032168910999753656,
+              "y": 0.999994825792439
+            },
+            {
+              "x": -0.22022075940787272,
+              "y": 0.9754500587553521
+            },
+            {
+              "x": -0.6175223191442912,
+              "y": 0.7865533582400213
+            },
+            {
+              "x": -0.8953144801203196,
+              "y": 0.4454345986639136
+            },
+            {
+              "x": -0.9999976668723302,
+              "y": 0.002160150433691341
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 78.03392343949966,
+              "y": 474.253641742215
+            },
+            "max": {
+              "x": 258.99896999217003,
+              "y": 720.6075272582691
+            }
+          },
+          "area": 44025.710215137784,
+          "mass": 52.830852258165336,
+          "inverseMass": 0.018928333677324764,
+          "inertia": 1616210.7498905854,
+          "inverseInertia": 6.187311896469556e-7,
+          "speed": 0.005724601831818999,
+          "angularSpeed": 0.000040986213176542245,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      },
+      {
+        "id": 584,
+        "lv": 2,
+        "k": 1,
+        "born": 1178.2166666659239,
+        "gameId": 581,
+        "x": 287.81098681783055,
+        "y": 446.50903159384814,
+        "angle": 0.6411242224334794,
+        "vx": 0.0062657086540980345,
+        "vy": -0.002570910901965817,
+        "av": -0.00011539338266131072,
+        "px": 287.80472110917646,
+        "py": 446.5116025047501,
+        "pa": 0.6412396158161408,
+        "ix": 0,
+        "iy": 0,
+        "deltaTime": 16.666666666666668,
+        "vertices": [
+          {
+            "x": 297.1994072324969,
+            "y": 399.8226886205146
+          },
+          {
+            "x": 299.59797562314316,
+            "y": 398.277088723414
+          },
+          {
+            "x": 302.4226391488665,
+            "y": 398.68117452243877
+          },
+          {
+            "x": 329.0661270738884,
+            "y": 418.51393808517787
+          },
+          {
+            "x": 330.61172697098914,
+            "y": 420.9125064758239
+          },
+          {
+            "x": 330.20764117196524,
+            "y": 423.7371700015469
+          },
+          {
+            "x": 278.4225664031642,
+            "y": 493.1953745671818
+          },
+          {
+            "x": 276.02399801251795,
+            "y": 494.74097446428226
+          },
+          {
+            "x": 273.1993344867945,
+            "y": 494.3368886652576
+          },
+          {
+            "x": 246.55584656177265,
+            "y": 474.5041251025185
+          },
+          {
+            "x": 245.010246664672,
+            "y": 472.1055567118725
+          },
+          {
+            "x": 245.414332463696,
+            "y": 469.2808931861495
+          }
+        ],
+        "dynamics": {
+          "axes": [
+            {
+              "x": 0.541665632381511,
+              "y": 0.8405940415543874
+            },
+            {
+              "x": -0.1416145215041107,
+              "y": 0.9899218793920881
+            },
+            {
+              "x": -0.5971086466790912,
+              "y": 0.8021603730308964
+            },
+            {
+              "x": -0.8405940415543401,
+              "y": 0.5416656323815848
+            },
+            {
+              "x": -0.9899218793920779,
+              "y": -0.14161452150418258
+            },
+            {
+              "x": -0.8017063697358104,
+              "y": -0.5977180746179843
+            }
+          ],
+          "bounds": {
+            "min": {
+              "x": 245.010246664672,
+              "y": 398.277088723414
+            },
+            "max": {
+              "x": 330.61581154860914,
+              "y": 495.1849484593217
+            }
+          },
+          "area": 3820.8919099404993,
+          "mass": 4.585070291928599,
+          "inverseMass": 0.21809916453415468,
+          "inertia": 15958.110268527698,
+          "inverseInertia": 0.00006266406129378504,
+          "speed": 0.006772642601221897,
+          "angularSpeed": 0.00011539338266131072,
+          "motion": 0,
+          "sleepCounter": 0,
+          "totalContacts": 0,
+          "force": {
+            "x": 0,
+            "y": 0
+          },
+          "torque": 0,
+          "constraintImpulse": {
+            "x": 0,
+            "y": 0,
+            "angle": 0
+          }
+        }
+      }
+    ]
+  }
+}
