@@ -7,7 +7,7 @@
   let running = false, moves = 0, started = 0;
   const route = [];
   const requests = new Map(), slowRequests = [];
-  let lastHint = null;
+  let lastHint = null, initial = null;
   window.HintDiagnostics = record => {
     if (record.phase === 'request') { requests.clear(); requests.set(record.id, record); return; }
     if (record.phase === 'accepted' || record.phase === 'stale' || record.phase === 'error') {
@@ -29,7 +29,7 @@
     document.getElementById('qa-result').textContent = JSON.stringify(result, null, 2);
     const manifest = JSON.parse(document.getElementById('qa-source')?.textContent || '{}');
     const log = document.getElementById('qa-log'); log.hidden = false;
-    log.value = JSON.stringify({ result, route, slowRequests, manifest, userAgent: navigator.userAgent });
+    log.value = JSON.stringify({ result, route, initial, final: s, slowRequests, manifest, userAgent: navigator.userAgent });
     document.getElementById('qa-start').disabled = false;
   };
   document.getElementById('qa-start').onclick = () => {
@@ -45,8 +45,10 @@
     document.getElementById('qa-state').textContent = `已按提示 ${moves} 步\n${s.score} 分 / 最高第 ${s.maxLv + 1} 级`;
     const button = document.getElementById('hintPlace');
     if (!button.disabled) {
+      if (!initial) initial = s;
       route.push({ move: ++moves, level: state.level, next: state.nextLevel, hint: document.getElementById('hintStatus').textContent,
-        detail: document.getElementById('hintDetail').textContent, score: s.score, diagnostics: lastHint });
+        detail: document.getElementById('hintDetail').textContent, score: s.score, boxes: s.bodies.length,
+        time: s.time, x: lastHint?.x, diagnostics: lastHint });
       button.click();
     }
   }, 50);
