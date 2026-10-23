@@ -1,9 +1,11 @@
 'use strict';
-const requested = new URL(self.location.href).searchParams.get('strategy');
+const parameters = new URL(self.location.href).searchParams;
+const requested = parameters.get('strategy'), release = parameters.get('v');
+const versioned = file => release ? `${file}?v=${encodeURIComponent(release)}` : file;
 const strategy = ['future', 'plan'].includes(requested) ? requested : 'optimized';
-importScripts('lib/matter.min.js', 'physics.js');
-if (strategy === 'plan') importScripts('solver-future.js', 'layout.js');
-importScripts(`solver-${strategy}.js`);
+importScripts(...['lib/matter.min.js', 'physics.js'].map(versioned));
+if (strategy === 'plan') importScripts(...['solver-future.js', 'layout.js'].map(versioned));
+importScripts(versioned(`solver-${strategy}.js`));
 let context;
 onmessage = async ({ data }) => {
   if (data.type === 'init') { context = data.context; return; }
