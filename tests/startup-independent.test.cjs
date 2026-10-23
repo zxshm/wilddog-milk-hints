@@ -4,7 +4,7 @@ const fs = require('node:fs'), vm = require('node:vm');
 
 test('全部图片请求悬而未决时，依赖脚本和游戏仍可启动；图案晚到不会再次初始化游戏', async () => {
   const nodes = new Map(), scripts = [], preloads = [], pendingImages = [], timers = new Map(), events = [];
-  const window = new EventTarget();
+  const window = new EventTarget(); window.Game = { initialized: true, state: () => ({ level: 0, nextLevel: 1 }) };
   window.addEventListener('wilddog:ready', () => events.push('ready'));
   window.addEventListener('wilddog:texture', () => events.push('texture'));
   const node = id => {
@@ -16,10 +16,11 @@ test('全部图片请求悬而未决时，依赖脚本和游戏仍可启动；�
     getElementById: node, querySelectorAll: selector => selector.startsWith('script') ? templates : [],
     createElement: () => ({ dataset: {}, remove() {} }),
     head: { append: element => preloads.push(element) },
-    body: { append: script => { scripts.push(script.src); queueMicrotask(() => script.onload()); } } };
+    body: { append: script => { scripts.push(script.textContent.split('sourceURL=')[1]); } } };
   let serial = 0;
   const sandbox = { window, document, URL, Event, CustomEvent, location: { protocol: 'https:' },
     setTimeout(fn) { const id = ++serial; timers.set(id, fn); return id; }, clearTimeout(id) { timers.delete(id); },
+    XMLHttpRequest: class { open(method, url) { this.url = url; } send() { this.status = 200; this.responseText = '// 测试脚本'; queueMicrotask(() => this.onload()); } },
     Image: class { set src(value) { if (value) pendingImages.push(this); } } };
   vm.runInNewContext(fs.readFileSync('dist/startup.js', 'utf8'), sandbox);
   const flush = async () => { for (let i = 0; i < 30; i++) await Promise.resolve(); };
@@ -28,7 +29,7 @@ test('全部图片请求悬而未决时，依赖脚本和游戏仍可启动；�
   assert.equal(events.filter(event => event === 'ready').length, 1);
   assert.equal(node('loadingPanel').removed, true);
   assert.equal(node('textureNotice').hidden, false);
-  assert.equal(preloads.length, templates.length);
+  assert.equal(preloads.length, 0);
   assert.equal(scripts.filter(src => src.endsWith('/game.js')).length, 1);
   assert.equal(pendingImages.length, 3);
   // 图片仍未返回时，重复的网络恢复事件不能重开对局或重复下载同一批图案。

@@ -20,8 +20,9 @@ const hash = value => createHash('sha256').update(value).digest('hex');
   assert.equal(entryHash, indexHash, '原分享链接尚未更新到验收版本');
   const entry = { url: base, status: entryResponse.status, sha256: entryHash, matched: true };
   const files = [...new Set(['index.html', ...[...html.matchAll(/<script src="([^"?]+)/g)].map(m => m[1]),
-    ...[...html.matchAll(/<link rel="stylesheet" href="([^"?]+)/g)].map(m => m[1]),
-    'hint-worker-persistent.js', 'hint-branch-worker.js', 'branch-pool.js'])];
+    ...[...html.matchAll(/<link[^>]*rel="stylesheet"[^>]*href="([^"?]+)/g)].map(m => m[1]),
+    ...[...html.matchAll(/<style data-source="([^"]+)"/g)].map(m => m[1]),
+    'startup.js', 'hint-worker-persistent.js', 'hint-branch-worker.js', 'branch-pool.js'])];
   const results = [];
   for (const file of files) {
     const url = new URL(file, base); url.searchParams.set('v', release);
@@ -34,6 +35,6 @@ const hash = value => createHash('sha256').update(value).digest('hex');
   }
   const report = { checkedAt: new Date().toISOString(), base, release, source, entry, allMatched: true, files: results };
   fs.mkdirSync(path.join(root, 'output/deployment'), { recursive: true });
-  fs.writeFileSync(path.join(root, `output/deployment/${release}-online.json`), JSON.stringify(report, null, 2));
+  fs.writeFileSync(path.join(root, `output/deployment/${release}-${new URL(base).hostname}-online.json`), JSON.stringify(report, null, 2));
   console.log(JSON.stringify({ source, release, matchedFiles: results.length, originalLinkMatched: entry.matched, allMatched: true }));
 })().catch(error => { console.error(error); process.exitCode = 1; });

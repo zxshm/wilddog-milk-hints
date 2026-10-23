@@ -21,7 +21,7 @@ test('独立服务器隔离私有文件、兼容新旧入口、迁移身份和�
   t.after(async () => { if (child.exitCode === null) await stop(); fs.rmSync(folder, { recursive: true, force: true }); });
   await start();
   const base = 'http://127.0.0.1:4189';
-  let r = await fetch(base + '/'); assert.equal(r.status, 200); assert.match(await r.text(), /server-v13/);
+  let r = await fetch(base + '/'); assert.equal(r.status, 200); assert.match(await r.text(), /startup-v14/);
   for (const privatePath of ['/data/leaderboard.sqlite', '/.git/config', '/server/index.js', '/.openai/hosting.json', '/__qa/acceptance']) assert.equal((await fetch(base + privatePath)).status, 404);
   const img = await fetch(base + '/img/11.png'); assert.equal(img.status, 200); assert.equal((await fetch(base + '/img/11.png', { headers: { 'If-None-Match': img.headers.get('etag') } })).status, 304);
   for (const origin of ['https://zxshm.github.io', 'https://dogmilk.zxshm.dpdns.org']) {

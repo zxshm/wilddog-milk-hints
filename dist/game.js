@@ -10,15 +10,28 @@ const cvs = $('game'), ctx = cvs.getContext('2d');
 const nextCvs = $('next'), nctx = nextCvs.getContext('2d');
 const chainCvs = $('chain'), cctx = chainCvs.getContext('2d');
 const board = $('board'), top_ = $('top');
+// 微信隐私模式、存储被禁用或配额耗尽时，记录失败不能中断游戏循环。
+const readSetting = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
+const saveSetting = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
+function createRunId() {
+  if (typeof globalThis.crypto?.randomUUID === 'function') return globalThis.crypto.randomUUID();
+  const bytes = new Uint8Array(16);
+  if (typeof globalThis.crypto?.getRandomValues === 'function') globalThis.crypto.getRandomValues(bytes);
+  else for (let i = 0; i < bytes.length; i++) bytes[i] = Math.floor(Math.random() * 256);
+  bytes[6] = (bytes[6] & 15) | 64; bytes[8] = (bytes[8] & 63) | 128;
+  // 对局编号只用于成绩去重，不充当登录令牌。
+  const hex = Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
+  return [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join('-');
+}
 
 let sim;
 let viewScale = 1, dpr = 1;
 let compactLayout = false, compactWidth = 0;
 let particles = [], popups = [], mergeQueue = [];
-let score = 0, best = +localStorage.getItem('wildDogMilkHintBest') || 0;
+let score = 0, best = +readSetting('wildDogMilkHintBest') || 0;
 let curLv = 0, nextLv = 0, aimX = W / 2, dropCd = 0;
 let dangerT = 0, maxLv = 0, shake = 0, over = false, acc = 0, lastT = 0, time = 0;
-let soundOn = localStorage.getItem('wildDogMilkHintSound') !== '0';
+let soundOn = readSetting('wildDogMilkHintSound') !== '0';
 let rankRunId, rankMoves = 0, rankStarted = 0;
 
 // ===== 贴图 =====
@@ -111,7 +124,7 @@ function randLv() {
 function cartons() { return sim.cartons(); }
 
 function reset() {
-  rankRunId = crypto.randomUUID(); rankMoves = 0; rankStarted = performance.now();
+  rankRunId = createRunId(); rankMoves = 0; rankStarted = performance.now();
   window.dispatchEvent(new CustomEvent('wilddog:reset'));
   if (sim) sim.destroy();
   sim = new GamePhysics.World(mergeEffects);
@@ -145,7 +158,7 @@ function drop() {
 function addScore(n, x, y) {
   score += n;
   popups.push({ x, y, text: '+' + n, life: 1 });
-  if (score > best) { best = score; localStorage.setItem('wildDogMilkHintBest', best); }
+  if (score > best) { best = score; saveSetting('wildDogMilkHintBest', best); }
   updateHud();
 }
 
@@ -404,7 +417,7 @@ function syncSound() {
 }
 soundBtn.addEventListener('click', () => {
   soundOn = !soundOn;
-  localStorage.setItem('wildDogMilkHintSound', soundOn ? '1' : '0');
+  saveSetting('wildDogMilkHintSound', soundOn ? '1' : '0');
   syncSound();
 });
 window.addEventListener('resize', layout);
@@ -444,4 +457,5 @@ syncSound();
 layout();
 reset();
 Hints.init();
+Game.initialized = true;
 requestAnimationFrame(loop);

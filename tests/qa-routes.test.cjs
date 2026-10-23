@@ -21,6 +21,6 @@ test('切换正式入口后，旧算法验收页仍独立加载所选版本', ()
 });
 test('布局入口按依赖顺序加载，原版物理与游戏入口保持单份', () => {
   const names = scripts(renderQaPage(html, 'plan', '{}'));
-  const expected = ['lib/matter.min.js', 'physics.js', 'leaderboard.js', 'solver-future.js', 'layout.js', 'solver-plan.js', 'hints-persistent.js', 'game.js', 'startup.js'];
+  const expected = ['lib/matter.min.js', 'physics.js', 'leaderboard.js', 'solver-future.js', 'layout.js', 'solver-plan.js', 'hints-persistent.js', 'game.js'];
   assert.deepEqual(names.filter(name => !name.startsWith('/__qa/')), expected);
 });

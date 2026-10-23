@@ -12,8 +12,8 @@ pre { white-space: pre-wrap; font-size: 12px; max-height: 360px; overflow: auto;
 <div class="phone"><iframe id="preview" title="首次打开游戏"></iframe></div>
 <aside><h2>首次加载与网络故障恢复</h2>
 <p>每次使用新路径、禁用缓存；只在本机故意制造资源失败，不影响正式网站。</p>
-<select id="scenario" aria-label="故障场景"><option value="blocked">全部图案失败，独立计算验收</option><option value="retry">首次图片与脚本失败</option><option value="stall">计算线程首次无响应</option><option value="offline">图片一直失败后恢复网络</option></select>
-<button id="start">新用户首次打开</button><button id="online">恢复网络</button>
+<select id="scenario" aria-label="故障场景"><option value="hang">核心脚本首次一直不返回</option><option value="optional">样式、排行榜及全部图案一直不返回</option><option value="compat">存储不可用且缺少 randomUUID</option><option value="blocked">全部图案失败，独立计算验收</option><option value="retry">首次图片与脚本失败</option><option value="stall">计算线程首次无响应</option><option value="offline">图片一直失败后恢复网络</option></select>
+<button id="start">新用户首次打开</button><button id="online">恢复网络</button><button id="place">按提示投放</button>
 <p id="state">尚未启动</p><pre id="evidence"></pre></aside>
 </main>
 <script>
@@ -28,6 +28,7 @@ document.getElementById('online').onclick = async () => {
   await fetch('/__evidence/' + caseId, { method: 'POST' });
   frame.contentWindow.dispatchEvent(new Event('online'));
 };
+document.getElementById('place').onclick = () => frame.contentWindow.Hints?.place();
 setInterval(async () => {
   if (!caseId || !frame.contentDocument) return;
   const d = frame.contentDocument;

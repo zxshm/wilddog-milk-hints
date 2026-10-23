@@ -57,9 +57,90 @@
     font: inherit; font-size: 17px; font-weight: 700; color: #fff; background: #e8553a; box-shadow: 0 3px 0 #a8321d;
   }
 </style>
-<link rel="stylesheet" href="hints.css">
-<link rel="stylesheet" href="leaderboard.css?v=server-v13-20261023">
-<link rel="stylesheet" href="mobile.css?v=server-v13-20261023">
+<style data-source="hints.css">
+/* 提示控件沿用原版奶油底色、圆角和棕色字，不改动原有界面样式。 */
+#hintDock { flex-shrink: 0; margin-top: 7px; color: #5a3d1e; font-size: 11px; }
+.hint-top { display: flex; align-items: center; gap: 8px; min-height: 24px; }
+#hintToggle { border: 0; border-radius: 7px; background: #fff9; padding: 4px 7px; color: #5a3d1e; font: inherit; white-space: nowrap; cursor: pointer; }
+#hintStatus { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.hint-actions { display: flex; gap: 6px; margin-top: 4px; }
+.hint-actions button, .hint-actions select { border: 0; border-radius: 8px; font: inherit; padding: 6px 9px; cursor: pointer; color: #5a3d1e; background: #fff9; }
+#hintPlace { flex: 1; color: #fff; background: #e8553a; font-weight: 700; box-shadow: 0 2px 0 #a8321d; }
+#hintPlace:disabled { opacity: .5; cursor: default; box-shadow: none; }
+#hintDetail { margin-top: 5px; opacity: .75; font-size: 10px; line-height: 1.4; min-height: 28px; white-space: pre-line; }
+#hintDock button:focus-visible, #hintDock select:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+#hintControls[hidden] { display: none; }
+@media (min-width: 1040px) { #hintDock { position: fixed; top: 130px; padding: 10px; border-radius: 12px; background: #fff7; } }
+@media (max-height: 650px) { html, body { overflow-y: auto; } body { min-height: 100%; height: auto; } }
+
+</style>
+<style data-source="leaderboard.css">
+#rankButton { font-size: 16px; }
+#rankDialog { margin: auto; width: min(94vw, 430px); max-height: 86vh; padding: 22px; border: 2px solid #e5b679; border-radius: 18px; background: #fff8ec; color: #5a3d1e; font: 14px/1.6 "Microsoft YaHei", sans-serif; overflow-y: auto; touch-action: pan-y; user-select: text; }
+#rankDialog::backdrop { background: #0007; }
+.rank-heading, .rank-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#rankDialog h2 { font-size: 22px; color: #c2410c; }
+#rankDialog button, #rankDialog input { border: 1px solid #d69a55; border-radius: 8px; padding: 7px 10px; background: #fff; color: inherit; font: inherit; touch-action: manipulation; }
+#rankDialog button { cursor: pointer; }
+#rankDialog button:disabled { opacity: .6; cursor: default; }
+#rankDialog input { width: 100%; user-select: text; }
+.rank-note { font-size: 12px; opacity: .8; margin: 10px 0; }
+#rankStatus { margin: 12px 0; min-height: 23px; }
+#rankList { padding-left: 28px; max-height: 32vh; overflow-y: auto; touch-action: pan-y; }
+#rankList li { padding: 8px 0; border-bottom: 1px solid #e5b67980; }
+#rankList strong { float: right; color: #c2410c; }
+#rankList span { overflow-wrap: anywhere; }
+#rankForm { display: grid; gap: 8px; }
+#rankDialog #rankSubmit { background: #e8553a; color: #fff; font-weight: 700; }
+#rankEndButton { display: block; margin: 10px auto 0; padding: 8px 18px; font-size: 14px; }
+
+</style>
+<style data-source="mobile.css">
+/* 手机使用紧凑工具栏，把高度优先留给棋盘；桌面继续使用原版布局。 */
+@media (max-width: 700px) {
+  html { height: 100%; overflow: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    height: var(--game-viewport-height, 100dvh); min-height: 0;
+    padding: max(4px, env(safe-area-inset-top)) max(6px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(6px, env(safe-area-inset-left));
+    overflow-x: hidden; overflow-y: auto; touch-action: pan-y; scrollbar-width: none;
+  }
+  body::-webkit-scrollbar { display: none; }
+  #top, #board, #chain, #hintDock { flex-shrink: 0; }
+  #top { padding: 0 0 4px; gap: 6px; min-height: 54px; }
+  #top > div:first-child { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 7px; min-width: 0; }
+  #top .title { grid-column: 1 / -1; font-size: clamp(15px, 4vw, 18px); letter-spacing: 0; white-space: nowrap; }
+  #top .score { font-size: 26px; line-height: 1.05; }
+  #top .best { font-size: 10px; white-space: nowrap; }
+  #top .right { gap: 6px; }
+  #top .next { flex-direction: row; gap: 2px; padding: 0 4px; border-radius: 9px; font-size: 10px; white-space: nowrap; }
+  #top .next canvas { width: 28px; height: 38px; }
+  #top .btns { flex-direction: row; gap: 4px; }
+  #top .icon-btn { width: 40px; height: 40px; font-size: 18px; }
+  #board { border-radius: 12px; box-shadow: 0 3px 0 #d69a55, 0 5px 14px #0002; }
+  #chain { margin-top: 5px; }
+  #hintDock { margin-top: 2px; font-size: 12px; padding: 0; }
+  .hint-top { min-height: 30px; gap: 6px; }
+  #hintToggle { min-height: 30px; padding: 4px 6px; flex-shrink: 0; }
+  #hintStatus { flex: 1; min-width: 0; }
+  .hint-actions { gap: 6px; margin-top: 3px; }
+  .hint-actions button, .hint-actions select { min-height: 44px; padding: 6px 10px; font-size: 13px; }
+  #hintPlace { font-size: 15px; }
+  #hintRefresh { flex: 0 0 44px; font-size: 20px; }
+  #hintDetail { margin-top: 3px; min-height: 26px; line-height: 13px; font-size: 10px; }
+  #rankDialog { max-height: calc(var(--game-viewport-height, 100dvh) - 20px); padding: 16px; }
+  #rankDialog input { font-size: 16px; }
+  #rankDialog button { min-height: 40px; }
+  #rankList { max-height: calc(var(--game-viewport-height, 100dvh) * .32); }
+}
+@media (max-width: 370px) {
+  #top .right { gap: 3px; }
+  #top .next { flex-direction: column; gap: 0; padding: 0 3px; font-size: 9px; }
+  #top .next canvas { width: 22px; height: 30px; }
+  #top .btns { gap: 3px; }
+  #top .icon-btn { width: 38px; height: 40px; }
+}
+
+</style>
 </head>
 <body>
 
@@ -124,28 +205,183 @@
 <div id="textureNotice" hidden aria-live="polite" style="position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:5;max-width:calc(100% - 16px);padding:5px 8px;border-radius:8px;background:#fff8ece6;color:#785737;font:12px/1.5 'Microsoft YaHei',sans-serif;text-align:center;pointer-events:none">
   <span id="textureStatus"></span><button id="textureRetry" type="button" hidden style="margin-left:6px;padding:3px 6px;border:1px solid #d69a55;border-radius:5px;background:#fff;color:inherit;font:inherit;pointer-events:auto">重试图案</button>
 </div>
-<script src="lib/matter.min.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="physics.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="solver-future.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="layout.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="solver-plan.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="hints-persistent.js?v=server-v13-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="leaderboard.js?v=server-v13-20261023" type="application/x-game-script"></script>
-<script src="game.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="lib/matter.min.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="physics.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="solver-future.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="layout.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="solver-plan.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="hints-persistent.js?v=startup-v14-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="leaderboard.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<script src="game.js?v=startup-v14-20261023" type="application/x-game-script"></script>
+<!-- 启动器内联开始 -->
 <script>
-// 启动器自身也可重试，首次网络抖动无需用户刷新整页。
-window.retryGameStartup = function (failed) {
-  const attempt = +(failed.dataset.attempt || 0) + 1;
-  const source = new URL(failed.src); source.searchParams.set('retry', attempt);
-  failed.remove();
-  document.getElementById('loadingStatus').textContent = '网络有些慢，正在重新连接…';
-  setTimeout(() => {
-    const script = document.createElement('script'); script.src = source.href;
-    script.dataset.attempt = attempt; script.onerror = () => window.retryGameStartup(script);
-    document.body.append(script);
-  }, Math.min(1000 * attempt, 10000));
-};
+'use strict';
+(() => {
+  // 计算脚本按依赖启动，图片独立在后台加载，二者互不等待。
+  if (window.GameStartup) return;
+  const status = document.getElementById('loadingStatus');
+  const retryButton = document.getElementById('loadingRetry');
+  const panel = document.getElementById('loadingPanel');
+  const assetNotice = document.getElementById('textureNotice');
+  const assetStatus = document.getElementById('textureStatus');
+  const assetRetry = document.getElementById('textureRetry');
+  const scripts = [...document.querySelectorAll('script[type="application/x-game-script"]')];
+  const loaded = new Set(), downloads = new Map(), images = [];
+  let executionError = null;
+  let running = false, complete = false, imageCount = 0, imageRun = null, imageFailed = false;
+  let imageQueue = [];
+  window.GameAssets = { images, prioritize(levels) {
+    const first = [...new Set(levels)].filter(index => imageQueue.includes(index));
+    imageQueue = first.concat(imageQueue.filter(index => !first.includes(index)));
+  } };
+  document.getElementById('board').append(assetNotice);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  async function settleAll(tasks) {
+    const results = await Promise.allSettled(tasks);
+    const failed = results.find(item => item.status === 'rejected');
+    if (failed) throw failed.reason;
+  }
+  const resourceUrl = (source, attempt) => {
+    const url = new URL(source, document.baseURI);
+    if (attempt) url.searchParams.set('retry', attempt);
+    return url.href;
+  };
+  async function retry(task, onFailure = () => { status.textContent = '连接较慢，正在自动重试…'; }) {
+    let error;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try { return await task(attempt); }
+      catch (reason) {
+        error = reason;
+        onFailure();
+        if (attempt < 4) await wait(Math.min(800 * 2 ** attempt, 5000));
+      }
+    }
+    throw error;
+  }
+  function download(template) {
+    if (downloads.has(template)) return downloads.get(template);
+    // 只下载文本，超时中止旧请求；成功后再执行一次，避免慢脚本晚到导致重复开局。
+    const task = retry(attempt => new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', resourceUrl(template.getAttribute('src'), attempt), true);
+      xhr.timeout = 10000;
+      xhr.onload = () => {
+        if ((xhr.status === 200 || (location.protocol === 'file:' && xhr.status === 0)) && xhr.responseText.trim()) resolve(xhr.responseText);
+        else reject(new Error('脚本下载失败：' + template.getAttribute('src')));
+      };
+      xhr.onerror = xhr.ontimeout = xhr.onabort = () => reject(new Error('脚本连接中断或超时：' + template.getAttribute('src')));
+      xhr.send();
+    }));
+    downloads.set(template, task);
+    // 为并行下载立即挂上失败处理，避免后面的依赖先失败而触发未处理拒绝。
+    task.catch(() => { downloads.delete(template); });
+    return task;
+  }
+  async function loadScript(template) {
+    if (loaded.has(template)) return;
+    const code = await download(template);
+    const script = document.createElement('script');
+    if (template.dataset.worker) script.dataset.worker = template.dataset.worker;
+    let failure;
+    const onError = event => { failure = event.error || new Error(event.message || '脚本执行失败'); };
+    window.addEventListener('error', onError);
+    try {
+      script.textContent = code + '\n//# sourceURL=' + resourceUrl(template.getAttribute('src'), 0);
+      document.body.append(script);
+      if (failure) throw failure;
+      loaded.add(template);
+    } catch (error) {
+      // 已执行了一部分的脚本不能安全重放；保留明确错误，允许用户重新打开。
+      executionError = error; throw error;
+    } finally { window.removeEventListener('error', onError); script.remove(); }
+  }
+  function loadImage(index) {
+    if (images[index]) return Promise.resolve();
+    return retry(attempt => new Promise((resolve, reject) => {
+      const img = new Image();
+      let finished = false;
+      const finish = error => {
+        if (finished) return;
+        finished = true; clearTimeout(timer); img.onload = img.onerror = null;
+        if (error) { img.src = ''; reject(error); }
+        else {
+          images[index] = img; imageCount++; showAssets();
+          window.dispatchEvent(new CustomEvent('wilddog:texture', { detail: { index } }));
+          resolve();
+        }
+      };
+      const timer = setTimeout(() => finish(new Error('图片加载超时')), 12000);
+      img.onload = () => img.naturalWidth > 0 ? finish() : finish(new Error('图片内容为空'));
+      img.onerror = () => finish(new Error('图片加载失败'));
+      // 图案内容未变化时沿用固定地址，避免每次更新脚本都重新下载整套图片。
+      img.src = resourceUrl(`img/${index + 1}.png`, attempt);
+    }), () => {});
+  }
+  async function loadImages() {
+    // 初始出盒只有前三种；后续优先补齐实际的当前盒和下一盒。
+    imageQueue = Array.from({ length: 11 }, (_, index) => index).filter(index => !images[index]);
+    const state = window.Game?.state();
+    if (state) window.GameAssets.prioritize([state.level, state.nextLevel]);
+    const errors = [];
+    await settleAll(Array.from({ length: 3 }, async () => {
+      while (imageQueue.length) {
+        const index = imageQueue.shift();
+        try { await loadImage(index); } catch (error) { errors.push(error); }
+      }
+    }));
+    if (errors.length) throw errors[0];
+  }
+  function showAssets() {
+    assetNotice.hidden = !complete || imageCount === 11;
+    assetStatus.textContent = imageFailed ? '部分图案暂未加载，仍可游戏' : `图案加载 ${imageCount}/11 · 游戏可用`;
+    assetRetry.hidden = !imageFailed;
+  }
+  function startImages() {
+    if (imageRun || imageCount === 11) return imageRun;
+    imageFailed = false; showAssets();
+    imageRun = loadImages().catch(() => { imageFailed = true; })
+      .finally(() => { imageRun = null; showAssets(); });
+    return imageRun;
+  }
+  async function start() {
+    if (running || complete) return;
+    if (executionError) { location.reload(); return; }
+    running = true; retryButton.hidden = true;
+    status.textContent = '正在打开游戏与放置提示…';
+    try {
+      // 排行榜的恢复不阻塞物理引擎、操作或辅助计算。
+      const core = scripts.filter(s => !/\bleaderboard\.js(?:\?|$)/.test(s.getAttribute('src')));
+      for (const script of core) download(script);
+      for (const script of core) await loadScript(script);
+      if (!window.Game?.initialized) throw new Error('游戏初始化没有完成');
+      complete = true; panel.remove(); showAssets();
+      window.dispatchEvent(new Event('wilddog:ready'));
+      startImages();
+      const ranking = scripts.find(s => /\bleaderboard\.js(?:\?|$)/.test(s.getAttribute('src')));
+      if (ranking) {
+        const openRanking = () => loadScript(ranking).catch(() => {
+          for (const id of ['rankButton', 'rankEndButton']) {
+            const button = document.getElementById(id);
+            button.textContent = '重试排行榜'; button.onclick = openRanking;
+          }
+        });
+        openRanking();
+      }
+    } catch (error) {
+      window.GameStartup.error = String(error.message || error);
+      status.textContent = executionError ? '游戏初始化失败，请重新打开。' : '游戏脚本连接中断，可继续加载，无需刷新。';
+      retryButton.textContent = executionError ? '重新打开' : '继续加载';
+      retryButton.hidden = false;
+    } finally { running = false; }
+  }
+  retryButton.onclick = start;
+  assetRetry.onclick = startImages;
+  window.addEventListener('online', () => { if (complete) startImages(); else start(); });
+  window.GameStartup = { start };
+  start();
+})();
+
 </script>
-<script src="startup.js?v=server-v13-20261023" onerror="retryGameStartup(this)"></script>
+<!-- 启动器内联结束 -->
 </body>
 </html>

@@ -10,7 +10,7 @@ import { openDatabase, d1Adapter } from './database.mjs';
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const db = openDatabase(process.env.DOGMILK_DB || fileURLToPath(new URL('../data/leaderboard.sqlite', import.meta.url)));
 const env = { DB: d1Adapter(db) };
-const version = 'server-v13-20261023';
+const version = 'startup-v14-20261023';
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.txt': 'text/plain; charset=utf-8' };
 // 只额外开放用户指定的微信域名验证文件。
 const verificationFiles = new Set(['8bcd2c24caf20cee09f578a660030251.txt']);

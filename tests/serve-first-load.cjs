@@ -26,11 +26,21 @@ http.createServer((req, res) => {
   if (id.startsWith('offline-') && relative === 'img/1.png' && !state.online) fail = true;
   if (id.startsWith('blocked-') && relative.startsWith('img/') && !state.online) fail = true;
   if (id.startsWith('stall-') && relative === 'hint-worker-persistent.js' && count === 1) stalled = true;
+  const hanging = (id.startsWith('hang-') && relative === 'physics.js' && count === 1)
+    || (id.startsWith('optional-') && (relative === 'leaderboard.js' || relative.endsWith('.css') || relative.startsWith('img/')));
+  if (hanging) { state.log.push({ file: relative, attempt: count, status: 0, hanging: true }); return; }
   state.log.push({ file: relative, attempt: count, status: fail ? 503 : 200, ...(stalled ? { stalled: true } : {}) });
   if (fail) { res.writeHead(503); res.end('本地测试：模拟首次网络错误'); return; }
   if (stalled) { res.setHeader('Content-Type', types['.js']); res.end('/* 本地测试：模拟线程依赖长时间未完成 */'); return; }
   fs.readFile(file, (error, data) => {
     if (error) { res.writeHead(404); res.end(); return; }
+    if (relative === 'index.html' && id.startsWith('compat-')) {
+      // 同时注入存储读取失败、写入失败以及旧内核缺少 randomUUID。
+      data = data.toString().replace('<head>', `<head><script>
+        Object.defineProperty(window, 'localStorage', { get() { throw new Error('本地测试：存储禁止访问'); } });
+        Object.defineProperty(crypto, 'randomUUID', { value: undefined });
+      </script>`);
+    }
     res.setHeader('Content-Type', types[path.extname(file)] || 'application/octet-stream'); res.end(data);
   });
-}).listen(4174, '127.0.0.1', () => console.log('首次加载验收：http://127.0.0.1:4174/'));
+}).listen(Number(process.env.PORT || 4174), '127.0.0.1', () => console.log('首次加载验收服务已启动'));
