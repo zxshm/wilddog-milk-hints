@@ -1,0 +1,23 @@
+[Unit]
+Description=Dogmilk game and shared leaderboard
+After=network.target
+
+[Service]
+Type=simple
+User=zxshm
+Group=zxshm
+WorkingDirectory=/home/zxshm/dogmilk/current
+Environment=PORT=4180
+Environment=DOGMILK_DB=/home/zxshm/dogmilk/data/leaderboard.sqlite
+ExecStart=/usr/bin/node /home/zxshm/dogmilk/current/server/index.mjs
+Restart=always
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/zxshm/dogmilk/data
+
+[Install]
+WantedBy=multi-user.target

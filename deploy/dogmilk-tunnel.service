@@ -1,0 +1,20 @@
+[Unit]
+Description=Dogmilk Cloudflare Tunnel
+After=network-online.target dogmilk.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zxshm
+Group=zxshm
+ExecStart=/home/zxshm/dogmilk/bin/cloudflared tunnel --no-autoupdate --protocol http2 run --token-file /home/zxshm/dogmilk/private/tunnel-token
+Restart=always
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target

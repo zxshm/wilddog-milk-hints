@@ -1,5 +1,5 @@
 const GAME = 'https://zxshm.github.io/wilddog-milk-hints/';
-const ORIGINS = new Set(['https://zxshm.github.io', 'http://127.0.0.1:4173']);
+const ORIGINS = new Set(['https://zxshm.github.io', 'https://dogmilk.zxshm.dpdns.org', 'http://127.0.0.1:4173']);
 const uuid = value => typeof value === 'string' && /^[a-f0-9-]{36}$/.test(value);
 const hash = async value => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)))].map(v => v.toString(16).padStart(2, '0')).join('');
 export function validateScore(data) {

@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const API = 'https://wilddog-milk-hints-20261022.zhangqiongxingzhe.chatgpt.site/api';
+  const API = location.hostname === 'dogmilk.zxshm.dpdns.org' ? '/api' : 'https://dogmilk.zxshm.dpdns.org/api';
   const $ = id => document.getElementById(id);
   const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const save = (key, value) => { try { localStorage.setItem(key, value); } catch {} };

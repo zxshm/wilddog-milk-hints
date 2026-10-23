@@ -58,8 +58,8 @@
   }
 </style>
 <link rel="stylesheet" href="hints.css">
-<link rel="stylesheet" href="leaderboard.css?v=independent-v12-20261023">
-<link rel="stylesheet" href="mobile.css?v=independent-v12-20261023">
+<link rel="stylesheet" href="leaderboard.css?v=server-v13-20261023">
+<link rel="stylesheet" href="mobile.css?v=server-v13-20261023">
 </head>
 <body>
 
@@ -124,14 +124,14 @@
 <div id="textureNotice" hidden aria-live="polite" style="position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:5;max-width:calc(100% - 16px);padding:5px 8px;border-radius:8px;background:#fff8ece6;color:#785737;font:12px/1.5 'Microsoft YaHei',sans-serif;text-align:center;pointer-events:none">
   <span id="textureStatus"></span><button id="textureRetry" type="button" hidden style="margin-left:6px;padding:3px 6px;border:1px solid #d69a55;border-radius:5px;background:#fff;color:inherit;font:inherit;pointer-events:auto">重试图案</button>
 </div>
-<script src="lib/matter.min.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="physics.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="solver-future.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="layout.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="solver-plan.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="hints-persistent.js?v=independent-v12-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="leaderboard.js?v=independent-v12-20261023" type="application/x-game-script"></script>
-<script src="game.js?v=independent-v12-20261023" type="application/x-game-script"></script>
+<script src="lib/matter.min.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="physics.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="solver-future.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="layout.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="solver-plan.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="hints-persistent.js?v=server-v13-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="leaderboard.js?v=server-v13-20261023" type="application/x-game-script"></script>
+<script src="game.js?v=server-v13-20261023" type="application/x-game-script"></script>
 <script>
 // 启动器自身也可重试，首次网络抖动无需用户刷新整页。
 window.retryGameStartup = function (failed) {
@@ -146,6 +146,6 @@ window.retryGameStartup = function (failed) {
   }, Math.min(1000 * attempt, 10000));
 };
 </script>
-<script src="startup.js?v=independent-v12-20261023" onerror="retryGameStartup(this)"></script>
+<script src="startup.js?v=server-v13-20261023" onerror="retryGameStartup(this)"></script>
 </body>
 </html>
