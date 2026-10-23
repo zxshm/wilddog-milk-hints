@@ -6,6 +6,7 @@ import sys
 import paramiko
 
 sys.stdout.reconfigure(encoding="utf-8")
+sys.stdin.reconfigure(encoding="utf-8")
 host, user = sys.argv[1:3]
 print("等待 SSH 密码", flush=True)
 password = sys.stdin.readline().rstrip("\r\n")

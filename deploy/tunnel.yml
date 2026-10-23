@@ -1,0 +1,9 @@
+# 只公开游戏服务；凭据单独保存在服务器私有目录，不进入 Git。
+tunnel: a798398e-b723-4710-9853-f83a058bbddb
+credentials-file: /home/zxshm/dogmilk/private/tunnel.json
+protocol: http2
+metrics: 127.0.0.1:20249
+ingress:
+  - hostname: dogmilk.zxshm.dpdns.org
+    service: http://127.0.0.1:4180
+  - service: http_status:404
