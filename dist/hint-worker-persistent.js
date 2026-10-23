@@ -1,12 +1,15 @@
 'use strict';
-const strategy = new URL(self.location.href).searchParams.get('strategy') === 'future' ? 'future' : 'optimized';
-importScripts('lib/matter.min.js', 'physics.js', `solver-${strategy}.js`, 'branch-pool.js');
+const requested = new URL(self.location.href).searchParams.get('strategy');
+const strategy = ['future', 'plan'].includes(requested) ? requested : 'optimized';
+importScripts('lib/matter.min.js', 'physics.js');
+if (strategy === 'plan') importScripts('solver-future.js', 'layout.js');
+importScripts(`solver-${strategy}.js`, 'branch-pool.js');
 let pool;
 onmessage = async ({ data }) => {
   try {
     let size = Math.max(1, Math.min(4, Math.floor((navigator.hardwareConcurrency || 2) / 2)));
     // 不支持嵌套线程的环境仍执行同样的串行搜索。
-    try { if (size > 1 && !pool) pool = createBranchPool(() => new Worker(`hint-branch-worker.js?strategy=${strategy}`), size); }
+    try { if (size > 1 && !pool) pool = createBranchPool(() => new Worker(`hint-branch-worker.js?strategy=${strategy}`), size, !!data.diagnostics); }
     catch (_) { size = 1; }
     let lastProgress = 0;
     const options = {
@@ -26,6 +29,7 @@ onmessage = async ({ data }) => {
       result = await PlacementSolver.solve(data.snapshot, data.level, data.nextLevel, options);
     }
     result.workers = size;
+    if (data.diagnostics) result.workerTasks = pool?.drainTimings() || [];
     postMessage({ id: data.id, result });
   } catch (error) { pool?.destroy(); pool = null; postMessage({ id: data.id, error: error.message }); }
 };

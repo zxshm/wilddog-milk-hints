@@ -280,7 +280,7 @@
       rank();
       mark('firstRefine');
     }
-    let best = results[0], futureSimulations = 0;
+    let best = results[0], futureSimulations = 0, futureBranches;
     if (hasNext && !best.won && !best.route.second?.won) {
       const finalists = results.filter(r => !r.route.fatal && r.route.second).slice(0, mode === 'fast' ? 2 : mode === 'deep' ? 6 : 4);
       const context = { snapshot, level: lv, nextLevel: nextLv, mode, stage: 'future' };
@@ -298,9 +298,13 @@
             * Math.max(...alternatives.map(r => r.forecast.levels.find(v => v.lv === level.lv).value)), 0);
         }
         first.route = bestSecond.choice.route;
+        if (options.diagnostics && (policy.secondWidth || 1) > 1) first.forecastChoices = alternatives.map(r => ({
+          nextX: r.choice.route.second?.x, value: r.forecast.value, levels: r.forecast.levels }));
       }
       finalists.sort((a, b) => b.futureValue - a.futureValue || (better(a.route, b.route) ? -1 : 1));
       if (finalists.length) best = finalists[0];
+      if (options.diagnostics && (policy.secondWidth || 1) > 1) futureBranches = finalists.map(r => ({
+        x: r.x, value: r.futureValue, choices: r.forecastChoices }));
       simulated += futureSimulations;
     }
     mark('future');
@@ -313,6 +317,7 @@
       version: policy.version || 'joint-5-future', futureSimulations, stages };
     if (options.diagnostics) answer.branches = results.map(r => ({ x: r.x, firstGain: r.gain, nextX: r.route.second?.x,
       totalGain: r.gain + (r.route.second?.gain || 0), jointValue: r.route.jointValue, nextPositions: r.tested.size }));
+    if (futureBranches) answer.futureBranches = futureBranches;
     return answer;
   }
   return { solve, solveBranch, solveFutureBranch, prepareFutureBranch, solveFutureLevel, forecastBranches,

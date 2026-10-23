@@ -4,6 +4,8 @@ window.Hints = (() => {
   let enabled = true, mode = 'balanced', hint = null, source = null, worker = null;
   let generation = 0, pending = false, stableSince = 0, lastRequest = -10000, fallback = false;
   let ready = false, lastStatus = '', lastDetail = '';
+  // 仅本地验收脚本订阅诊断；普通页面没有订阅者，也不保存局面日志。
+  const trace = data => { if (typeof window.HintDiagnostics === 'function') window.HintDiagnostics({ ...data, at: Date.now() }); };
   const $h = id => document.getElementById(id);
   const status = (title, detail) => {
     if (!ready) return;
@@ -32,10 +34,11 @@ window.Hints = (() => {
   function accept(id, result, error) {
     if (id !== generation) return;
     pending = false;
-    if (error) { source = null; status('本次计算失败，可点击重算', error); return; }
+    if (error) { trace({ phase: 'error', id, error }); source = null; status('本次计算失败，可点击重算', error); return; }
     const state = Game.state();
-    if (!enabled || state.over || !compatible(source, state)) { hint = null; source = null; return; }
+    if (!enabled || state.over || !compatible(source, state)) { trace({ phase: 'stale', id, result }); hint = null; source = null; return; }
     hint = result;
+    trace({ phase: 'accepted', id, result });
     const risks = { low: '堆叠较低', medium: '注意高度', high: '接近溢出', fatal: '所有已测落点都有失败风险' };
     const pos = Math.round(result.x / GamePhysics.W * 100), nextPos = Math.round(result.nextX / GamePhysics.W * 100);
     status(result.usedNext ? `①本步 ${pos}% → ②下步 ${nextPos}%` : `本步 ${pos}% · 暂无可行后续`,
@@ -47,7 +50,9 @@ window.Hints = (() => {
     source = { ...Game.snapshot(), level: state.level, nextLevel: state.nextLevel };
     pending = true; hint = null; lastRequest = t;
     status('正在联算当前盒与下一盒…', '逐一模拟两次投放、运动和连锁合成。');
-    const data = { id, snapshot: source, level: state.level, nextLevel: state.nextLevel, mode };
+    const data = { id, snapshot: source, level: state.level, nextLevel: state.nextLevel, mode,
+      diagnostics: typeof window.HintDiagnostics === 'function' };
+    trace({ phase: 'request', ...data });
     const localSolve = () => PlacementSolver.solve(data.snapshot, data.level, data.nextLevel,
       { mode, yieldMain: true, cancelled: () => id !== generation })
       .then(result => accept(id, result)).catch(e => accept(id, null, e.message));
@@ -88,7 +93,10 @@ window.Hints = (() => {
     const state = Game.state();
     if (!enabled || !hint || pending || state.over || state.cooldown > 0 || !compatible(source, state)) return false;
     if (!state.bodies.every(b => b.k >= 1 && b.speed < .45 && Math.abs(b.angularVelocity) < .025)) return false;
-    return Game.place(hint.x);
+    const placed = hint;
+    const success = Game.place(placed.x);
+    if (success) trace({ phase: 'placed', result: placed });
+    return success;
   }
   function draw(ctx) {
     if (!enabled || !hint || Game.state().over || !compatible(source, Game.state())) return;

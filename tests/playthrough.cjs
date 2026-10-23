@@ -20,7 +20,9 @@ function level(w, random) {
   const mode = process.argv[4] || 'balanced', label = process.argv[5] || 'acceptance';
   // 在开局时固定源码身份，避免测试运行期间提交文档影响归属。
   const source = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
-  const hashes = Object.fromEntries([solverFile, 'physics.js'].map(name => [name,
+  const files = [...new Set([solverFile, 'physics.js', 'lib/matter.min.js', 'branch-pool.js',
+    ...(solverFile === 'solver-plan.js' ? ['solver-future.js', 'layout.js'] : [])])];
+  const hashes = Object.fromEntries(files.map(name => [name,
     createHash('sha256').update(fs.readFileSync(path.join(__dirname, '../dist', name))).digest('hex')]));
   const startedAt = new Date().toISOString();
   const w = new World(), random = rng(seed), start = performance.now();
@@ -31,7 +33,8 @@ function level(w, random) {
     const r = await solve(w.snapshot(), current, next, { mode, mapBranches: pool?.mapBranches });
     maxMs = Math.max(maxMs, r.elapsed);
     if (!Number.isFinite(r.x) || r.x < 0 || r.x > 400) throw new Error('非法推荐位置');
-    const item = { move: moves + 1, level: current, next, x: r.x, nextX: r.nextX, predictedGain: r.totalGain ?? r.gain, solveMs: r.elapsed };
+    const item = { move: moves + 1, level: current, next, x: r.x, nextX: r.nextX, predictedGain: r.totalGain ?? r.gain,
+      solveMs: r.elapsed, simulations: r.simulations, stages: r.stages };
     w.drop(current, r.x); current = next; next = level(w, random);
     for (let i = 0; i < 240 && !w.over; i++) w.step();
     Object.assign(item, { score: w.score, maxLevel: w.maxLv + 1, boxes: w.cartons().length }); route.push(item);

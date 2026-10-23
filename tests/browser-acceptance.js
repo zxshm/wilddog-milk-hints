@@ -6,13 +6,30 @@
   document.body.append(panel);
   let running = false, moves = 0, started = 0;
   const route = [];
+  const requests = new Map(), slowRequests = [];
+  let lastHint = null;
+  window.HintDiagnostics = record => {
+    if (record.phase === 'request') { requests.clear(); requests.set(record.id, record); return; }
+    if (record.phase === 'accepted' || record.phase === 'stale' || record.phase === 'error') {
+      const request = requests.get(record.id);
+      if (request) {
+        const roundTripMs = record.at - request.at;
+        // 长等待保留准确输入、分阶段耗时和每个线程任务，后续可以原样重算。
+        if (roundTripMs >= 5000 || record.phase !== 'accepted') slowRequests.push({ request, reply: record, roundTripMs });
+        if (record.phase === 'accepted') lastHint = { ...record.result, roundTripMs };
+        requests.delete(record.id);
+      }
+    }
+  };
   const finish = won => {
     running = false;
     const s = Game.snapshot();
     const result = { won, moves, score: s.score, maxLevel: s.maxLv + 1, over: s.over, seconds: Math.round((performance.now() - started) / 1000), mode: 'balanced', runner: '真实浏览器按钮与后台计算，固定物理步长加速显示' };
     document.getElementById('qa-state').textContent = won ? '验收通过：已合成第11级' : '验收失败：未合成第11级';
     document.getElementById('qa-result').textContent = JSON.stringify(result, null, 2);
-    const log = document.getElementById('qa-log'); log.hidden = false; log.value = JSON.stringify({ result, route });
+    const manifest = JSON.parse(document.getElementById('qa-source')?.textContent || '{}');
+    const log = document.getElementById('qa-log'); log.hidden = false;
+    log.value = JSON.stringify({ result, route, slowRequests, manifest, userAgent: navigator.userAgent });
     document.getElementById('qa-start').disabled = false;
   };
   document.getElementById('qa-start').onclick = () => {
@@ -28,7 +45,8 @@
     document.getElementById('qa-state').textContent = `已按提示 ${moves} 步\n${s.score} 分 / 最高第 ${s.maxLv + 1} 级`;
     const button = document.getElementById('hintPlace');
     if (!button.disabled) {
-      route.push({ move: ++moves, level: state.level, next: state.nextLevel, hint: document.getElementById('hintStatus').textContent, detail: document.getElementById('hintDetail').textContent, score: s.score });
+      route.push({ move: ++moves, level: state.level, next: state.nextLevel, hint: document.getElementById('hintStatus').textContent,
+        detail: document.getElementById('hintDetail').textContent, score: s.score, diagnostics: lastHint });
       button.click();
     }
   }, 50);
