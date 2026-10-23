@@ -4,6 +4,8 @@ window.Hints = (() => {
   let enabled = true, mode = 'balanced', hint = null, source = null, worker = null;
   let generation = 0, pending = false, stableSince = 0, lastRequest = -10000, fallback = false;
   let ready = false, lastStatus = '', lastDetail = '';
+  let watchdog = null, workerReady = false;
+  const clearWatchdog = () => { clearTimeout(watchdog); watchdog = null; };
   // 仅本地验收脚本订阅诊断；普通页面没有订阅者，也不保存局面日志。
   const trace = data => { if (typeof window.HintDiagnostics === 'function') window.HintDiagnostics({ ...data, at: Date.now() }); };
   const $h = id => document.getElementById(id);
@@ -13,10 +15,11 @@ window.Hints = (() => {
     if (detail !== undefined && detail !== lastDetail) { $h('hintDetail').textContent = detail; lastDetail = detail; }
   };
   function invalidate() {
+    clearWatchdog();
     const wasPending = pending;
     generation++; hint = null; source = null; pending = false; stableSince = 0;
     // 已完成的计算保留热线程；中途取消或关闭提示时才释放。
-    if (worker && (wasPending || !enabled)) { worker.terminate(); worker = null; }
+    if (worker && (wasPending || !enabled)) { worker.terminate(); worker = null; workerReady = false; }
     if (ready) {
       $h('hintPlace').disabled = true;
       if (enabled) status('局势已更新，准备计算…', '奶盒落定后自动给出新的放置建议。');
@@ -33,6 +36,7 @@ window.Hints = (() => {
   }
   function accept(id, result, error) {
     if (id !== generation) return;
+    clearWatchdog();
     pending = false;
     if (error) { trace({ phase: 'error', id, error }); source = null; status('本次计算失败，可点击重算', error); return; }
     const state = Game.state();
@@ -53,25 +57,40 @@ window.Hints = (() => {
     const data = { id, snapshot: source, level: state.level, nextLevel: state.nextLevel, mode,
       diagnostics: typeof window.HintDiagnostics === 'function' };
     trace({ phase: 'request', ...data });
-    const localSolve = () => PlacementSolver.solve(data.snapshot, data.level, data.nextLevel,
+    const localSolve = () => { clearWatchdog(); return PlacementSolver.solve(data.snapshot, data.level, data.nextLevel,
       { mode, yieldMain: true, cancelled: () => id !== generation })
-      .then(result => accept(id, result)).catch(e => accept(id, null, e.message));
+      .then(result => accept(id, result)).catch(e => accept(id, null, e.message)); };
     if (fallback || location.protocol === 'file:') { fallback = true; localSolve(); return; }
-    try {
+    let recoveries = 0;
+    const launch = () => { try {
       if (!worker) {
-        worker = new Worker(workerUrl);
+        workerReady = false;
+        worker = new Worker(workerUrl + (recoveries ? (workerUrl.includes('?') ? '&' : '?') + 'retry=' + recoveries : ''));
       }
-      worker.onmessage = ({ data: reply }) => {
+      const current = worker;
+      const recover = () => {
+        if (current !== worker || id !== generation) return;
+        clearWatchdog(); current.terminate(); worker = null; workerReady = false;
+        if (!pending) return;
+        if (recoveries++ === 0) { status('正在恢复放置提示…', '连接有些慢，正在自动重新准备计算。'); launch(); }
+        else { fallback = true; status('正在恢复放置提示…', '正在用兼容方式继续计算，无需刷新页面。'); localSolve(); }
+      };
+      const arm = delay => { clearWatchdog(); watchdog = setTimeout(recover, delay); };
+      current.onmessage = ({ data: reply }) => {
+        if (current !== worker || id !== generation) return;
+        if (reply.ready) { workerReady = true; if (pending) arm(90000); return; }
+        if (reply.id !== generation) return;
         if (reply.progress) {
+          arm(90000);
           if (reply.id === generation && pending) status(`两步搜索 ${reply.progress.completed}/${reply.progress.total}`, `已模拟 ${reply.progress.pairs} 组组合，仍可手动投放。`);
         } else accept(reply.id, reply.result, reply.error);
       };
-      worker.onerror = e => {
-        e.preventDefault(); worker?.terminate(); worker = null; fallback = true;
-        if (id === generation) localSolve();
-      };
-      worker.postMessage(data);
-    } catch (_) { fallback = true; localSolve(); }
+      current.onerror = e => { e.preventDefault(); recover(); };
+      current.onmessageerror = recover;
+      arm(workerReady ? 90000 : 15000);
+      current.postMessage(data);
+    } catch (_) { worker?.terminate(); worker = null; workerReady = false; fallback = true; localSolve(); } };
+    launch();
   }
   function tick(t) {
     if (!enabled || !ready) return;

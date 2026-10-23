@@ -22,7 +22,8 @@ let soundOn = localStorage.getItem('wildDogMilkHintSound') !== '0';
 let rankRunId, rankMoves = 0, rankStarted = 0;
 
 // ===== 贴图 =====
-LEVELS.forEach((L) => {
+LEVELS.forEach((L, index) => {
+  if (window.GameAssets?.images[index]) { L.img = window.GameAssets.images[index]; return; }
   const img = new Image();
   img.onload = () => { L.img = img; drawNext(); drawChain(); };
   img.src = `img/${LEVELS.indexOf(L) + 1}.png`;

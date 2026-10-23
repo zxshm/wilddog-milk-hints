@@ -58,8 +58,8 @@
   }
 </style>
 <link rel="stylesheet" href="hints.css">
-<link rel="stylesheet" href="leaderboard.css?v=mobile-v10-20261023">
-<link rel="stylesheet" href="mobile.css?v=mobile-v10-20261023">
+<link rel="stylesheet" href="leaderboard.css?v=startup-v11-20261023">
+<link rel="stylesheet" href="mobile.css?v=startup-v11-20261023">
 </head>
 <body>
 
@@ -116,13 +116,33 @@
 </section>
 
 <!-- Matter.js 0.20.0（MIT），本地引入，负责奶盒的刚体碰撞和翻倒 -->
-<script src="lib/matter.min.js?v=mobile-v10-20261023"></script>
-<script src="physics.js?v=mobile-v10-20261023"></script>
-<script src="solver-future.js?v=mobile-v10-20261023"></script>
-<script src="layout.js?v=mobile-v10-20261023"></script>
-<script src="solver-plan.js?v=mobile-v10-20261023"></script>
-<script src="hints-persistent.js?v=mobile-v10-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=mobile-v10-20261023"></script>
-<script src="leaderboard.js?v=mobile-v10-20261023"></script>
-<script src="game.js?v=mobile-v10-20261023"></script>
+<div id="loadingPanel" role="status" aria-live="polite" style="position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:#fff8ec;color:#5a3d1e;font:16px 'Microsoft YaHei',sans-serif;text-align:center;padding:24px">
+  <strong style="font-size:24px;color:#c2410c">合成野生狗奶</strong>
+  <span id="loadingStatus">正在准备奶盒和放置提示…</span>
+  <button id="loadingRetry" type="button" hidden style="border:0;border-radius:12px;padding:12px 24px;background:#e8553a;color:white;font:inherit">继续加载</button>
+</div>
+<script src="lib/matter.min.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="physics.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="solver-future.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="layout.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="solver-plan.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="hints-persistent.js?v=startup-v11-20261023" data-worker="hint-worker-persistent.js?strategy=plan&amp;v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="leaderboard.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script src="game.js?v=startup-v11-20261023" type="application/x-game-script"></script>
+<script>
+// 启动器自身也可重试，首次网络抖动无需用户刷新整页。
+window.retryGameStartup = function (failed) {
+  const attempt = +(failed.dataset.attempt || 0) + 1;
+  const source = new URL(failed.src); source.searchParams.set('retry', attempt);
+  failed.remove();
+  document.getElementById('loadingStatus').textContent = '网络有些慢，正在重新连接…';
+  setTimeout(() => {
+    const script = document.createElement('script'); script.src = source.href;
+    script.dataset.attempt = attempt; script.onerror = () => window.retryGameStartup(script);
+    document.body.append(script);
+  }, Math.min(1000 * attempt, 10000));
+};
+</script>
+<script src="startup.js?v=startup-v11-20261023" onerror="retryGameStartup(this)"></script>
 </body>
 </html>
