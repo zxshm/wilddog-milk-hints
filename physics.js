@@ -23,6 +23,24 @@
   const spawnY = lv => DEAD_Y - 6 - LEVELS[lv].h / 2;
   const clampX = (lv, x) => Math.max(LEVELS[lv].w / 2 + 1, Math.min(W - LEVELS[lv].w / 2 - 1, x));
 
+  let restoreTemplate;
+  function restoreCarton(v) {
+    // 快照已经包含真实顶点、轴和惯量，无需先生成圆角再把生成结果覆盖掉。
+    if (!restoreTemplate) restoreTemplate = Bodies.rectangle(0, 0, 1, 1, {
+      friction: .25, frictionStatic: .5, frictionAir: .004, restitution: .12, density: .0012,
+    });
+    const b = { ...restoreTemplate, id: M.Common.nextId(), plugin: {},
+      position: { x: v.x, y: v.y }, positionPrev: { x: v.px, y: v.py },
+      angle: v.angle, anglePrev: v.pa, velocity: { x: v.vx, y: v.vy },
+      positionImpulse: { x: v.ix, y: v.iy },
+      collisionFilter: { ...restoreTemplate.collisionFilter },
+      render: { ...restoreTemplate.render, sprite: { ...restoreTemplate.render.sprite } },
+      lv: v.lv, k: v.k, born: v.born, gameId: v.gameId, gone: false,
+    };
+    b.parent = b; b.parts = [b];
+    return b;
+  }
+
   // 实际游戏与预测器共用同一套物理、合成、生长和越线规则。
   class World {
     constructor(onMerge) {
@@ -129,16 +147,18 @@
         })),
       };
     }
-    static restore(s) {
+    static restore(s, options = {}) {
       const w = new World();
       Object.assign(w, { time: s.time, score: s.score, maxLv: s.maxLv, dangerT: s.dangerT, over: s.over, merges: s.merges });
       if (s.timing) Object.assign(w.engine.timing, s.timing);
       if (s.walls) Composite.allBodies(w.world).forEach((b, i) => { b.id = s.walls[i]; });
       for (const v of s.bodies) {
-        const b = w.spawn(v.lv, v.x, v.y, v.angle, v.k);
+        const direct = options.reuseGeometry !== false && v.vertices && v.dynamics;
+        const b = direct ? restoreCarton(v) : w.spawn(v.lv, v.x, v.y, v.angle, v.k);
         // 保留合成后缩放形成的真实圆角顶点，避免重建圆角时改变碰撞形状。
         if (v.vertices && v.dynamics) {
-          b.vertices = v.vertices.map((point, index) => ({ ...point, index, body: b, isInternal: false }));
+          // 与 Matter.js 原生顶点使用相同字段顺序，避免展开对象形成不同的存储布局。
+          b.vertices = v.vertices.map((point, index) => ({ x: point.x, y: point.y, index, body: b, isInternal: false }));
           Object.assign(b, { ...v.dynamics, axes: v.dynamics.axes.map(a => ({ ...a })),
             bounds: { min: { ...v.dynamics.bounds.min }, max: { ...v.dynamics.bounds.max } },
             force: { ...v.dynamics.force }, constraintImpulse: { ...v.dynamics.constraintImpulse } });
@@ -149,6 +169,7 @@
         if (!v.dynamics) { b.speed = Math.hypot(v.vx, v.vy); b.angularSpeed = Math.abs(v.av); }
         b.positionPrev.x = v.px; b.positionPrev.y = v.py; b.anglePrev = v.pa;
         b.positionImpulse.x = v.ix; b.positionImpulse.y = v.iy; b.deltaTime = v.deltaTime;
+        if (direct) Composite.add(w.world, b);
       }
       w.serial = s.serial;
       const byId = new Map(Composite.allBodies(w.world).map(b => [b.id, b]));
