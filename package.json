@@ -1,0 +1,6 @@
+{
+  "name": "wilddog-milk-hints",
+  "private": true,
+  "scripts": { "db:generate": "drizzle-kit generate", "build:api": "node scripts/build-api.cjs" },
+  "devDependencies": { "drizzle-kit": "0.31.4", "drizzle-orm": "0.44.5" }
+}

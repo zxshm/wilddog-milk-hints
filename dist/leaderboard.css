@@ -1,0 +1,18 @@
+#rankButton { font-size: 16px; }
+#rankDialog { margin: auto; width: min(94vw, 430px); max-height: 86vh; padding: 22px; border: 2px solid #e5b679; border-radius: 18px; background: #fff8ec; color: #5a3d1e; font: 14px/1.6 "Microsoft YaHei", sans-serif; overflow-y: auto; touch-action: pan-y; user-select: text; }
+#rankDialog::backdrop { background: #0007; }
+.rank-heading, .rank-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#rankDialog h2 { font-size: 22px; color: #c2410c; }
+#rankDialog button, #rankDialog select, #rankDialog input { border: 1px solid #d69a55; border-radius: 8px; padding: 7px 10px; background: #fff; color: inherit; font: inherit; touch-action: manipulation; }
+#rankDialog button { cursor: pointer; }
+#rankDialog button:disabled { opacity: .6; cursor: default; }
+#rankDialog input { width: 100%; user-select: text; }
+.rank-note { font-size: 12px; opacity: .8; margin: 10px 0; }
+#rankStatus { margin: 12px 0; min-height: 23px; }
+#rankList { padding-left: 28px; max-height: 32vh; overflow-y: auto; touch-action: pan-y; }
+#rankList li { padding: 8px 0; border-bottom: 1px solid #e5b67980; }
+#rankList strong { float: right; color: #c2410c; }
+#rankList span { overflow-wrap: anywhere; }
+#rankForm { display: grid; gap: 8px; }
+#rankDialog #rankSubmit { background: #e8553a; color: #fff; font-weight: 700; }
+#rankEndButton { display: block; margin: 10px auto 0; padding: 8px 18px; font-size: 14px; }

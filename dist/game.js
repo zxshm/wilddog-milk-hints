@@ -18,6 +18,7 @@ let score = 0, best = +localStorage.getItem('wildDogMilkHintBest') || 0;
 let curLv = 0, nextLv = 0, aimX = W / 2, dropCd = 0;
 let dangerT = 0, maxLv = 0, shake = 0, over = false, acc = 0, lastT = 0, time = 0;
 let soundOn = localStorage.getItem('wildDogMilkHintSound') !== '0';
+let rankRunId, rankMoves = 0, rankStarted = 0;
 
 // ===== 贴图 =====
 LEVELS.forEach((L) => {
@@ -100,6 +101,8 @@ function randLv() {
 function cartons() { return sim.cartons(); }
 
 function reset() {
+  rankRunId = crypto.randomUUID(); rankMoves = 0; rankStarted = performance.now();
+  window.dispatchEvent(new CustomEvent('wilddog:reset'));
   if (sim) sim.destroy();
   sim = new GamePhysics.World(mergeEffects);
   if (window.Hints) Hints.invalidate();
@@ -119,6 +122,7 @@ function clampAim(lv) {
 function drop() {
   if (over || dropCd > 0) return;
   sim.drop(curLv, clampAim(curLv));
+  rankMoves++;
   if (window.Hints) Hints.invalidate();
   tone(320, .08, 'triangle', .12);
   curLv = nextLv; nextLv = randLv();
@@ -189,6 +193,7 @@ function update(dt) {
 
 function gameOver() {
   over = true;
+  window.dispatchEvent(new CustomEvent('wilddog:over', { detail: { runId: rankRunId, score, moves: rankMoves, maxLevel: maxLv + 1, duration: Math.max(1, Math.round((performance.now() - rankStarted) / 1000)) } }));
   if (window.Hints) Hints.invalidate();
   tone(300, .6, 'sawtooth', .15); tone(180, .7, 'sawtooth', .12, .2);
   $('finalScore').textContent = score;

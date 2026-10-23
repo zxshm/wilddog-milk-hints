@@ -4,3 +4,6 @@ Thumbs.db
 output/
 *.zip
 *.tar.gz
+node_modules/
+dist/server/
+dist/.openai/
