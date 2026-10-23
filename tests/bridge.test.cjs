@@ -2,8 +2,9 @@
 const test = require('node:test'), assert = require('node:assert/strict');
 test('旧排行榜入口保留来源与身份、只转发一次写入且不接受任意代理路径', async t => {
   const { default: bridge } = await import('../worker/bridge.mjs');
-  const original = global.fetch, calls = [];
-  t.after(() => { global.fetch = original; });
+  const original = global.fetch, originalTimeout = AbortSignal.timeout, calls = [];
+  AbortSignal.timeout = undefined;
+  t.after(() => { global.fetch = original; AbortSignal.timeout = originalTimeout; });
   global.fetch = async (url, options) => { calls.push({ url, options }); return new Response('{"saved":true}', { status: 201 }); };
   const request = () => new Request('https://old.test/api/scores', { method: 'POST', headers: { Origin: 'https://zxshm.github.io', 'Content-Type': 'application/json', Authorization: 'Bearer test:identity' }, body: '{"score":2}' });
   let result = await bridge.fetch(request());
