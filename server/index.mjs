@@ -11,10 +11,12 @@ const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const db = openDatabase(process.env.DOGMILK_DB || fileURLToPath(new URL('../data/leaderboard.sqlite', import.meta.url)));
 const env = { DB: d1Adapter(db) };
 const version = 'server-v13-20261023';
-const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png' };
+const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.png': 'image/png', '.txt': 'text/plain; charset=utf-8' };
+// 只额外开放用户指定的微信域名验证文件。
+const verificationFiles = new Set(['8bcd2c24caf20cee09f578a660030251.txt']);
 // 只发布游戏资源，不提供源码、数据库、部署配置或本地验收入口。
 const assets = new Map();
-for (const relative of [...fs.readdirSync(root).filter(f => /\.(html|js|css)$/.test(f)), ...['img', 'lib'].flatMap(dir => fs.readdirSync(path.join(root, dir)).map(f => dir + '/' + f))]) {
+for (const relative of [...fs.readdirSync(root).filter(f => /\.(html|js|css)$/.test(f) || verificationFiles.has(f)), ...['img', 'lib'].flatMap(dir => fs.readdirSync(path.join(root, dir)).map(f => dir + '/' + f))]) {
   const type = types[path.extname(relative)];
   if (!type) continue;
   const body = fs.readFileSync(path.join(root, relative));
