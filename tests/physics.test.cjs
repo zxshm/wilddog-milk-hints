@@ -10,11 +10,12 @@ const P = require('../dist/physics.js');
 const Solver = require('../dist/solver.js');
 const advance = (w, frames) => { for (let i = 0; i < frames; i++) w.step(); };
 
-test('原版样式、主要界面结构与全部贴图保持不变', () => {
+test('新增排行榜按钮以外，原版样式、主要界面结构与全部贴图保持不变', () => {
   const original = execFileSync('git', ['show', 'original-before-hints-b170dd7:index.html'], { encoding: 'utf8' });
   const current = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8').replace(/\r\n/g, '\n');
   assert.equal(current.match(/<style>[\s\S]*?<\/style>/)[0], original.match(/<style>[\s\S]*?<\/style>/)[0]);
-  assert.equal(current.match(/<header[\s\S]*?<canvas id="chain"[^>]*><\/canvas>/)[0], original.match(/<header[\s\S]*?<canvas id="chain"[^>]*><\/canvas>/)[0]);
+  const gameOnly = current.replace(/^.*<button[^>]+id="rank(?:Button|EndButton)"[^>]*>.*<\/button>\n/gm, '');
+  assert.equal(gameOnly.match(/<header[\s\S]*?<canvas id="chain"[^>]*><\/canvas>/)[0], original.match(/<header[\s\S]*?<canvas id="chain"[^>]*><\/canvas>/)[0]);
   for (let i = 1; i <= 11; i++) {
     const baseline = execFileSync('git', ['show', `original-before-hints-b170dd7:img/${i}.png`]);
     assert.deepEqual(fs.readFileSync(path.join(__dirname, `../dist/img/${i}.png`)), baseline);
