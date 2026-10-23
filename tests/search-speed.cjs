@@ -58,6 +58,7 @@ if (process.argv[2] === '--child') {
   const hashes = Object.fromEntries([solverFile, 'physics.js', 'branch-pool.js'].map(name => [name,
     createHash('sha256').update(fs.readFileSync(path.join(root, 'dist', name))).digest('hex')]));
   const report = { date: new Date().toISOString(), node: process.version, solverFile, workers, hashes,
+    referenceRevision: process.env.REFERENCE_REVISION || 'ac91039404bbf0a5520448f5f5d60971563f1fb4',
     warmupRounds: 1, measuredSamplesPerCase: 4, allResultsIdentical: true, summary, rows };
   fs.mkdirSync(path.join(root, 'output/performance'), { recursive: true });
   fs.writeFileSync(path.join(root, 'output/performance', `search-speed-${solverFile}-${workers}.json`), JSON.stringify(report, null, 2));
