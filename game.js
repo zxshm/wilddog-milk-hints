@@ -24,9 +24,17 @@ let rankRunId, rankMoves = 0, rankStarted = 0;
 // ===== 贴图 =====
 LEVELS.forEach((L, index) => {
   if (window.GameAssets?.images[index]) { L.img = window.GameAssets.images[index]; return; }
+  if (window.GameAssets) return;
   const img = new Image();
   img.onload = () => { L.img = img; drawNext(); drawChain(); };
   img.src = `img/${LEVELS.indexOf(L) + 1}.png`;
+});
+// 图片只更新绘制，不重开对局、不取消已算好的建议。
+window.addEventListener('wilddog:texture', ({ detail }) => {
+  const img = window.GameAssets?.images[detail.index];
+  if (!img || !LEVELS[detail.index]) return;
+  LEVELS[detail.index].img = img;
+  drawNext(); drawChain();
 });
 
 function roundRect(g, x, y, w, h, r) {
@@ -111,6 +119,7 @@ function reset() {
   particles = []; popups = []; mergeQueue = [];
   time = 0; score = 0; maxLv = 0; dangerT = 0; dropCd = 0; shake = 0; over = false;
   curLv = randLv(); nextLv = randLv();
+  window.GameAssets?.prioritize([curLv, nextLv]);
   aimX = W / 2;
   $('over').hidden = true;
   updateHud(); drawNext(); drawChain();
@@ -128,6 +137,7 @@ function drop() {
   if (window.Hints) Hints.invalidate();
   tone(320, .08, 'triangle', .12);
   curLv = nextLv; nextLv = randLv();
+  window.GameAssets?.prioritize([curLv, nextLv]);
   dropCd = .5;
   drawNext();
 }
