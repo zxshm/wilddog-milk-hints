@@ -1,0 +1,19 @@
+{
+  "request": "GET /api/leaderboard?mode=player",
+  "checkedAt": "2026-10-23T04:22:21.4696154Z",
+  "response": {
+    "mode": "player",
+    "entries": [
+      {
+        "nickname": "123",
+        "score": 1112,
+        "moves": 106,
+        "maxLevel": 8,
+        "duration": 251,
+        "createdAt": 1792728854694
+      }
+    ],
+    "updatedAt": 1792729346537,
+    "verification": "客户端上报，未逐局回放验证"
+  }
+}
