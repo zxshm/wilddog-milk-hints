@@ -36,6 +36,12 @@
   };
   document.getElementById('qa-start').onclick = () => {
     if (running) return;
+    // 每次点击都开始新局，清空上一局证据，避免把结束状态误当作新测试。
+    document.getElementById('resetBtn').click();
+    moves = 0; route.length = 0; slowRequests.length = 0; requests.clear();
+    initial = null; lastHint = null; firstWin = null;
+    document.getElementById('qa-result').textContent = '';
+    document.getElementById('qa-log').value = ''; document.getElementById('qa-log').hidden = true;
     running = true; started = performance.now();
     document.getElementById('qa-start').disabled = true;
   };

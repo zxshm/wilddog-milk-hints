@@ -1,5 +1,5 @@
 'use strict';
-// 完整对局验收：只执行提示，直到合成最高级、失败或超出步数上限。
+// 完整对局验收：只执行提示；持续模式在首次通关后继续到失败或步数上限。
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');
