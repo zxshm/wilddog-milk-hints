@@ -17,7 +17,12 @@ export default {
       // 旧客户端身份继续有效；请求转向同一数据库，不重复提交或维护第二份榜单。
       const forwarded = new Headers();
       for (const name of ['Content-Type', 'Authorization', 'Origin']) if (request.headers.has(name)) forwarded.set(name, request.headers.get(name));
-      const response = await fetch(TARGET + url.pathname + url.search, { method: request.method, headers: forwarded, ...(request.method === 'POST' ? { body: request.body } : {}), redirect: 'error', signal: controller.signal });
+      const response = await fetch(TARGET + url.pathname + url.search, { method: request.method, headers: forwarded, ...(request.method === 'POST' ? { body: request.body } : {}), redirect: 'manual', signal: controller.signal });
+      // Cloudflare 不支持 redirect:error；显式拒绝跳转，避免凭据被转交到其他站点。
+      if (response.status >= 300 && response.status < 400) {
+        await response.body?.cancel();
+        throw new Error('榜单服务器返回了意外跳转');
+      }
       return new Response(response.body, { status: response.status, headers });
     } catch (error) {
       console.error('榜单转发失败', error.name, error.message);
