@@ -4,7 +4,7 @@ const path = require('node:path');
 const Module = require('node:module');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-const revision = 'ac91039404bbf0a5520448f5f5d60971563f1fb4';
+const revision = process.env.REFERENCE_REVISION || 'ac91039404bbf0a5520448f5f5d60971563f1fb4';
 function load(name, physics) {
   const filename = path.join(root, 'dist', name), instance = new Module(filename, module);
   instance.filename = filename; instance.paths = module.paths;
