@@ -1,0 +1,18 @@
+'use strict';
+const test = require('node:test'), assert = require('node:assert/strict');
+test('旧排行榜入口保留来源与身份、只转发一次写入且不接受任意代理路径', async t => {
+  const { default: bridge } = await import('../worker/bridge.mjs');
+  const original = global.fetch, calls = [];
+  t.after(() => { global.fetch = original; });
+  global.fetch = async (url, options) => { calls.push({ url, options }); return new Response('{"saved":true}', { status: 201 }); };
+  const request = () => new Request('https://old.test/api/scores', { method: 'POST', headers: { Origin: 'https://zxshm.github.io', 'Content-Type': 'application/json', Authorization: 'Bearer test:identity' }, body: '{"score":2}' });
+  let result = await bridge.fetch(request());
+  assert.equal(result.status, 201); assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, 'https://dogmilk.zxshm.dpdns.org/api/scores');
+  assert.equal(calls[0].options.headers.get('Authorization'), 'Bearer test:identity');
+  assert.equal(result.headers.get('Access-Control-Allow-Origin'), 'https://zxshm.github.io');
+  assert.equal((await bridge.fetch(new Request('https://old.test/api/private'))).status, 404);
+  assert.equal((await bridge.fetch(new Request('https://old.test/api/leaderboard', { headers: { Origin: 'https://bad.test' } }))).status, 403);
+  global.fetch = async () => { throw new Error('网络异常'); };
+  assert.equal((await bridge.fetch(request())).status, 503);
+});
