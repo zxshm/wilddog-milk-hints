@@ -8,9 +8,9 @@
   try { identity = JSON.parse(read('wildDogRankIdentity')); } catch {}
   const dialog = document.createElement('dialog');
   dialog.id = 'rankDialog';
-  dialog.innerHTML = `<div class="rank-heading"><h2>共同排行榜</h2><button id="rankClose" type="button" aria-label="关闭排行榜">✕</button></div>
+  dialog.innerHTML = `<div class="rank-heading"><h2>玩家排行榜</h2><button id="rankClose" type="button" aria-label="关闭排行榜">✕</button></div>
     <p class="rank-note">所有玩家共用 · 每个浏览器保留最高成绩</p>
-    <div class="rank-actions"><select id="rankMode" aria-label="榜单分组"><option value="player">玩家榜（可用提示）</option><option value="auto">自动测试榜</option></select><button id="rankRefresh" type="button">刷新</button></div>
+    <div class="rank-actions"><span>可使用提示 · 前 50 名</span><button id="rankRefresh" type="button">刷新</button></div>
     <p id="rankStatus" role="status" aria-live="polite"></p>
     <ol id="rankList"></ol><p class="rank-note">成绩由客户端上报，尚未逐局回放验证。昵称公开，请勿填写个人信息。</p>
     <form id="rankForm"><label for="rankName">上榜昵称</label><input id="rankName" maxlength="32" autocomplete="nickname" placeholder="1～16 个字"><button id="rankSubmit" type="submit" disabled>本局结束后可提交</button></form>`;
@@ -27,7 +27,7 @@
     $('rankStatus').textContent = '正在读取共享榜单…';
     $('rankList').replaceChildren();
     try {
-      const data = await api('/leaderboard?mode=' + $('rankMode').value);
+      const data = await api('/leaderboard?mode=player');
       if (current !== loading) return;
       for (const item of data.entries) {
         const li = document.createElement('li'), name = document.createElement('span'), points = document.createElement('strong');
@@ -39,7 +39,7 @@
   }
   function open() { if (!dialog.open) dialog.showModal(); refresh(); }
   $('rankClose').onclick = () => dialog.close();
-  $('rankRefresh').onclick = refresh; $('rankMode').onchange = refresh;
+  $('rankRefresh').onclick = refresh;
   $('rankButton').onclick = open; $('rankEndButton').onclick = open;
   $('rankForm').onsubmit = async event => {
     event.preventDefault(); if (!ended) return;
@@ -49,13 +49,16 @@
     try {
       if (!identity) { identity = await api('/players', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }); save('wildDogRankIdentity', JSON.stringify(identity)); }
       await api('/scores', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${identity.id}:${identity.token}` }, body: JSON.stringify({ ...ended, nickname }) });
-      save('wildDogRankName', nickname); $('rankMode').value = ended.mode;
+      save('wildDogRankName', nickname);
       $('rankSubmit').textContent = '本局成绩已提交'; await refresh();
     } catch (error) { $('rankStatus').textContent = error.message || '提交失败，请重试'; $('rankSubmit').disabled = false; }
   };
   window.addEventListener('wilddog:reset', () => { ended = null; $('rankSubmit').disabled = true; $('rankSubmit').textContent = '本局结束后可提交'; });
   window.addEventListener('wilddog:over', event => {
-    ended = { ...event.detail, mode: location.pathname.startsWith('/__qa/') ? 'auto' : 'player' };
+    if (location.pathname.startsWith('/__qa/')) {
+      ended = null; $('rankSubmit').disabled = true; $('rankSubmit').textContent = '自动测试不参与玩家排名'; return;
+    }
+    ended = { ...event.detail, mode: 'player' };
     $('rankSubmit').disabled = false; $('rankSubmit').textContent = `提交本局 ${ended.score} 分`;
   });
 })();
