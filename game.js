@@ -13,6 +13,7 @@ const board = $('board'), top_ = $('top');
 
 let sim;
 let viewScale = 1, dpr = 1;
+let compactLayout = false, compactWidth = 0;
 let particles = [], popups = [], mergeQueue = [];
 let score = 0, best = +localStorage.getItem('wildDogMilkHintBest') || 0;
 let curLv = 0, nextLv = 0, aimX = W / 2, dropCd = 0;
@@ -268,8 +269,8 @@ function drawNext() {
   nextCvs.width = cw; nextCvs.height = ch;
   nctx.setTransform(1, 0, 0, 1, 0, 0);
   nctx.clearRect(0, 0, cw, ch);
-  // 按真实比例缩放（可投放的最大一级占满框）
-  const big = LEVELS[SPAWN_WEIGHTS.length - 1];
+  // 手机按本盒尺寸放大预览，低等级也清晰可见；桌面保留原来的相对大小。
+  const big = LEVELS[compactLayout ? nextLv : SPAWN_WEIGHTS.length - 1];
   const k = Math.min((cw - 4) / big.w, (ch - 6) / big.h);
   drawCarton(nctx, nextLv, cw / 2, ch / 2, k);
 }
@@ -279,6 +280,19 @@ const GAP = 3;
 const SUM_W = LEVELS.reduce((t, L) => t + L.w, 0);
 function chainScale(cssW) { return (cssW - GAP * (LEVELS.length - 1) - 6) / SUM_W; }
 function drawChain() {
+  if (compactLayout) {
+    // 手机合成表等高缩略展示，保留全部十一级，不再随棋盘宽度撑高整条说明区。
+    const cssW = compactWidth, cssH = 32;
+    chainCvs.style.width = cssW + 'px'; chainCvs.style.height = cssH + 'px';
+    chainCvs.width = cssW * dpr; chainCvs.height = cssH * dpr;
+    cctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const cell = cssW / LEVELS.length;
+    LEVELS.forEach((L, i) => {
+      const k = Math.min((cell - 5) / L.w, (cssH - 4) / L.h);
+      drawCarton(cctx, i, cell * (i + .5), cssH - 2 - L.h * k / 2, k, 0, i <= maxLv ? 1 : .35);
+    });
+    return;
+  }
   const cssW = board.clientWidth;
   const k = chainScale(cssW);
   const cssH = Math.ceil(LEVELS[LAST].h * k) + 8;
@@ -301,6 +315,34 @@ function updateHud() {
 // ===== 尺寸自适应 =====
 function layout() {
   dpr = Math.min(window.devicePixelRatio || 1, 3);
+  compactLayout = innerWidth <= 700;
+  const viewport = window.visualViewport;
+  const visibleHeight = Math.floor(Math.min(innerHeight, viewport && viewport.scale === 1 ? viewport.height : innerHeight));
+  document.documentElement.style.setProperty('--game-viewport-height', visibleHeight + 'px');
+  if (compactLayout) {
+    const bodyStyle = getComputedStyle(document.body);
+    const number = value => parseFloat(value) || 0;
+    const paddingX = number(bodyStyle.paddingLeft) + number(bodyStyle.paddingRight);
+    const paddingY = number(bodyStyle.paddingTop) + number(bodyStyle.paddingBottom);
+    compactWidth = Math.floor(document.body.clientWidth - paddingX);
+    top_.style.width = compactWidth + 'px';
+    const dock = $('hintDock');
+    dock.style.width = compactWidth + 'px'; dock.style.left = '';
+    // 读取控件实际尺寸，兼容微信工具栏、安全区、字体及提示开关带来的高度变化。
+    const dockStyle = getComputedStyle(dock), chainStyle = getComputedStyle(chainCvs);
+    const reserved = paddingY + top_.getBoundingClientRect().height + 32
+      + number(chainStyle.marginTop) + number(dockStyle.marginTop) + dock.getBoundingClientRect().height;
+    const available = visibleHeight - reserved - 2;
+    // 极矮窗口允许纵向滚动，避免棋盘和按钮被 flex 压扁；常见竖屏可完整放入一屏。
+    const minimum = Math.min(240, compactWidth);
+    const cssW = Math.floor(Math.min(compactWidth, Math.max(minimum, available * W / H)));
+    const cssH = Math.round(cssW * H / W);
+    board.style.width = cssW + 'px'; board.style.height = cssH + 'px';
+    cvs.width = cssW * dpr; cvs.height = cssH * dpr;
+    viewScale = cssW / W;
+    drawNext(); drawChain();
+    return;
+  }
   const headH = top_.offsetHeight + 8;
   // 棋盘高 = 宽·H/W，合成表高 ≈ 宽·chainRatio，一起塞进剩余高度
   const chainRatio = LEVELS[LAST].h * chainScale(1000) / 1000;
@@ -355,6 +397,17 @@ soundBtn.addEventListener('click', () => {
   syncSound();
 });
 window.addEventListener('resize', layout);
+// 微信地址栏收放及软键盘可能只触发可视窗口变化，合并到下一帧重排且不重开游戏。
+let layoutFrame = 0;
+function scheduleLayout() {
+  if (layoutFrame) return;
+  layoutFrame = requestAnimationFrame(() => { layoutFrame = 0; layout(); });
+}
+if (window.visualViewport) window.visualViewport.addEventListener('resize', scheduleLayout);
+if (window.ResizeObserver) {
+  const resizeObserver = new ResizeObserver(scheduleLayout);
+  resizeObserver.observe(top_); resizeObserver.observe($('hintDock'));
+}
 
 // ===== 主循环（固定步长，高刷屏也一样快） =====
 function loop(t) {
