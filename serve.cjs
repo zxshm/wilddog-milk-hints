@@ -37,10 +37,18 @@ const server = http.createServer((req, res) => {
     const html = renderQaPage(fs.readFileSync(path.join(root, 'index.html'), 'utf8'), name.split('/').pop(), manifest);
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }); res.end(html); return;
   }
-  const qaScripts = { '/__qa/clock.js': 'browser-clock.js', '/__qa/acceptance.js': 'browser-acceptance.js' };
+  const qaScripts = { '/__qa/clock.js': 'browser-clock.js', '/__qa/acceptance.js': 'browser-acceptance.js',
+    '/__qa/replay-worker.js': 'replay-browser-worker.js' };
   if (qaScripts[name]) {
     res.writeHead(200, { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'no-store' });
     res.end(fs.readFileSync(path.join(__dirname, 'tests', qaScripts[name]))); return;
+  }
+  const qaFiles = { '/__qa/replay': ['replay-browser.html', 'text/html; charset=utf-8'],
+    '/__qa/browser-record.json': ['evidence/browser-layout-v7.json', 'application/json; charset=utf-8'] };
+  if (qaFiles[name]) {
+    const [file, type] = qaFiles[name];
+    res.writeHead(200, { 'Content-Type': type, 'Cache-Control': 'no-store' });
+    res.end(fs.readFileSync(path.join(__dirname, 'tests', file))); return;
   }
   const mobilePreview = name === '/__qa/mobile';
   const file = mobilePreview ? path.join(__dirname, 'tests', 'mobile.html') : path.resolve(root, '.' + (name === '/' ? '/index.html' : name));

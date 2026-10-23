@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>同引擎整局重放</title>
+<style>body{font:16px/1.7 system-ui;margin:32px;color:#493621;background:#fff9ed}pre{white-space:pre-wrap}button{padding:10px 18px}</style>
+<h1>同引擎整局重放</h1>
+<p>读取已保存的真实投放时刻和落点，核对每步得分、盒子数以及最终运动状态。</p>
+<button id="start">开始精确重放</button><pre id="result">尚未开始</pre>
+<script>
+document.getElementById('start').onclick=()=>{
+  document.getElementById('start').disabled=true;
+  const worker=new Worker('/__qa/replay-worker.js');
+  worker.onmessage=({data})=>{
+    document.getElementById('result').textContent=JSON.stringify(data,null,2);
+    if(data.result||data.error){worker.terminate();document.getElementById('start').disabled=false;}
+  };
+  worker.onerror=event=>{document.getElementById('result').textContent=event.message;worker.terminate();};
+  worker.postMessage({});
+};
+</script>
